@@ -14,7 +14,7 @@ For more information, please visit [the documentation](https://docs.passkit.io).
 - [Author & License](#author--license)
 
 ## Requirements
-1. PHP 5.5 and later, 7.0 or higher
+1. PHP 7.0 or higher
 2. PECL.
 3. Composer.
 4. A PassKit account; sign up for free at [https://app.passkit.com](https://app.passkit.com/signup).
@@ -27,7 +27,7 @@ For more information, please visit [the documentation](https://docs.passkit.io).
 sudo pecl install grpc-1.32.0
 ```
 
-After installing the gRPC extension, make sure the extension is enabled in your php.ini file, (e.g. /etc/php5/cli/php.ini, /etc/php5/apache2/php.ini, or /usr/local/etc/php/5.6/php.ini), depending on where your PHP installation is.
+After installing the gRPC extension, make sure the extension is enabled in your `php.ini` file, (e.g. `/etc/php5/cli/php.ini`, `/etc/php5/apache2/php.ini`, or `/usr/local/etc/php/7.2/php.ini`), depending on where your PHP installation is.
 ```bash
 extension=grpc.so
 ```
@@ -65,7 +65,7 @@ Follow the [installation procedure](#installation), and see general usage format
 
 ### Authorization
 Simply request your SDK credentials from the [PassKit Portal](https://app.passkit.com/app/account/developer-tools). You will receive an email with your credentials on your registered email address.
-Follow the instructions in the email to decrypt `key.pem`, and then copy the files into your project (in this project & for the samples to work they are in the `certs` directory).
+Follow the instructions in the email to decrypt `key.pem`, and then copy the `.pem` files into your project (in this project & for the examples to work they should be in the `certs` directory).
  
 You will need the credentials when you setup the SSL connection to the server.
 
@@ -149,7 +149,7 @@ try {
 ```
 
 ### Examples
-The [examples](/examples) folder contains a working sample project for using the SDK. 
+The [examples](/examples) folder contains working samples for using the SDK. 
 
 To successfully run the program:
 - ensure your gPRC certificates are in the `certs` folder in this repo (you will need `ca-chain.pem`, `certificate.pem` & `key.pem`).
