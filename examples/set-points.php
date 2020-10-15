@@ -3,7 +3,8 @@ require_once "../vendor/autoload.php";
 
 putenv("GRPC_SSL_CIPHER_SUITES=HIGH+ECDSA");
 
-// MODIFY WITH THE VARIABLES OF YOUR PROGRAM AND TIER
+// MODIFY WITH THE VARIABLES OF YOUR PROGRAM, TIER AND MEMBER
+$memberId = "memberId";
 $programId = "programId";
 $tierId = "tierId";
 
@@ -24,26 +25,18 @@ try {
     ]);
 
     // Set the Member body
-    $member = new Members\Member();
-    $member->setProgramId($programId);
-    $member->setTierId($tierId);
+    $memberPointsRequest = new \Members\SetPointsRequest();
+    $memberPointsRequest->setId($memberId);
+    $memberPointsRequest->setPoints(2000);
+    $memberPointsRequest->setSecondaryPoints(1000);
+    $memberPointsRequest->setTierPoints(100);
 
-    $person = new Io\Person();
-    $person->setDisplayName("Peter Pan");
-    $dateOfBirth = new Io\Date();
-    $dateOfBirth->setDay(22);
-    $dateOfBirth->setMonth(6);
-    $dateOfBirth->setYear(2020);
-    $person->setDateOfBirth($dateOfBirth);
-    $person->setEmailAddress("peter@pan.com");
-    $member->setPerson($person);
-
-    list($id, $status) = $client->enrolMember($member)->wait();
+    list($result, $status) = $client->setPoints($memberPointsRequest)->wait();
     if ($status->code !== 0) {
         throw new Exception(sprintf('Status Code: %s, Details: %s, Meta: %s', $status->code, $status->details, var_dump($status->metadata)));
     }
 
-    echo "https://pub1.pskt.io/" . $id->getId() . "\n";
+    echo $result->getId() . "/n";
 } catch (Exception $e) {
     echo $e;
 }
