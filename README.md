@@ -14,7 +14,7 @@ For more information, please visit [the documentation](https://docs.passkit.io).
 - [Author & License](#author--license)
 
 ## Requirements
-1. PHP 7.0 or higher
+1. PHP 7.0 or higher.
 2. PECL.
 3. Composer.
 4. A PassKit account; sign up for free at [https://app.passkit.com](https://app.passkit.com/signup).
