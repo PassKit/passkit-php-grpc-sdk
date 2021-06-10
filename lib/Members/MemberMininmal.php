@@ -209,7 +209,7 @@ class MemberMininmal extends \Google\Protobuf\Internal\Message
      * Personal details of the member.
      *
      * Generated from protobuf field <code>.io.Person person = 6;</code>
-     * @return \Io\Person
+     * @return \Io\Person|null
      */
     public function getPerson()
     {

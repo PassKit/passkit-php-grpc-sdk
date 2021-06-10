@@ -16,7 +16,7 @@ class Venue extends \Google\Protobuf\Internal\Message
     /**
      * PassKit generated venue id (22 characters).
      *
-     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $id = '';
     /**
@@ -64,13 +64,13 @@ class Venue extends \Google\Protobuf\Internal\Message
     /**
      * The date the venue was created. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $created = null;
     /**
      * The date the venue updated. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $updated = null;
 
@@ -110,7 +110,7 @@ class Venue extends \Google\Protobuf\Internal\Message
     /**
      * PassKit generated venue id (22 characters).
      *
-     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getId()
@@ -121,7 +121,7 @@ class Venue extends \Google\Protobuf\Internal\Message
     /**
      * PassKit generated venue id (22 characters).
      *
-     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -189,7 +189,7 @@ class Venue extends \Google\Protobuf\Internal\Message
      * Localized venue name.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedName = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedName()
     {
@@ -251,7 +251,7 @@ class Venue extends \Google\Protobuf\Internal\Message
      * Localized venue address.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedAddress = 6;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedAddress()
     {
@@ -338,8 +338,8 @@ class Venue extends \Google\Protobuf\Internal\Message
     /**
      * The date the venue was created. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Timestamp
+     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -359,7 +359,7 @@ class Venue extends \Google\Protobuf\Internal\Message
     /**
      * The date the venue was created. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -374,8 +374,8 @@ class Venue extends \Google\Protobuf\Internal\Message
     /**
      * The date the venue updated. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Timestamp
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {
@@ -395,7 +395,7 @@ class Venue extends \Google\Protobuf\Internal\Message
     /**
      * The date the venue updated. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */

@@ -73,7 +73,7 @@ class ValidateTicketResponse extends \Google\Protobuf\Internal\Message
      * Full ticket details.
      *
      * Generated from protobuf field <code>.event_tickets.Ticket ticket = 2;</code>
-     * @return \Event_tickets\Ticket
+     * @return \Event_tickets\Ticket|null
      */
     public function getTicket()
     {

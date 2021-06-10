@@ -24,49 +24,49 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * PNR code of the carrier operating the flight, independent of code-share, lease or other issues.
      *
-     * Generated from protobuf field <code>string operatingCarrierPNR = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string operatingCarrierPNR = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $operatingCarrierPNR = '';
     /**
      * Up to three related PNRs can be used to index the record and can be the marketing carrier PNR or a master PNR containing multiple bookings. If required, a related PNR can be followed by the two or three character designator of the carrier or CRS controlling the PNR, separated by an oblique.
      *
-     * Generated from protobuf field <code>repeated string relatedPNRs = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated string relatedPNRs = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $relatedPNRs;
     /**
      * Ticket number can optionally be prefixed by the 3 digit airline code, followed by a 10 digit ticket number.  For ticket numbers less than 10 digits, pad with zeros.
      *
-     * Generated from protobuf field <code>string ticketNumber = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string ticketNumber = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $ticketNumber = '';
     /**
      * The leg of the ticketed journey. For a return flight, the outbound flight would be leg 1 and the inbound flight would be leg 2.  For Direct flights, a ticketed leg includes all stops between the boarding point and deplaning point. Leg cannot be zero and ticket/leg combination cannot already exist for a 'create' call.
      *
-     * Generated from protobuf field <code>int32 ticketLeg = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>int32 ticketLeg = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $ticketLeg = 0;
     /**
      * 3 letter IATA code or 4 letter ICAO code of the passenger boarding point.
      *
-     * Generated from protobuf field <code>string boardingPoint = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string boardingPoint = 6 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $boardingPoint = '';
     /**
      * 3 letter IATA code or 4 letter ICAO code of the passenger deplaning point.
      *
-     * Generated from protobuf field <code>string deplaningPoint = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string deplaningPoint = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $deplaningPoint = '';
     /**
      * The two or three character airline code of the marketing carrier.
      *
-     * Generated from protobuf field <code>string carrierCode = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carrierCode = 8 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $carrierCode = '';
     /**
      * The flight number of the marketing character (excluding the carrier code).
      *
-     * Generated from protobuf field <code>string flightNumber = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string flightNumber = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $flightNumber = '';
     /**
@@ -96,7 +96,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * The allocated seat number.  The text "ANY" or "XXX" can be used where a free seating condition exists.
      *
-     * Generated from protobuf field <code>string seatNumber = 15 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string seatNumber = 15 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $seatNumber = '';
     /**
@@ -120,13 +120,13 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * 3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
      *
-     * Generated from protobuf field <code>string freeBaggageAllowance = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string freeBaggageAllowance = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $freeBaggageAllowance = '';
     /**
      * 3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
      *
-     * Generated from protobuf field <code>string carryOnAllowance = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carryOnAllowance = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $carryOnAllowance = '';
     /**
@@ -166,19 +166,19 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      */
     protected $barcodePayload = '';
     /**
-     * Security image should relate to a security image provided in the pass design. If passenger has TSA PreCheck and an image name with `tsa_precheck` is present, it will be used automatically.
+     * Security image id for display above the barcode on a Google Pay pass.
      *
      * Generated from protobuf field <code>string securityImage = 27;</code>
      */
     protected $securityImage = '';
     /**
-     * Privilege image should relate to a boarding privilege image provided in the pass design. If the passenger has a frequent flyer tier and an image with a lowercase name of the tier is present, it will be used automatically.
+     * Privilege image id for display above the barcode on a Google Pay pass.
      *
      * Generated from protobuf field <code>string privilegeImage = 28;</code>
      */
     protected $privilegeImage = '';
     /**
-     * Footer image is applicable to iOS devices. If not provided and security or privilege images (or their defaults) exist, then a composite will automatically be created. Else if a footer image or an airline alliance images exists in the design, it will be used.
+     * Footer image id for display above the barcode on iOS devices.
      *
      * Generated from protobuf field <code>string footerImage = 29;</code>
      */
@@ -186,19 +186,19 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
      *
-     * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $locationMessages;
     /**
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
      *
-     * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $beaconMessages;
     /**
      * A list of links to be appended to the end of each boarding pass.
      *
-     * Generated from protobuf field <code>repeated .io.Link links = 32 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Link links = 32 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $links;
     /**
@@ -283,11 +283,11 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      *     @type string $barcodePayload
      *           Payload to be encoded in the pass barcode. If omitted, an IATA BCBP Standard (Resolution 792) barcode will be generated.
      *     @type string $securityImage
-     *           Security image should relate to a security image provided in the pass design. If passenger has TSA PreCheck and an image name with `tsa_precheck` is present, it will be used automatically.
+     *           Security image id for display above the barcode on a Google Pay pass.
      *     @type string $privilegeImage
-     *           Privilege image should relate to a boarding privilege image provided in the pass design. If the passenger has a frequent flyer tier and an image with a lowercase name of the tier is present, it will be used automatically.
+     *           Privilege image id for display above the barcode on a Google Pay pass.
      *     @type string $footerImage
-     *           Footer image is applicable to iOS devices. If not provided and security or privilege images (or their defaults) exist, then a composite will automatically be created. Else if a footer image or an airline alliance images exists in the design, it will be used.
+     *           Footer image id for display above the barcode on iOS devices.
      *     @type \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $locationMessages
      *           A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
      *     @type \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $beaconMessages
@@ -338,7 +338,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * PNR code of the carrier operating the flight, independent of code-share, lease or other issues.
      *
-     * Generated from protobuf field <code>string operatingCarrierPNR = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string operatingCarrierPNR = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getOperatingCarrierPNR()
@@ -349,7 +349,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * PNR code of the carrier operating the flight, independent of code-share, lease or other issues.
      *
-     * Generated from protobuf field <code>string operatingCarrierPNR = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string operatingCarrierPNR = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -364,7 +364,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * Up to three related PNRs can be used to index the record and can be the marketing carrier PNR or a master PNR containing multiple bookings. If required, a related PNR can be followed by the two or three character designator of the carrier or CRS controlling the PNR, separated by an oblique.
      *
-     * Generated from protobuf field <code>repeated string relatedPNRs = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated string relatedPNRs = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getRelatedPNRs()
@@ -375,7 +375,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * Up to three related PNRs can be used to index the record and can be the marketing carrier PNR or a master PNR containing multiple bookings. If required, a related PNR can be followed by the two or three character designator of the carrier or CRS controlling the PNR, separated by an oblique.
      *
-     * Generated from protobuf field <code>repeated string relatedPNRs = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated string relatedPNRs = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -390,7 +390,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * Ticket number can optionally be prefixed by the 3 digit airline code, followed by a 10 digit ticket number.  For ticket numbers less than 10 digits, pad with zeros.
      *
-     * Generated from protobuf field <code>string ticketNumber = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string ticketNumber = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getTicketNumber()
@@ -401,7 +401,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * Ticket number can optionally be prefixed by the 3 digit airline code, followed by a 10 digit ticket number.  For ticket numbers less than 10 digits, pad with zeros.
      *
-     * Generated from protobuf field <code>string ticketNumber = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string ticketNumber = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -416,7 +416,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * The leg of the ticketed journey. For a return flight, the outbound flight would be leg 1 and the inbound flight would be leg 2.  For Direct flights, a ticketed leg includes all stops between the boarding point and deplaning point. Leg cannot be zero and ticket/leg combination cannot already exist for a 'create' call.
      *
-     * Generated from protobuf field <code>int32 ticketLeg = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>int32 ticketLeg = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return int
      */
     public function getTicketLeg()
@@ -427,7 +427,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * The leg of the ticketed journey. For a return flight, the outbound flight would be leg 1 and the inbound flight would be leg 2.  For Direct flights, a ticketed leg includes all stops between the boarding point and deplaning point. Leg cannot be zero and ticket/leg combination cannot already exist for a 'create' call.
      *
-     * Generated from protobuf field <code>int32 ticketLeg = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>int32 ticketLeg = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -442,7 +442,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * 3 letter IATA code or 4 letter ICAO code of the passenger boarding point.
      *
-     * Generated from protobuf field <code>string boardingPoint = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string boardingPoint = 6 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getBoardingPoint()
@@ -453,7 +453,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * 3 letter IATA code or 4 letter ICAO code of the passenger boarding point.
      *
-     * Generated from protobuf field <code>string boardingPoint = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string boardingPoint = 6 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -468,7 +468,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * 3 letter IATA code or 4 letter ICAO code of the passenger deplaning point.
      *
-     * Generated from protobuf field <code>string deplaningPoint = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string deplaningPoint = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getDeplaningPoint()
@@ -479,7 +479,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * 3 letter IATA code or 4 letter ICAO code of the passenger deplaning point.
      *
-     * Generated from protobuf field <code>string deplaningPoint = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string deplaningPoint = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -494,7 +494,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * The two or three character airline code of the marketing carrier.
      *
-     * Generated from protobuf field <code>string carrierCode = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carrierCode = 8 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getCarrierCode()
@@ -505,7 +505,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * The two or three character airline code of the marketing carrier.
      *
-     * Generated from protobuf field <code>string carrierCode = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carrierCode = 8 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -520,7 +520,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * The flight number of the marketing character (excluding the carrier code).
      *
-     * Generated from protobuf field <code>string flightNumber = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string flightNumber = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getFlightNumber()
@@ -531,7 +531,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * The flight number of the marketing character (excluding the carrier code).
      *
-     * Generated from protobuf field <code>string flightNumber = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string flightNumber = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -547,7 +547,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * The date of departure in local airport time.
      *
      * Generated from protobuf field <code>.io.Date departureDate = 11;</code>
-     * @return \Io\Date
+     * @return \Io\Date|null
      */
     public function getDepartureDate()
     {
@@ -583,7 +583,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * Details of the passenger and any infant.
      *
      * Generated from protobuf field <code>.flights.Passenger passenger = 12;</code>
-     * @return \Flights\Passenger
+     * @return \Flights\Passenger|null
      */
     public function getPassenger()
     {
@@ -670,7 +670,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * The allocated seat number.  The text "ANY" or "XXX" can be used where a free seating condition exists.
      *
-     * Generated from protobuf field <code>string seatNumber = 15 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string seatNumber = 15 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getSeatNumber()
@@ -681,7 +681,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * The allocated seat number.  The text "ANY" or "XXX" can be used where a free seating condition exists.
      *
-     * Generated from protobuf field <code>string seatNumber = 15 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string seatNumber = 15 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -774,7 +774,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * 3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
      *
-     * Generated from protobuf field <code>string freeBaggageAllowance = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string freeBaggageAllowance = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getFreeBaggageAllowance()
@@ -785,7 +785,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * 3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
      *
-     * Generated from protobuf field <code>string freeBaggageAllowance = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string freeBaggageAllowance = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -800,7 +800,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * 3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
      *
-     * Generated from protobuf field <code>string carryOnAllowance = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carryOnAllowance = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getCarryOnAllowance()
@@ -811,7 +811,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * 3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
      *
-     * Generated from protobuf field <code>string carryOnAllowance = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carryOnAllowance = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -931,7 +931,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * Conditional items for the flight segment as described in IATA PSC Resolution 792.
      *
      * Generated from protobuf field <code>.flights.ConditionalItems conditionalItems = 25;</code>
-     * @return \Flights\ConditionalItems
+     * @return \Flights\ConditionalItems|null
      */
     public function getConditionalItems()
     {
@@ -990,7 +990,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Security image should relate to a security image provided in the pass design. If passenger has TSA PreCheck and an image name with `tsa_precheck` is present, it will be used automatically.
+     * Security image id for display above the barcode on a Google Pay pass.
      *
      * Generated from protobuf field <code>string securityImage = 27;</code>
      * @return string
@@ -1001,7 +1001,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Security image should relate to a security image provided in the pass design. If passenger has TSA PreCheck and an image name with `tsa_precheck` is present, it will be used automatically.
+     * Security image id for display above the barcode on a Google Pay pass.
      *
      * Generated from protobuf field <code>string securityImage = 27;</code>
      * @param string $var
@@ -1016,7 +1016,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Privilege image should relate to a boarding privilege image provided in the pass design. If the passenger has a frequent flyer tier and an image with a lowercase name of the tier is present, it will be used automatically.
+     * Privilege image id for display above the barcode on a Google Pay pass.
      *
      * Generated from protobuf field <code>string privilegeImage = 28;</code>
      * @return string
@@ -1027,7 +1027,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Privilege image should relate to a boarding privilege image provided in the pass design. If the passenger has a frequent flyer tier and an image with a lowercase name of the tier is present, it will be used automatically.
+     * Privilege image id for display above the barcode on a Google Pay pass.
      *
      * Generated from protobuf field <code>string privilegeImage = 28;</code>
      * @param string $var
@@ -1042,7 +1042,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Footer image is applicable to iOS devices. If not provided and security or privilege images (or their defaults) exist, then a composite will automatically be created. Else if a footer image or an airline alliance images exists in the design, it will be used.
+     * Footer image id for display above the barcode on iOS devices.
      *
      * Generated from protobuf field <code>string footerImage = 29;</code>
      * @return string
@@ -1053,7 +1053,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Footer image is applicable to iOS devices. If not provided and security or privilege images (or their defaults) exist, then a composite will automatically be created. Else if a footer image or an airline alliance images exists in the design, it will be used.
+     * Footer image id for display above the barcode on iOS devices.
      *
      * Generated from protobuf field <code>string footerImage = 29;</code>
      * @param string $var
@@ -1070,7 +1070,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
      *
-     * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getLocationMessages()
@@ -1081,7 +1081,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
      *
-     * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -1096,7 +1096,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
      *
-     * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getBeaconMessages()
@@ -1107,7 +1107,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
      *
-     * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -1122,7 +1122,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * A list of links to be appended to the end of each boarding pass.
      *
-     * Generated from protobuf field <code>repeated .io.Link links = 32 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Link links = 32 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getLinks()
@@ -1133,7 +1133,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     /**
      * A list of links to be appended to the end of each boarding pass.
      *
-     * Generated from protobuf field <code>repeated .io.Link links = 32 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Link links = 32 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -1201,7 +1201,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * Optional key value pairs to be added in to the flight record
      *
      * Generated from protobuf field <code>.io.DataItems additionalDataItems = 35;</code>
-     * @return \Io\DataItems
+     * @return \Io\DataItems|null
      */
     public function getAdditionalDataItems()
     {
@@ -1237,7 +1237,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * Pass Metadata
      *
      * Generated from protobuf field <code>.io.Metadata metadata = 36;</code>
-     * @return \Io\Metadata
+     * @return \Io\Metadata|null
      */
     public function getMetadata()
     {

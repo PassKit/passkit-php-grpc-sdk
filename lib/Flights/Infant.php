@@ -45,6 +45,24 @@ class Infant extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string barcodeAdditionalData = 5;</code>
      */
     protected $barcodeAdditionalData = '';
+    /**
+     * Security image id for display above the barcode on a Google Pay pass.
+     *
+     * Generated from protobuf field <code>string securityImage = 6;</code>
+     */
+    protected $securityImage = '';
+    /**
+     * Privilege image id for display above the barcode on a Google Pay pass.
+     *
+     * Generated from protobuf field <code>string privilegeImage = 7;</code>
+     */
+    protected $privilegeImage = '';
+    /**
+     * Footer image id for display above the barcode on iOS devices.
+     *
+     * Generated from protobuf field <code>string footerImage = 8;</code>
+     */
+    protected $footerImage = '';
 
     /**
      * Constructor.
@@ -62,6 +80,12 @@ class Infant extends \Google\Protobuf\Internal\Message
      *           Optional conditional items for the infant barcode.  Not required if barcode payload is set.
      *     @type string $barcodeAdditionalData
      *           Optional additional barcode data. If PassKit are generating barcodes, airline use data (IATA item 4) to be included in the infant barcode.
+     *     @type string $securityImage
+     *           Security image id for display above the barcode on a Google Pay pass.
+     *     @type string $privilegeImage
+     *           Privilege image id for display above the barcode on a Google Pay pass.
+     *     @type string $footerImage
+     *           Footer image id for display above the barcode on iOS devices.
      * }
      */
     public function __construct($data = NULL) {
@@ -73,7 +97,7 @@ class Infant extends \Google\Protobuf\Internal\Message
      * Personal details of the infant.
      *
      * Generated from protobuf field <code>.io.Person infantDetails = 1;</code>
-     * @return \Io\Person
+     * @return \Io\Person|null
      */
     public function getInfantDetails()
     {
@@ -109,7 +133,7 @@ class Infant extends \Google\Protobuf\Internal\Message
      * Optional identity details, only required if need to be rendered on the pass, or for analytics purposes.
      *
      * Generated from protobuf field <code>.flights.IdentityDetails identityDetails = 2;</code>
-     * @return \Flights\IdentityDetails
+     * @return \Flights\IdentityDetails|null
      */
     public function getIdentityDetails()
     {
@@ -171,7 +195,7 @@ class Infant extends \Google\Protobuf\Internal\Message
      * Optional conditional items for the infant barcode.  Not required if barcode payload is set.
      *
      * Generated from protobuf field <code>.flights.ConditionalItems conditionalItems = 4;</code>
-     * @return \Flights\ConditionalItems
+     * @return \Flights\ConditionalItems|null
      */
     public function getConditionalItems()
     {
@@ -225,6 +249,84 @@ class Infant extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->barcodeAdditionalData = $var;
+
+        return $this;
+    }
+
+    /**
+     * Security image id for display above the barcode on a Google Pay pass.
+     *
+     * Generated from protobuf field <code>string securityImage = 6;</code>
+     * @return string
+     */
+    public function getSecurityImage()
+    {
+        return $this->securityImage;
+    }
+
+    /**
+     * Security image id for display above the barcode on a Google Pay pass.
+     *
+     * Generated from protobuf field <code>string securityImage = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSecurityImage($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->securityImage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Privilege image id for display above the barcode on a Google Pay pass.
+     *
+     * Generated from protobuf field <code>string privilegeImage = 7;</code>
+     * @return string
+     */
+    public function getPrivilegeImage()
+    {
+        return $this->privilegeImage;
+    }
+
+    /**
+     * Privilege image id for display above the barcode on a Google Pay pass.
+     *
+     * Generated from protobuf field <code>string privilegeImage = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPrivilegeImage($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->privilegeImage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Footer image id for display above the barcode on iOS devices.
+     *
+     * Generated from protobuf field <code>string footerImage = 8;</code>
+     * @return string
+     */
+    public function getFooterImage()
+    {
+        return $this->footerImage;
+    }
+
+    /**
+     * Footer image id for display above the barcode on iOS devices.
+     *
+     * Generated from protobuf field <code>string footerImage = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setFooterImage($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->footerImage = $var;
 
         return $this;
     }

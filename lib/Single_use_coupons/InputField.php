@@ -145,7 +145,7 @@ class InputField extends \Google\Protobuf\Internal\Message
      * Localized label of input field.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedLabel = 2;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedLabel()
     {
@@ -207,7 +207,7 @@ class InputField extends \Google\Protobuf\Internal\Message
      * Localized help text shown below the input field.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedHelperText = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedHelperText()
     {
@@ -269,7 +269,7 @@ class InputField extends \Google\Protobuf\Internal\Message
      * Localized invalid code error message.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedErrorMessage = 6;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedErrorMessage()
     {
@@ -331,7 +331,7 @@ class InputField extends \Google\Protobuf\Internal\Message
      * Localized default value.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedDefaultValue = 8;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedDefaultValue()
     {
@@ -393,7 +393,7 @@ class InputField extends \Google\Protobuf\Internal\Message
      * Localized placeholder text.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedPlaceholder = 10;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedPlaceholder()
     {

@@ -17,9 +17,24 @@ class CertificatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Io\PassTypeIdentifier $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function getAppleCertificateData(\Io\PassTypeIdentifier $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Certificates/getAppleCertificateData',
+        $argument,
+        ['\Io\CertificateData', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Google\Protobuf\GPBEmpty $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getCertificateSigningRequest(\Google\Protobuf\GPBEmpty $argument,
       $metadata = [], $options = []) {
@@ -33,6 +48,7 @@ class CertificatesClient extends \Grpc\BaseStub {
      * @param \Io\FileBytes $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function addAppleCertificate(\Io\FileBytes $argument,
       $metadata = [], $options = []) {
@@ -46,6 +62,7 @@ class CertificatesClient extends \Grpc\BaseStub {
      * @param \Io\FileBytes $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateAppleCertificate(\Io\FileBytes $argument,
       $metadata = [], $options = []) {
@@ -56,22 +73,10 @@ class CertificatesClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Io\PassTypeIdentifier $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     */
-    public function getAppleCertificateData(\Io\PassTypeIdentifier $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/io.Certificates/getAppleCertificateData',
-        $argument,
-        ['\Io\CertificateData', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listAppleCertificatesDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -85,6 +90,7 @@ class CertificatesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listAppleCertificates(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -98,6 +104,7 @@ class CertificatesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countAppleCertificatesDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -111,6 +118,7 @@ class CertificatesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countAppleCertificates(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -124,6 +132,7 @@ class CertificatesClient extends \Grpc\BaseStub {
      * @param \Io\NFCSigningCredentialsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function sendNFCSigningCredentials(\Io\NFCSigningCredentialsRequest $argument,
       $metadata = [], $options = []) {

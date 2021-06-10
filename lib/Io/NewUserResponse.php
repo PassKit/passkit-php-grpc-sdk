@@ -41,6 +41,18 @@ class NewUserResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string privateKey = 7;</code>
      */
     protected $privateKey = '';
+    /**
+     * Generated from protobuf field <code>string javaPrivateKey = 8;</code>
+     */
+    protected $javaPrivateKey = '';
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp expiresAt = 9;</code>
+     */
+    protected $expiresAt = null;
+    /**
+     * Generated from protobuf field <code>string regionId = 10;</code>
+     */
+    protected $regionId = '';
 
     /**
      * Constructor.
@@ -55,6 +67,9 @@ class NewUserResponse extends \Google\Protobuf\Internal\Message
      *     @type string $secret
      *     @type string $certificate
      *     @type string $privateKey
+     *     @type string $javaPrivateKey
+     *     @type \Google\Protobuf\Timestamp $expiresAt
+     *     @type string $regionId
      * }
      */
     public function __construct($data = NULL) {
@@ -212,6 +227,82 @@ class NewUserResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->privateKey = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string javaPrivateKey = 8;</code>
+     * @return string
+     */
+    public function getJavaPrivateKey()
+    {
+        return $this->javaPrivateKey;
+    }
+
+    /**
+     * Generated from protobuf field <code>string javaPrivateKey = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setJavaPrivateKey($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->javaPrivateKey = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp expiresAt = 9;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getExpiresAt()
+    {
+        return isset($this->expiresAt) ? $this->expiresAt : null;
+    }
+
+    public function hasExpiresAt()
+    {
+        return isset($this->expiresAt);
+    }
+
+    public function clearExpiresAt()
+    {
+        unset($this->expiresAt);
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp expiresAt = 9;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setExpiresAt($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->expiresAt = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string regionId = 10;</code>
+     * @return string
+     */
+    public function getRegionId()
+    {
+        return $this->regionId;
+    }
+
+    /**
+     * Generated from protobuf field <code>string regionId = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRegionId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->regionId = $var;
 
         return $this;
     }

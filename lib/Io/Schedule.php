@@ -142,7 +142,7 @@ class Schedule extends \Google\Protobuf\Internal\Message
      * The time the job should start.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp startTime = 4;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getStartTime()
     {
@@ -178,7 +178,7 @@ class Schedule extends \Google\Protobuf\Internal\Message
      * Optional time when the job will stop.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp runUntil = 5;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getRunUntil()
     {

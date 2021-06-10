@@ -18,19 +18,19 @@ class Carrier extends \Google\Protobuf\Internal\Message
     /**
      * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
      *
-     * Generated from protobuf field <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $iataCarrierCode = '';
     /**
      * The ICAO carrier code. Required if an iataCarrierCode is not provided.
      *
-     * Generated from protobuf field <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $icaoCarrierCode = '';
     /**
      * The IATA accounting code / AWB prefix.  If no code has been allocated, enter zero.
      *
-     * Generated from protobuf field <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $iataAccountingCode = 0;
     /**
@@ -88,7 +88,7 @@ class Carrier extends \Google\Protobuf\Internal\Message
     /**
      * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
      *
-     * Generated from protobuf field <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getIataCarrierCode()
@@ -99,7 +99,7 @@ class Carrier extends \Google\Protobuf\Internal\Message
     /**
      * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
      *
-     * Generated from protobuf field <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -114,7 +114,7 @@ class Carrier extends \Google\Protobuf\Internal\Message
     /**
      * The ICAO carrier code. Required if an iataCarrierCode is not provided.
      *
-     * Generated from protobuf field <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getIcaoCarrierCode()
@@ -125,7 +125,7 @@ class Carrier extends \Google\Protobuf\Internal\Message
     /**
      * The ICAO carrier code. Required if an iataCarrierCode is not provided.
      *
-     * Generated from protobuf field <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -140,7 +140,7 @@ class Carrier extends \Google\Protobuf\Internal\Message
     /**
      * The IATA accounting code / AWB prefix.  If no code has been allocated, enter zero.
      *
-     * Generated from protobuf field <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return int
      */
     public function getIataAccountingCode()
@@ -151,7 +151,7 @@ class Carrier extends \Google\Protobuf\Internal\Message
     /**
      * The IATA accounting code / AWB prefix.  If no code has been allocated, enter zero.
      *
-     * Generated from protobuf field <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -193,7 +193,7 @@ class Carrier extends \Google\Protobuf\Internal\Message
      * The localized airline name, if applicable.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedAirlineName = 5;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedAirlineName()
     {

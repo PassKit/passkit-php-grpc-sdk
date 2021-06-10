@@ -88,12 +88,6 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     protected $autoDeleteDaysAfterNotInstalling = 0;
     /**
-     * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-     *
-     * Generated from protobuf field <code>map<uint32, .io.Callback> callbacks = 14;</code>
-     */
-    private $callbacks;
-    /**
      * Points format for primary points.
      *
      * Generated from protobuf field <code>.members.PointsType pointsType = 16;</code>
@@ -147,6 +141,12 @@ class Program extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.members.EventCaptureSettings eventCaptureSettings = 25;</code>
      */
     protected $eventCaptureSettings = null;
+    /**
+     * Settings for how users can recover passes.
+     *
+     * Generated from protobuf field <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+     */
+    protected $passRecoverySettings = null;
 
     /**
      * Constructor.
@@ -178,8 +178,6 @@ class Program extends \Google\Protobuf\Internal\Message
      *           Localized expiry message.
      *     @type int $autoDeleteDaysAfterNotInstalling
      *           Auto deletes the member `autoDeleteDaysAfterNotInstalling` days after the card has not been installed.
-     *     @type array|\Google\Protobuf\Internal\MapField $callbacks
-     *           Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
      *     @type \Members\PointsType $pointsType
      *           Points format for primary points.
      *     @type \Members\PointsType $secondaryPointsType
@@ -198,6 +196,8 @@ class Program extends \Google\Protobuf\Internal\Message
      *           Auto generate the external id from member object field. e.g. if you set person.emailAddress, then member's email address will be used as a value of external id.
      *     @type \Members\EventCaptureSettings $eventCaptureSettings
      *           Event settings for the program. Can be used if the program captures member events.
+     *     @type \Members\PassRecoverySettings $passRecoverySettings
+     *           Settings for how users can recover passes.
      * }
      */
     public function __construct($data = NULL) {
@@ -261,7 +261,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * Localized name of the membership program.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedName = 3;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedName()
     {
@@ -323,7 +323,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * The project quota.
      *
      * Generated from protobuf field <code>.io.Quota quota = 5;</code>
-     * @return \Io\Quota
+     * @return \Io\Quota|null
      */
     public function getQuota()
     {
@@ -385,7 +385,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * Contains the email & sms distribution settings for the program.
      *
      * Generated from protobuf field <code>.io.DistributionSettings distributionSettings = 7;</code>
-     * @return \Io\DistributionSettings
+     * @return \Io\DistributionSettings|null
      */
     public function getDistributionSettings()
     {
@@ -499,7 +499,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * Localized expiry message.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedExpiryMessage = 11;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedExpiryMessage()
     {
@@ -558,36 +558,10 @@ class Program extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-     *
-     * Generated from protobuf field <code>map<uint32, .io.Callback> callbacks = 14;</code>
-     * @return \Google\Protobuf\Internal\MapField
-     */
-    public function getCallbacks()
-    {
-        return $this->callbacks;
-    }
-
-    /**
-     * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-     *
-     * Generated from protobuf field <code>map<uint32, .io.Callback> callbacks = 14;</code>
-     * @param array|\Google\Protobuf\Internal\MapField $var
-     * @return $this
-     */
-    public function setCallbacks($var)
-    {
-        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::UINT32, \Google\Protobuf\Internal\GPBType::MESSAGE, \Io\Callback::class);
-        $this->callbacks = $arr;
-
-        return $this;
-    }
-
-    /**
      * Points format for primary points.
      *
      * Generated from protobuf field <code>.members.PointsType pointsType = 16;</code>
-     * @return \Members\PointsType
+     * @return \Members\PointsType|null
      */
     public function getPointsType()
     {
@@ -623,7 +597,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * Points format for secondary points.
      *
      * Generated from protobuf field <code>.members.PointsType secondaryPointsType = 17;</code>
-     * @return \Members\PointsType
+     * @return \Members\PointsType|null
      */
     public function getSecondaryPointsType()
     {
@@ -659,7 +633,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * Issued, installed, uninstalled and invalidated counts. Metrics are not writable.
      *
      * Generated from protobuf field <code>.io.Metrics metrics = 19;</code>
-     * @return \Io\Metrics
+     * @return \Io\Metrics|null
      */
     public function getMetrics()
     {
@@ -721,7 +695,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * The date the program was created.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 21;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -757,7 +731,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * The date the program was updated.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 22;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {
@@ -819,7 +793,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * Auto generate the external id from member object field. e.g. if you set person.emailAddress, then member's email address will be used as a value of external id.
      *
      * Generated from protobuf field <code>.members.CustomExternalId applyFieldToExternalIdOnEnrol = 24;</code>
-     * @return \Members\CustomExternalId
+     * @return \Members\CustomExternalId|null
      */
     public function getApplyFieldToExternalIdOnEnrol()
     {
@@ -855,7 +829,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * Event settings for the program. Can be used if the program captures member events.
      *
      * Generated from protobuf field <code>.members.EventCaptureSettings eventCaptureSettings = 25;</code>
-     * @return \Members\EventCaptureSettings
+     * @return \Members\EventCaptureSettings|null
      */
     public function getEventCaptureSettings()
     {
@@ -883,6 +857,42 @@ class Program extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Members\EventCaptureSettings::class);
         $this->eventCaptureSettings = $var;
+
+        return $this;
+    }
+
+    /**
+     * Settings for how users can recover passes.
+     *
+     * Generated from protobuf field <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+     * @return \Members\PassRecoverySettings|null
+     */
+    public function getPassRecoverySettings()
+    {
+        return isset($this->passRecoverySettings) ? $this->passRecoverySettings : null;
+    }
+
+    public function hasPassRecoverySettings()
+    {
+        return isset($this->passRecoverySettings);
+    }
+
+    public function clearPassRecoverySettings()
+    {
+        unset($this->passRecoverySettings);
+    }
+
+    /**
+     * Settings for how users can recover passes.
+     *
+     * Generated from protobuf field <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+     * @param \Members\PassRecoverySettings $var
+     * @return $this
+     */
+    public function setPassRecoverySettings($var)
+    {
+        GPBUtil::checkMessage($var, \Members\PassRecoverySettings::class);
+        $this->passRecoverySettings = $var;
 
         return $this;
     }

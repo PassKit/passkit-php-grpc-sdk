@@ -14,9 +14,20 @@ class Billing
         if (static::$is_initialized == true) {
           return;
         }
-        $pool->internalAddGeneratedFile(hex2bin(
-            "0a88020a17696f2f636f6d6d6f6e2f62696c6c696e672e70726f746f1202696f22720a0551756f746112270a0764657461696c7318012003280b32162e696f2e51756f74612e44657461696c73456e7472791a400a0c44657461696c73456e747279120b0a036b657918012001280d121f0a0576616c756518022001280b32102e696f2e51756f746144657461696c733a023801222d0a0c51756f746144657461696c73120d0a0571756f7461180120012805120e0a06737461747573180220012804423e0a0f696f2e706173736b69742e504b696f5a2473746173682e706173736b69742e636f6d2f696f2f6d6f64656c2f73646b2f676f2f696faa0204504b496f620670726f746f33"
-        ), true);
+        $pool->internalAddGeneratedFile(
+            '
+‘
+io/common/billing.protoio"r
+Quota\'
+details (2.io.Quota.DetailsEntry@
+DetailsEntry
+key (
+value (2.io.QuotaDetails:8"-
+QuotaDetails
+quota (
+status (BG
+com.passkit.grpcZ$stash.passkit.com/io/model/sdk/go/ioªPassKit.Grpcbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

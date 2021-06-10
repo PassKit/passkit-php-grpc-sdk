@@ -14,15 +14,29 @@ use Google\Protobuf\Internal\GPBUtil;
 class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Pass Id (22 characters).
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      */
     protected $id = '';
     /**
-     * Generated from protobuf field <code>.io.PassProtocol protocol = 2;</code>
+     * External Id of the pass holder. Needs to provide Class Id as well.
+     *
+     * Generated from protobuf field <code>string externalId = 2;</code>
+     */
+    protected $externalId = '';
+    /**
+     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     *
+     * Generated from protobuf field <code>string classId = 3;</code>
+     */
+    protected $classId = '';
+    /**
+     * Generated from protobuf field <code>.io.PassProtocol protocol = 4;</code>
      */
     protected $protocol = 0;
     /**
-     * Generated from protobuf field <code>string alternativeEmail = 3;</code>
+     * Generated from protobuf field <code>string alternativeEmail = 5;</code>
      */
     protected $alternativeEmail = '';
 
@@ -33,6 +47,11 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
+     *           Pass Id (22 characters).
+     *     @type string $externalId
+     *           External Id of the pass holder. Needs to provide Class Id as well.
+     *     @type string $classId
+     *           The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
      *     @type int $protocol
      *     @type string $alternativeEmail
      * }
@@ -43,6 +62,8 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Pass Id (22 characters).
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @return string
      */
@@ -52,6 +73,8 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Pass Id (22 characters).
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @param string $var
      * @return $this
@@ -65,7 +88,59 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.io.PassProtocol protocol = 2;</code>
+     * External Id of the pass holder. Needs to provide Class Id as well.
+     *
+     * Generated from protobuf field <code>string externalId = 2;</code>
+     * @return string
+     */
+    public function getExternalId()
+    {
+        return $this->externalId;
+    }
+
+    /**
+     * External Id of the pass holder. Needs to provide Class Id as well.
+     *
+     * Generated from protobuf field <code>string externalId = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setExternalId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->externalId = $var;
+
+        return $this;
+    }
+
+    /**
+     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     *
+     * Generated from protobuf field <code>string classId = 3;</code>
+     * @return string
+     */
+    public function getClassId()
+    {
+        return $this->classId;
+    }
+
+    /**
+     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     *
+     * Generated from protobuf field <code>string classId = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClassId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->classId = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.io.PassProtocol protocol = 4;</code>
      * @return int
      */
     public function getProtocol()
@@ -74,7 +149,7 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.io.PassProtocol protocol = 2;</code>
+     * Generated from protobuf field <code>.io.PassProtocol protocol = 4;</code>
      * @param int $var
      * @return $this
      */
@@ -87,7 +162,7 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string alternativeEmail = 3;</code>
+     * Generated from protobuf field <code>string alternativeEmail = 5;</code>
      * @return string
      */
     public function getAlternativeEmail()
@@ -96,7 +171,7 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string alternativeEmail = 3;</code>
+     * Generated from protobuf field <code>string alternativeEmail = 5;</code>
      * @param string $var
      * @return $this
      */

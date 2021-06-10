@@ -33,7 +33,7 @@ class Http extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>bool fully_decode_reserved_expansion = 2;</code>
      */
-    private $fully_decode_reserved_expansion = false;
+    protected $fully_decode_reserved_expansion = false;
 
     /**
      * Constructor.

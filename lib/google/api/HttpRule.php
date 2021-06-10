@@ -246,7 +246,7 @@ class HttpRule extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string selector = 1;</code>
      */
-    private $selector = '';
+    protected $selector = '';
     /**
      * The name of the request field whose value is mapped to the HTTP request
      * body, or `*` for mapping all request fields not captured by the path
@@ -256,7 +256,7 @@ class HttpRule extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string body = 7;</code>
      */
-    private $body = '';
+    protected $body = '';
     /**
      * Optional. The name of the response field whose value is mapped to the HTTP
      * response body. When omitted, the entire response message will be used
@@ -266,7 +266,7 @@ class HttpRule extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>string response_body = 12;</code>
      */
-    private $response_body = '';
+    protected $response_body = '';
     /**
      * Additional HTTP bindings for the selector. Nested bindings must
      * not contain an `additional_bindings` field themselves (that is,
@@ -368,6 +368,11 @@ class HttpRule extends \Google\Protobuf\Internal\Message
         return $this->readOneof(2);
     }
 
+    public function hasGet()
+    {
+        return $this->hasOneof(2);
+    }
+
     /**
      * Maps to HTTP GET. Used for listing and getting information about
      * resources.
@@ -393,6 +398,11 @@ class HttpRule extends \Google\Protobuf\Internal\Message
     public function getPut()
     {
         return $this->readOneof(3);
+    }
+
+    public function hasPut()
+    {
+        return $this->hasOneof(3);
     }
 
     /**
@@ -421,6 +431,11 @@ class HttpRule extends \Google\Protobuf\Internal\Message
         return $this->readOneof(4);
     }
 
+    public function hasPost()
+    {
+        return $this->hasOneof(4);
+    }
+
     /**
      * Maps to HTTP POST. Used for creating a resource or performing an action.
      *
@@ -447,6 +462,11 @@ class HttpRule extends \Google\Protobuf\Internal\Message
         return $this->readOneof(5);
     }
 
+    public function hasDelete()
+    {
+        return $this->hasOneof(5);
+    }
+
     /**
      * Maps to HTTP DELETE. Used for deleting a resource.
      *
@@ -471,6 +491,11 @@ class HttpRule extends \Google\Protobuf\Internal\Message
     public function getPatch()
     {
         return $this->readOneof(6);
+    }
+
+    public function hasPatch()
+    {
+        return $this->hasOneof(6);
     }
 
     /**
@@ -500,6 +525,11 @@ class HttpRule extends \Google\Protobuf\Internal\Message
     public function getCustom()
     {
         return $this->readOneof(8);
+    }
+
+    public function hasCustom()
+    {
+        return $this->hasOneof(8);
     }
 
     /**

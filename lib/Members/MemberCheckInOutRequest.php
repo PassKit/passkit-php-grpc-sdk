@@ -14,29 +14,77 @@ use Google\Protobuf\Internal\GPBUtil;
 class MemberCheckInOutRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Internal PassKit ID.
+     * PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
      *
-     * Generated from protobuf field <code>string id = 1;</code>
+     * Generated from protobuf field <code>string memberId = 1;</code>
      */
-    protected $id = '';
+    protected $memberId = '';
     /**
-     * External member ID.
+     * External member ID. Required if id is not provided.
      *
-     * Generated from protobuf field <code>string externalId = 2;</code>
+     * Generated from protobuf field <code>string externalMemberId = 2;</code>
      */
-    protected $externalId = '';
+    protected $externalMemberId = '';
     /**
-     * GPS details of check in.
+     * Program ID which member belongs to. Required if id is not provided.
      *
-     * Generated from protobuf field <code>.io.GPSLocation location = 3;</code>
+     * Generated from protobuf field <code>string programId = 3;</code>
      */
-    protected $location = null;
+    protected $programId = '';
     /**
-     * Optional timestamp.
+     * Address the event took place.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp timestamp = 4;</code>
+     * Generated from protobuf field <code>string address = 4;</code>
      */
-    protected $timestamp = null;
+    protected $address = '';
+    /**
+     * Latitude the event took place.
+     *
+     * Generated from protobuf field <code>double lat = 5;</code>
+     */
+    protected $lat = 0.0;
+    /**
+     * Longitude the event took place.
+     *
+     * Generated from protobuf field <code>double lon = 6;</code>
+     */
+    protected $lon = 0.0;
+    /**
+     * Altitude the event took place (in metres).
+     *
+     * Generated from protobuf field <code>int32 alt = 7;</code>
+     */
+    protected $alt = 0;
+    /**
+     * External unique ID of the event.
+     *
+     * Generated from protobuf field <code>string externalEventId = 8;</code>
+     */
+    protected $externalEventId = '';
+    /**
+     * External device ID of the device that was used to capture the event (for example when using an external scanning app).
+     *
+     * Generated from protobuf field <code>string externalDeviceId = 9;</code>
+     */
+    protected $externalDeviceId = '';
+    /**
+     * External service ID of the service that was used for capturing the event (for example when using an external scanning app).
+     *
+     * Generated from protobuf field <code>string externalServiceId = 10;</code>
+     */
+    protected $externalServiceId = '';
+    /**
+     * Any meta data (for example gathered on scanning) that is relevant to the event (# of points earner, bill spent, device meta-data, etc).
+     *
+     * Generated from protobuf field <code>map<string, string> metaData = 11;</code>
+     */
+    private $metaData;
+    /**
+     * Any relevant notes for the event.
+     *
+     * Generated from protobuf field <code>string notes = 12;</code>
+     */
+    protected $notes = '';
 
     /**
      * Constructor.
@@ -44,14 +92,30 @@ class MemberCheckInOutRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $id
-     *           Internal PassKit ID.
-     *     @type string $externalId
-     *           External member ID.
-     *     @type \Io\GPSLocation $location
-     *           GPS details of check in.
-     *     @type \Google\Protobuf\Timestamp $timestamp
-     *           Optional timestamp.
+     *     @type string $memberId
+     *           PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
+     *     @type string $externalMemberId
+     *           External member ID. Required if id is not provided.
+     *     @type string $programId
+     *           Program ID which member belongs to. Required if id is not provided.
+     *     @type string $address
+     *           Address the event took place.
+     *     @type float $lat
+     *           Latitude the event took place.
+     *     @type float $lon
+     *           Longitude the event took place.
+     *     @type int $alt
+     *           Altitude the event took place (in metres).
+     *     @type string $externalEventId
+     *           External unique ID of the event.
+     *     @type string $externalDeviceId
+     *           External device ID of the device that was used to capture the event (for example when using an external scanning app).
+     *     @type string $externalServiceId
+     *           External service ID of the service that was used for capturing the event (for example when using an external scanning app).
+     *     @type array|\Google\Protobuf\Internal\MapField $metaData
+     *           Any meta data (for example gathered on scanning) that is relevant to the event (# of points earner, bill spent, device meta-data, etc).
+     *     @type string $notes
+     *           Any relevant notes for the event.
      * }
      */
     public function __construct($data = NULL) {
@@ -60,125 +124,313 @@ class MemberCheckInOutRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Internal PassKit ID.
+     * PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
      *
-     * Generated from protobuf field <code>string id = 1;</code>
+     * Generated from protobuf field <code>string memberId = 1;</code>
      * @return string
      */
-    public function getId()
+    public function getMemberId()
     {
-        return $this->id;
+        return $this->memberId;
     }
 
     /**
-     * Internal PassKit ID.
+     * PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
      *
-     * Generated from protobuf field <code>string id = 1;</code>
+     * Generated from protobuf field <code>string memberId = 1;</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setMemberId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->id = $var;
+        $this->memberId = $var;
 
         return $this;
     }
 
     /**
-     * External member ID.
+     * External member ID. Required if id is not provided.
      *
-     * Generated from protobuf field <code>string externalId = 2;</code>
+     * Generated from protobuf field <code>string externalMemberId = 2;</code>
      * @return string
      */
-    public function getExternalId()
+    public function getExternalMemberId()
     {
-        return $this->externalId;
+        return $this->externalMemberId;
     }
 
     /**
-     * External member ID.
+     * External member ID. Required if id is not provided.
      *
-     * Generated from protobuf field <code>string externalId = 2;</code>
+     * Generated from protobuf field <code>string externalMemberId = 2;</code>
      * @param string $var
      * @return $this
      */
-    public function setExternalId($var)
+    public function setExternalMemberId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->externalId = $var;
+        $this->externalMemberId = $var;
 
         return $this;
     }
 
     /**
-     * GPS details of check in.
+     * Program ID which member belongs to. Required if id is not provided.
      *
-     * Generated from protobuf field <code>.io.GPSLocation location = 3;</code>
-     * @return \Io\GPSLocation
+     * Generated from protobuf field <code>string programId = 3;</code>
+     * @return string
      */
-    public function getLocation()
+    public function getProgramId()
     {
-        return isset($this->location) ? $this->location : null;
-    }
-
-    public function hasLocation()
-    {
-        return isset($this->location);
-    }
-
-    public function clearLocation()
-    {
-        unset($this->location);
+        return $this->programId;
     }
 
     /**
-     * GPS details of check in.
+     * Program ID which member belongs to. Required if id is not provided.
      *
-     * Generated from protobuf field <code>.io.GPSLocation location = 3;</code>
-     * @param \Io\GPSLocation $var
+     * Generated from protobuf field <code>string programId = 3;</code>
+     * @param string $var
      * @return $this
      */
-    public function setLocation($var)
+    public function setProgramId($var)
     {
-        GPBUtil::checkMessage($var, \Io\GPSLocation::class);
-        $this->location = $var;
+        GPBUtil::checkString($var, True);
+        $this->programId = $var;
 
         return $this;
     }
 
     /**
-     * Optional timestamp.
+     * Address the event took place.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp timestamp = 4;</code>
-     * @return \Google\Protobuf\Timestamp
+     * Generated from protobuf field <code>string address = 4;</code>
+     * @return string
      */
-    public function getTimestamp()
+    public function getAddress()
     {
-        return isset($this->timestamp) ? $this->timestamp : null;
-    }
-
-    public function hasTimestamp()
-    {
-        return isset($this->timestamp);
-    }
-
-    public function clearTimestamp()
-    {
-        unset($this->timestamp);
+        return $this->address;
     }
 
     /**
-     * Optional timestamp.
+     * Address the event took place.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp timestamp = 4;</code>
-     * @param \Google\Protobuf\Timestamp $var
+     * Generated from protobuf field <code>string address = 4;</code>
+     * @param string $var
      * @return $this
      */
-    public function setTimestamp($var)
+    public function setAddress($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
-        $this->timestamp = $var;
+        GPBUtil::checkString($var, True);
+        $this->address = $var;
+
+        return $this;
+    }
+
+    /**
+     * Latitude the event took place.
+     *
+     * Generated from protobuf field <code>double lat = 5;</code>
+     * @return float
+     */
+    public function getLat()
+    {
+        return $this->lat;
+    }
+
+    /**
+     * Latitude the event took place.
+     *
+     * Generated from protobuf field <code>double lat = 5;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setLat($var)
+    {
+        GPBUtil::checkDouble($var);
+        $this->lat = $var;
+
+        return $this;
+    }
+
+    /**
+     * Longitude the event took place.
+     *
+     * Generated from protobuf field <code>double lon = 6;</code>
+     * @return float
+     */
+    public function getLon()
+    {
+        return $this->lon;
+    }
+
+    /**
+     * Longitude the event took place.
+     *
+     * Generated from protobuf field <code>double lon = 6;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setLon($var)
+    {
+        GPBUtil::checkDouble($var);
+        $this->lon = $var;
+
+        return $this;
+    }
+
+    /**
+     * Altitude the event took place (in metres).
+     *
+     * Generated from protobuf field <code>int32 alt = 7;</code>
+     * @return int
+     */
+    public function getAlt()
+    {
+        return $this->alt;
+    }
+
+    /**
+     * Altitude the event took place (in metres).
+     *
+     * Generated from protobuf field <code>int32 alt = 7;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setAlt($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->alt = $var;
+
+        return $this;
+    }
+
+    /**
+     * External unique ID of the event.
+     *
+     * Generated from protobuf field <code>string externalEventId = 8;</code>
+     * @return string
+     */
+    public function getExternalEventId()
+    {
+        return $this->externalEventId;
+    }
+
+    /**
+     * External unique ID of the event.
+     *
+     * Generated from protobuf field <code>string externalEventId = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setExternalEventId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->externalEventId = $var;
+
+        return $this;
+    }
+
+    /**
+     * External device ID of the device that was used to capture the event (for example when using an external scanning app).
+     *
+     * Generated from protobuf field <code>string externalDeviceId = 9;</code>
+     * @return string
+     */
+    public function getExternalDeviceId()
+    {
+        return $this->externalDeviceId;
+    }
+
+    /**
+     * External device ID of the device that was used to capture the event (for example when using an external scanning app).
+     *
+     * Generated from protobuf field <code>string externalDeviceId = 9;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setExternalDeviceId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->externalDeviceId = $var;
+
+        return $this;
+    }
+
+    /**
+     * External service ID of the service that was used for capturing the event (for example when using an external scanning app).
+     *
+     * Generated from protobuf field <code>string externalServiceId = 10;</code>
+     * @return string
+     */
+    public function getExternalServiceId()
+    {
+        return $this->externalServiceId;
+    }
+
+    /**
+     * External service ID of the service that was used for capturing the event (for example when using an external scanning app).
+     *
+     * Generated from protobuf field <code>string externalServiceId = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setExternalServiceId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->externalServiceId = $var;
+
+        return $this;
+    }
+
+    /**
+     * Any meta data (for example gathered on scanning) that is relevant to the event (# of points earner, bill spent, device meta-data, etc).
+     *
+     * Generated from protobuf field <code>map<string, string> metaData = 11;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getMetaData()
+    {
+        return $this->metaData;
+    }
+
+    /**
+     * Any meta data (for example gathered on scanning) that is relevant to the event (# of points earner, bill spent, device meta-data, etc).
+     *
+     * Generated from protobuf field <code>map<string, string> metaData = 11;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setMetaData($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->metaData = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Any relevant notes for the event.
+     *
+     * Generated from protobuf field <code>string notes = 12;</code>
+     * @return string
+     */
+    public function getNotes()
+    {
+        return $this->notes;
+    }
+
+    /**
+     * Any relevant notes for the event.
+     *
+     * Generated from protobuf field <code>string notes = 12;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setNotes($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->notes = $var;
 
         return $this;
     }

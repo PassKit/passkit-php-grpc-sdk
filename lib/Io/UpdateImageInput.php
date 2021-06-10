@@ -20,19 +20,19 @@ class UpdateImageInput extends \Google\Protobuf\Internal\Message
      */
     protected $id = '';
     /**
-     * Optional, if ommitted, the original name will remain the same.
+     * Optional, if omitted, the original name will remain the same.
      *
      * Generated from protobuf field <code>string name = 2;</code>
      */
     protected $name = '';
     /**
-     * Optional, if ommitted, the original image will remain the same.
+     * Optional, if omitted, the original image will remain the same.
      *
      * Generated from protobuf field <code>string imageData = 3;</code>
      */
     protected $imageData = '';
     /**
-     * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+     * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedImageData = 4;</code>
      */
@@ -47,11 +47,11 @@ class UpdateImageInput extends \Google\Protobuf\Internal\Message
      *     @type string $id
      *           The image id.
      *     @type string $name
-     *           Optional, if ommitted, the original name will remain the same.
+     *           Optional, if omitted, the original name will remain the same.
      *     @type string $imageData
-     *           Optional, if ommitted, the original image will remain the same.
+     *           Optional, if omitted, the original image will remain the same.
      *     @type \Io\LocalizedString $localizedImageData
-     *           Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+     *           Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
      * }
      */
     public function __construct($data = NULL) {
@@ -86,7 +86,7 @@ class UpdateImageInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional, if ommitted, the original name will remain the same.
+     * Optional, if omitted, the original name will remain the same.
      *
      * Generated from protobuf field <code>string name = 2;</code>
      * @return string
@@ -97,7 +97,7 @@ class UpdateImageInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional, if ommitted, the original name will remain the same.
+     * Optional, if omitted, the original name will remain the same.
      *
      * Generated from protobuf field <code>string name = 2;</code>
      * @param string $var
@@ -112,7 +112,7 @@ class UpdateImageInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional, if ommitted, the original image will remain the same.
+     * Optional, if omitted, the original image will remain the same.
      *
      * Generated from protobuf field <code>string imageData = 3;</code>
      * @return string
@@ -123,7 +123,7 @@ class UpdateImageInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional, if ommitted, the original image will remain the same.
+     * Optional, if omitted, the original image will remain the same.
      *
      * Generated from protobuf field <code>string imageData = 3;</code>
      * @param string $var
@@ -138,10 +138,10 @@ class UpdateImageInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+     * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedImageData = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedImageData()
     {
@@ -159,7 +159,7 @@ class UpdateImageInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+     * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedImageData = 4;</code>
      * @param \Io\LocalizedString $var

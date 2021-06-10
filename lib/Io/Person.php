@@ -81,6 +81,12 @@ class Person extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string externalId = 11;</code>
      */
     protected $externalId = '';
+    /**
+     * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+     *
+     * Generated from protobuf field <code>map<int32, string> externalIds = 12;</code>
+     */
+    private $externalIds;
 
     /**
      * Constructor.
@@ -110,6 +116,8 @@ class Person extends \Google\Protobuf\Internal\Message
      *           Telephone number. Enter in the format +{countryCode}{telephoneNumber} with no commas, spaces or other delimiters.
      *     @type string $externalId
      *           External id. Not editable.
+     *     @type array|\Google\Protobuf\Internal\MapField $externalIds
+     *           Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
      * }
      */
     public function __construct($data = NULL) {
@@ -303,7 +311,7 @@ class Person extends \Google\Protobuf\Internal\Message
      * Date of birth.
      *
      * Generated from protobuf field <code>.io.Date dateOfBirth = 8;</code>
-     * @return \Io\Date
+     * @return \Io\Date|null
      */
     public function getDateOfBirth()
     {
@@ -409,6 +417,32 @@ class Person extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->externalId = $var;
+
+        return $this;
+    }
+
+    /**
+     * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+     *
+     * Generated from protobuf field <code>map<int32, string> externalIds = 12;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getExternalIds()
+    {
+        return $this->externalIds;
+    }
+
+    /**
+     * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+     *
+     * Generated from protobuf field <code>map<int32, string> externalIds = 12;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setExternalIds($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::INT32, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->externalIds = $arr;
 
         return $this;
     }

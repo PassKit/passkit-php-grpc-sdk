@@ -68,7 +68,7 @@ class SinkSubscriptionPayload extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.Pass pass = 2;</code>
-     * @return \Io\Pass
+     * @return \Io\Pass|null
      */
     public function getPass()
     {

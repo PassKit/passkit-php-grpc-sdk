@@ -18,7 +18,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * PassKit generated ticket id (22 characters).
      *
-     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $id = '';
     /**
@@ -84,13 +84,13 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * Indicates if the holder of the ticket opted out to receive marketing promotions (defaults to false).
      *
-     * Generated from protobuf field <code>bool optOut = 12;</code>
+     * Generated from protobuf field <code>.io.Toggle optOut = 12;</code>
      */
-    protected $optOut = false;
+    protected $optOut = 0;
     /**
      * Holds the ticket status.
      *
-     * Generated from protobuf field <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $status = 0;
     /**
@@ -126,13 +126,13 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * The date the ticket was created. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $created = null;
     /**
      * The date the ticket last updated. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $updated = null;
 
@@ -164,7 +164,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      *           The ticket holder information. Stored encrypted in PassKit's database.
      *     @type array|\Google\Protobuf\Internal\MapField $metaData
      *           Any other meta fields for the ticket that are not covered in the Ticket Object / API (i.e. you might want to capture ticket information specific to your process).
-     *     @type bool $optOut
+     *     @type int $optOut
      *           Indicates if the holder of the ticket opted out to receive marketing promotions (defaults to false).
      *     @type int $status
      *           Holds the ticket status.
@@ -192,7 +192,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * PassKit generated ticket id (22 characters).
      *
-     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getId()
@@ -203,7 +203,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * PassKit generated ticket id (22 characters).
      *
-     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -245,7 +245,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      * The event that the ticket is for. Can provide event id, or the whole event object - if the event doesn't exist it will be created. The combination of event.production.id, event.startDate, event.venue.uid & ticket.ticketTypeUid is enforced unique in the system.
      *
      * Generated from protobuf field <code>.event_tickets.Event event = 3;</code>
-     * @return \Event_tickets\Event
+     * @return \Event_tickets\Event|null
      */
     public function getEvent()
     {
@@ -281,7 +281,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      * The ticket type the ticket is for.
      *
      * Generated from protobuf field <code>.event_tickets.TicketType ticketType = 4;</code>
-     * @return \Event_tickets\TicketType
+     * @return \Event_tickets\TicketType|null
      */
     public function getTicketType()
     {
@@ -395,7 +395,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      * The seat info for the ticket.
      *
      * Generated from protobuf field <code>.event_tickets.Seat seatInfo = 8;</code>
-     * @return \Event_tickets\Seat
+     * @return \Event_tickets\Seat|null
      */
     public function getSeatInfo()
     {
@@ -431,7 +431,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      * The face value details for the ticket.
      *
      * Generated from protobuf field <code>.event_tickets.FaceValue faceValue = 9;</code>
-     * @return \Event_tickets\FaceValue
+     * @return \Event_tickets\FaceValue|null
      */
     public function getFaceValue()
     {
@@ -467,7 +467,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      * The ticket holder information. Stored encrypted in PassKit's database.
      *
      * Generated from protobuf field <code>.io.Person person = 10;</code>
-     * @return \Io\Person
+     * @return \Io\Person|null
      */
     public function getPerson()
     {
@@ -528,8 +528,8 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * Indicates if the holder of the ticket opted out to receive marketing promotions (defaults to false).
      *
-     * Generated from protobuf field <code>bool optOut = 12;</code>
-     * @return bool
+     * Generated from protobuf field <code>.io.Toggle optOut = 12;</code>
+     * @return int
      */
     public function getOptOut()
     {
@@ -539,13 +539,13 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * Indicates if the holder of the ticket opted out to receive marketing promotions (defaults to false).
      *
-     * Generated from protobuf field <code>bool optOut = 12;</code>
-     * @param bool $var
+     * Generated from protobuf field <code>.io.Toggle optOut = 12;</code>
+     * @param int $var
      * @return $this
      */
     public function setOptOut($var)
     {
-        GPBUtil::checkBool($var);
+        GPBUtil::checkEnum($var, \Io\Toggle::class);
         $this->optOut = $var;
 
         return $this;
@@ -554,7 +554,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * Holds the ticket status.
      *
-     * Generated from protobuf field <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return int
      */
     public function getStatus()
@@ -565,7 +565,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * Holds the ticket status.
      *
-     * Generated from protobuf field <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -581,7 +581,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      * Optional field to set when the ticket expires. When the expiry date hits, it will automatically gray out the barcode.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiryDate = 14;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getExpiryDate()
     {
@@ -617,7 +617,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      * Contains details about the redemption (if the ticket is in a redeemed state). Not writable; set by the redeem endpoint.
      *
      * Generated from protobuf field <code>.event_tickets.RedemptionDetails redemptionDetails = 15;</code>
-     * @return \Event_tickets\RedemptionDetails
+     * @return \Event_tickets\RedemptionDetails|null
      */
     public function getRedemptionDetails()
     {
@@ -679,7 +679,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      * Optional Pass level overrides for proximity & images.
      *
      * Generated from protobuf field <code>.io.PassOverrides passOverrides = 17;</code>
-     * @return \Io\PassOverrides
+     * @return \Io\PassOverrides|null
      */
     public function getPassOverrides()
     {
@@ -715,7 +715,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      * Pass Metadata hold meta data about the pass like status, lifecycle, utm details and installation data. Cannot be set via the API.
      *
      * Generated from protobuf field <code>.io.Metadata passMetaData = 18;</code>
-     * @return \Io\Metadata
+     * @return \Io\Metadata|null
      */
     public function getPassMetaData()
     {
@@ -750,8 +750,8 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * The date the ticket was created. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Timestamp
+     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -771,7 +771,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * The date the ticket was created. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -786,8 +786,8 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * The date the ticket last updated. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Timestamp
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {
@@ -807,7 +807,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
     /**
      * The date the ticket last updated. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */

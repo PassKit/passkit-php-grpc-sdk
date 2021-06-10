@@ -187,7 +187,7 @@ class MemberEvent extends \Google\Protobuf\Internal\Message
      * Member that the event belongs to. This does not contain the full member details, only the key data.
      *
      * Generated from protobuf field <code>.members.MemberMininmal member = 2;</code>
-     * @return \Members\MemberMininmal
+     * @return \Members\MemberMininmal|null
      */
     public function getMember()
     {
@@ -509,7 +509,7 @@ class MemberEvent extends \Google\Protobuf\Internal\Message
      * The event date.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp date = 14;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getDate()
     {
@@ -545,7 +545,7 @@ class MemberEvent extends \Google\Protobuf\Internal\Message
      * The date until the event is retained in the PassKit database.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp retainedUntilDate = 15;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getRetainedUntilDate()
     {
@@ -581,7 +581,7 @@ class MemberEvent extends \Google\Protobuf\Internal\Message
      * The date the event record was created in the PassKit database.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 16;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {

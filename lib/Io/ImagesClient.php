@@ -20,6 +20,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\ProfileImageInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function setProfileImage(\Io\ProfileImageInput $argument,
       $metadata = [], $options = []) {
@@ -33,6 +34,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Google\Protobuf\GPBEmpty $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getProfileImage(\Google\Protobuf\GPBEmpty $argument,
       $metadata = [], $options = []) {
@@ -43,22 +45,10 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Io\Id $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     */
-    public function getProfileImageById(\Io\Id $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/io.Images/getProfileImageById',
-        $argument,
-        ['\Io\Url', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \Io\CreateImageInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createImages(\Io\CreateImageInput $argument,
       $metadata = [], $options = []) {
@@ -72,6 +62,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\UpdateImageInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateImage(\Io\UpdateImageInput $argument,
       $metadata = [], $options = []) {
@@ -85,6 +76,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getImageURL(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -95,29 +87,16 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
-     * returns a zip bundle containing all images for that ID
-     * @param \Io\Id $argument input argument
+     * @param \Io\StampImageRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
-    public function getImageBundle(\Io\Id $argument,
+    public function getStampImageURL(\Io\StampImageRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/io.Images/getImageBundle',
+        return $this->_simpleRequest('/io.Images/getStampImageURL',
         $argument,
-        ['\Io\ImageBundle', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Io\Id $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     */
-    public function getImageData(\Io\Id $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/io.Images/getImageData',
-        $argument,
-        ['\Io\ImageRecord', 'decode'],
+        ['\Io\Url', 'decode'],
         $metadata, $options);
     }
 
@@ -125,6 +104,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\LocalizedImageInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getLocalizedImageURL(\Io\LocalizedImageInput $argument,
       $metadata = [], $options = []) {
@@ -138,6 +118,50 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function getProfileImageById(\Io\Id $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Images/getProfileImageById',
+        $argument,
+        ['\Io\Url', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * returns a zip bundle containing all images for that ID
+     * @param \Io\Id $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function getImageBundle(\Io\Id $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Images/getImageBundle',
+        $argument,
+        ['\Io\ImageBundle', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\Id $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function getImageData(\Io\Id $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Images/getImageData',
+        $argument,
+        ['\Io\ImageRecord', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\Id $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteImage(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -151,6 +175,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\LocalizedImageInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteLocalizedImage(\Io\LocalizedImageInput $argument,
       $metadata = [], $options = []) {
@@ -164,6 +189,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listImagesForUserDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -177,6 +203,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listImagesForUser(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -190,6 +217,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listImagesDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -203,6 +231,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listImages(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -216,6 +245,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countImagesDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -229,6 +259,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countImages(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -242,6 +273,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countImagesForUserDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -255,6 +287,7 @@ class ImagesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countImagesForUser(\Io\Filters $argument,
       $metadata = [], $options = []) {

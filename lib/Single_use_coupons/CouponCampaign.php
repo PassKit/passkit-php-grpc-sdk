@@ -149,7 +149,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
      * Localized name of the coupon campaign.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedName = 3;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedName()
     {
@@ -263,7 +263,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
      * The date the campaign was created.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 10;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -299,7 +299,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
      * The date the campaign updated.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 11;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {

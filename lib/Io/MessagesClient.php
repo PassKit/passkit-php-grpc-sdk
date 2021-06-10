@@ -20,6 +20,7 @@ class MessagesClient extends \Grpc\BaseStub {
      * @param \Io\Message $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function sendMessage(\Io\Message $argument,
       $metadata = [], $options = []) {
@@ -33,6 +34,7 @@ class MessagesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function getMessages(\Io\Pagination $argument,
       $metadata = [], $options = []) {

@@ -79,7 +79,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      * Optional field that can be set if offers can only be redeemed after a certain date. Defaults to the offer issue start date. Needs to be greater than / equal to the offer issue start date, and less than / equal to offer issue end date.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp redemptionStartDate = 1;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getRedemptionStartDate()
     {
@@ -115,7 +115,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      * Optional field that can be set if offers can only be redeemed until a certain date. Defaults to the offer issue end date. Needs to be less than / equal to the offer issue end date.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp redemptionEndDate = 2;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getRedemptionEndDate()
     {
@@ -177,7 +177,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      * Settings for code provided on redemption; a list of valid codes and possible invalid-code error message needs to be provided.
      *
      * Generated from protobuf field <code>.single_use_coupons.CustomerInitiatedCodeProvideOnRedeemSettings codeProvidedOnRedeemSettings = 5;</code>
-     * @return \Single_use_coupons\CustomerInitiatedCodeProvideOnRedeemSettings
+     * @return \Single_use_coupons\CustomerInitiatedCodeProvideOnRedeemSettings|null
      */
     public function getCodeProvidedOnRedeemSettings()
     {
@@ -213,7 +213,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      * Settings for fixed code redemption.
      *
      * Generated from protobuf field <code>.single_use_coupons.CustomerInitiatedFixedCodeSettings fixedCodeSettings = 6;</code>
-     * @return \Single_use_coupons\CustomerInitiatedFixedCodeSettings
+     * @return \Single_use_coupons\CustomerInitiatedFixedCodeSettings|null
      */
     public function getFixedCodeSettings()
     {
@@ -249,7 +249,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      * Standard redemption page design, hosted by PassKit. Mandatory field if the type is any of the customer initiated redemptions.
      *
      * Generated from protobuf field <code>.single_use_coupons.StandardPassKitHostedPage standardSettings = 7;</code>
-     * @return \Single_use_coupons\StandardPassKitHostedPage
+     * @return \Single_use_coupons\StandardPassKitHostedPage|null
      */
     public function getStandardSettings()
     {

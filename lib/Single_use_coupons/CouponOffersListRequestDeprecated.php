@@ -63,7 +63,7 @@ class CouponOffersListRequestDeprecated extends \Google\Protobuf\Internal\Messag
 
     /**
      * Generated from protobuf field <code>.io.Pagination pagination = 2;</code>
-     * @return \Io\Pagination
+     * @return \Io\Pagination|null
      */
     public function getPagination()
     {

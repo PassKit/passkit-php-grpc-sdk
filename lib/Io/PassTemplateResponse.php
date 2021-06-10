@@ -64,7 +64,7 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.PassTemplate template = 1;</code>
-     * @return \Io\PassTemplate
+     * @return \Io\PassTemplate|null
      */
     public function getTemplate()
     {
@@ -184,7 +184,7 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 6;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreatedAt()
     {
@@ -216,7 +216,7 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 7;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdatedAt()
     {

@@ -81,7 +81,7 @@ class Passenger extends \Google\Protobuf\Internal\Message
      * Personal details of the passenger.
      *
      * Generated from protobuf field <code>.io.Person passengerDetails = 1;</code>
-     * @return \Io\Person
+     * @return \Io\Person|null
      */
     public function getPassengerDetails()
     {
@@ -117,7 +117,7 @@ class Passenger extends \Google\Protobuf\Internal\Message
      * Frequent flyer details for th passenger.
      *
      * Generated from protobuf field <code>.flights.FrequentFlyerInfo frequentFlyerInfo = 2;</code>
-     * @return \Flights\FrequentFlyerInfo
+     * @return \Flights\FrequentFlyerInfo|null
      */
     public function getFrequentFlyerInfo()
     {
@@ -153,7 +153,7 @@ class Passenger extends \Google\Protobuf\Internal\Message
      * Optional identity details, only required if need to be rendered on the pass, or for analytics purposes.
      *
      * Generated from protobuf field <code>.flights.IdentityDetails identityDetails = 3;</code>
-     * @return \Flights\IdentityDetails
+     * @return \Flights\IdentityDetails|null
      */
     public function getIdentityDetails()
     {
@@ -215,7 +215,7 @@ class Passenger extends \Google\Protobuf\Internal\Message
      * Details of the infant travelling with the passenger.
      *
      * Generated from protobuf field <code>.flights.Infant infantDetails = 5;</code>
-     * @return \Flights\Infant
+     * @return \Flights\Infant|null
      */
     public function getInfantDetails()
     {

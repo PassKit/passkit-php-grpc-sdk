@@ -26,6 +26,7 @@ class AnalyticsClient extends \Grpc\BaseStub {
      * @param \Io\AnalyticsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getAnalytics(\Io\AnalyticsRequest $argument,
       $metadata = [], $options = []) {

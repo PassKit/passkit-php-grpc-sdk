@@ -83,6 +83,18 @@ class ImageIds extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string appImage = 17;</code>
      */
     protected $appImage = '';
+    /**
+     * Generated from protobuf field <code>string stampedImage = 18;</code>
+     */
+    protected $stampedImage = '';
+    /**
+     * Generated from protobuf field <code>string unstampedImage = 19;</code>
+     */
+    protected $unstampedImage = '';
+    /**
+     * Generated from protobuf field <code>string stampImage = 20;</code>
+     */
+    protected $stampImage = '';
 
     /**
      * Constructor.
@@ -107,6 +119,9 @@ class ImageIds extends \Google\Protobuf\Internal\Message
      *     @type string $message
      *     @type string $profile
      *     @type string $appImage
+     *     @type string $stampedImage
+     *     @type string $unstampedImage
+     *     @type string $stampImage
      * }
      */
     public function __construct($data = NULL) {
@@ -484,6 +499,72 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->appImage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string stampedImage = 18;</code>
+     * @return string
+     */
+    public function getStampedImage()
+    {
+        return $this->stampedImage;
+    }
+
+    /**
+     * Generated from protobuf field <code>string stampedImage = 18;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setStampedImage($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->stampedImage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string unstampedImage = 19;</code>
+     * @return string
+     */
+    public function getUnstampedImage()
+    {
+        return $this->unstampedImage;
+    }
+
+    /**
+     * Generated from protobuf field <code>string unstampedImage = 19;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setUnstampedImage($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->unstampedImage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string stampImage = 20;</code>
+     * @return string
+     */
+    public function getStampImage()
+    {
+        return $this->stampImage;
+    }
+
+    /**
+     * Generated from protobuf field <code>string stampImage = 20;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setStampImage($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->stampImage = $var;
 
         return $this;
     }

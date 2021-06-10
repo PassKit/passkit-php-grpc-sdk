@@ -26,6 +26,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\Program $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createProgram(\Members\Program $argument,
       $metadata = [], $options = []) {
@@ -40,6 +41,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\Program $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateProgram(\Members\Program $argument,
       $metadata = [], $options = []) {
@@ -54,6 +56,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getProgram(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -68,6 +71,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\ProgramCopyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function copyProgram(\Members\ProgramCopyRequest $argument,
       $metadata = [], $options = []) {
@@ -82,6 +86,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteProgram(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -96,6 +101,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listProgramsDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -110,6 +116,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listPrograms(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -124,6 +131,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\Tier $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createTier(\Members\Tier $argument,
       $metadata = [], $options = []) {
@@ -138,6 +146,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\Tier $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateTier(\Members\Tier $argument,
       $metadata = [], $options = []) {
@@ -152,6 +161,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\TierRequestInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getTier(\Members\TierRequestInput $argument,
       $metadata = [], $options = []) {
@@ -166,6 +176,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\TierRequestInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteTier(\Members\TierRequestInput $argument,
       $metadata = [], $options = []) {
@@ -180,6 +191,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\ListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listTiersDeprecated(\Members\ListRequestDeprecated $argument,
       $metadata = [], $options = []) {
@@ -194,6 +206,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listTiers(\Members\ListRequest $argument,
       $metadata = [], $options = []) {
@@ -208,6 +221,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\Member $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function enrolMember(\Members\Member $argument,
       $metadata = [], $options = []) {
@@ -222,6 +236,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\Member $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function enrolMemberPublic(\Members\Member $argument,
       $metadata = [], $options = []) {
@@ -235,6 +250,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getMemberRecordById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -248,6 +264,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\MemberRecordByExternalIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getMemberRecordByExternalId(\Members\MemberRecordByExternalIdRequest $argument,
       $metadata = [], $options = []) {
@@ -261,12 +278,13 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\MemberCheckInOutRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function checkInMember(\Members\MemberCheckInOutRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/members.Members/checkInMember',
         $argument,
-        ['\Google\Protobuf\GPBEmpty', 'decode'],
+        ['\Members\MemberEvent', 'decode'],
         $metadata, $options);
     }
 
@@ -274,12 +292,13 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\MemberCheckInOutRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function checkOutMember(\Members\MemberCheckInOutRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/members.Members/checkOutMember',
         $argument,
-        ['\Google\Protobuf\GPBEmpty', 'decode'],
+        ['\Members\MemberEvent', 'decode'],
         $metadata, $options);
     }
 
@@ -287,6 +306,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\ListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listMembersDeprecated(\Members\ListRequestDeprecated $argument,
       $metadata = [], $options = []) {
@@ -300,6 +320,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listMembers(\Members\ListRequest $argument,
       $metadata = [], $options = []) {
@@ -313,6 +334,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\Member $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateMember(\Members\Member $argument,
       $metadata = [], $options = []) {
@@ -327,6 +349,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\EarnBurnPointsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function earnPoints(\Members\EarnBurnPointsRequest $argument,
       $metadata = [], $options = []) {
@@ -341,6 +364,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\EarnBurnPointsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function burnPoints(\Members\EarnBurnPointsRequest $argument,
       $metadata = [], $options = []) {
@@ -354,6 +378,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\SetPointsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function setPoints(\Members\SetPointsRequest $argument,
       $metadata = [], $options = []) {
@@ -364,9 +389,24 @@ class MembersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Members\ChangeTierRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function changeMemberTier(\Members\ChangeTierRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/members.Members/changeMemberTier',
+        $argument,
+        ['\Members\MemberEvent', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Members\MemberSegmentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateMembersBySegment(\Members\MemberSegmentRequest $argument,
       $metadata = [], $options = []) {
@@ -380,6 +420,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\MemberSegmentRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteMembersBySegment(\Members\MemberSegmentRequest $argument,
       $metadata = [], $options = []) {
@@ -393,6 +434,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\Member $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteMember(\Members\Member $argument,
       $metadata = [], $options = []) {
@@ -406,6 +448,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\ListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countMembersDeprecated(\Members\ListRequestDeprecated $argument,
       $metadata = [], $options = []) {
@@ -419,6 +462,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countMembers(\Members\ListRequest $argument,
       $metadata = [], $options = []) {
@@ -432,6 +476,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function getMessageHistoryForMember(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -445,6 +490,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getMetaKeysForProgram(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -458,6 +504,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\UpdateExpiryRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function renewMembersExpiry(\Members\UpdateExpiryRequest $argument,
       $metadata = [], $options = []) {
@@ -468,9 +515,38 @@ class MembersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Members\MemberExpiry $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function updateMemberExpiry(\Members\MemberExpiry $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/members.Members/updateMemberExpiry',
+        $argument,
+        ['\Io\Id', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\PersonRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function patchPerson(\Io\PersonRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/members.Members/patchPerson',
+        $argument,
+        ['\Io\Id', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Members\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countMemberEvents(\Members\ListRequest $argument,
       $metadata = [], $options = []) {
@@ -484,6 +560,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listMemberEvents(\Members\ListRequest $argument,
       $metadata = [], $options = []) {
@@ -497,6 +574,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getMemberEventMetaKeysForProgram(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -510,6 +588,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listEventsForMember(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -523,6 +602,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Members\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteMemberEvents(\Members\ListRequest $argument,
       $metadata = [], $options = []) {
@@ -536,6 +616,7 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteEventsForMember(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -549,12 +630,27 @@ class MembersClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteMemberEvent(\Io\Id $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/members.Members/deleteMemberEvent',
         $argument,
         ['\Google\Protobuf\GPBEmpty', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\Id $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function getProgramEnrolment(\Io\Id $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/members.Members/getProgramEnrolment',
+        $argument,
+        ['\Io\EnrolmentUrls', 'decode'],
         $metadata, $options);
     }
 

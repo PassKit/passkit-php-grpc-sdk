@@ -331,7 +331,7 @@ class Member extends \Google\Protobuf\Internal\Message
      * Personal details of the member.
      *
      * Generated from protobuf field <code>.io.Person person = 6;</code>
-     * @return \Io\Person
+     * @return \Io\Person|null
      */
     public function getPerson()
     {
@@ -497,7 +497,7 @@ class Member extends \Google\Protobuf\Internal\Message
      * Indicates when the membership card expires. When the expiry date hits, it will automatically gray out the barcode.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiryDate = 18;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getExpiryDate()
     {
@@ -559,7 +559,7 @@ class Member extends \Google\Protobuf\Internal\Message
      * Pass level overrides for proximity & images.
      *
      * Generated from protobuf field <code>.io.PassOverrides passOverrides = 20;</code>
-     * @return \Io\PassOverrides
+     * @return \Io\PassOverrides|null
      */
     public function getPassOverrides()
     {
@@ -595,7 +595,7 @@ class Member extends \Google\Protobuf\Internal\Message
      * Pass Metadata.
      *
      * Generated from protobuf field <code>.io.Metadata passMetaData = 21;</code>
-     * @return \Io\Metadata
+     * @return \Io\Metadata|null
      */
     public function getPassMetaData()
     {
@@ -657,7 +657,7 @@ class Member extends \Google\Protobuf\Internal\Message
      * The date the current tier was awarded.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp currentTierAwarded = 27;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCurrentTierAwarded()
     {
@@ -693,7 +693,7 @@ class Member extends \Google\Protobuf\Internal\Message
      * The date the current tier expires.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp currentTierExpires = 28;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCurrentTierExpires()
     {
@@ -729,7 +729,7 @@ class Member extends \Google\Protobuf\Internal\Message
      * The date the member was created in the PassKit system.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 29;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -765,7 +765,7 @@ class Member extends \Google\Protobuf\Internal\Message
      * The date the member was last updated in the PassKit system.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 30;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {

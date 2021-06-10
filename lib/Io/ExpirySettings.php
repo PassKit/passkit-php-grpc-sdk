@@ -68,7 +68,7 @@ class ExpirySettings extends \Google\Protobuf\Internal\Message
      * Please set expiryType as EXPIRE_ON_FIXED_DATE.
      *
      * Generated from protobuf field <code>.io.Date fixedExpiryDate = 2;</code>
-     * @return \Io\Date
+     * @return \Io\Date|null
      */
     public function getFixedExpiryDate()
     {

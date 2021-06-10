@@ -100,7 +100,7 @@ class WebhookConfig extends \Google\Protobuf\Internal\Message
      * Set source fields (fields used within the PassKit platform) and destination fields (fields set on the third party app).
      *
      * Generated from protobuf field <code>.io.FieldMapping fieldMapping = 3;</code>
-     * @return \Io\FieldMapping
+     * @return \Io\FieldMapping|null
      */
     public function getFieldMapping()
     {

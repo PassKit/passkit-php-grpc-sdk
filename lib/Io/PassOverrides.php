@@ -9,42 +9,48 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * PassObject contains pass-object level details that are common across protocols.
+ * PassOverrides contains optional pass-object level details. Overrides any template level values.
  *
  * Generated from protobuf message <code>io.PassOverrides</code>
  */
 class PassOverrides extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Image ID's of images to override for this pass
+     * Image ID's of images to override for this pass.
      *
      * Generated from protobuf field <code>.io.ImageIds imageIds = 1;</code>
      */
     protected $imageIds = null;
     /**
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *
-     * Generated from protobuf field <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $locations;
     /**
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *
-     * Generated from protobuf field <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $beacons;
     /**
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      *
-     * Generated from protobuf field <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $links;
     /**
-     * stores custom pass colors
+     * Stores custom pass colors.
      *
      * Generated from protobuf field <code>.io.Colors colors = 6;</code>
      */
     protected $colors = null;
+    /**
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *
+     * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+     */
+    private $associatedStoreIdentifiers;
 
     /**
      * Constructor.
@@ -53,15 +59,17 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Io\ImageIds $imageIds
-     *           Image ID's of images to override for this pass
+     *           Image ID's of images to override for this pass.
      *     @type \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $locations
-     *           A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     *           A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *     @type \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $beacons
-     *           A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     *           A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *     @type \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $links
-     *           A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     *           A list of (personalized) links to be shown on the pass.
      *     @type \Io\Colors $colors
-     *           stores custom pass colors
+     *           Stores custom pass colors.
+     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $associatedStoreIdentifiers
+     *           A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * }
      */
     public function __construct($data = NULL) {
@@ -70,10 +78,10 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Image ID's of images to override for this pass
+     * Image ID's of images to override for this pass.
      *
      * Generated from protobuf field <code>.io.ImageIds imageIds = 1;</code>
-     * @return \Io\ImageIds
+     * @return \Io\ImageIds|null
      */
     public function getImageIds()
     {
@@ -91,7 +99,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Image ID's of images to override for this pass
+     * Image ID's of images to override for this pass.
      *
      * Generated from protobuf field <code>.io.ImageIds imageIds = 1;</code>
      * @param \Io\ImageIds $var
@@ -106,9 +114,9 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *
-     * Generated from protobuf field <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getLocations()
@@ -117,9 +125,9 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *
-     * Generated from protobuf field <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -132,9 +140,9 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *
-     * Generated from protobuf field <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getBeacons()
@@ -143,9 +151,9 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *
-     * Generated from protobuf field <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -158,9 +166,9 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      *
-     * Generated from protobuf field <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getLinks()
@@ -169,9 +177,9 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      *
-     * Generated from protobuf field <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -184,10 +192,10 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * stores custom pass colors
+     * Stores custom pass colors.
      *
      * Generated from protobuf field <code>.io.Colors colors = 6;</code>
-     * @return \Io\Colors
+     * @return \Io\Colors|null
      */
     public function getColors()
     {
@@ -205,7 +213,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * stores custom pass colors
+     * Stores custom pass colors.
      *
      * Generated from protobuf field <code>.io.Colors colors = 6;</code>
      * @param \Io\Colors $var
@@ -215,6 +223,32 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Io\Colors::class);
         $this->colors = $var;
+
+        return $this;
+    }
+
+    /**
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *
+     * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getAssociatedStoreIdentifiers()
+    {
+        return $this->associatedStoreIdentifiers;
+    }
+
+    /**
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *
+     * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setAssociatedStoreIdentifiers($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::UINT32);
+        $this->associatedStoreIdentifiers = $arr;
 
         return $this;
     }

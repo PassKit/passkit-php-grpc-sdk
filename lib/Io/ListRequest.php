@@ -88,7 +88,7 @@ class ListRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.Filters filters = 3;</code>
-     * @return \Io\Filters
+     * @return \Io\Filters|null
      */
     public function getFilters()
     {

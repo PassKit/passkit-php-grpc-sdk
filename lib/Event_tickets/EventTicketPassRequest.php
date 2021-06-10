@@ -41,7 +41,7 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.Id ticketId = 1;</code>
-     * @return \Io\Id
+     * @return \Io\Id|null
      */
     public function getTicketId()
     {
@@ -68,7 +68,7 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.event_tickets.TicketNumberRequest ticketNumber = 2;</code>
-     * @return \Event_tickets\TicketNumberRequest
+     * @return \Event_tickets\TicketNumberRequest|null
      */
     public function getTicketNumber()
     {
@@ -95,7 +95,7 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.event_tickets.OrderNumberRequest orderNumber = 3;</code>
-     * @return \Event_tickets\OrderNumberRequest
+     * @return \Event_tickets\OrderNumberRequest|null
      */
     public function getOrderNumber()
     {

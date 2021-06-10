@@ -41,6 +41,14 @@ class GetUserResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 6;</code>
      */
     protected $createdAt = null;
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp expiresAt = 7;</code>
+     */
+    protected $expiresAt = null;
+    /**
+     * Generated from protobuf field <code>string regionId = 8;</code>
+     */
+    protected $regionId = '';
 
     /**
      * Constructor.
@@ -55,6 +63,8 @@ class GetUserResponse extends \Google\Protobuf\Internal\Message
      *     @type int|string $companyStatus
      *           used for checking production, etc.
      *     @type \Google\Protobuf\Timestamp $createdAt
+     *     @type \Google\Protobuf\Timestamp $expiresAt
+     *     @type string $regionId
      * }
      */
     public function __construct($data = NULL) {
@@ -178,7 +188,7 @@ class GetUserResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 6;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreatedAt()
     {
@@ -204,6 +214,60 @@ class GetUserResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
         $this->createdAt = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp expiresAt = 7;</code>
+     * @return \Google\Protobuf\Timestamp|null
+     */
+    public function getExpiresAt()
+    {
+        return isset($this->expiresAt) ? $this->expiresAt : null;
+    }
+
+    public function hasExpiresAt()
+    {
+        return isset($this->expiresAt);
+    }
+
+    public function clearExpiresAt()
+    {
+        unset($this->expiresAt);
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.Timestamp expiresAt = 7;</code>
+     * @param \Google\Protobuf\Timestamp $var
+     * @return $this
+     */
+    public function setExpiresAt($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
+        $this->expiresAt = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string regionId = 8;</code>
+     * @return string
+     */
+    public function getRegionId()
+    {
+        return $this->regionId;
+    }
+
+    /**
+     * Generated from protobuf field <code>string regionId = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRegionId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->regionId = $var;
 
         return $this;
     }

@@ -383,7 +383,7 @@ class Message extends \Google\Protobuf\Internal\Message
      * Localized title of the message.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedTitle = 9;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedTitle()
     {
@@ -445,7 +445,7 @@ class Message extends \Google\Protobuf\Internal\Message
      * Localized content of the message.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedContent = 11;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedContent()
     {
@@ -481,7 +481,7 @@ class Message extends \Google\Protobuf\Internal\Message
      * Start date indicates when the message is shown on the pass.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp startDate = 12;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getStartDate()
     {
@@ -517,7 +517,7 @@ class Message extends \Google\Protobuf\Internal\Message
      * End date indicates when the message is removed from the pass.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp endDate = 13;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getEndDate()
     {
@@ -553,7 +553,7 @@ class Message extends \Google\Protobuf\Internal\Message
      * optional filter used determine which members qualify for this message.
      *
      * Generated from protobuf field <code>.io.Filter filter = 14;</code>
-     * @return \Io\Filter
+     * @return \Io\Filter|null
      */
     public function getFilter()
     {
@@ -667,7 +667,7 @@ class Message extends \Google\Protobuf\Internal\Message
      * The date the message was created in the PassKit system.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 18;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {

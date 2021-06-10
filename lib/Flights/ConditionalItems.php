@@ -54,7 +54,7 @@ class ConditionalItems extends \Google\Protobuf\Internal\Message
     /**
      * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.\n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.\n2-4: carrier numeric code.\n5-10: carrier initial tag number (leading zeros).\n11-13: number of consecutive tags (allows for up to 999 tags).\nUp to 2 additional, non-consecutive tags can be added.
      *
-     * Generated from protobuf field <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $baggageTagNumber;
     /**
@@ -199,7 +199,7 @@ class ConditionalItems extends \Google\Protobuf\Internal\Message
      * Date of boarding pass issuance, local to the boarding point.
      *
      * Generated from protobuf field <code>.io.Date boardingPassIssueDate = 4;</code>
-     * @return \Io\Date
+     * @return \Io\Date|null
      */
     public function getBoardingPassIssueDate()
     {
@@ -286,7 +286,7 @@ class ConditionalItems extends \Google\Protobuf\Internal\Message
     /**
      * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.\n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.\n2-4: carrier numeric code.\n5-10: carrier initial tag number (leading zeros).\n11-13: number of consecutive tags (allows for up to 999 tags).\nUp to 2 additional, non-consecutive tags can be added.
      *
-     * Generated from protobuf field <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getBaggageTagNumber()
@@ -297,7 +297,7 @@ class ConditionalItems extends \Google\Protobuf\Internal\Message
     /**
      * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.\n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.\n2-4: carrier numeric code.\n5-10: carrier initial tag number (leading zeros).\n11-13: number of consecutive tags (allows for up to 999 tags).\nUp to 2 additional, non-consecutive tags can be added.
      *
-     * Generated from protobuf field <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

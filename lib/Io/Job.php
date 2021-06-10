@@ -257,7 +257,7 @@ class Job extends \Google\Protobuf\Internal\Message
      * Defines the recurrence schedule of the job.
      *
      * Generated from protobuf field <code>.io.Schedule schedule = 6;</code>
-     * @return \Io\Schedule
+     * @return \Io\Schedule|null
      */
     public function getSchedule()
     {
@@ -293,7 +293,7 @@ class Job extends \Google\Protobuf\Internal\Message
      * The date the job was created in the PassKit system.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 7;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -329,7 +329,7 @@ class Job extends \Google\Protobuf\Internal\Message
      * The date the job was updated in the PassKit system.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 8;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {
@@ -365,7 +365,7 @@ class Job extends \Google\Protobuf\Internal\Message
      * The date the job will run for the first time in the PassKit system.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp firstRun = 9;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFirstRun()
     {
@@ -401,7 +401,7 @@ class Job extends \Google\Protobuf\Internal\Message
      * The date the job will run for the last time in the PassKit system.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp finalRun = 10;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFinalRun()
     {
@@ -437,7 +437,7 @@ class Job extends \Google\Protobuf\Internal\Message
      * The date the job will run next in the PassKit system.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp nextRun = 11;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getNextRun()
     {
@@ -473,7 +473,7 @@ class Job extends \Google\Protobuf\Internal\Message
      * The date the job was last run in the PassKit system.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp lastRun = 12;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getLastRun()
     {

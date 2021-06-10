@@ -18,13 +18,13 @@ class Port extends \Google\Protobuf\Internal\Message
     /**
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      *
-     * Generated from protobuf field <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $iataAirportCode = '';
     /**
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      *
-     * Generated from protobuf field <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $icaoAirportCode = '';
     /**
@@ -96,7 +96,7 @@ class Port extends \Google\Protobuf\Internal\Message
     /**
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      *
-     * Generated from protobuf field <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getIataAirportCode()
@@ -107,7 +107,7 @@ class Port extends \Google\Protobuf\Internal\Message
     /**
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      *
-     * Generated from protobuf field <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -122,7 +122,7 @@ class Port extends \Google\Protobuf\Internal\Message
     /**
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      *
-     * Generated from protobuf field <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getIcaoAirportCode()
@@ -133,7 +133,7 @@ class Port extends \Google\Protobuf\Internal\Message
     /**
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      *
-     * Generated from protobuf field <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -175,7 +175,7 @@ class Port extends \Google\Protobuf\Internal\Message
      * The localized name of the city to be displayed on the boarding pass.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedCityName = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedCityName()
     {
@@ -237,7 +237,7 @@ class Port extends \Google\Protobuf\Internal\Message
      * The localized name of the airport to be displayed on the boarding pass above the airport code.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedAirportName = 6;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedAirportName()
     {

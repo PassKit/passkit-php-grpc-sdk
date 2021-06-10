@@ -15,9 +15,17 @@ class Note
           return;
         }
         \GPBMetadata\Google\Protobuf\Timestamp::initOnce();
-        $pool->internalAddGeneratedFile(hex2bin(
-            "0acd010a14696f2f636f6d6d6f6e2f6e6f74652e70726f746f1202696f22690a044e6f746512110a097375626a656374496418012001280912100a08757365726e616d65180220012809120f0a076d657373616765180320012809122b0a076372656174656418042001280b321a2e676f6f676c652e70726f746f6275662e54696d657374616d70423e0a0f696f2e706173736b69742e504b696f5a2473746173682e706173736b69742e636f6d2f696f2f6d6f64656c2f73646b2f676f2f696faa0204504b496f620670726f746f33"
-        ), true);
+        $pool->internalAddGeneratedFile(
+            '
+Ö
+io/common/note.protoio"i
+Note
+	subjectId (	
+username (	
+message (	+
+created (2.google.protobuf.TimestampBG
+com.passkit.grpcZ$stash.passkit.com/io/model/sdk/go/ioªPassKit.Grpcbproto3'
+        , true);
 
         static::$is_initialized = true;
     }

@@ -89,7 +89,7 @@ class CustomerInitiatedCodeProvideOnRedeemSettings extends \Google\Protobuf\Inte
      * Input field box for entering the redemption code.
      *
      * Generated from protobuf field <code>.single_use_coupons.InputField redemptionCodeInput = 2;</code>
-     * @return \Single_use_coupons\InputField
+     * @return \Single_use_coupons\InputField|null
      */
     public function getRedemptionCodeInput()
     {
@@ -151,7 +151,7 @@ class CustomerInitiatedCodeProvideOnRedeemSettings extends \Google\Protobuf\Inte
      * Localized submit button text.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedSubmitButtonText = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedSubmitButtonText()
     {

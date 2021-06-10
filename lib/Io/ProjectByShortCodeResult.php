@@ -39,7 +39,7 @@ class ProjectByShortCodeResult extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.Project project = 1;</code>
-     * @return \Io\Project
+     * @return \Io\Project|null
      */
     public function getProject()
     {
@@ -71,7 +71,7 @@ class ProjectByShortCodeResult extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.PassTemplate template = 2;</code>
-     * @return \Io\PassTemplate
+     * @return \Io\PassTemplate|null
      */
     public function getTemplate()
     {

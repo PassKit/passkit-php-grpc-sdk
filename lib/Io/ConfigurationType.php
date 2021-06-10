@@ -38,6 +38,22 @@ class ConfigurationType
      */
     const CODEREADR = 5;
     /**
+     * Generated from protobuf enum <code>ZAPIER = 6;</code>
+     */
+    const ZAPIER = 6;
+    /**
+     * Generated from protobuf enum <code>MAILCHIMP = 7;</code>
+     */
+    const MAILCHIMP = 7;
+    /**
+     * Generated from protobuf enum <code>SPROUT = 8;</code>
+     */
+    const SPROUT = 8;
+    /**
+     * Generated from protobuf enum <code>TESSITURA = 9;</code>
+     */
+    const TESSITURA = 9;
+    /**
      * Generated from protobuf enum <code>_CONFIG_TYPE_1 = 100;</code>
      */
     const _CONFIG_TYPE_1 = 100;
@@ -49,6 +65,10 @@ class ConfigurationType
         self::ZOHO => 'ZOHO',
         self::BRAZE => 'BRAZE',
         self::CODEREADR => 'CODEREADR',
+        self::ZAPIER => 'ZAPIER',
+        self::MAILCHIMP => 'MAILCHIMP',
+        self::SPROUT => 'SPROUT',
+        self::TESSITURA => 'TESSITURA',
         self::_CONFIG_TYPE_1 => '_CONFIG_TYPE_1',
     ];
 

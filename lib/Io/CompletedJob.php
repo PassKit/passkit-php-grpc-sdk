@@ -279,7 +279,7 @@ class CompletedJob extends \Google\Protobuf\Internal\Message
      * The date the job was completed in the PassKit system.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp completed = 8;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCompleted()
     {
@@ -313,7 +313,7 @@ class CompletedJob extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.CompletedCsvImport completedCsvImport = 9;</code>
-     * @return \Io\CompletedCsvImport
+     * @return \Io\CompletedCsvImport|null
      */
     public function getCompletedCsvImport()
     {

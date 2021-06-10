@@ -141,7 +141,7 @@ class RedeemByOrderNumber extends \Google\Protobuf\Internal\Message
      * Details about the redemption.
      *
      * Generated from protobuf field <code>.event_tickets.RedemptionDetails redemptionDetails = 4;</code>
-     * @return \Event_tickets\RedemptionDetails
+     * @return \Event_tickets\RedemptionDetails|null
      */
     public function getRedemptionDetails()
     {

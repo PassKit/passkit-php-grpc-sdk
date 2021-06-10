@@ -14,25 +14,37 @@ use UnexpectedValueException;
 class MemberStatus
 {
     /**
-     * Member has successfully enrolled in the program
+     * Member has successfully enrolled in the program.
      *
      * Generated from protobuf enum <code>ENROLLED = 0;</code>
      */
     const ENROLLED = 0;
     /**
-     * Member is active
+     * Member is active.
      *
      * Generated from protobuf enum <code>ACTIVE = 1;</code>
      */
     const ACTIVE = 1;
     /**
-     * For expired members
+     * Member is checked in.
+     *
+     * Generated from protobuf enum <code>CHECKED_IN = 2;</code>
+     */
+    const CHECKED_IN = 2;
+    /**
+     * For expired members.
      *
      * Generated from protobuf enum <code>EXPIRED = 3;</code>
      */
     const EXPIRED = 3;
     /**
-     * For members who's records have been deleted
+     * Member is checked out.
+     *
+     * Generated from protobuf enum <code>CHECKED_OUT = 4;</code>
+     */
+    const CHECKED_OUT = 4;
+    /**
+     * For members who's records have been deleted.
      *
      * Generated from protobuf enum <code>DELETED = 5;</code>
      */
@@ -41,7 +53,9 @@ class MemberStatus
     private static $valueToName = [
         self::ENROLLED => 'ENROLLED',
         self::ACTIVE => 'ACTIVE',
+        self::CHECKED_IN => 'CHECKED_IN',
         self::EXPIRED => 'EXPIRED',
+        self::CHECKED_OUT => 'CHECKED_OUT',
         self::DELETED => 'DELETED',
     ];
 

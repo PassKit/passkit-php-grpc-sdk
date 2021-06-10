@@ -51,6 +51,12 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string backgroundColor = 6;</code>
      */
     protected $backgroundColor = '';
+    /**
+     * The pass localisation will be restricted to languages in this list. Currently only available to Boarding Passes and restricted to a single language. Google are working on supporting multiple overrides and we will update this documentation once multiple languages are available.
+     *
+     * Generated from protobuf field <code>repeated .io.LanguageCode languageOverrides = 7;</code>
+     */
+    private $languageOverrides;
 
     /**
      * Constructor.
@@ -70,6 +76,8 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      *           Custom template (takes a JSON ClassTemplateInfo object https://developers.google.com/pay/passes/rest/v1/ClassTemplateInfo)
      *     @type string $backgroundColor
      *           Override template background color
+     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $languageOverrides
+     *           The pass localisation will be restricted to languages in this list. Currently only available to Boarding Passes and restricted to a single language. Google are working on supporting multiple overrides and we will update this documentation once multiple languages are available.
      * }
      */
     public function __construct($data = NULL) {
@@ -107,7 +115,7 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      * Android App details
      *
      * Generated from protobuf field <code>.io.GooglePayApp androidApp = 2;</code>
-     * @return \Io\GooglePayApp
+     * @return \Io\GooglePayApp|null
      */
     public function getAndroidApp()
     {
@@ -143,7 +151,7 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      * IOS app details
      *
      * Generated from protobuf field <code>.io.GooglePayApp iosApp = 3;</code>
-     * @return \Io\GooglePayApp
+     * @return \Io\GooglePayApp|null
      */
     public function getIosApp()
     {
@@ -179,7 +187,7 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      * Web app details
      *
      * Generated from protobuf field <code>.io.GooglePayApp webApp = 4;</code>
-     * @return \Io\GooglePayApp
+     * @return \Io\GooglePayApp|null
      */
     public function getWebApp()
     {
@@ -259,6 +267,32 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->backgroundColor = $var;
+
+        return $this;
+    }
+
+    /**
+     * The pass localisation will be restricted to languages in this list. Currently only available to Boarding Passes and restricted to a single language. Google are working on supporting multiple overrides and we will update this documentation once multiple languages are available.
+     *
+     * Generated from protobuf field <code>repeated .io.LanguageCode languageOverrides = 7;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getLanguageOverrides()
+    {
+        return $this->languageOverrides;
+    }
+
+    /**
+     * The pass localisation will be restricted to languages in this list. Currently only available to Boarding Passes and restricted to a single language. Google are working on supporting multiple overrides and we will update this documentation once multiple languages are available.
+     *
+     * Generated from protobuf field <code>repeated .io.LanguageCode languageOverrides = 7;</code>
+     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setLanguageOverrides($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Io\LanguageCode::class);
+        $this->languageOverrides = $arr;
 
         return $this;
     }

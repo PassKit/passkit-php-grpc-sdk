@@ -245,7 +245,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Contains UTM data if provided in the URL parameters (utm_source, utm_medium, utm_name, utm_term, utm_content). Can also be used to track channel (web / app, etc).
      *
      * Generated from protobuf field <code>.io.UTM utm = 3;</code>
-     * @return \Io\UTM
+     * @return \Io\UTM|null
      */
     public function getUtm()
     {
@@ -359,7 +359,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Location information based of the where the pass landing page was rendered. Not Writeable
      *
      * Generated from protobuf field <code>.io.MetaLocation renderLocation = 7;</code>
-     * @return \Io\MetaLocation
+     * @return \Io\MetaLocation|null
      */
     public function getRenderLocation()
     {
@@ -525,7 +525,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Date the pass record was created. Not Writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp issueAt = 13;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getIssueAt()
     {
@@ -561,7 +561,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Date the pass was first displayed to the user to install. Not Writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp renderedAt = 14;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getRenderedAt()
     {
@@ -597,7 +597,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Date the pass was first installed in a mobile wallet. Not Writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp firstInstalledAt = 15;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFirstInstalledAt()
     {
@@ -633,7 +633,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Date the pass was last installed in a mobile wallet. For Apple devices, this will update each time the device registers a new token. Not Writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp lastInstalledAt = 16;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getLastInstalledAt()
     {
@@ -669,7 +669,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Date the pass was first uninstalled from a mobile wallet.  For Apple devices, this represents either the time notifications were disabled, or when the pass was removed from the wallet as it is not possible to distinguish the two events. Not Writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp firstUninstalledAt = 17;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getFirstUninstalledAt()
     {
@@ -705,7 +705,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Date the pass was last uninstalled from a mobile wallet. Not Writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp lastUninstalledAt = 18;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getLastUninstalledAt()
     {
@@ -741,7 +741,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Date the pass was invalidated. Not Writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp invalidatedAt = 19;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getInvalidatedAt()
     {
@@ -777,7 +777,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Date the pass record was last updated. Can be used for segmenting passes based 'last visit', or 'last-purchase'. Not Writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp lastUpdatedAt = 20;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getLastUpdatedAt()
     {

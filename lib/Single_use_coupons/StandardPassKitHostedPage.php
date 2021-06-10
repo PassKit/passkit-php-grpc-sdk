@@ -142,7 +142,7 @@ class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message
      * Localized title.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedTitle = 2;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedTitle()
     {
@@ -204,7 +204,7 @@ class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message
      * Localized redemption instructions.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedRedemptionInstructions = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedRedemptionInstructions()
     {
@@ -240,7 +240,7 @@ class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message
      * Image data defined by image ids.
      *
      * Generated from protobuf field <code>.io.ImageIds imageIds = 5;</code>
-     * @return \Io\ImageIds
+     * @return \Io\ImageIds|null
      */
     public function getImageIds()
     {
@@ -271,7 +271,7 @@ class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message
      * Image data defined as image object.
      *
      * Generated from protobuf field <code>.io.ImageData images = 6;</code>
-     * @return \Io\ImageData
+     * @return \Io\ImageData|null
      */
     public function getImages()
     {
@@ -328,7 +328,7 @@ class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message
      * Localized text shown at the footer of the page.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedFooterText = 8;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedFooterText()
     {
@@ -364,7 +364,7 @@ class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message
      * Customize success or error messages shown on the page or error dialog box.
      *
      * Generated from protobuf field <code>.single_use_coupons.ResponseTexts responseTexts = 9;</code>
-     * @return \Single_use_coupons\ResponseTexts
+     * @return \Single_use_coupons\ResponseTexts|null
      */
     public function getResponseTexts()
     {
@@ -426,7 +426,7 @@ class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message
      * Call to action button rendered on error page of coupon already redeemed to provide better customer experience.
      *
      * Generated from protobuf field <code>.single_use_coupons.CallToActionButton callToActionButton = 11;</code>
-     * @return \Single_use_coupons\CallToActionButton
+     * @return \Single_use_coupons\CallToActionButton|null
      */
     public function getCallToActionButton()
     {

@@ -405,7 +405,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * The transaction timestamp
      *
      * Generated from protobuf field <code>.io.Date timestamp = 11;</code>
-     * @return \Io\Date
+     * @return \Io\Date|null
      */
     public function getTimestamp()
     {
@@ -467,7 +467,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * GPS details of check in
      *
      * Generated from protobuf field <code>.io.GPSLocation location = 13;</code>
-     * @return \Io\GPSLocation
+     * @return \Io\GPSLocation|null
      */
     public function getLocation()
     {

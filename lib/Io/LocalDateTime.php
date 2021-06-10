@@ -18,7 +18,7 @@ class LocalDateTime extends \Google\Protobuf\Internal\Message
     /**
      * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
      *
-     * Generated from protobuf field <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $dateTime = '';
 
@@ -40,7 +40,7 @@ class LocalDateTime extends \Google\Protobuf\Internal\Message
     /**
      * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
      *
-     * Generated from protobuf field <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getDateTime()
@@ -51,7 +51,7 @@ class LocalDateTime extends \Google\Protobuf\Internal\Message
     /**
      * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
      *
-     * Generated from protobuf field <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */

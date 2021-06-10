@@ -288,7 +288,7 @@ class DataField extends \Google\Protobuf\Internal\Message
      * This translates label text into different language.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedLabel = 6;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedLabel()
     {
@@ -376,7 +376,7 @@ class DataField extends \Google\Protobuf\Internal\Message
      * This translates default value of the field into different languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedDefaultValue = 9;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedDefaultValue()
     {
@@ -488,7 +488,7 @@ class DataField extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.AppleWalletFieldRenderOptions appleWalletFieldRenderOptions = 13;</code>
-     * @return \Io\AppleWalletFieldRenderOptions
+     * @return \Io\AppleWalletFieldRenderOptions|null
      */
     public function getAppleWalletFieldRenderOptions()
     {
@@ -520,7 +520,7 @@ class DataField extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.DataCollectionFieldRenderOptions dataCollectionFieldRenderOptions = 14;</code>
-     * @return \Io\DataCollectionFieldRenderOptions
+     * @return \Io\DataCollectionFieldRenderOptions|null
      */
     public function getDataCollectionFieldRenderOptions()
     {
@@ -578,7 +578,7 @@ class DataField extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.GooglePayFieldRenderOptions googlePayFieldRenderOptions = 16;</code>
-     * @return \Io\GooglePayFieldRenderOptions
+     * @return \Io\GooglePayFieldRenderOptions|null
      */
     public function getGooglePayFieldRenderOptions()
     {

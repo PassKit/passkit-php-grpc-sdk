@@ -118,6 +118,12 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string pageBackgroundColor = 17;</code>
      */
     protected $pageBackgroundColor = '';
+    /**
+     * Holds additional template options for rendering the email template.
+     *
+     * Generated from protobuf field <code>int32 templateOptions = 18;</code>
+     */
+    protected $templateOptions = 0;
 
     /**
      * Constructor.
@@ -159,6 +165,8 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      *           Background color for the message content section.
      *     @type string $pageBackgroundColor
      *           Background color for the margin space surrounding the message content. This setting is relevant for PC viewers.
+     *     @type int $templateOptions
+     *           Holds additional template options for rendering the email template.
      * }
      */
     public function __construct($data = NULL) {
@@ -196,7 +204,7 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      * Localized subject of the email. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedSubject = 2;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedSubject()
     {
@@ -258,7 +266,7 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      * Localized text content of the email (for email clients that don't support HTML). The body text is rendered above pass install url text. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedBodyTextContent = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedBodyTextContent()
     {
@@ -320,7 +328,7 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      * Localized content for HTML email. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedBodyHtmlContent = 6;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedBodyHtmlContent()
     {
@@ -356,7 +364,7 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      * 7 is reserved for custom email SMTP configuration
      *
      * Generated from protobuf field <code>.io.EmailConfiguration configuration = 7;</code>
-     * @return \Io\EmailConfiguration
+     * @return \Io\EmailConfiguration|null
      */
     public function getConfiguration()
     {
@@ -522,7 +530,7 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      * Localized footer text content (for email clients that don't support HTML). The footer text is rendered below the pass install url text.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedFooterTextContent = 13;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedFooterTextContent()
     {
@@ -584,7 +592,7 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      * Localized content for HTML footer content which is rendered below the pass install button.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedFooterHtmlContent = 15;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedFooterHtmlContent()
     {
@@ -664,6 +672,32 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->pageBackgroundColor = $var;
+
+        return $this;
+    }
+
+    /**
+     * Holds additional template options for rendering the email template.
+     *
+     * Generated from protobuf field <code>int32 templateOptions = 18;</code>
+     * @return int
+     */
+    public function getTemplateOptions()
+    {
+        return $this->templateOptions;
+    }
+
+    /**
+     * Holds additional template options for rendering the email template.
+     *
+     * Generated from protobuf field <code>int32 templateOptions = 18;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setTemplateOptions($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->templateOptions = $var;
 
         return $this;
     }

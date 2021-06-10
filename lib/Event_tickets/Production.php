@@ -16,7 +16,7 @@ class Production extends \Google\Protobuf\Internal\Message
     /**
      * PassKit generated production id (22 characters).
      *
-     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $id = '';
     /**
@@ -88,13 +88,13 @@ class Production extends \Google\Protobuf\Internal\Message
     /**
      * The date the event was created. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $created = null;
     /**
      * The date the event updated. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $updated = null;
 
@@ -142,7 +142,7 @@ class Production extends \Google\Protobuf\Internal\Message
     /**
      * PassKit generated production id (22 characters).
      *
-     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getId()
@@ -153,7 +153,7 @@ class Production extends \Google\Protobuf\Internal\Message
     /**
      * PassKit generated production id (22 characters).
      *
-     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -221,7 +221,7 @@ class Production extends \Google\Protobuf\Internal\Message
      * Localized name of the production.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedName = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedName()
     {
@@ -283,7 +283,7 @@ class Production extends \Google\Protobuf\Internal\Message
      * Localized fine print of the production.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedFinePrint = 6;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedFinePrint()
     {
@@ -449,7 +449,7 @@ class Production extends \Google\Protobuf\Internal\Message
      * Contains the email & sms distribution settings for the production.
      *
      * Generated from protobuf field <code>.io.DistributionSettings distributionSettings = 12;</code>
-     * @return \Io\DistributionSettings
+     * @return \Io\DistributionSettings|null
      */
     public function getDistributionSettings()
     {
@@ -484,8 +484,8 @@ class Production extends \Google\Protobuf\Internal\Message
     /**
      * The date the event was created. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Timestamp
+     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -505,7 +505,7 @@ class Production extends \Google\Protobuf\Internal\Message
     /**
      * The date the event was created. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -520,8 +520,8 @@ class Production extends \Google\Protobuf\Internal\Message
     /**
      * The date the event updated. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Timestamp
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {
@@ -541,7 +541,7 @@ class Production extends \Google\Protobuf\Internal\Message
     /**
      * The date the event updated. Not writable.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */

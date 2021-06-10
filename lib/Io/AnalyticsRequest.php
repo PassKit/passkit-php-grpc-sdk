@@ -237,7 +237,7 @@ class AnalyticsRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.CouponAnalyticsFilter coupon = 15;</code>
-     * @return \Io\CouponAnalyticsFilter
+     * @return \Io\CouponAnalyticsFilter|null
      */
     public function getCoupon()
     {
@@ -264,7 +264,7 @@ class AnalyticsRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.FlightAnalyticsFilter flight = 16;</code>
-     * @return \Io\FlightAnalyticsFilter
+     * @return \Io\FlightAnalyticsFilter|null
      */
     public function getFlight()
     {
@@ -291,7 +291,7 @@ class AnalyticsRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.EventTicketAnalyticsFilter eventTicket = 17;</code>
-     * @return \Io\EventTicketAnalyticsFilter
+     * @return \Io\EventTicketAnalyticsFilter|null
      */
     public function getEventTicket()
     {

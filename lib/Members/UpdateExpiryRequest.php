@@ -117,7 +117,7 @@ class UpdateExpiryRequest extends \Google\Protobuf\Internal\Message
      * Expiry date setting you want to apply for this update.
      *
      * Generated from protobuf field <code>.io.ExpirySettings expirySettings = 3;</code>
-     * @return \Io\ExpirySettings
+     * @return \Io\ExpirySettings|null
      */
     public function getExpirySettings()
     {

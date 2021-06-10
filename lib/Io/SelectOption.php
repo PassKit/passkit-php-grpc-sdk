@@ -112,7 +112,7 @@ class SelectOption extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedTextLabel = 3;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedTextLabel()
     {

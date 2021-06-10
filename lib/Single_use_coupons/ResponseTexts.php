@@ -163,7 +163,7 @@ class ResponseTexts extends \Google\Protobuf\Internal\Message
      * Localized redemption confirm dialog box text.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedRedeemConfirmationDialogBoxText = 2;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedRedeemConfirmationDialogBoxText()
     {
@@ -227,7 +227,7 @@ class ResponseTexts extends \Google\Protobuf\Internal\Message
      * Localized cancel redemption text.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedCancelRedeemText = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedCancelRedeemText()
     {
@@ -289,7 +289,7 @@ class ResponseTexts extends \Google\Protobuf\Internal\Message
      * Localized after redemption text.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedAfterRedeemText = 6;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedAfterRedeemText()
     {
@@ -351,7 +351,7 @@ class ResponseTexts extends \Google\Protobuf\Internal\Message
      * Localized text shown when the coupon was already redeemed.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedCouponAlreadyRedeemedText = 8;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedCouponAlreadyRedeemedText()
     {
@@ -413,7 +413,7 @@ class ResponseTexts extends \Google\Protobuf\Internal\Message
      * Localized text shown when offer has ended.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedOfferExpiredText = 10;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedOfferExpiredText()
     {
@@ -475,7 +475,7 @@ class ResponseTexts extends \Google\Protobuf\Internal\Message
      * Localized text shown when the coupon expiry date / redemption end date has passed.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedCouponExpiredText = 12;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedCouponExpiredText()
     {

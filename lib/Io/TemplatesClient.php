@@ -20,6 +20,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\PassTemplate $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createTemplate(\Io\PassTemplate $argument,
       $metadata = [], $options = []) {
@@ -33,6 +34,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\PassTemplate $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateTemplate(\Io\PassTemplate $argument,
       $metadata = [], $options = []) {
@@ -46,6 +48,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getTemplate(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -59,6 +62,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\DefaultTemplateRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getDefaultTemplate(\Io\DefaultTemplateRequest $argument,
       $metadata = [], $options = []) {
@@ -72,6 +76,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\CopyObjectInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function copyTemplate(\Io\CopyObjectInput $argument,
       $metadata = [], $options = []) {
@@ -85,6 +90,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteTemplate(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -98,6 +104,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listTemplatesForUserDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -111,6 +118,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listTemplatesForUser(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -124,6 +132,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listTemplatesDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -137,6 +146,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listTemplates(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -150,6 +160,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countTemplatesDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -163,6 +174,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countTemplates(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -176,6 +188,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countTemplatesForUserDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -189,6 +202,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countTemplatesForUser(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -202,6 +216,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\GPSLocation $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createLocation(\Io\GPSLocation $argument,
       $metadata = [], $options = []) {
@@ -215,6 +230,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\GPSLocation $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateLocation(\Io\GPSLocation $argument,
       $metadata = [], $options = []) {
@@ -228,6 +244,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getLocation(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -241,6 +258,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listLocationsDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -254,6 +272,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listLocations(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -267,6 +286,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\CopyObjectInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function copyLocation(\Io\CopyObjectInput $argument,
       $metadata = [], $options = []) {
@@ -280,6 +300,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteLocation(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -293,6 +314,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countLocationsDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -306,6 +328,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countLocations(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -319,6 +342,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Beacon $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createBeacon(\Io\Beacon $argument,
       $metadata = [], $options = []) {
@@ -332,6 +356,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Beacon $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateBeacon(\Io\Beacon $argument,
       $metadata = [], $options = []) {
@@ -345,6 +370,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getBeacon(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -358,6 +384,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listBeaconsDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -371,6 +398,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listBeacons(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -384,6 +412,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\CopyObjectInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function copyBeacon(\Io\CopyObjectInput $argument,
       $metadata = [], $options = []) {
@@ -397,6 +426,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteBeacon(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -410,6 +440,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countBeaconsDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -423,6 +454,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countBeacons(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -436,6 +468,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Link $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createLink(\Io\Link $argument,
       $metadata = [], $options = []) {
@@ -449,6 +482,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Link $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateLink(\Io\Link $argument,
       $metadata = [], $options = []) {
@@ -462,6 +496,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getLink(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -475,6 +510,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listLinksDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -488,6 +524,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listLinks(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -501,6 +538,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\CopyObjectInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function copyLink(\Io\CopyObjectInput $argument,
       $metadata = [], $options = []) {
@@ -514,6 +552,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteLink(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -527,6 +566,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countLinksDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -540,6 +580,7 @@ class TemplatesClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countLinks(\Io\Filters $argument,
       $metadata = [], $options = []) {

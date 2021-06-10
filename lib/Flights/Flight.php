@@ -16,25 +16,25 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
      *
-     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $carrierCode = '';
     /**
      * The flight number.
      *
-     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $flightNumber = '';
     /**
      * The IATA airport code of the boarding point. Only required is segment is not provided.
      *
-     * Generated from protobuf field <code>string boardingPoint = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string boardingPoint = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $boardingPoint = '';
     /**
      * The IATA airport code of the deplaning point.
      *
-     * Generated from protobuf field <code>string deplaningPoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string deplaningPoint = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $deplaningPoint = '';
     /**
@@ -106,13 +106,13 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
      *
-     * Generated from protobuf field <code>string operatingCarrierCode = 16 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string operatingCarrierCode = 16 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $operatingCarrierCode = '';
     /**
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
      *
-     * Generated from protobuf field <code>string operatingFlightNumber = 17 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string operatingFlightNumber = 17 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $operatingFlightNumber = '';
     /**
@@ -134,33 +134,34 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     protected $baggageBelt = '';
     /**
-     * Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter -1 if the pass should not auto invalidate. Default is 48 hours.
+     * Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
      *
-     * Generated from protobuf field <code>uint32 autoInvalidateAfter = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>uint32 autoInvalidateAfter = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $autoInvalidateAfter = 0;
     /**
-     * Invalidate passes where either the booking or the flight have been cancelled. Default is true.
+     * Deprecated: Use InvalidateCancelledPasses.
      *
-     * Generated from protobuf field <code>bool autoInvalidateCancelledPasses = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
+     * @deprecated
      */
     protected $autoInvalidateCancelledPasses = false;
     /**
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults.
      *
-     * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 24 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 24 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $locationMessages;
     /**
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designated defaults.
      *
-     * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 25 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 25 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $beaconMessages;
     /**
      * A list of links to be appended to the end of each boarding pass.
      *
-     * Generated from protobuf field <code>repeated .io.Link links = 26 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Link links = 26 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $links;
     /**
@@ -217,6 +218,12 @@ class Flight extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string designatorId = 35;</code>
      */
     protected $designatorId = '';
+    /**
+     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+     *
+     * Generated from protobuf field <code>.io.Toggle invalidateCancelledPasses = 36 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     */
+    protected $invalidateCancelledPasses = 0;
 
     /**
      * Constructor.
@@ -265,9 +272,9 @@ class Flight extends \Google\Protobuf\Internal\Message
      *     @type string $baggageBelt
      *           The baggage belt at the destination.
      *     @type int $autoInvalidateAfter
-     *           Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter -1 if the pass should not auto invalidate. Default is 48 hours.
+     *           Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
      *     @type bool $autoInvalidateCancelledPasses
-     *           Invalidate passes where either the booking or the flight have been cancelled. Default is true.
+     *           Deprecated: Use InvalidateCancelledPasses.
      *     @type \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $locationMessages
      *           A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults.
      *     @type \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $beaconMessages
@@ -292,6 +299,8 @@ class Flight extends \Google\Protobuf\Internal\Message
      *           How the flight was created Create mode, manually or automatically.
      *     @type string $designatorId
      *           For automatically created flights, shows the ID of the designator that bootstrapped the flight record.
+     *     @type int $invalidateCancelledPasses
+     *           Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
      * }
      */
     public function __construct($data = NULL) {
@@ -302,7 +311,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
      *
-     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getCarrierCode()
@@ -313,7 +322,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
      *
-     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -328,7 +337,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * The flight number.
      *
-     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getFlightNumber()
@@ -339,7 +348,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * The flight number.
      *
-     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -354,7 +363,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * The IATA airport code of the boarding point. Only required is segment is not provided.
      *
-     * Generated from protobuf field <code>string boardingPoint = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string boardingPoint = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getBoardingPoint()
@@ -365,7 +374,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * The IATA airport code of the boarding point. Only required is segment is not provided.
      *
-     * Generated from protobuf field <code>string boardingPoint = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string boardingPoint = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -380,7 +389,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * The IATA airport code of the deplaning point.
      *
-     * Generated from protobuf field <code>string deplaningPoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string deplaningPoint = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getDeplaningPoint()
@@ -391,7 +400,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * The IATA airport code of the deplaning point.
      *
-     * Generated from protobuf field <code>string deplaningPoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string deplaningPoint = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -407,7 +416,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * The scheduled date of departure.
      *
      * Generated from protobuf field <code>.io.Date departureDate = 5;</code>
-     * @return \Io\Date
+     * @return \Io\Date|null
      */
     public function getDepartureDate()
     {
@@ -547,7 +556,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * The scheduled departure time. If omitted then the departureDate must be specified.
      *
      * Generated from protobuf field <code>.io.LocalDateTime scheduledDepartureTime = 10;</code>
-     * @return \Io\LocalDateTime
+     * @return \Io\LocalDateTime|null
      */
     public function getScheduledDepartureTime()
     {
@@ -583,7 +592,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * The estimated departure time.
      *
      * Generated from protobuf field <code>.io.LocalDateTime estimatedDepartureTime = 11;</code>
-     * @return \Io\LocalDateTime
+     * @return \Io\LocalDateTime|null
      */
     public function getEstimatedDepartureTime()
     {
@@ -619,7 +628,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * The boarding time.
      *
      * Generated from protobuf field <code>.io.LocalDateTime boardingTime = 12;</code>
-     * @return \Io\LocalDateTime
+     * @return \Io\LocalDateTime|null
      */
     public function getBoardingTime()
     {
@@ -655,7 +664,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * The time the gate will close.
      *
      * Generated from protobuf field <code>.io.LocalDateTime gateClosingTime = 13;</code>
-     * @return \Io\LocalDateTime
+     * @return \Io\LocalDateTime|null
      */
     public function getGateClosingTime()
     {
@@ -691,7 +700,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * The scheduled arrival time.
      *
      * Generated from protobuf field <code>.io.LocalDateTime scheduledArrivalTime = 14;</code>
-     * @return \Io\LocalDateTime
+     * @return \Io\LocalDateTime|null
      */
     public function getScheduledArrivalTime()
     {
@@ -727,7 +736,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * The estimated arrival time.
      *
      * Generated from protobuf field <code>.io.LocalDateTime estimatedArrivalTime = 15;</code>
-     * @return \Io\LocalDateTime
+     * @return \Io\LocalDateTime|null
      */
     public function getEstimatedArrivalTime()
     {
@@ -762,7 +771,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
      *
-     * Generated from protobuf field <code>string operatingCarrierCode = 16 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string operatingCarrierCode = 16 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getOperatingCarrierCode()
@@ -773,7 +782,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
      *
-     * Generated from protobuf field <code>string operatingCarrierCode = 16 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string operatingCarrierCode = 16 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -788,7 +797,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
      *
-     * Generated from protobuf field <code>string operatingFlightNumber = 17 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string operatingFlightNumber = 17 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getOperatingFlightNumber()
@@ -799,7 +808,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
      *
-     * Generated from protobuf field <code>string operatingFlightNumber = 17 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string operatingFlightNumber = 17 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -890,9 +899,9 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter -1 if the pass should not auto invalidate. Default is 48 hours.
+     * Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
      *
-     * Generated from protobuf field <code>uint32 autoInvalidateAfter = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>uint32 autoInvalidateAfter = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return int
      */
     public function getAutoInvalidateAfter()
@@ -901,9 +910,9 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter -1 if the pass should not auto invalidate. Default is 48 hours.
+     * Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
      *
-     * Generated from protobuf field <code>uint32 autoInvalidateAfter = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>uint32 autoInvalidateAfter = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -916,25 +925,29 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Invalidate passes where either the booking or the flight have been cancelled. Default is true.
+     * Deprecated: Use InvalidateCancelledPasses.
      *
-     * Generated from protobuf field <code>bool autoInvalidateCancelledPasses = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
      * @return bool
+     * @deprecated
      */
     public function getAutoInvalidateCancelledPasses()
     {
+        @trigger_error('autoInvalidateCancelledPasses is deprecated.', E_USER_DEPRECATED);
         return $this->autoInvalidateCancelledPasses;
     }
 
     /**
-     * Invalidate passes where either the booking or the flight have been cancelled. Default is true.
+     * Deprecated: Use InvalidateCancelledPasses.
      *
-     * Generated from protobuf field <code>bool autoInvalidateCancelledPasses = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
      * @param bool $var
      * @return $this
+     * @deprecated
      */
     public function setAutoInvalidateCancelledPasses($var)
     {
+        @trigger_error('autoInvalidateCancelledPasses is deprecated.', E_USER_DEPRECATED);
         GPBUtil::checkBool($var);
         $this->autoInvalidateCancelledPasses = $var;
 
@@ -944,7 +957,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults.
      *
-     * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 24 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 24 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getLocationMessages()
@@ -955,7 +968,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults.
      *
-     * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 24 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 24 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -970,7 +983,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designated defaults.
      *
-     * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 25 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 25 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getBeaconMessages()
@@ -981,7 +994,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designated defaults.
      *
-     * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 25 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 25 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -996,7 +1009,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * A list of links to be appended to the end of each boarding pass.
      *
-     * Generated from protobuf field <code>repeated .io.Link links = 26 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Link links = 26 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getLinks()
@@ -1007,7 +1020,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     /**
      * A list of links to be appended to the end of each boarding pass.
      *
-     * Generated from protobuf field <code>repeated .io.Link links = 26 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Link links = 26 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -1179,7 +1192,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * Issued, installed, uninstalled and invalidated counts. Metrics are not writable.
      *
      * Generated from protobuf field <code>.io.Metrics metrics = 33;</code>
-     * @return \Io\Metrics
+     * @return \Io\Metrics|null
      */
     public function getMetrics()
     {
@@ -1259,6 +1272,32 @@ class Flight extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->designatorId = $var;
+
+        return $this;
+    }
+
+    /**
+     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+     *
+     * Generated from protobuf field <code>.io.Toggle invalidateCancelledPasses = 36 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return int
+     */
+    public function getInvalidateCancelledPasses()
+    {
+        return $this->invalidateCancelledPasses;
+    }
+
+    /**
+     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+     *
+     * Generated from protobuf field <code>.io.Toggle invalidateCancelledPasses = 36 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInvalidateCancelledPasses($var)
+    {
+        GPBUtil::checkEnum($var, \Io\Toggle::class);
+        $this->invalidateCancelledPasses = $var;
 
         return $this;
     }

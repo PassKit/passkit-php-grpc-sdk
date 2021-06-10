@@ -257,7 +257,7 @@ class AnalyticsResponse extends \Google\Protobuf\Internal\Message
      * Total number of passes installed for each device type.
      *
      * Generated from protobuf field <code>.io.DeviceBreakdown deviceBreakdown = 6;</code>
-     * @return \Io\DeviceBreakdown
+     * @return \Io\DeviceBreakdown|null
      */
     public function getDeviceBreakdown()
     {

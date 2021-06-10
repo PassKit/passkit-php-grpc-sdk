@@ -121,6 +121,12 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string cssOverrides = 18;</code>
      */
     protected $cssOverrides = '';
+    /**
+     * Configuration for password protecting the data collection page
+     *
+     * Generated from protobuf field <code>.io.PasswordSettings passwordSettings = 19;</code>
+     */
+    protected $passwordSettings = null;
 
     /**
      * Constructor.
@@ -163,6 +169,8 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      *           Localized footer text.
      *     @type string $cssOverrides
      *           Custom css to overwrite on the data collection page.
+     *     @type \Io\PasswordSettings $passwordSettings
+     *           Configuration for password protecting the data collection page
      * }
      */
     public function __construct($data = NULL) {
@@ -200,7 +208,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      * Localized title of the page.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedTitle = 2;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedTitle()
     {
@@ -262,7 +270,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      * Localized description of the page.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedDescription = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedDescription()
     {
@@ -322,7 +330,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedSubmitButtonText = 6;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedSubmitButtonText()
     {
@@ -382,7 +390,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      * Localized loading text.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedLoadingText = 8;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedLoadingText()
     {
@@ -444,7 +452,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      * Localized thank you text. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedThankYouText = 10;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedThankYouText()
     {
@@ -506,7 +514,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      * Localized page background color shown if device is greater than the iPad.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedPageBackgroundColor = 12;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedPageBackgroundColor()
     {
@@ -542,7 +550,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      * Tracking settings for Facebook Pixel & Google Analytics
      *
      * Generated from protobuf field <code>.io.TrackingSettings trackingSettings = 13;</code>
-     * @return \Io\TrackingSettings
+     * @return \Io\TrackingSettings|null
      */
     public function getTrackingSettings()
     {
@@ -656,7 +664,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      * Localized footer text.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedFooterText = 17;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedFooterText()
     {
@@ -710,6 +718,42 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->cssOverrides = $var;
+
+        return $this;
+    }
+
+    /**
+     * Configuration for password protecting the data collection page
+     *
+     * Generated from protobuf field <code>.io.PasswordSettings passwordSettings = 19;</code>
+     * @return \Io\PasswordSettings|null
+     */
+    public function getPasswordSettings()
+    {
+        return isset($this->passwordSettings) ? $this->passwordSettings : null;
+    }
+
+    public function hasPasswordSettings()
+    {
+        return isset($this->passwordSettings);
+    }
+
+    public function clearPasswordSettings()
+    {
+        unset($this->passwordSettings);
+    }
+
+    /**
+     * Configuration for password protecting the data collection page
+     *
+     * Generated from protobuf field <code>.io.PasswordSettings passwordSettings = 19;</code>
+     * @param \Io\PasswordSettings $var
+     * @return $this
+     */
+    public function setPasswordSettings($var)
+    {
+        GPBUtil::checkMessage($var, \Io\PasswordSettings::class);
+        $this->passwordSettings = $var;
 
         return $this;
     }

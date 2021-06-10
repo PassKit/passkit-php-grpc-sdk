@@ -81,7 +81,7 @@ class ValidateTicketRequest extends \Google\Protobuf\Internal\Message
      * Ticket details for the ticket to validate.
      *
      * Generated from protobuf field <code>.event_tickets.Ticket ticket = 2;</code>
-     * @return \Event_tickets\Ticket
+     * @return \Event_tickets\Ticket|null
      */
     public function getTicket()
     {
@@ -117,7 +117,7 @@ class ValidateTicketRequest extends \Google\Protobuf\Internal\Message
      * Additional details to set for this validation.
      *
      * Generated from protobuf field <code>.event_tickets.ValidateDetails validateDetails = 3;</code>
-     * @return \Event_tickets\ValidateDetails
+     * @return \Event_tickets\ValidateDetails|null
      */
     public function getValidateDetails()
     {

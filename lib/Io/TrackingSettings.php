@@ -47,7 +47,7 @@ class TrackingSettings extends \Google\Protobuf\Internal\Message
      * Facebook Pixel settings
      *
      * Generated from protobuf field <code>.io.FacebookPixelSettings facebookPixelSettings = 1;</code>
-     * @return \Io\FacebookPixelSettings
+     * @return \Io\FacebookPixelSettings|null
      */
     public function getFacebookPixelSettings()
     {
@@ -83,7 +83,7 @@ class TrackingSettings extends \Google\Protobuf\Internal\Message
      * Google Analytics settings
      *
      * Generated from protobuf field <code>.io.GoogleAnalyticsSettings googleAnalyticsSettings = 2;</code>
-     * @return \Io\GoogleAnalyticsSettings
+     * @return \Io\GoogleAnalyticsSettings|null
      */
     public function getGoogleAnalyticsSettings()
     {

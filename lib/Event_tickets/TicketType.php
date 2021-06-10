@@ -18,7 +18,7 @@ class TicketType extends \Google\Protobuf\Internal\Message
     /**
      * PassKit generated ticket type id (22 characters).
      *
-     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $id = '';
     /**
@@ -72,13 +72,13 @@ class TicketType extends \Google\Protobuf\Internal\Message
     /**
      * The date the ticket type was created. Cannot be set via the API.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $created = null;
     /**
      * The date the ticket type updated. Cannot be set via the API.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $updated = null;
 
@@ -120,7 +120,7 @@ class TicketType extends \Google\Protobuf\Internal\Message
     /**
      * PassKit generated ticket type id (22 characters).
      *
-     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getId()
@@ -131,7 +131,7 @@ class TicketType extends \Google\Protobuf\Internal\Message
     /**
      * PassKit generated ticket type id (22 characters).
      *
-     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -225,7 +225,7 @@ class TicketType extends \Google\Protobuf\Internal\Message
      * Localized name of the ticket type.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedName = 5;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedName()
     {
@@ -287,7 +287,7 @@ class TicketType extends \Google\Protobuf\Internal\Message
      * Localized ticket conditions for this ticket type.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedTicketTypeConditions = 7;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedTicketTypeConditions()
     {
@@ -374,8 +374,8 @@ class TicketType extends \Google\Protobuf\Internal\Message
     /**
      * The date the ticket type was created. Cannot be set via the API.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Timestamp
+     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -395,7 +395,7 @@ class TicketType extends \Google\Protobuf\Internal\Message
     /**
      * The date the ticket type was created. Cannot be set via the API.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */
@@ -410,8 +410,8 @@ class TicketType extends \Google\Protobuf\Internal\Message
     /**
      * The date the ticket type updated. Cannot be set via the API.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Timestamp
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {
@@ -431,7 +431,7 @@ class TicketType extends \Google\Protobuf\Internal\Message
     /**
      * The date the ticket type updated. Cannot be set via the API.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
      */

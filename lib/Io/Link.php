@@ -201,7 +201,7 @@ class Link extends \Google\Protobuf\Internal\Message
      * This customises link text for different languages. Ignored by Google Pay passes.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedLink = 5;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedLink()
     {
@@ -237,7 +237,7 @@ class Link extends \Google\Protobuf\Internal\Message
      * This translates link title in different languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedTitle = 6;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedTitle()
     {

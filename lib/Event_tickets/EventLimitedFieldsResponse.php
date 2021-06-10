@@ -89,7 +89,7 @@ class EventLimitedFieldsResponse extends \Google\Protobuf\Internal\Message
      * The scheduled date/time when the event starts. If the event spans multiple days, it should be the start date/time on the first day. Tickets can only be issued for events that are within 90 days of the ticket issue date.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp scheduledStartDate = 2;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getScheduledStartDate()
     {
@@ -125,7 +125,7 @@ class EventLimitedFieldsResponse extends \Google\Protobuf\Internal\Message
      * The new date/time when the event starts. This field can be used when you need to set a new event start data/time.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp actualStartDate = 3;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getActualStartDate()
     {
@@ -161,7 +161,7 @@ class EventLimitedFieldsResponse extends \Google\Protobuf\Internal\Message
      * The date/time when the event ends. If the event spans multiple days, it should be the end date/time on the last day.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp endDate = 4;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getEndDate()
     {

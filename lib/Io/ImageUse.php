@@ -120,6 +120,24 @@ class ImageUse
      * Generated from protobuf enum <code>appImage = 16;</code>
      */
     const appImage = 16;
+    /**
+     * used for custom stamped images.
+     *
+     * Generated from protobuf enum <code>stampedImage = 18;</code>
+     */
+    const stampedImage = 18;
+    /**
+     * used for custom unstamped images.
+     *
+     * Generated from protobuf enum <code>unstampedImage = 19;</code>
+     */
+    const unstampedImage = 19;
+    /**
+     * used for stamp / punch card type images. Indicates that the image has a stamp image config record.
+     *
+     * Generated from protobuf enum <code>stampImage = 20;</code>
+     */
+    const stampImage = 20;
 
     private static $valueToName = [
         self::icon => 'icon',
@@ -139,6 +157,9 @@ class ImageUse
         self::message => 'message',
         self::profile => 'profile',
         self::appImage => 'appImage',
+        self::stampedImage => 'stampedImage',
+        self::unstampedImage => 'unstampedImage',
+        self::stampImage => 'stampImage',
     ];
 
     public static function name($value)

@@ -22,19 +22,19 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      */
     protected $passType = 0;
     /**
-     * Information that will not appear on the pass.
+     * Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
      *
      * Generated from protobuf field <code>string userInfo = 2;</code>
      */
     protected $userInfo = '';
     /**
-     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
      *
      * Generated from protobuf field <code>string appLaunchUrl = 3;</code>
      */
     protected $appLaunchUrl = '';
     /**
-     * A list of iTunes Store item identifiers which is used to generate a app install page.
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
      */
@@ -69,11 +69,11 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      *     @type int $passType
      *           Pass type
      *     @type string $userInfo
-     *           Information that will not appear on the pass.
+     *           Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
      *     @type string $appLaunchUrl
-     *           This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+     *           This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
      *     @type int[]|\Google\Protobuf\Internal\RepeatedField $associatedStoreIdentifiers
-     *           A list of iTunes Store item identifiers which is used to generate a app install page.
+     *           A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *     @type int $maxDistance
      *           GPS lock screen messages will show at the lower of max distance and the pass default(unpublished) value.
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $appStoreCountries
@@ -114,7 +114,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Information that will not appear on the pass.
+     * Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
      *
      * Generated from protobuf field <code>string userInfo = 2;</code>
      * @return string
@@ -125,7 +125,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Information that will not appear on the pass.
+     * Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
      *
      * Generated from protobuf field <code>string userInfo = 2;</code>
      * @param string $var
@@ -140,7 +140,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
      *
      * Generated from protobuf field <code>string appLaunchUrl = 3;</code>
      * @return string
@@ -151,7 +151,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
      *
      * Generated from protobuf field <code>string appLaunchUrl = 3;</code>
      * @param string $var
@@ -166,7 +166,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of iTunes Store item identifiers which is used to generate a app install page.
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -177,7 +177,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of iTunes Store item identifiers which is used to generate a app install page.
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
      * @param int[]|\Google\Protobuf\Internal\RepeatedField $var

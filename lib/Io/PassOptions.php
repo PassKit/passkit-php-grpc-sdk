@@ -39,7 +39,7 @@ class PassOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.AppleWalletSettings apple = 1;</code>
-     * @return \Io\AppleWalletSettings
+     * @return \Io\AppleWalletSettings|null
      */
     public function getApple()
     {
@@ -71,7 +71,7 @@ class PassOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.GooglePaySettings google = 2;</code>
-     * @return \Io\GooglePaySettings
+     * @return \Io\GooglePaySettings|null
      */
     public function getGoogle()
     {

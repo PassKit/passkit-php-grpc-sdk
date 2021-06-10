@@ -23,6 +23,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\CouponCampaign $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createCouponCampaign(\Single_use_coupons\CouponCampaign $argument,
       $metadata = [], $options = []) {
@@ -36,6 +37,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\CouponCampaign $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateCouponCampaign(\Single_use_coupons\CouponCampaign $argument,
       $metadata = [], $options = []) {
@@ -49,6 +51,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getCouponCampaign(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -62,6 +65,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteCouponCampaign(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -75,6 +79,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listCouponCampaignsDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -88,6 +93,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listCouponCampaigns(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -101,6 +107,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Io\AnalyticsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getAnalytics(\Io\AnalyticsRequest $argument,
       $metadata = [], $options = []) {
@@ -114,6 +121,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\CouponOffer $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createCouponOffer(\Single_use_coupons\CouponOffer $argument,
       $metadata = [], $options = []) {
@@ -127,6 +135,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\CouponOffer $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateCouponOffer(\Single_use_coupons\CouponOffer $argument,
       $metadata = [], $options = []) {
@@ -140,6 +149,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getCouponOffer(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -153,6 +163,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteCouponOffer(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -166,6 +177,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\CouponOffersListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listCouponOffersDeprecated(\Single_use_coupons\CouponOffersListRequestDeprecated $argument,
       $metadata = [], $options = []) {
@@ -179,6 +191,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\CouponOffersListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listCouponOffers(\Single_use_coupons\CouponOffersListRequest $argument,
       $metadata = [], $options = []) {
@@ -192,6 +205,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\Coupon $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createCoupon(\Single_use_coupons\Coupon $argument,
       $metadata = [], $options = []) {
@@ -205,6 +219,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\Coupon $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateCoupon(\Single_use_coupons\Coupon $argument,
       $metadata = [], $options = []) {
@@ -217,6 +232,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     /**
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\BidiStreamingCall
      */
     public function streamCouponUpdates($metadata = [], $options = []) {
         return $this->_bidiRequest('/single_use_coupons.SingleUseCoupons/streamCouponUpdates',
@@ -228,6 +244,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\Coupon $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function redeemCoupon(\Single_use_coupons\Coupon $argument,
       $metadata = [], $options = []) {
@@ -238,8 +255,23 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Single_use_coupons\CouponNewExternalIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function updateCouponExternalId(\Single_use_coupons\CouponNewExternalIdRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/single_use_coupons.SingleUseCoupons/updateCouponExternalId',
+        $argument,
+        ['\Io\Id', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\BidiStreamingCall
      */
     public function streamCouponRedemptions($metadata = [], $options = []) {
         return $this->_bidiRequest('/single_use_coupons.SingleUseCoupons/streamCouponRedemptions',
@@ -251,6 +283,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getCouponById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -264,6 +297,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\ExternalIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getCouponByExternalId(\Single_use_coupons\ExternalIdRequest $argument,
       $metadata = [], $options = []) {
@@ -277,6 +311,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\Coupon $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function voidCoupon(\Single_use_coupons\Coupon $argument,
       $metadata = [], $options = []) {
@@ -290,6 +325,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\ListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listCouponsByCouponCampaignDeprecated(\Single_use_coupons\ListRequestDeprecated $argument,
       $metadata = [], $options = []) {
@@ -303,6 +339,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listCouponsByCouponCampaign(\Single_use_coupons\ListRequest $argument,
       $metadata = [], $options = []) {
@@ -316,6 +353,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\ListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countCouponsByCouponCampaignDeprecated(\Single_use_coupons\ListRequestDeprecated $argument,
       $metadata = [], $options = []) {
@@ -329,6 +367,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Single_use_coupons\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countCouponsByCouponCampaign(\Single_use_coupons\ListRequest $argument,
       $metadata = [], $options = []) {
@@ -339,9 +378,24 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Io\PersonRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function patchPerson(\Io\PersonRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/single_use_coupons.SingleUseCoupons/patchPerson',
+        $argument,
+        ['\Io\Id', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Single_use_coupons\CampaignCopyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function copyCouponCampaign(\Single_use_coupons\CampaignCopyRequest $argument,
       $metadata = [], $options = []) {
@@ -355,6 +409,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getMetaKeysForCampaign(\Io\Id $argument,
       $metadata = [], $options = []) {

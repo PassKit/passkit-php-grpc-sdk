@@ -121,7 +121,7 @@ class Seat extends \Google\Protobuf\Internal\Message
      * Localized seat number.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedSeat = 2;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedSeat()
     {
@@ -183,7 +183,7 @@ class Seat extends \Google\Protobuf\Internal\Message
      * Localized row.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedRow = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedRow()
     {
@@ -245,7 +245,7 @@ class Seat extends \Google\Protobuf\Internal\Message
      * Localized section.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedSection = 6;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedSection()
     {
@@ -307,7 +307,7 @@ class Seat extends \Google\Protobuf\Internal\Message
      * Localized gate.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedGate = 8;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedGate()
     {

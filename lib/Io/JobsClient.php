@@ -20,6 +20,7 @@ class JobsClient extends \Grpc\BaseStub {
      * @param \Io\CsvImportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function importCsv(\Io\CsvImportRequest $argument,
       $metadata = [], $options = []) {
@@ -33,6 +34,7 @@ class JobsClient extends \Grpc\BaseStub {
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function getJobs(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -46,6 +48,7 @@ class JobsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getJob(\Io\Id $argument,
       $metadata = [], $options = []) {

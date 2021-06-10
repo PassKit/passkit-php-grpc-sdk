@@ -18,7 +18,7 @@ class BoardingPassRecordRequestByTicketNumber extends \Google\Protobuf\Internal\
     /**
      * Ticket number can optionally be prefixed by the 3 digit airline code, followed by a 10 digit ticket number.  For ticket numbers less than 10 digits, pad with zeros.
      *
-     * Generated from protobuf field <code>string ticketNumber = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string ticketNumber = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $ticketNumber = '';
     /**
@@ -56,7 +56,7 @@ class BoardingPassRecordRequestByTicketNumber extends \Google\Protobuf\Internal\
     /**
      * Ticket number can optionally be prefixed by the 3 digit airline code, followed by a 10 digit ticket number.  For ticket numbers less than 10 digits, pad with zeros.
      *
-     * Generated from protobuf field <code>string ticketNumber = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string ticketNumber = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getTicketNumber()
@@ -67,7 +67,7 @@ class BoardingPassRecordRequestByTicketNumber extends \Google\Protobuf\Internal\
     /**
      * Ticket number can optionally be prefixed by the 3 digit airline code, followed by a 10 digit ticket number.  For ticket numbers less than 10 digits, pad with zeros.
      *
-     * Generated from protobuf field <code>string ticketNumber = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string ticketNumber = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */

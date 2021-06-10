@@ -20,9 +20,44 @@ class ARpcCertificates
         \GPBMetadata\Io\Certificate\Certificate::initOnce();
         \GPBMetadata\Io\Common\Pagination::initOnce();
         \GPBMetadata\Io\Common\Filter::initOnce();
-        $pool->internalAddGeneratedFile(hex2bin(
-            "0ad4090a20696f2f636f72652f615f7270635f6365727469666963617465732e70726f746f1202696f1a1b676f6f676c652f70726f746f6275662f656d7074792e70726f746f1a1e696f2f636f6d6d6f6e2f636f6d6d6f6e5f6f626a656374732e70726f746f1a20696f2f63657274696669636174652f63657274696669636174652e70726f746f1a1a696f2f636f6d6d6f6e2f706167696e6174696f6e2e70726f746f1a16696f2f636f6d6d6f6e2f66696c7465722e70726f746f32d0070a0c4365727469666963617465731287010a1c67657443657274696669636174655369676e696e675265717565737412162e676f6f676c652e70726f746f6275662e456d7074791a1d2e696f2e43657274696669636174655369676e696e6752657175657374223082d3e493022a12282f63657274696669636174652f63657274696669636174655f7369676e696e675f7265717565737412640a136164644170706c654365727469666963617465120d2e696f2e46696c6542797465731a132e696f2e436572746966696361746544617461222982d3e4930223221e2f63657274696669636174652f6170706c655f63657274696669636174653a012a12670a167570646174654170706c654365727469666963617465120d2e696f2e46696c6542797465731a132e696f2e436572746966696361746544617461222982d3e49302231a1e2f63657274696669636174652f6170706c655f63657274696669636174653a012a12690a176765744170706c6543657274696669636174654461746112162e696f2e50617373547970654964656e7469666965721a132e696f2e436572746966696361746544617461222182d3e493021b12192f63657274696669636174652f7b706173735479706549647d125f0a1f6c6973744170706c6543657274696669636174657344657072656361746564120e2e696f2e506167696e6174696f6e1a132e696f2e436572746966696361746544617461221582d3e493020f120d2f636572746966696361746573300112600a156c6973744170706c65436572746966696361746573120b2e696f2e46696c746572731a132e696f2e436572746966696361746544617461222382d3e493021d22182f6365727469666963617465732f6170706c652f6c6973743a012a3001125a0a20636f756e744170706c6543657274696669636174657344657072656361746564120e2e696f2e506167696e6174696f6e1a092e696f2e436f756e74221b82d3e493021512132f6365727469666963617465732f636f756e7412560a16636f756e744170706c65436572746966696361746573120b2e696f2e46696c746572731a092e696f2e436f756e74222482d3e493021e22192f6365727469666963617465732f6170706c652f636f756e743a012a1284010a1973656e644e46435369676e696e6743726564656e7469616c7312202e696f2e4e46435369676e696e6743726564656e7469616c73526571756573741a162e676f6f676c652e70726f746f6275662e456d707479222d82d3e493022722222f6365727469666963617465732f6e66632f63726564656e7469616c732f73656e643a012a423e0a0f696f2e706173736b69742e504b696f5a2473746173682e706173736b69742e636f6d2f696f2f6d6f64656c2f73646b2f676f2f696faa0204504b496f620670726f746f33"
-        ), true);
+        $pool->internalAddGeneratedFile(
+            '
+∑
+ io/core/a_rpc_certificates.protoiogoogle/protobuf/empty.protoio/common/common_objects.proto io/certificate/certificate.protoio/common/pagination.protoio/common/filter.proto.protoc-gen-openapiv2/options/annotations.proto2Ë
+Certificates‹
+getAppleCertificateData.io.PassTypeIdentifier.io.CertificateData"ìÇ”‰ì/certificate/{passTypeId}íAoGet Apple pass certificateQGets the certificate data for certificate with Pass Type Identifier {passTypeId}.’
+getCertificateSigningRequest.google.protobuf.Empty.io.CertificateSigningRequest"~Ç”‰ì*(/certificate/certificate_signing_requestíAK%Get CSR (Certificate Signing Request)"Gets a CSR for the logged in user.¢
+addAppleCertificate.io.FileBytes.io.CertificateData"gÇ”‰ì#"/certificate/apple_certificate:*íA;Add Apple certificate"Uploads an Apple pass certificate.ª
+updateAppleCertificate.io.FileBytes.io.CertificateData"}Ç”‰ì#/certificate/apple_certificate:*íAQUpdate Apple certificate5Updates or renews an existing Apple pass certificate.ª
+listAppleCertificatesDeprecated.io.Pagination.io.CertificateData"qÇ”‰ì/certificatesíAY)List Apple pass certificates [DEPRECATED],Retrieves a users certificates [DEPRECATED].0°
+listAppleCertificates.io.Filters.io.CertificateData"dÇ”‰ì"/certificates/apple/list:*íA>List Apple pass certificatesRetrieves a users certificates0‡
+ countAppleCertificatesDeprecated.io.Pagination	.io.Count"†Ç”‰ì/certificates/countíAÅ*Count Apple pass certificates [DEPRECATED]SRetrieves the total count of pass certificates for the logged in user [DEPRECATED].¡
+countAppleCertificates.io.Filters	.io.Count"éÇ”‰ì"/certificates/apple/count:*íAgCount Apple pass certificatesFRetrieves the total count of pass certificates for the logged in user.¥
+sendNFCSigningCredentials .io.NFCSigningCredentialsRequest.google.protobuf.Empty"‹Ç”‰ì\'""/certificates/nfc/credentials/send:*íA´Send NFC signing credentialsäSends the NFC signing credentials for a certificate to the registered email address of the user. Only works with NFC enabled certificates.Bÿ
+com.passkit.grpcZ$stash.passkit.com/io/model/sdk/go/io™PassKit.GrpcíAç⁄
+PassKit Certificates APICAPI for managing Apple Wallet Pass Type Identifiers & Certificates.8https://passkit.com/legal/terms-of-subscription-service/"?
+PassKit Supporthttps://docs.passkit.iosupport@passkit.com*2application/json:application/jsonR9
+2002
+(Returned when the request is successful.
+öR4
+400-
++Returned when wrong user input is provided.R0
+401)
+\'Returned when the user is unauthorized.RP
+403I
+GReturned when the user does not have permission to access the resource.R;
+4044
+*Returned when the resource does not exist.
+öR<
+5005
++Returned when there is an unexpected error.
+öRW
+503P
+NServer is unavailable. Back off for 250ms and repeat request until successful.Z>
+<
+
+apiKeyAuth.JWT Authentication token.Authorization bproto3'
+        , true);
 
         static::$is_initialized = true;
     }

@@ -171,7 +171,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      * The date/time when the doors open at the venue.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp doorsOpen = 3;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getDoorsOpen()
     {
@@ -207,7 +207,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      * The scheduled date/time when the event starts. If the event spans multiple days, it should be the start date/time on the first day. Tickets can only be issued for events that are within 90 days of the ticket issue date.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp scheduledStartDate = 4;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getScheduledStartDate()
     {
@@ -243,7 +243,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      * The new date/time when the event starts. This field can be used when you need to set a new event start data/time.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp actualStartDate = 5;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getActualStartDate()
     {
@@ -279,7 +279,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      * The date/time when the event ends. If the event spans multiple days, it should be the end date/time on the last day.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp endDate = 6;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getEndDate()
     {
@@ -315,7 +315,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Pay will always notify the user 3 hours before the event start date that they have an upcoming event.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp relevantDate = 7;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getRelevantDate()
     {
@@ -351,7 +351,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      * The quota for the event. If set to 0, then it is unlimited. If the quota is reached no new tickets can be issued.
      *
      * Generated from protobuf field <code>.io.Quota quota = 8;</code>
-     * @return \Io\Quota
+     * @return \Io\Quota|null
      */
     public function getQuota()
     {
@@ -387,7 +387,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      * Performance analytics for the event. Not writable.
      *
      * Generated from protobuf field <code>.io.Metrics metrics = 9;</code>
-     * @return \Io\Metrics
+     * @return \Io\Metrics|null
      */
     public function getMetrics()
     {
@@ -423,7 +423,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      * The date the event was created. Not writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 10;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -459,7 +459,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      * The date the event updated. Not writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 11;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {

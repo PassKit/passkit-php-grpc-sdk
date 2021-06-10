@@ -66,7 +66,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.flights.FlightTimes monday = 1;</code>
-     * @return \Flights\FlightTimes
+     * @return \Flights\FlightTimes|null
      */
     public function getMonday()
     {
@@ -98,7 +98,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.flights.FlightTimes tuesday = 2;</code>
-     * @return \Flights\FlightTimes
+     * @return \Flights\FlightTimes|null
      */
     public function getTuesday()
     {
@@ -130,7 +130,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.flights.FlightTimes wednesday = 3;</code>
-     * @return \Flights\FlightTimes
+     * @return \Flights\FlightTimes|null
      */
     public function getWednesday()
     {
@@ -162,7 +162,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.flights.FlightTimes thursday = 4;</code>
-     * @return \Flights\FlightTimes
+     * @return \Flights\FlightTimes|null
      */
     public function getThursday()
     {
@@ -194,7 +194,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.flights.FlightTimes friday = 5;</code>
-     * @return \Flights\FlightTimes
+     * @return \Flights\FlightTimes|null
      */
     public function getFriday()
     {
@@ -226,7 +226,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.flights.FlightTimes saturday = 6;</code>
-     * @return \Flights\FlightTimes
+     * @return \Flights\FlightTimes|null
      */
     public function getSaturday()
     {
@@ -258,7 +258,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.flights.FlightTimes sunday = 7;</code>
-     * @return \Flights\FlightTimes
+     * @return \Flights\FlightTimes|null
      */
     public function getSunday()
     {

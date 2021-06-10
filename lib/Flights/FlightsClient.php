@@ -26,6 +26,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\Port $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createPort(\Flights\Port $argument,
       $metadata = [], $options = []) {
@@ -40,6 +41,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\AirportCode $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getPort(\Flights\AirportCode $argument,
       $metadata = [], $options = []) {
@@ -54,6 +56,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\Port $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updatePort(\Flights\Port $argument,
       $metadata = [], $options = []) {
@@ -68,6 +71,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\AirportCode $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deletePort(\Flights\AirportCode $argument,
       $metadata = [], $options = []) {
@@ -82,6 +86,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\Carrier $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createCarrier(\Flights\Carrier $argument,
       $metadata = [], $options = []) {
@@ -96,6 +101,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\CarrierCode $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getCarrier(\Flights\CarrierCode $argument,
       $metadata = [], $options = []) {
@@ -110,6 +116,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\Carrier $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateCarrier(\Flights\Carrier $argument,
       $metadata = [], $options = []) {
@@ -124,6 +131,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\CarrierCode $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteCarrier(\Flights\CarrierCode $argument,
       $metadata = [], $options = []) {
@@ -138,6 +146,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\FlightDesignator $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createFlightDesignator(\Flights\FlightDesignator $argument,
       $metadata = [], $options = []) {
@@ -152,6 +161,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\FlightDesignatorRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getFlightDesignator(\Flights\FlightDesignatorRequest $argument,
       $metadata = [], $options = []) {
@@ -166,6 +176,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\FlightDesignator $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateFlightDesignator(\Flights\FlightDesignator $argument,
       $metadata = [], $options = []) {
@@ -180,6 +191,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\FlightDesignatorRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteFlightDesignator(\Flights\FlightDesignatorRequest $argument,
       $metadata = [], $options = []) {
@@ -194,6 +206,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\Flight $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createFlight(\Flights\Flight $argument,
       $metadata = [], $options = []) {
@@ -208,6 +221,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\FlightRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getFlight(\Flights\FlightRequest $argument,
       $metadata = [], $options = []) {
@@ -222,6 +236,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\Flight $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateFlight(\Flights\Flight $argument,
       $metadata = [], $options = []) {
@@ -236,6 +251,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\FlightRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteFlight(\Flights\FlightRequest $argument,
       $metadata = [], $options = []) {
@@ -250,6 +266,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\BoardingPassRecord $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createBoardingPass(\Flights\BoardingPassRecord $argument,
       $metadata = [], $options = []) {
@@ -264,6 +281,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\BoardingPassRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getBoardingPassRecord(\Flights\BoardingPassRecordRequest $argument,
       $metadata = [], $options = []) {
@@ -278,6 +296,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\BoardingPassRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getBoardingPass(\Flights\BoardingPassRequest $argument,
       $metadata = [], $options = []) {
@@ -292,6 +311,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\BoardingPassRecord $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateBoardingPass(\Flights\BoardingPassRecord $argument,
       $metadata = [], $options = []) {
@@ -306,6 +326,7 @@ class FlightsClient extends \Grpc\BaseStub {
      * @param \Flights\BoardingPassRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteBoardingPass(\Flights\BoardingPassRecordRequest $argument,
       $metadata = [], $options = []) {

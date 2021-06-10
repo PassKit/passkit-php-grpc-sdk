@@ -143,7 +143,7 @@ class Sharing extends \Google\Protobuf\Internal\Message
      * Sharing description in localized language.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedDescription = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedDescription()
     {

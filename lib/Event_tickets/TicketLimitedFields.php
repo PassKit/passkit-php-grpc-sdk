@@ -259,7 +259,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * The production information.
      *
      * Generated from protobuf field <code>.event_tickets.ProductionLimitedFieldsResponse production = 3;</code>
-     * @return \Event_tickets\ProductionLimitedFieldsResponse
+     * @return \Event_tickets\ProductionLimitedFieldsResponse|null
      */
     public function getProduction()
     {
@@ -295,7 +295,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * The event information. Only specific fields are returned.
      *
      * Generated from protobuf field <code>.event_tickets.EventLimitedFieldsResponse event = 4;</code>
-     * @return \Event_tickets\EventLimitedFieldsResponse
+     * @return \Event_tickets\EventLimitedFieldsResponse|null
      */
     public function getEvent()
     {
@@ -331,7 +331,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * Venue information. Only specific fields are returned.
      *
      * Generated from protobuf field <code>.event_tickets.VenueLimitedFieldsResponse venue = 5;</code>
-     * @return \Event_tickets\VenueLimitedFieldsResponse
+     * @return \Event_tickets\VenueLimitedFieldsResponse|null
      */
     public function getVenue()
     {
@@ -367,7 +367,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * The ticket type the ticket is for. Only specific fields are returned.
      *
      * Generated from protobuf field <code>.event_tickets.TicketTypeLimitedFields ticketType = 6;</code>
-     * @return \Event_tickets\TicketTypeLimitedFields
+     * @return \Event_tickets\TicketTypeLimitedFields|null
      */
     public function getTicketType()
     {
@@ -481,7 +481,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * The seat info for the ticket.
      *
      * Generated from protobuf field <code>.event_tickets.Seat seatInfo = 10;</code>
-     * @return \Event_tickets\Seat
+     * @return \Event_tickets\Seat|null
      */
     public function getSeatInfo()
     {
@@ -517,7 +517,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * The face value details for the ticket.
      *
      * Generated from protobuf field <code>.event_tickets.FaceValue faceValue = 11;</code>
-     * @return \Event_tickets\FaceValue
+     * @return \Event_tickets\FaceValue|null
      */
     public function getFaceValue()
     {
@@ -553,7 +553,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * The ticket holder information. Stored encrypted in PassKit's database.
      *
      * Generated from protobuf field <code>.io.Person person = 12;</code>
-     * @return \Io\Person
+     * @return \Io\Person|null
      */
     public function getPerson()
     {
@@ -667,7 +667,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * Optional field to set when the ticket expires. When the expiry date hits, it will automatically gray out the barcode.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiryDate = 16;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getExpiryDate()
     {
@@ -703,7 +703,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * Contains details about the redemption (if the ticket is in a redeemed state). Not writable; set by the redeem endpoint.
      *
      * Generated from protobuf field <code>.event_tickets.RedemptionDetails redemptionDetails = 17;</code>
-     * @return \Event_tickets\RedemptionDetails
+     * @return \Event_tickets\RedemptionDetails|null
      */
     public function getRedemptionDetails()
     {
@@ -765,7 +765,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * Optional Pass level overrides for proximity & images.
      *
      * Generated from protobuf field <code>.io.PassOverrides passOverrides = 19;</code>
-     * @return \Io\PassOverrides
+     * @return \Io\PassOverrides|null
      */
     public function getPassOverrides()
     {
@@ -801,7 +801,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * Pass Metadata hold meta data about the pass like status, lifecycle, utm details and installation data. Cannot be set via the API.
      *
      * Generated from protobuf field <code>.io.Metadata passMetaData = 20;</code>
-     * @return \Io\Metadata
+     * @return \Io\Metadata|null
      */
     public function getPassMetaData()
     {
@@ -837,7 +837,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * The date the ticket was created. Not writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 21;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -873,7 +873,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * The date the ticket last updated. Not writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 22;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {

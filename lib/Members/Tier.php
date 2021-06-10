@@ -271,7 +271,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      * Localized name of tier.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedName = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedName()
     {
@@ -333,7 +333,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      * Localized name of the secondary reward tier.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedSecondaryTierName = 6;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedSecondaryTierName()
     {
@@ -447,7 +447,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      * Localized notification to be shown when someone upgrades tier.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedTierUpgradeMessage = 10;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedTierUpgradeMessage()
     {
@@ -509,7 +509,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      * Localized notification to be shown when someone upgrades tier.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedTierDowngradeMessage = 12;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedTierDowngradeMessage()
     {
@@ -545,7 +545,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      * The date the tier was created.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 13;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -581,7 +581,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      * The date the tier was updated.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 14;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {
@@ -669,7 +669,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      * Expiry date setting. You can set expiry logic here. Default no expiry logic.
      *
      * Generated from protobuf field <code>.io.ExpirySettings expirySettings = 17;</code>
-     * @return \Io\ExpirySettings
+     * @return \Io\ExpirySettings|null
      */
     public function getExpirySettings()
     {
@@ -731,7 +731,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      * Indicates if customers can enrol into this tier via a public web form (only for public programs).
      *
      * Generated from protobuf field <code>.io.PkBool allowTierEnrolment = 19;</code>
-     * @return \Io\PkBool
+     * @return \Io\PkBool|null
      */
     public function getAllowTierEnrolment()
     {

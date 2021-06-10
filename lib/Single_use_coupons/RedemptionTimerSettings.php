@@ -107,7 +107,7 @@ class RedemptionTimerSettings extends \Google\Protobuf\Internal\Message
      * Localized help text for redemption timer.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedTimeHelpText = 3;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedTimeHelpText()
     {

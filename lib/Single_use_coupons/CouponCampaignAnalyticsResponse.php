@@ -125,7 +125,7 @@ class CouponCampaignAnalyticsResponse extends \Google\Protobuf\Internal\Message
      * Total number of pass redeemed for each device type.
      *
      * Generated from protobuf field <code>.io.DeviceBreakdown devices = 3;</code>
-     * @return \Io\DeviceBreakdown
+     * @return \Io\DeviceBreakdown|null
      */
     public function getDevices()
     {

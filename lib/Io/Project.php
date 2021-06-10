@@ -199,7 +199,7 @@ class Project extends \Google\Protobuf\Internal\Message
      * The timestamp when the project was created.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 5;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {

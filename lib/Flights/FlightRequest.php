@@ -18,13 +18,13 @@ class FlightRequest extends \Google\Protobuf\Internal\Message
     /**
      * The 2 character IATA code or 3 character ICAO code.
      *
-     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $carrierCode = '';
     /**
      * The flight number.
      *
-     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $flightNumber = '';
     /**
@@ -72,7 +72,7 @@ class FlightRequest extends \Google\Protobuf\Internal\Message
     /**
      * The 2 character IATA code or 3 character ICAO code.
      *
-     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getCarrierCode()
@@ -83,7 +83,7 @@ class FlightRequest extends \Google\Protobuf\Internal\Message
     /**
      * The 2 character IATA code or 3 character ICAO code.
      *
-     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -98,7 +98,7 @@ class FlightRequest extends \Google\Protobuf\Internal\Message
     /**
      * The flight number.
      *
-     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getFlightNumber()
@@ -109,7 +109,7 @@ class FlightRequest extends \Google\Protobuf\Internal\Message
     /**
      * The flight number.
      *
-     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -125,7 +125,7 @@ class FlightRequest extends \Google\Protobuf\Internal\Message
      * The scheduled date of the flight, stated in the timezone of the boarding point.
      *
      * Generated from protobuf field <code>.io.Date departureDate = 3;</code>
-     * @return \Io\Date
+     * @return \Io\Date|null
      */
     public function getDepartureDate()
     {

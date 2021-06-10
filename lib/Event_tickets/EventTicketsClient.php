@@ -23,6 +23,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Production $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createProduction(\Event_tickets\Production $argument,
       $metadata = [], $options = []) {
@@ -36,6 +37,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Production $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function patchProduction(\Event_tickets\Production $argument,
       $metadata = [], $options = []) {
@@ -49,6 +51,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Production $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateProduction(\Event_tickets\Production $argument,
       $metadata = [], $options = []) {
@@ -62,6 +65,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getProduction(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -75,6 +79,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Production $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteProduction(\Event_tickets\Production $argument,
       $metadata = [], $options = []) {
@@ -88,6 +93,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listProductions(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -101,6 +107,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Io\AnalyticsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getAnalytics(\Io\AnalyticsRequest $argument,
       $metadata = [], $options = []) {
@@ -114,6 +121,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\ProductionCopyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function copyProduction(\Event_tickets\ProductionCopyRequest $argument,
       $metadata = [], $options = []) {
@@ -127,6 +135,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Venue $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createVenue(\Event_tickets\Venue $argument,
       $metadata = [], $options = []) {
@@ -140,6 +149,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Venue $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateVenue(\Event_tickets\Venue $argument,
       $metadata = [], $options = []) {
@@ -153,6 +163,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Venue $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function patchVenue(\Event_tickets\Venue $argument,
       $metadata = [], $options = []) {
@@ -166,6 +177,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getVenueById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -179,6 +191,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Venue $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteVenue(\Event_tickets\Venue $argument,
       $metadata = [], $options = []) {
@@ -192,6 +205,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listVenues(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -205,6 +219,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Event $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createEvent(\Event_tickets\Event $argument,
       $metadata = [], $options = []) {
@@ -218,6 +233,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Event $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateEvent(\Event_tickets\Event $argument,
       $metadata = [], $options = []) {
@@ -231,6 +247,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Event $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function patchEvent(\Event_tickets\Event $argument,
       $metadata = [], $options = []) {
@@ -244,6 +261,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getEventById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -257,6 +275,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\GetEventRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getEventByStartDateAndVenue(\Event_tickets\GetEventRequest $argument,
       $metadata = [], $options = []) {
@@ -270,6 +289,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Event $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteEvent(\Event_tickets\Event $argument,
       $metadata = [], $options = []) {
@@ -283,6 +303,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\EventListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listEvents(\Event_tickets\EventListRequest $argument,
       $metadata = [], $options = []) {
@@ -296,6 +317,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\TicketType $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createTicketType(\Event_tickets\TicketType $argument,
       $metadata = [], $options = []) {
@@ -309,6 +331,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\TicketType $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateTicketType(\Event_tickets\TicketType $argument,
       $metadata = [], $options = []) {
@@ -322,6 +345,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\TicketType $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function patchTicketType(\Event_tickets\TicketType $argument,
       $metadata = [], $options = []) {
@@ -335,6 +359,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getTicketTypeById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -348,6 +373,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\GetByUidRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getTicketTypeByUserDefinedId(\Event_tickets\GetByUidRequest $argument,
       $metadata = [], $options = []) {
@@ -361,6 +387,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\TicketType $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteTicketType(\Event_tickets\TicketType $argument,
       $metadata = [], $options = []) {
@@ -374,6 +401,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\TicketTypeListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listTicketTypes(\Event_tickets\TicketTypeListRequest $argument,
       $metadata = [], $options = []) {
@@ -387,6 +415,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\IssueTicketRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function issueTicket(\Event_tickets\IssueTicketRequest $argument,
       $metadata = [], $options = []) {
@@ -400,6 +429,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Ticket $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function issueTicketById(\Event_tickets\Ticket $argument,
       $metadata = [], $options = []) {
@@ -413,6 +443,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Ticket $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateTicket(\Event_tickets\Ticket $argument,
       $metadata = [], $options = []) {
@@ -423,9 +454,24 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Event_tickets\EventTicketPerson $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function patchPerson(\Event_tickets\EventTicketPerson $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/event_tickets.EventTickets/patchPerson',
+        $argument,
+        ['\Io\Id', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Event_tickets\ValidateTicketRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function validateTicket(\Event_tickets\ValidateTicketRequest $argument,
       $metadata = [], $options = []) {
@@ -439,6 +485,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Ticket $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function redeemTicket(\Event_tickets\Ticket $argument,
       $metadata = [], $options = []) {
@@ -452,6 +499,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\RedeemByOrderNumber $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function redeemTicketsByOrderNumber(\Event_tickets\RedeemByOrderNumber $argument,
       $metadata = [], $options = []) {
@@ -465,6 +513,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getTicketById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -478,6 +527,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\TicketNumberRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getTicketByTicketNumber(\Event_tickets\TicketNumberRequest $argument,
       $metadata = [], $options = []) {
@@ -491,6 +541,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\OrderNumberRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getTicketsByOrderNumber(\Event_tickets\OrderNumberRequest $argument,
       $metadata = [], $options = []) {
@@ -504,6 +555,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\EventTicketPassRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getEventTicketPass(\Event_tickets\EventTicketPassRequest $argument,
       $metadata = [], $options = []) {
@@ -517,6 +569,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\Ticket $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteTicket(\Event_tickets\Ticket $argument,
       $metadata = [], $options = []) {
@@ -530,6 +583,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\OrderNumberRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteTicketsByOrderNumber(\Event_tickets\OrderNumberRequest $argument,
       $metadata = [], $options = []) {
@@ -543,6 +597,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\TicketListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listTickets(\Event_tickets\TicketListRequest $argument,
       $metadata = [], $options = []) {
@@ -556,6 +611,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
      * @param \Event_tickets\TicketListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function countTickets(\Event_tickets\TicketListRequest $argument,
       $metadata = [], $options = []) {

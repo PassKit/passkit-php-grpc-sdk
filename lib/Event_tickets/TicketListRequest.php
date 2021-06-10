@@ -144,7 +144,7 @@ class TicketListRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.event_tickets.EventFilterByVenueAndStart eventFilterByVenueAndStart = 4;</code>
-     * @return \Event_tickets\EventFilterByVenueAndStart
+     * @return \Event_tickets\EventFilterByVenueAndStart|null
      */
     public function getEventFilterByVenueAndStart()
     {
@@ -235,7 +235,7 @@ class TicketListRequest extends \Google\Protobuf\Internal\Message
      * Filters: allows to filter on additional ticket data (i.e. group id, pass install status, updated etc).
      *
      * Generated from protobuf field <code>.io.Filters filters = 7;</code>
-     * @return \Io\Filters
+     * @return \Io\Filters|null
      */
     public function getFilters()
     {

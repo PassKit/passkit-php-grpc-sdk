@@ -257,7 +257,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * Optional field if you would like to add PII to the individual coupon. Person is stored encrypted.
      *
      * Generated from protobuf field <code>.io.Person person = 5;</code>
-     * @return \Io\Person
+     * @return \Io\Person|null
      */
     public function getPerson()
     {
@@ -397,7 +397,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * Optional field to set when the coupon expires. When the expiry date hits, it will automatically gray out the barcode. Only applicable if the template for the offer is set to EXPIRE_ON_VARIABLE_DATE_TIME.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiryDate = 11;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getExpiryDate()
     {
@@ -433,7 +433,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * Contains details about the redemption (if the coupon is in a redeemed state).
      *
      * Generated from protobuf field <code>.single_use_coupons.RedemptionDetails redemptionDetails = 12;</code>
-     * @return \Single_use_coupons\RedemptionDetails
+     * @return \Single_use_coupons\RedemptionDetails|null
      */
     public function getRedemptionDetails()
     {
@@ -469,7 +469,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * Optional Pass level overrides for proximity & images.
      *
      * Generated from protobuf field <code>.io.PassOverrides passOverrides = 13;</code>
-     * @return \Io\PassOverrides
+     * @return \Io\PassOverrides|null
      */
     public function getPassOverrides()
     {
@@ -505,7 +505,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * Pass Metadata hold meta data about the pass like status, lifecycle, utm details and installation data.
      *
      * Generated from protobuf field <code>.io.Metadata passMetaData = 14;</code>
-     * @return \Io\Metadata
+     * @return \Io\Metadata|null
      */
     public function getPassMetaData()
     {
@@ -541,7 +541,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * The date the coupon was created.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 15;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -577,7 +577,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      * The date the coupon was last updated.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 16;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {

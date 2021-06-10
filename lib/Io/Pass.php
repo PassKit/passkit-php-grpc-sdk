@@ -167,7 +167,7 @@ class Pass extends \Google\Protobuf\Internal\Message
      * PII data of pass holder.
      *
      * Generated from protobuf field <code>.io.Person personDetails = 4;</code>
-     * @return \Io\Person
+     * @return \Io\Person|null
      */
     public function getPersonDetails()
     {
@@ -203,7 +203,7 @@ class Pass extends \Google\Protobuf\Internal\Message
      * Pass meta data such as install ip, user agent and other lifecycle data.
      *
      * Generated from protobuf field <code>.io.Metadata metadata = 5;</code>
-     * @return \Io\Metadata
+     * @return \Io\Metadata|null
      */
     public function getMetadata()
     {

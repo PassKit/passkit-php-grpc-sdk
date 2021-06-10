@@ -107,7 +107,7 @@ class EventFilterByVenueAndStart extends \Google\Protobuf\Internal\Message
      * Event scheduled start date time.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp scheduledStartDate = 3;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getScheduledStartDate()
     {

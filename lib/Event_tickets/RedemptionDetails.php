@@ -79,7 +79,7 @@ class RedemptionDetails extends \Google\Protobuf\Internal\Message
      * The date the ticket was redeemed, auto set by the system when the redeem endpoint is called. Not writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp redemptionDate = 1;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getRedemptionDate()
     {

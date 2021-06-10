@@ -349,7 +349,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedAddress1Label = 11;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedAddress1Label()
     {
@@ -381,7 +381,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedAddress2Label = 12;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedAddress2Label()
     {
@@ -413,7 +413,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedCityLabel = 13;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedCityLabel()
     {
@@ -445,7 +445,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedCountryLabel = 14;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedCountryLabel()
     {
@@ -477,7 +477,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedZipLabel = 15;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedZipLabel()
     {
@@ -509,7 +509,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedAddress1Placeholder = 16;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedAddress1Placeholder()
     {
@@ -541,7 +541,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedAddress2Placeholder = 17;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedAddress2Placeholder()
     {
@@ -573,7 +573,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedCityPlaceholder = 18;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedCityPlaceholder()
     {
@@ -605,7 +605,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedCountryPlaceholder = 19;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedCountryPlaceholder()
     {
@@ -637,7 +637,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedZipPlaceholder = 20;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedZipPlaceholder()
     {

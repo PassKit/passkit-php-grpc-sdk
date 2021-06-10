@@ -79,7 +79,7 @@ class ValidateDetails extends \Google\Protobuf\Internal\Message
      * The date the ticket was validated, auto set by the system when the validate endpoint is called. Tickets can be validated multiple times. Not writable.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validateDate = 1;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getValidateDate()
     {

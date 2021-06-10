@@ -49,7 +49,7 @@ class MemberSegmentRequest extends \Google\Protobuf\Internal\Message
      * Optional filter object; defines the segment.
      *
      * Generated from protobuf field <code>.io.Filter filter = 1;</code>
-     * @return \Io\Filter
+     * @return \Io\Filter|null
      */
     public function getFilter()
     {
@@ -85,7 +85,7 @@ class MemberSegmentRequest extends \Google\Protobuf\Internal\Message
      * Contains fields to update (optional: if used in update context).
      *
      * Generated from protobuf field <code>.members.Member newValues = 2;</code>
-     * @return \Members\Member
+     * @return \Members\Member|null
      */
     public function getNewValues()
     {

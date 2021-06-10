@@ -49,6 +49,16 @@ class EarnBurnPointsRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 tierPoints = 6;</code>
      */
     protected $tierPoints = 0;
+    /**
+     * Generated from protobuf field <code>.members.EventDetails eventDetails = 7;</code>
+     */
+    protected $eventDetails = null;
+    /**
+     * Optional field to change the tierIf of the member.
+     *
+     * Generated from protobuf field <code>string tierId = 8;</code>
+     */
+    protected $tierId = '';
 
     /**
      * Constructor.
@@ -68,6 +78,9 @@ class EarnBurnPointsRequest extends \Google\Protobuf\Internal\Message
      *           The amount of secondary points earned or burnt. The amount needs to be greater than or equal to 0.
      *     @type int $tierPoints
      *           The amount of tier points earned or burnt. The amount needs to be greater than or equal to 0.
+     *     @type \Members\EventDetails $eventDetails
+     *     @type string $tierId
+     *           Optional field to change the tierIf of the member.
      * }
      */
     public function __construct($data = NULL) {
@@ -227,6 +240,64 @@ class EarnBurnPointsRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->tierPoints = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.members.EventDetails eventDetails = 7;</code>
+     * @return \Members\EventDetails|null
+     */
+    public function getEventDetails()
+    {
+        return isset($this->eventDetails) ? $this->eventDetails : null;
+    }
+
+    public function hasEventDetails()
+    {
+        return isset($this->eventDetails);
+    }
+
+    public function clearEventDetails()
+    {
+        unset($this->eventDetails);
+    }
+
+    /**
+     * Generated from protobuf field <code>.members.EventDetails eventDetails = 7;</code>
+     * @param \Members\EventDetails $var
+     * @return $this
+     */
+    public function setEventDetails($var)
+    {
+        GPBUtil::checkMessage($var, \Members\EventDetails::class);
+        $this->eventDetails = $var;
+
+        return $this;
+    }
+
+    /**
+     * Optional field to change the tierIf of the member.
+     *
+     * Generated from protobuf field <code>string tierId = 8;</code>
+     * @return string
+     */
+    public function getTierId()
+    {
+        return $this->tierId;
+    }
+
+    /**
+     * Optional field to change the tierIf of the member.
+     *
+     * Generated from protobuf field <code>string tierId = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTierId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->tierId = $var;
 
         return $this;
     }

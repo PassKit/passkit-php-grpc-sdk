@@ -115,7 +115,7 @@ class BillingMeta extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.Address billingAddress = 4;</code>
-     * @return \Io\Address
+     * @return \Io\Address|null
      */
     public function getBillingAddress()
     {

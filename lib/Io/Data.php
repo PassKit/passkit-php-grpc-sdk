@@ -79,7 +79,7 @@ class Data extends \Google\Protobuf\Internal\Message
      * Settings for data collection elements other than form fields. Form fields can be configured in dataFields object.
      *
      * Generated from protobuf field <code>.io.DataCollectionPageSettings dataCollectionPageSettings = 2;</code>
-     * @return \Io\DataCollectionPageSettings
+     * @return \Io\DataCollectionPageSettings|null
      */
     public function getDataCollectionPageSettings()
     {

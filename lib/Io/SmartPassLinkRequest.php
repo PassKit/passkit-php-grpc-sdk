@@ -47,7 +47,7 @@ class SmartPassLinkRequest extends \Google\Protobuf\Internal\Message
      * The PassKit URL used to generate the link; found under your SmartPass link settings in the Portal: https://github.com/PassKit/smart-pass-link-from-csv-generator#how-to-use
      *
      * Generated from protobuf field <code>.io.Url projectDistributionUrl = 1;</code>
-     * @return \Io\Url
+     * @return \Io\Url|null
      */
     public function getProjectDistributionUrl()
     {

@@ -269,7 +269,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      * Localized offer title.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedOfferTitle = 3;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedOfferTitle()
     {
@@ -331,7 +331,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      * Localized offer short title.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedOfferShortTitle = 5;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedOfferShortTitle()
     {
@@ -393,7 +393,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      * Localized offer details.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedOfferDetails = 7;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedOfferDetails()
     {
@@ -455,7 +455,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      * Localized offer fine print.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedOfferFinePrint = 9;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedOfferFinePrint()
     {
@@ -543,7 +543,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      * The quota for the campaign. If set to 0, then it is unlimited. If the quota is reached no new coupons can be issued.
      *
      * Generated from protobuf field <code>.io.Quota quota = 12;</code>
-     * @return \Io\Quota
+     * @return \Io\Quota|null
      */
     public function getQuota()
     {
@@ -579,7 +579,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      * Coupon expiry settings
      *
      * Generated from protobuf field <code>.single_use_coupons.CouponExpirySettings couponExpirySettings = 13;</code>
-     * @return \Single_use_coupons\CouponExpirySettings
+     * @return \Single_use_coupons\CouponExpirySettings|null
      */
     public function getCouponExpirySettings()
     {
@@ -615,7 +615,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      * Optional redemption settings to give more control over redemption.
      *
      * Generated from protobuf field <code>.single_use_coupons.RedemptionSettings redemptionSettings = 14;</code>
-     * @return \Single_use_coupons\RedemptionSettings
+     * @return \Single_use_coupons\RedemptionSettings|null
      */
     public function getRedemptionSettings()
     {
@@ -651,7 +651,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      * Optional date when coupons can start to be issued. Defaults to the campaign start date. Needs to be greater than / equal to the campaign start date. Needs to be less than / equal to the campaign end date.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp issueStartDate = 15;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getIssueStartDate()
     {
@@ -687,7 +687,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      * Optional date when coupons can no longer be issued. Defaults to the campaign end date. Needs to be less than / equal to the campaign end date.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp issueEndDate = 16;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getIssueEndDate()
     {
@@ -723,7 +723,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      * The date when the offer was created.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 17;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {
@@ -759,7 +759,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      * The date the offer was last updated.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updated = 18;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdated()
     {
@@ -821,7 +821,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      * Contains the email & sms distribution settings for the offer.
      *
      * Generated from protobuf field <code>.io.DistributionSettings distributionSettings = 20;</code>
-     * @return \Io\DistributionSettings
+     * @return \Io\DistributionSettings|null
      */
     public function getDistributionSettings()
     {

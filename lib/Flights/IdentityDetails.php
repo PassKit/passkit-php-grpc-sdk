@@ -201,7 +201,7 @@ class IdentityDetails extends \Google\Protobuf\Internal\Message
      * The date of birth as marked on the traveler's identity document.
      *
      * Generated from protobuf field <code>.io.Date dateOfBirth = 5;</code>
-     * @return \Io\Date
+     * @return \Io\Date|null
      */
     public function getDateOfBirth()
     {
@@ -263,7 +263,7 @@ class IdentityDetails extends \Google\Protobuf\Internal\Message
      * The issue date of the traveler's identity document.
      *
      * Generated from protobuf field <code>.io.Date issuedDate = 7;</code>
-     * @return \Io\Date
+     * @return \Io\Date|null
      */
     public function getIssuedDate()
     {
@@ -299,7 +299,7 @@ class IdentityDetails extends \Google\Protobuf\Internal\Message
      * The expiry date of the traveler's identity document.
      *
      * Generated from protobuf field <code>.io.Date expiryDate = 8;</code>
-     * @return \Io\Date
+     * @return \Io\Date|null
      */
     public function getExpiryDate()
     {

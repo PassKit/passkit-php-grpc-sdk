@@ -18,13 +18,13 @@ class BoardingPassRecordRequestByIndex extends \Google\Protobuf\Internal\Message
     /**
      * The two or three character airline code of the marketing carrier.
      *
-     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $carrierCode = '';
     /**
      * The flight number of the marketing character (excluding the carrier code).
      *
-     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $flightNumber = '';
     /**
@@ -36,7 +36,7 @@ class BoardingPassRecordRequestByIndex extends \Google\Protobuf\Internal\Message
     /**
      * 3 letter IATA code or 4 letter ICAO code of the passenger boarding point.
      *
-     * Generated from protobuf field <code>string boardingPoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string boardingPoint = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $boardingPoint = '';
     /**
@@ -72,7 +72,7 @@ class BoardingPassRecordRequestByIndex extends \Google\Protobuf\Internal\Message
     /**
      * The two or three character airline code of the marketing carrier.
      *
-     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getCarrierCode()
@@ -83,7 +83,7 @@ class BoardingPassRecordRequestByIndex extends \Google\Protobuf\Internal\Message
     /**
      * The two or three character airline code of the marketing carrier.
      *
-     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -98,7 +98,7 @@ class BoardingPassRecordRequestByIndex extends \Google\Protobuf\Internal\Message
     /**
      * The flight number of the marketing character (excluding the carrier code).
      *
-     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getFlightNumber()
@@ -109,7 +109,7 @@ class BoardingPassRecordRequestByIndex extends \Google\Protobuf\Internal\Message
     /**
      * The flight number of the marketing character (excluding the carrier code).
      *
-     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -125,7 +125,7 @@ class BoardingPassRecordRequestByIndex extends \Google\Protobuf\Internal\Message
      * The date of departure in local airport time.
      *
      * Generated from protobuf field <code>.io.Date departureDate = 3;</code>
-     * @return \Io\Date
+     * @return \Io\Date|null
      */
     public function getDepartureDate()
     {
@@ -160,7 +160,7 @@ class BoardingPassRecordRequestByIndex extends \Google\Protobuf\Internal\Message
     /**
      * 3 letter IATA code or 4 letter ICAO code of the passenger boarding point.
      *
-     * Generated from protobuf field <code>string boardingPoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string boardingPoint = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getBoardingPoint()
@@ -171,7 +171,7 @@ class BoardingPassRecordRequestByIndex extends \Google\Protobuf\Internal\Message
     /**
      * 3 letter IATA code or 4 letter ICAO code of the passenger boarding point.
      *
-     * Generated from protobuf field <code>string boardingPoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string boardingPoint = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */

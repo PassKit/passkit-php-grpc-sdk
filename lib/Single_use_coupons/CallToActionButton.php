@@ -123,7 +123,7 @@ class CallToActionButton extends \Google\Protobuf\Internal\Message
      * Localized button text.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedButtonText = 3;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedButtonText()
     {
@@ -185,7 +185,7 @@ class CallToActionButton extends \Google\Protobuf\Internal\Message
      * Localized link that the button will open.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedLink = 5;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedLink()
     {

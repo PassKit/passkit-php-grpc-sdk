@@ -141,7 +141,7 @@ class CustomerInitiatedFixedCodeSettings extends \Google\Protobuf\Internal\Messa
      * Count down timer for redemption.
      *
      * Generated from protobuf field <code>.single_use_coupons.RedemptionTimerSettings redemptionTimer = 4;</code>
-     * @return \Single_use_coupons\RedemptionTimerSettings
+     * @return \Single_use_coupons\RedemptionTimerSettings|null
      */
     public function getRedemptionTimer()
     {

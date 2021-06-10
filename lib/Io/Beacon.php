@@ -36,13 +36,13 @@ class Beacon extends \Google\Protobuf\Internal\Message
     /**
      * Major indicator.
      *
-     * Generated from protobuf field <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $major = 0;
     /**
      * Minor indicator.
      *
-     * Generated from protobuf field <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $minor = 0;
     /**
@@ -174,7 +174,7 @@ class Beacon extends \Google\Protobuf\Internal\Message
     /**
      * Major indicator.
      *
-     * Generated from protobuf field <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return int
      */
     public function getMajor()
@@ -185,7 +185,7 @@ class Beacon extends \Google\Protobuf\Internal\Message
     /**
      * Major indicator.
      *
-     * Generated from protobuf field <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -200,7 +200,7 @@ class Beacon extends \Google\Protobuf\Internal\Message
     /**
      * Minor indicator.
      *
-     * Generated from protobuf field <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return int
      */
     public function getMinor()
@@ -211,7 +211,7 @@ class Beacon extends \Google\Protobuf\Internal\Message
     /**
      * Minor indicator.
      *
-     * Generated from protobuf field <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -253,7 +253,7 @@ class Beacon extends \Google\Protobuf\Internal\Message
      * Localized lock screen message.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedLockScreenMessage = 7;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedLockScreenMessage()
     {

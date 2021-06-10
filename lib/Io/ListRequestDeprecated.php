@@ -90,7 +90,7 @@ class ListRequestDeprecated extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.Pagination pagination = 3;</code>
-     * @return \Io\Pagination
+     * @return \Io\Pagination|null
      */
     public function getPagination()
     {

@@ -120,7 +120,7 @@ class Barcode extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.LocalizedString localizedAltText = 4;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedAltText()
     {

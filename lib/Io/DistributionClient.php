@@ -20,6 +20,7 @@ class DistributionClient extends \Grpc\BaseStub {
      * @param \Io\EmailDistributionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function sendWelcomeEmail(\Io\EmailDistributionRequest $argument,
       $metadata = [], $options = []) {
@@ -33,12 +34,41 @@ class DistributionClient extends \Grpc\BaseStub {
      * @param \Io\SmartPassLinkRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
-    public function getSmartPasssLink(\Io\SmartPassLinkRequest $argument,
+    public function getSmartPassLink(\Io\SmartPassLinkRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/io.Distribution/getSmartPasssLink',
+        return $this->_simpleRequest('/io.Distribution/getSmartPassLink',
         $argument,
         ['\Io\Url', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\ClassObjectInput $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function getDataCollectionPageFields(\Io\ClassObjectInput $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Distribution/getDataCollectionPageFields',
+        $argument,
+        ['\Io\DataCollectionFields', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\SmartPassCsvUploadRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function uploadSmartPassCsv(\Io\SmartPassCsvUploadRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Distribution/uploadSmartPassCsv',
+        $argument,
+        ['\Google\Protobuf\GPBEmpty', 'decode'],
         $metadata, $options);
     }
 

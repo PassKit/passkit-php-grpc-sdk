@@ -19,13 +19,13 @@ class SmsTemplate extends \Google\Protobuf\Internal\Message
     /**
      * content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      *
-     * Generated from protobuf field <code>string content = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string content = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $content = '';
     /**
      * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      *
-     * Generated from protobuf field <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $localizedContent = null;
 
@@ -49,7 +49,7 @@ class SmsTemplate extends \Google\Protobuf\Internal\Message
     /**
      * content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      *
-     * Generated from protobuf field <code>string content = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string content = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
     public function getContent()
@@ -60,7 +60,7 @@ class SmsTemplate extends \Google\Protobuf\Internal\Message
     /**
      * content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      *
-     * Generated from protobuf field <code>string content = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>string content = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -75,8 +75,8 @@ class SmsTemplate extends \Google\Protobuf\Internal\Message
     /**
      * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      *
-     * Generated from protobuf field <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
-     * @return \Io\LocalizedString
+     * Generated from protobuf field <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedContent()
     {
@@ -96,7 +96,7 @@ class SmsTemplate extends \Google\Protobuf\Internal\Message
     /**
      * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      *
-     * Generated from protobuf field <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Io\LocalizedString $var
      * @return $this
      */

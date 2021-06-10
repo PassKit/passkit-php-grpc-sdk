@@ -76,7 +76,7 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
      * Welcome email settings
      *
      * Generated from protobuf field <code>.io.EmailTemplate welcomeEmail = 2;</code>
-     * @return \Io\EmailTemplate
+     * @return \Io\EmailTemplate|null
      */
     public function getWelcomeEmail()
     {
@@ -112,7 +112,7 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
      * Welcome SMS settings
      *
      * Generated from protobuf field <code>.io.SmsTemplate welcomeSms = 3;</code>
-     * @return \Io\SmsTemplate
+     * @return \Io\SmsTemplate|null
      */
     public function getWelcomeSms()
     {

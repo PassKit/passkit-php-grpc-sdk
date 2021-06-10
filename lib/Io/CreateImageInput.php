@@ -73,7 +73,7 @@ class CreateImageInput extends \Google\Protobuf\Internal\Message
      * Image data can be either a base64 image or a url.
      *
      * Generated from protobuf field <code>.io.ImageData imageData = 2;</code>
-     * @return \Io\ImageData
+     * @return \Io\ImageData|null
      */
     public function getImageData()
     {

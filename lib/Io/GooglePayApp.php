@@ -45,6 +45,18 @@ class GooglePayApp extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.io.LocalizedString localizedDescription = 5;</code>
      */
     protected $localizedDescription = null;
+    /**
+     * Clickable link description of the Android App
+     *
+     * Generated from protobuf field <code>string urlDescription = 6;</code>
+     */
+    protected $urlDescription = '';
+    /**
+     * Localized clickable link description of the Android App
+     *
+     * Generated from protobuf field <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+     */
+    protected $localizedUrlDescription = null;
 
     /**
      * Constructor.
@@ -62,6 +74,10 @@ class GooglePayApp extends \Google\Protobuf\Internal\Message
      *           Description of the Android App
      *     @type \Io\LocalizedString $localizedDescription
      *           Localized description of the Android App
+     *     @type string $urlDescription
+     *           Clickable link description of the Android App
+     *     @type \Io\LocalizedString $localizedUrlDescription
+     *           Localized clickable link description of the Android App
      * }
      */
     public function __construct($data = NULL) {
@@ -73,7 +89,7 @@ class GooglePayApp extends \Google\Protobuf\Internal\Message
      * Link to an associated app on the Google Play Store
      *
      * Generated from protobuf field <code>.io.Url url = 1;</code>
-     * @return \Io\Url
+     * @return \Io\Url|null
      */
     public function getUrl()
     {
@@ -135,7 +151,7 @@ class GooglePayApp extends \Google\Protobuf\Internal\Message
      * Title of the Android App
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedTitle = 3;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedTitle()
     {
@@ -197,7 +213,7 @@ class GooglePayApp extends \Google\Protobuf\Internal\Message
      * Localized description of the Android App
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedDescription = 5;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedDescription()
     {
@@ -225,6 +241,68 @@ class GooglePayApp extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Io\LocalizedString::class);
         $this->localizedDescription = $var;
+
+        return $this;
+    }
+
+    /**
+     * Clickable link description of the Android App
+     *
+     * Generated from protobuf field <code>string urlDescription = 6;</code>
+     * @return string
+     */
+    public function getUrlDescription()
+    {
+        return $this->urlDescription;
+    }
+
+    /**
+     * Clickable link description of the Android App
+     *
+     * Generated from protobuf field <code>string urlDescription = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setUrlDescription($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->urlDescription = $var;
+
+        return $this;
+    }
+
+    /**
+     * Localized clickable link description of the Android App
+     *
+     * Generated from protobuf field <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+     * @return \Io\LocalizedString|null
+     */
+    public function getLocalizedUrlDescription()
+    {
+        return isset($this->localizedUrlDescription) ? $this->localizedUrlDescription : null;
+    }
+
+    public function hasLocalizedUrlDescription()
+    {
+        return isset($this->localizedUrlDescription);
+    }
+
+    public function clearLocalizedUrlDescription()
+    {
+        unset($this->localizedUrlDescription);
+    }
+
+    /**
+     * Localized clickable link description of the Android App
+     *
+     * Generated from protobuf field <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+     * @param \Io\LocalizedString $var
+     * @return $this
+     */
+    public function setLocalizedUrlDescription($var)
+    {
+        GPBUtil::checkMessage($var, \Io\LocalizedString::class);
+        $this->localizedUrlDescription = $var;
 
         return $this;
     }

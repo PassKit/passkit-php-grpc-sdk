@@ -253,7 +253,7 @@ class GPSLocation extends \Google\Protobuf\Internal\Message
      * Localized lock screen message.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedLockScreenMessage = 7;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedLockScreenMessage()
     {

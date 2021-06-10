@@ -147,7 +147,7 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      * Tooltip or helper text in localized language.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedHelpText = 2;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedHelpText()
     {
@@ -261,7 +261,7 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      * Placeholder in localized language.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedPlaceholder = 7;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedPlaceholder()
     {
@@ -323,7 +323,7 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      * Customize address input fields.
      *
      * Generated from protobuf field <code>.io.AddressRenderOptions addressRenderOptions = 9;</code>
-     * @return \Io\AddressRenderOptions
+     * @return \Io\AddressRenderOptions|null
      */
     public function getAddressRenderOptions()
     {

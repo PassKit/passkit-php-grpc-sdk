@@ -63,7 +63,7 @@ class FlightTimes extends \Google\Protobuf\Internal\Message
      * The published departure time.
      *
      * Generated from protobuf field <code>.io.Time scheduledDepartureTime = 1;</code>
-     * @return \Io\Time
+     * @return \Io\Time|null
      */
     public function getScheduledDepartureTime()
     {
@@ -99,7 +99,7 @@ class FlightTimes extends \Google\Protobuf\Internal\Message
      * The published boarding time.
      *
      * Generated from protobuf field <code>.io.Time boardingTime = 2;</code>
-     * @return \Io\Time
+     * @return \Io\Time|null
      */
     public function getBoardingTime()
     {
@@ -135,7 +135,7 @@ class FlightTimes extends \Google\Protobuf\Internal\Message
      * The point after which passengers will be denied boarding.
      *
      * Generated from protobuf field <code>.io.Time gateClosingTime = 3;</code>
-     * @return \Io\Time
+     * @return \Io\Time|null
      */
     public function getGateClosingTime()
     {
@@ -171,7 +171,7 @@ class FlightTimes extends \Google\Protobuf\Internal\Message
      * The published, scheduled arrival time.
      *
      * Generated from protobuf field <code>.io.Time scheduledArrivalTime = 4;</code>
-     * @return \Io\Time
+     * @return \Io\Time|null
      */
     public function getScheduledArrivalTime()
     {

@@ -20,6 +20,7 @@ class IntegrationsClient extends \Grpc\BaseStub {
      * @param \Io\IntegrationConfigs $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createIntegrations(\Io\IntegrationConfigs $argument,
       $metadata = [], $options = []) {
@@ -33,6 +34,7 @@ class IntegrationsClient extends \Grpc\BaseStub {
      * @param \Io\ProtocolIdInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getIntegrations(\Io\ProtocolIdInput $argument,
       $metadata = [], $options = []) {
@@ -46,6 +48,7 @@ class IntegrationsClient extends \Grpc\BaseStub {
      * @param \Io\IntegrationConfigs $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateIntegrations(\Io\IntegrationConfigs $argument,
       $metadata = [], $options = []) {
@@ -59,6 +62,7 @@ class IntegrationsClient extends \Grpc\BaseStub {
      * @param \Io\ProtocolIdInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteIntegrations(\Io\ProtocolIdInput $argument,
       $metadata = [], $options = []) {
@@ -72,6 +76,7 @@ class IntegrationsClient extends \Grpc\BaseStub {
      * @param \Io\SinkSubscription $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function createSinkSubscription(\Io\SinkSubscription $argument,
       $metadata = [], $options = []) {
@@ -85,6 +90,7 @@ class IntegrationsClient extends \Grpc\BaseStub {
      * @param \Io\SubscriptionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getSinkSubscription(\Io\SubscriptionRequest $argument,
       $metadata = [], $options = []) {
@@ -98,6 +104,7 @@ class IntegrationsClient extends \Grpc\BaseStub {
      * @param \Io\ListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listSinkSubscriptionsDeprecated(\Io\ListRequestDeprecated $argument,
       $metadata = [], $options = []) {
@@ -111,6 +118,7 @@ class IntegrationsClient extends \Grpc\BaseStub {
      * @param \Io\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
      */
     public function listSinkSubscriptions(\Io\ListRequest $argument,
       $metadata = [], $options = []) {
@@ -124,6 +132,7 @@ class IntegrationsClient extends \Grpc\BaseStub {
      * @param \Io\SinkSubscription $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function updateSinkSubscription(\Io\SinkSubscription $argument,
       $metadata = [], $options = []) {
@@ -137,6 +146,7 @@ class IntegrationsClient extends \Grpc\BaseStub {
      * @param \Io\SubscriptionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function deleteSinkSubscription(\Io\SubscriptionRequest $argument,
       $metadata = [], $options = []) {
@@ -150,12 +160,27 @@ class IntegrationsClient extends \Grpc\BaseStub {
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
+     * @return \Grpc\UnaryCall
      */
     public function getSampleSubscriptionEvent(\Io\Id $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/io.Integrations/getSampleSubscriptionEvent',
         $argument,
         ['\Io\SinkSubscription', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\DynamicApiInput $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function callDynamicApi(\Io\DynamicApiInput $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Integrations/callDynamicApi',
+        $argument,
+        ['\Io\DynamicApiResponse', 'decode'],
         $metadata, $options);
     }
 

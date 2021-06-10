@@ -173,7 +173,7 @@ class GetEventRequest extends \Google\Protobuf\Internal\Message
      * Event scheduled start date.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp scheduledStartDate = 5;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getScheduledStartDate()
     {

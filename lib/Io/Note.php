@@ -141,7 +141,7 @@ class Note extends \Google\Protobuf\Internal\Message
      * when the note was created
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp created = 4;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreated()
     {

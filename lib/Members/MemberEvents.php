@@ -53,6 +53,12 @@ class MemberEvents
      * Generated from protobuf enum <code>EVENT_MEMBER_POINTS_SET = 6;</code>
      */
     const EVENT_MEMBER_POINTS_SET = 6;
+    /**
+     * Used when points the tier is changed
+     *
+     * Generated from protobuf enum <code>EVENT_MEMBER_TIER_CHANGED = 7;</code>
+     */
+    const EVENT_MEMBER_TIER_CHANGED = 7;
 
     private static $valueToName = [
         self::EVENT_MEMBER_DO_NOT_USE => 'EVENT_MEMBER_DO_NOT_USE',
@@ -62,6 +68,7 @@ class MemberEvents
         self::EVENT_MEMBER_POINTS_EARNED => 'EVENT_MEMBER_POINTS_EARNED',
         self::EVENT_MEMBER_POINTS_BURNED => 'EVENT_MEMBER_POINTS_BURNED',
         self::EVENT_MEMBER_POINTS_SET => 'EVENT_MEMBER_POINTS_SET',
+        self::EVENT_MEMBER_TIER_CHANGED => 'EVENT_MEMBER_TIER_CHANGED',
     ];
 
     public static function name($value)

@@ -106,21 +106,21 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     protected $googlePaySettings = null;
     /**
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *
-     * Generated from protobuf field <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $locations;
     /**
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *
-     * Generated from protobuf field <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $beacons;
     /**
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      *
-     * Generated from protobuf field <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Link links = 21;</code>
      */
     private $links;
     /**
@@ -133,6 +133,12 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.io.ExpirySettings expirySettings = 23;</code>
      */
     protected $expirySettings = null;
+    /**
+     * Optional settings that override default localizations and Android experience.
+     *
+     * Generated from protobuf field <code>.io.LandingPageSettings landingPageSettings = 24;</code>
+     */
+    protected $landingPageSettings = null;
     protected $ImageAssets;
 
     /**
@@ -175,14 +181,16 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      *     @type \Io\AppleWalletSettings $appleWalletSettings
      *     @type \Io\GooglePaySettings $googlePaySettings
      *     @type \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $locations
-     *           A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     *           A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *     @type \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $beacons
-     *           A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     *           A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *     @type \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $links
-     *           A list of links to be shown on each membership card.
+     *           A list of links to be shown on each pass.
      *     @type string $timezone
      *           Timezone string in IANA timezone format. If not provided defaults to Etc/UTC.
      *     @type \Io\ExpirySettings $expirySettings
+     *     @type \Io\LandingPageSettings $landingPageSettings
+     *           Optional settings that override default localizations and Android experience.
      * }
      */
     public function __construct($data = NULL) {
@@ -350,7 +358,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * Different language translations for the name of company or organisation issuing the pass.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedOrganizationName = 7;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedOrganizationName()
     {
@@ -412,7 +420,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * Different language translations for the campaign description.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedDescription = 9;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedDescription()
     {
@@ -448,7 +456,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * This holds pass fields for both front and back of the pass and settings of rendering pass fields and data collection page.
      *
      * Generated from protobuf field <code>.io.Data data = 10;</code>
-     * @return \Io\Data
+     * @return \Io\Data|null
      */
     public function getData()
     {
@@ -484,7 +492,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * Image data defined by image ids.
      *
      * Generated from protobuf field <code>.io.ImageIds imageIds = 11;</code>
-     * @return \Io\ImageIds
+     * @return \Io\ImageIds|null
      */
     public function getImageIds()
     {
@@ -515,7 +523,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * Image data defined as image object.
      *
      * Generated from protobuf field <code>.io.ImageData images = 12;</code>
-     * @return \Io\ImageData
+     * @return \Io\ImageData|null
      */
     public function getImages()
     {
@@ -546,7 +554,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * Colours take a hex code input.  A '#' prefix is optional. Not all colors have effect on each design.
      *
      * Generated from protobuf field <code>.io.Colors colors = 13;</code>
-     * @return \Io\Colors
+     * @return \Io\Colors|null
      */
     public function getColors()
     {
@@ -580,7 +588,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.Barcode barcode = 14;</code>
-     * @return \Io\Barcode
+     * @return \Io\Barcode|null
      */
     public function getBarcode()
     {
@@ -614,7 +622,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * NFC enabled passes will depend on client certificate capabilities. Contact support for more information.
      *
      * Generated from protobuf field <code>.io.NFC nfcEnabled = 15;</code>
-     * @return \Io\NFC
+     * @return \Io\NFC|null
      */
     public function getNfcEnabled()
     {
@@ -650,7 +658,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * When set controls how this pass is shared. For Apple wallet this uses the built in sharing functionality. For Google Pay, a sharing link will be added to the pass.
      *
      * Generated from protobuf field <code>.io.Sharing sharing = 16;</code>
-     * @return \Io\Sharing
+     * @return \Io\Sharing|null
      */
     public function getSharing()
     {
@@ -684,7 +692,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.AppleWalletSettings appleWalletSettings = 17;</code>
-     * @return \Io\AppleWalletSettings
+     * @return \Io\AppleWalletSettings|null
      */
     public function getAppleWalletSettings()
     {
@@ -716,7 +724,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.GooglePaySettings googlePaySettings = 18;</code>
-     * @return \Io\GooglePaySettings
+     * @return \Io\GooglePaySettings|null
      */
     public function getGooglePaySettings()
     {
@@ -747,9 +755,9 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *
-     * Generated from protobuf field <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getLocations()
@@ -758,9 +766,9 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *
-     * Generated from protobuf field <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -773,9 +781,9 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *
-     * Generated from protobuf field <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getBeacons()
@@ -784,9 +792,9 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *
-     * Generated from protobuf field <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -799,9 +807,9 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      *
-     * Generated from protobuf field <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Link links = 21;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getLinks()
@@ -810,9 +818,9 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      *
-     * Generated from protobuf field <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = {</code>
+     * Generated from protobuf field <code>repeated .io.Link links = 21;</code>
      * @param \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -852,7 +860,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.ExpirySettings expirySettings = 23;</code>
-     * @return \Io\ExpirySettings
+     * @return \Io\ExpirySettings|null
      */
     public function getExpirySettings()
     {
@@ -878,6 +886,42 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Io\ExpirySettings::class);
         $this->expirySettings = $var;
+
+        return $this;
+    }
+
+    /**
+     * Optional settings that override default localizations and Android experience.
+     *
+     * Generated from protobuf field <code>.io.LandingPageSettings landingPageSettings = 24;</code>
+     * @return \Io\LandingPageSettings|null
+     */
+    public function getLandingPageSettings()
+    {
+        return isset($this->landingPageSettings) ? $this->landingPageSettings : null;
+    }
+
+    public function hasLandingPageSettings()
+    {
+        return isset($this->landingPageSettings);
+    }
+
+    public function clearLandingPageSettings()
+    {
+        unset($this->landingPageSettings);
+    }
+
+    /**
+     * Optional settings that override default localizations and Android experience.
+     *
+     * Generated from protobuf field <code>.io.LandingPageSettings landingPageSettings = 24;</code>
+     * @param \Io\LandingPageSettings $var
+     * @return $this
+     */
+    public function setLandingPageSettings($var)
+    {
+        GPBUtil::checkMessage($var, \Io\LandingPageSettings::class);
+        $this->landingPageSettings = $var;
 
         return $this;
     }

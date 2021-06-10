@@ -268,7 +268,7 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 8;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getCreatedAt()
     {
@@ -300,7 +300,7 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 9;</code>
-     * @return \Google\Protobuf\Timestamp
+     * @return \Google\Protobuf\Timestamp|null
      */
     public function getUpdatedAt()
     {
@@ -334,7 +334,7 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
      * For membership protocol subscription.
      *
      * Generated from protobuf field <code>.io.MembershipEventIds membershipEvents = 10;</code>
-     * @return \Io\MembershipEventIds
+     * @return \Io\MembershipEventIds|null
      */
     public function getMembershipEvents()
     {
@@ -365,7 +365,7 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
      * For coupon protocol subscription.
      *
      * Generated from protobuf field <code>.io.CouponEventIds couponEvents = 11;</code>
-     * @return \Io\CouponEventIds
+     * @return \Io\CouponEventIds|null
      */
     public function getCouponEvents()
     {

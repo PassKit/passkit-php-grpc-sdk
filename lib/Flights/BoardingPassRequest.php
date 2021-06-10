@@ -44,7 +44,7 @@ class BoardingPassRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.flights.BoardingPassRecordRequestByTicketNumber ticketNumber = 1;</code>
-     * @return \Flights\BoardingPassRecordRequestByTicketNumber
+     * @return \Flights\BoardingPassRecordRequestByTicketNumber|null
      */
     public function getTicketNumber()
     {
@@ -71,7 +71,7 @@ class BoardingPassRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.flights.BoardingPassRecordRequestByIndex index = 2;</code>
-     * @return \Flights\BoardingPassRecordRequestByIndex
+     * @return \Flights\BoardingPassRecordRequestByIndex|null
      */
     public function getIndex()
     {
@@ -98,7 +98,7 @@ class BoardingPassRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.flights.BoardingPassesForBookingRequest pnr = 3;</code>
-     * @return \Flights\BoardingPassesForBookingRequest
+     * @return \Flights\BoardingPassesForBookingRequest|null
      */
     public function getPnr()
     {
@@ -125,7 +125,7 @@ class BoardingPassRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.Id passId = 4;</code>
-     * @return \Io\Id
+     * @return \Io\Id|null
      */
     public function getPassId()
     {

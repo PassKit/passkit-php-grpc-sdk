@@ -122,7 +122,7 @@ class AppleWalletFieldRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.PositionSettings positionSettings = 3;</code>
-     * @return \Io\PositionSettings
+     * @return \Io\PositionSettings|null
      */
     public function getPositionSettings()
     {
@@ -182,7 +182,7 @@ class AppleWalletFieldRenderOptions extends \Google\Protobuf\Internal\Message
      * Localize push notification message for different languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedChangeMessage = 5;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedChangeMessage()
     {

@@ -74,7 +74,7 @@ class FlightAnalyticsFilter extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.Date departureDate = 2;</code>
-     * @return \Io\Date
+     * @return \Io\Date|null
      */
     public function getDepartureDate()
     {

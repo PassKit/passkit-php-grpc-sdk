@@ -118,6 +118,24 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     protected $appImage = '';
     /**
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     *
+     * Generated from protobuf field <code>string stampedImage = 18;</code>
+     */
+    protected $stampedImage = '';
+    /**
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     *
+     * Generated from protobuf field <code>string unstampedImage = 19;</code>
+     */
+    protected $unstampedImage = '';
+    /**
+     * Spec for a stamp image. Cannot be localized.
+     *
+     * Generated from protobuf field <code>.io.StampImageConfig stampConfig = 20;</code>
+     */
+    protected $stampConfig = null;
+    /**
      * Sets different icon images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedIcon = 31;</code>
@@ -248,6 +266,12 @@ class ImageData extends \Google\Protobuf\Internal\Message
      *           Used for user Profile images (300px x 300px). Cannot be localized.
      *     @type string $appImage
      *           Used for user app images in Google Pay Passes (300px x 300px). Cannot be localized.
+     *     @type string $stampedImage
+     *           Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     *     @type string $unstampedImage
+     *           Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     *     @type \Io\StampImageConfig $stampConfig
+     *           Spec for a stamp image. Cannot be localized.
      *     @type \Io\LocalizedString $localizedIcon
      *           Sets different icon images for non-default languages.
      *     @type \Io\LocalizedString $localizedLogo
@@ -728,10 +752,98 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     *
+     * Generated from protobuf field <code>string stampedImage = 18;</code>
+     * @return string
+     */
+    public function getStampedImage()
+    {
+        return $this->stampedImage;
+    }
+
+    /**
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     *
+     * Generated from protobuf field <code>string stampedImage = 18;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setStampedImage($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->stampedImage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     *
+     * Generated from protobuf field <code>string unstampedImage = 19;</code>
+     * @return string
+     */
+    public function getUnstampedImage()
+    {
+        return $this->unstampedImage;
+    }
+
+    /**
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     *
+     * Generated from protobuf field <code>string unstampedImage = 19;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setUnstampedImage($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->unstampedImage = $var;
+
+        return $this;
+    }
+
+    /**
+     * Spec for a stamp image. Cannot be localized.
+     *
+     * Generated from protobuf field <code>.io.StampImageConfig stampConfig = 20;</code>
+     * @return \Io\StampImageConfig|null
+     */
+    public function getStampConfig()
+    {
+        return isset($this->stampConfig) ? $this->stampConfig : null;
+    }
+
+    public function hasStampConfig()
+    {
+        return isset($this->stampConfig);
+    }
+
+    public function clearStampConfig()
+    {
+        unset($this->stampConfig);
+    }
+
+    /**
+     * Spec for a stamp image. Cannot be localized.
+     *
+     * Generated from protobuf field <code>.io.StampImageConfig stampConfig = 20;</code>
+     * @param \Io\StampImageConfig $var
+     * @return $this
+     */
+    public function setStampConfig($var)
+    {
+        GPBUtil::checkMessage($var, \Io\StampImageConfig::class);
+        $this->stampConfig = $var;
+
+        return $this;
+    }
+
+    /**
      * Sets different icon images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedIcon = 31;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedIcon()
     {
@@ -767,7 +879,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different logo images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedLogo = 32;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedLogo()
     {
@@ -803,7 +915,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different Apple Logo images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedAppleLogo = 33;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedAppleLogo()
     {
@@ -839,7 +951,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different hero images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedHero = 34;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedHero()
     {
@@ -875,7 +987,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different event strip images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedEventStrip = 35;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedEventStrip()
     {
@@ -911,7 +1023,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different strip images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedStrip = 36;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedStrip()
     {
@@ -947,7 +1059,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different thumbnail images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedThumbnail = 37;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedThumbnail()
     {
@@ -983,7 +1095,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different background images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedBackground = 38;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedBackground()
     {
@@ -1019,7 +1131,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different footer images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedFooter = 39;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedFooter()
     {
@@ -1055,7 +1167,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different security images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedSecurity = 40;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedSecurity()
     {
@@ -1091,7 +1203,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different privilege images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedPrivilege = 41;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedPrivilege()
     {
@@ -1127,7 +1239,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different airline alliance images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedAirlineAlliance = 42;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedAirlineAlliance()
     {
@@ -1163,7 +1275,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different personalized images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedPersonalization = 43;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedPersonalization()
     {
@@ -1199,7 +1311,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different banner images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedBanner = 44;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedBanner()
     {
@@ -1235,7 +1347,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Sets different message images for non-default languages.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedMessage = 45;</code>
-     * @return \Io\LocalizedString
+     * @return \Io\LocalizedString|null
      */
     public function getLocalizedMessage()
     {

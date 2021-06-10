@@ -128,7 +128,7 @@ class EventListRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>.io.Filters filters = 4;</code>
-     * @return \Io\Filters
+     * @return \Io\Filters|null
      */
     public function getFilters()
     {
