@@ -35,12 +35,19 @@ class OAuth2Provider
      * Generated from protobuf enum <code>OAUTH_MAILCHIMP = 100;</code>
      */
     const OAUTH_MAILCHIMP = 100;
+    /**
+     * Accounting 150-199
+     *
+     * Generated from protobuf enum <code>OAUTH_XERO = 150;</code>
+     */
+    const OAUTH_XERO = 150;
 
     private static $valueToName = [
         self::OAUTH_DO_NOT_USE => 'OAUTH_DO_NOT_USE',
         self::OAUTH_PATREON => 'OAUTH_PATREON',
         self::OAUTH_SPROUT => 'OAUTH_SPROUT',
         self::OAUTH_MAILCHIMP => 'OAUTH_MAILCHIMP',
+        self::OAUTH_XERO => 'OAUTH_XERO',
     ];
 
     public static function name($value)

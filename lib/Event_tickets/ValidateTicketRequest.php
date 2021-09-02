@@ -14,15 +14,15 @@ use Google\Protobuf\Internal\GPBUtil;
 class ValidateTicketRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * If provided will auto redeem ticket once max number of validations has been reached. A ticket can be validated a max of 10 times.
+     * If provided will auto redeem ticket once max number of validations has been reached.
      *
      * Generated from protobuf field <code>uint32 maxNumberOfValidations = 1;</code>
      */
     protected $maxNumberOfValidations = 0;
     /**
-     * Ticket details for the ticket to validate.
+     * Ticket id for the ticket to validate.
      *
-     * Generated from protobuf field <code>.event_tickets.Ticket ticket = 2;</code>
+     * Generated from protobuf field <code>.event_tickets.TicketId ticket = 2;</code>
      */
     protected $ticket = null;
     /**
@@ -39,9 +39,9 @@ class ValidateTicketRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $maxNumberOfValidations
-     *           If provided will auto redeem ticket once max number of validations has been reached. A ticket can be validated a max of 10 times.
-     *     @type \Event_tickets\Ticket $ticket
-     *           Ticket details for the ticket to validate.
+     *           If provided will auto redeem ticket once max number of validations has been reached.
+     *     @type \Event_tickets\TicketId $ticket
+     *           Ticket id for the ticket to validate.
      *     @type \Event_tickets\ValidateDetails $validateDetails
      *           Additional details to set for this validation.
      * }
@@ -52,7 +52,7 @@ class ValidateTicketRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If provided will auto redeem ticket once max number of validations has been reached. A ticket can be validated a max of 10 times.
+     * If provided will auto redeem ticket once max number of validations has been reached.
      *
      * Generated from protobuf field <code>uint32 maxNumberOfValidations = 1;</code>
      * @return int
@@ -63,7 +63,7 @@ class ValidateTicketRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If provided will auto redeem ticket once max number of validations has been reached. A ticket can be validated a max of 10 times.
+     * If provided will auto redeem ticket once max number of validations has been reached.
      *
      * Generated from protobuf field <code>uint32 maxNumberOfValidations = 1;</code>
      * @param int $var
@@ -78,10 +78,10 @@ class ValidateTicketRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Ticket details for the ticket to validate.
+     * Ticket id for the ticket to validate.
      *
-     * Generated from protobuf field <code>.event_tickets.Ticket ticket = 2;</code>
-     * @return \Event_tickets\Ticket|null
+     * Generated from protobuf field <code>.event_tickets.TicketId ticket = 2;</code>
+     * @return \Event_tickets\TicketId|null
      */
     public function getTicket()
     {
@@ -99,15 +99,15 @@ class ValidateTicketRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Ticket details for the ticket to validate.
+     * Ticket id for the ticket to validate.
      *
-     * Generated from protobuf field <code>.event_tickets.Ticket ticket = 2;</code>
-     * @param \Event_tickets\Ticket $var
+     * Generated from protobuf field <code>.event_tickets.TicketId ticket = 2;</code>
+     * @param \Event_tickets\TicketId $var
      * @return $this
      */
     public function setTicket($var)
     {
-        GPBUtil::checkMessage($var, \Event_tickets\Ticket::class);
+        GPBUtil::checkMessage($var, \Event_tickets\TicketId::class);
         $this->ticket = $var;
 
         return $this;

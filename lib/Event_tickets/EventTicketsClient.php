@@ -482,12 +482,12 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Event_tickets\Ticket $argument input argument
+     * @param \Event_tickets\RedeemTicketRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function redeemTicket(\Event_tickets\Ticket $argument,
+    public function redeemTicket(\Event_tickets\RedeemTicketRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/event_tickets.EventTickets/redeemTicket',
         $argument,
@@ -566,12 +566,12 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Event_tickets\Ticket $argument input argument
+     * @param \Event_tickets\TicketId $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function deleteTicket(\Event_tickets\Ticket $argument,
+    public function deleteTicket(\Event_tickets\TicketId $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/event_tickets.EventTickets/deleteTicket',
         $argument,

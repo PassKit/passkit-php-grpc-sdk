@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class Ids extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The unique identifier to an object or record.
+     * An array of unique identifiers for objects or records.
      *
      * Generated from protobuf field <code>repeated string id = 1;</code>
      */
@@ -27,7 +27,7 @@ class Ids extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $id
-     *           The unique identifier to an object or record.
+     *           An array of unique identifiers for objects or records.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class Ids extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The unique identifier to an object or record.
+     * An array of unique identifiers for objects or records.
      *
      * Generated from protobuf field <code>repeated string id = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -47,7 +47,7 @@ class Ids extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The unique identifier to an object or record.
+     * An array of unique identifiers for objects or records.
      *
      * Generated from protobuf field <code>repeated string id = 1;</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var

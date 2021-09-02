@@ -26,8 +26,8 @@ class ARpc
         \GPBMetadata\Io\EventTickets\Venue::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ûc
-io/event_tickets/a_rpc.protoevent_ticketsgoogle/api/annotations.protoio/common/common_objects.protoio/common/filter.protoio/common/reporting.protoio/event_tickets/event.proto!io/event_tickets/production.proto"io/event_tickets/ticket_type.protoio/event_tickets/ticket.protoio/event_tickets/venue.proto.protoc-gen-openapiv2/options/annotations.proto2¥X
+–b
+io/event_tickets/a_rpc.protoevent_ticketsgoogle/api/annotations.protoio/common/common_objects.protoio/common/filter.protoio/common/reporting.protoio/event_tickets/event.proto!io/event_tickets/production.proto"io/event_tickets/ticket_type.protoio/event_tickets/ticket.protoio/event_tickets/venue.proto.protoc-gen-openapiv2/options/annotations.proto2ÊW
 EventTicketsò
 createProduction.event_tickets.Production.io.Id"aÇ”‰ì"/eventTickets/production:*íA;
 ProductionsCreate ProductionCreates a new Production.…
@@ -98,9 +98,9 @@ listEvents.event_tickets.EventListRequest .event_tickets.EventListResponse"`Ç
 patchPerson .event_tickets.EventTicketPerson.io.Id"ÜÇ”‰ì 2/eventTickets/ticket/person:*íA]
 TicketsUpdate Personal Information5Updates personal information of a event ticket holderã
 validateTicket$.event_tickets.ValidateTicketRequest%.event_tickets.ValidateTicketResponse"´Ç”‰ì"/eventTickets/ticket/validate:*íAˇ
-TicketsValidate Ticket‚Validates an existing Ticket. Use this endpoint when you want to check validity of a ticket. Tickets can be validated multiple times. Requires ticket.id to be set, or ticket.ticketNumber + ticket.event.production.id to be set.Â
-redeemTicket.event_tickets.Ticket.io.Id"µÇ”‰ì /eventTickets/ticket/redeem:*íAã
-TicketsRedeem TicketRedeems an existing Ticket. Use this endpoint when you want to capture redemption data and trigger the switch to the redeemed design of the Ticket. Requires ticket.id to be set, or ticket.ticketNumber + ticket.event.production.id to be set.–
+TicketsValidate Ticket‚Validates an existing Ticket. Use this endpoint when you want to check validity of a ticket. Tickets can be validated multiple times. Requires ticket.id to be set, or ticket.ticketNumber + ticket.event.production.id to be set.ï
+redeemTicket".event_tickets.RedeemTicketRequest.io.Id"ÿÇ”‰ì /eventTickets/ticket/redeem:*íAÆ
+TicketsRedeem TicketìRedeems an existing Ticket. Use this endpoint when you want to capture redemption data and trigger the switch to the redeemed design of the Ticket.–
 redeemTicketsByOrderNumber".event_tickets.RedeemByOrderNumber.io.Ids"ÑÇ”‰ì-(/eventTickets/tickets/orderNumber/redeem:*íAÕ
 TicketsRedeem Tickets by Order Number°Redeems existing Tickets by Order Number. Use this endpoint when you want to capture redemption data and trigger the switch to the redeemed design of the Ticket.è
 getTicketById.io.Id.event_tickets.Ticket"_Ç”‰ì/eventTickets/ticket/id/{id}íA8
@@ -110,8 +110,8 @@ listEvents.event_tickets.EventListRequest .event_tickets.EventListResponse"`Ç
 getTicketsByOrderNumber!.event_tickets.OrderNumberRequest.event_tickets.Tickets"xÇ”‰ì#!/eventTickets/tickets/orderNumberíAL
 TicketsGet Tickets by Order Number$Gets Ticket records by Order Number.Æ
 getEventTicketPass%.event_tickets.EventTicketPassRequest.io.PassBundles"ﬂÇ”‰ì"/eventTickets/pass:*íAæ
-TicketsGet Event Ticket PassõRetrieves digital event ticket pass(es) in the requested format based on the index provided. Only one of ticketId, ticketNumber or orderNumber is required.ì
-deleteTicket.event_tickets.Ticket.google.protobuf.Empty"”Ç”‰ì*/eventTickets/ticket:*íA∞
+TicketsGet Event Ticket PassõRetrieves digital event ticket pass(es) in the requested format based on the index provided. Only one of ticketId, ticketNumber or orderNumber is required.ï
+deleteTicket.event_tickets.TicketId.google.protobuf.Empty"”Ç”‰ì*/eventTickets/ticket:*íA∞
 TicketsDelete TicketïDelete an existing Ticket by Id or Ticket Number. Invalidates the ticket in the customers Mobile Wallet; rendering it useless. This method is irreversible and should be used with care. Requires ticket.ID to be set, or ticket.ticketNumber + ticket.event.production.id to be set.›
 deleteTicketsByOrderNumber!.event_tickets.OrderNumberRequest.google.protobuf.Empty"ÉÇ”‰ì*/eventTickets/orderNumber:*íA€
 TicketsDelete Tickets by Order NumberØDelete existing Ticketd by Order Number. Invalidates the ticket in the customers Mobile Wallet; rendering it useless. This method is irreversible and should be used with care.œ

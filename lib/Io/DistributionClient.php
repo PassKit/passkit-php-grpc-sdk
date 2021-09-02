@@ -72,4 +72,18 @@ class DistributionClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Io\ImportMembersRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function importMembers(\Io\ImportMembersRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Distribution/importMembers',
+        $argument,
+        ['\Google\Protobuf\GPBEmpty', 'decode'],
+        $metadata, $options);
+    }
+
 }

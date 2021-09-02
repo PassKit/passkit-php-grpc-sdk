@@ -31,6 +31,12 @@ class LandingPageSettings extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.io.SupportedAndroidWallet preferredAndroidWallet = 3;</code>
      */
     protected $preferredAndroidWallet = 0;
+    /**
+     * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+     *
+     * Generated from protobuf field <code>map<string, .io.LocalizedString> localizedTextOverrides = 4;</code>
+     */
+    private $localizedTextOverrides;
 
     /**
      * Constructor.
@@ -44,6 +50,8 @@ class LandingPageSettings extends \Google\Protobuf\Internal\Message
      *           Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
      *     @type int $preferredAndroidWallet
      *           Preferred Android Wallet.
+     *     @type array|\Google\Protobuf\Internal\MapField $localizedTextOverrides
+     *           Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
      * }
      */
     public function __construct($data = NULL) {
@@ -125,6 +133,32 @@ class LandingPageSettings extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Io\SupportedAndroidWallet::class);
         $this->preferredAndroidWallet = $var;
+
+        return $this;
+    }
+
+    /**
+     * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+     *
+     * Generated from protobuf field <code>map<string, .io.LocalizedString> localizedTextOverrides = 4;</code>
+     * @return \Google\Protobuf\Internal\MapField
+     */
+    public function getLocalizedTextOverrides()
+    {
+        return $this->localizedTextOverrides;
+    }
+
+    /**
+     * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+     *
+     * Generated from protobuf field <code>map<string, .io.LocalizedString> localizedTextOverrides = 4;</code>
+     * @param array|\Google\Protobuf\Internal\MapField $var
+     * @return $this
+     */
+    public function setLocalizedTextOverrides($var)
+    {
+        $arr = GPBUtil::checkMapField($var, \Google\Protobuf\Internal\GPBType::STRING, \Google\Protobuf\Internal\GPBType::MESSAGE, \Io\LocalizedString::class);
+        $this->localizedTextOverrides = $arr;
 
         return $this;
     }

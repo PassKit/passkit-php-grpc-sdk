@@ -19,15 +19,14 @@ class ARpcOthers
         \GPBMetadata\Io\Common\CommonObjects::initOnce();
         \GPBMetadata\Io\Common\Project::initOnce();
         \GPBMetadata\Io\Common\Message::initOnce();
-        \GPBMetadata\Io\Common\Job::initOnce();
         \GPBMetadata\Io\Common\Pagination::initOnce();
         \GPBMetadata\Io\Common\Filter::initOnce();
         \GPBMetadata\Io\Common\Integration::initOnce();
         \GPBMetadata\Io\User\User::initOnce();
         $pool->internalAddGeneratedFile(
             '
-≠>
-io/core/a_rpc_others.protoiogoogle/protobuf/empty.proto.protoc-gen-openapiv2/options/annotations.protoio/common/common_objects.protoio/common/project.protoio/common/message.protoio/common/job.protoio/common/pagination.protoio/common/filter.protoio/common/integration.protoio/user/user.proto2ì
+„9
+io/core/a_rpc_others.protoiogoogle/protobuf/empty.proto.protoc-gen-openapiv2/options/annotations.protoio/common/common_objects.protoio/common/project.protoio/common/message.protoio/common/pagination.protoio/common/filter.protoio/common/integration.protoio/user/user.proto2ì
 Users@
 
 createUser.io.NewUser.io.NewUserResponse"Ç”‰ì
@@ -77,20 +76,7 @@ createUser.io.NewUser.io.NewUserResponse"Ç”‰ì
 \'There is a problem with the input data.ª
 getMessages.io.Pagination.io.Message"åÇ”‰ì	/messagesíAxGet Messages6Retrieves all messages matching the criteria provided.J0
 400)
-\'There is a problem with the input data.02≤
-Jobsﬁ
-	importCsv.io.CsvImportRequest.io.Id"≤Ç”‰ì"/job/csv_import:*íAî
-Import Csv*Takes a provided csv and builds a Csv job.J0
-400)
-\'There is a problem with the input data.J(
-413!
-The file provided is too large.ß
-getJobs.io.Pagination.io.Job"ÄÇ”‰ì/jobsíApGet Jobs2Retrieves all jobs matching the criteria provided.J0
-400)
-\'There is a problem with the input data.0û
-getJob.io.Id.io.Job"ÇÇ”‰ì	/job/{id}íAnGet Job1Retrieves a job record with the corresponding id.J0
-400)
-\'There is a problem with the input data.2√
+\'There is a problem with the input data.02√
 IntegrationsÅ
 createIntegrations.io.IntegrationConfigs.io.Id" Ç”‰ì"/integrations/integration:*íA¢Create Integrations#Sets up integration configurations.J0
 400)

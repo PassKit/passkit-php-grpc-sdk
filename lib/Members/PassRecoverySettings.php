@@ -39,6 +39,12 @@ class PassRecoverySettings extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string errorPageBody = 4;</code>
      */
     protected $errorPageBody = '';
+    /**
+     * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+     *
+     * Generated from protobuf field <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+     */
+    private $fieldsToMatchUponRecovery;
 
     /**
      * Constructor.
@@ -54,6 +60,8 @@ class PassRecoverySettings extends \Google\Protobuf\Internal\Message
      *           The header text for the error page.
      *     @type string $errorPageBody
      *           The body text for the error page.
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $fieldsToMatchUponRecovery
+     *           Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
      * }
      */
     public function __construct($data = NULL) {
@@ -161,6 +169,32 @@ class PassRecoverySettings extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->errorPageBody = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+     *
+     * Generated from protobuf field <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getFieldsToMatchUponRecovery()
+    {
+        return $this->fieldsToMatchUponRecovery;
+    }
+
+    /**
+     * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+     *
+     * Generated from protobuf field <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setFieldsToMatchUponRecovery($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->fieldsToMatchUponRecovery = $arr;
 
         return $this;
     }
