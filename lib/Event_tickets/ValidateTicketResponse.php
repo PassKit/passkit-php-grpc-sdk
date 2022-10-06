@@ -77,7 +77,7 @@ class ValidateTicketResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTicket()
     {
-        return isset($this->ticket) ? $this->ticket : null;
+        return $this->ticket;
     }
 
     public function hasTicket()

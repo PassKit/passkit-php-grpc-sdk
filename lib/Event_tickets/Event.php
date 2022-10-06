@@ -157,7 +157,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function getProduction()
     {
-        return isset($this->production) ? $this->production : null;
+        return $this->production;
     }
 
     public function hasProduction()
@@ -193,7 +193,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function getVenue()
     {
-        return isset($this->venue) ? $this->venue : null;
+        return $this->venue;
     }
 
     public function hasVenue()
@@ -229,7 +229,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function getDoorsOpen()
     {
-        return isset($this->doorsOpen) ? $this->doorsOpen : null;
+        return $this->doorsOpen;
     }
 
     public function hasDoorsOpen()
@@ -265,7 +265,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function getScheduledStartDate()
     {
-        return isset($this->scheduledStartDate) ? $this->scheduledStartDate : null;
+        return $this->scheduledStartDate;
     }
 
     public function hasScheduledStartDate()
@@ -301,7 +301,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function getActualStartDate()
     {
-        return isset($this->actualStartDate) ? $this->actualStartDate : null;
+        return $this->actualStartDate;
     }
 
     public function hasActualStartDate()
@@ -337,7 +337,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function getEndDate()
     {
-        return isset($this->endDate) ? $this->endDate : null;
+        return $this->endDate;
     }
 
     public function hasEndDate()
@@ -373,7 +373,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function getRelevantDate()
     {
-        return isset($this->relevantDate) ? $this->relevantDate : null;
+        return $this->relevantDate;
     }
 
     public function hasRelevantDate()
@@ -409,7 +409,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function getQuota()
     {
-        return isset($this->quota) ? $this->quota : null;
+        return $this->quota;
     }
 
     public function hasQuota()
@@ -445,7 +445,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function getMetrics()
     {
-        return isset($this->metrics) ? $this->metrics : null;
+        return $this->metrics;
     }
 
     public function hasMetrics()
@@ -481,7 +481,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -517,7 +517,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()

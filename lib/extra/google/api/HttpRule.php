@@ -150,18 +150,15 @@ use Google\Protobuf\Internal\GPBUtil;
  * 1. Leaf request fields (recursive expansion nested messages in the request
  *    message) are classified into three categories:
  *    - Fields referred by the path template. They are passed via the URL path.
- *    - Fields referred by the [HttpRule.body][google.api.HttpRule.body]. They
- *    are passed via the HTTP
+ *    - Fields referred by the [HttpRule.body][google.api.HttpRule.body]. They are passed via the HTTP
  *      request body.
  *    - All other fields are passed via the URL query parameters, and the
  *      parameter name is the field path in the request message. A repeated
  *      field can be represented as multiple query parameters under the same
  *      name.
- *  2. If [HttpRule.body][google.api.HttpRule.body] is "*", there is no URL
- *  query parameter, all fields
+ *  2. If [HttpRule.body][google.api.HttpRule.body] is "*", there is no URL query parameter, all fields
  *     are passed via URL path and HTTP request body.
- *  3. If [HttpRule.body][google.api.HttpRule.body] is omitted, there is no HTTP
- *  request body, all
+ *  3. If [HttpRule.body][google.api.HttpRule.body] is omitted, there is no HTTP request body, all
  *     fields are passed via URL path and URL query parameters.
  * ### Path template syntax
  *     Template = "/" Segments [ Verb ] ;
@@ -241,8 +238,7 @@ class HttpRule extends \Google\Protobuf\Internal\Message
 {
     /**
      * Selects a method to which this rule applies.
-     * Refer to [selector][google.api.DocumentationRule.selector] for syntax
-     * details.
+     * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
      *
      * Generated from protobuf field <code>string selector = 1;</code>
      */
@@ -285,8 +281,7 @@ class HttpRule extends \Google\Protobuf\Internal\Message
      *
      *     @type string $selector
      *           Selects a method to which this rule applies.
-     *           Refer to [selector][google.api.DocumentationRule.selector] for syntax
-     *           details.
+     *           Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
      *     @type string $get
      *           Maps to HTTP GET. Used for listing and getting information about
      *           resources.
@@ -328,8 +323,7 @@ class HttpRule extends \Google\Protobuf\Internal\Message
 
     /**
      * Selects a method to which this rule applies.
-     * Refer to [selector][google.api.DocumentationRule.selector] for syntax
-     * details.
+     * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
      *
      * Generated from protobuf field <code>string selector = 1;</code>
      * @return string
@@ -341,8 +335,7 @@ class HttpRule extends \Google\Protobuf\Internal\Message
 
     /**
      * Selects a method to which this rule applies.
-     * Refer to [selector][google.api.DocumentationRule.selector] for syntax
-     * details.
+     * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
      *
      * Generated from protobuf field <code>string selector = 1;</code>
      * @param string $var
@@ -520,7 +513,7 @@ class HttpRule extends \Google\Protobuf\Internal\Message
      * for services that provide content to Web (HTML) clients.
      *
      * Generated from protobuf field <code>.google.api.CustomHttpPattern custom = 8;</code>
-     * @return \Google\Api\CustomHttpPattern
+     * @return \Google\Api\CustomHttpPattern|null
      */
     public function getCustom()
     {

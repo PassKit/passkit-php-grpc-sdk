@@ -21,8 +21,8 @@ class ARpc
         \GPBMetadata\Io\Raw\Pass::initOnce();
         $pool->internalAddGeneratedFile(
             '
-£
-io/raw/a_rpc.protorawgoogle/api/annotations.protoio/common/common_objects.protoio/raw/project.protoio/raw/pass.proto.protoc-gen-openapiv2/options/annotations.proto2€
+†
+io/raw/a_rpc.protorawgoogle/api/annotations.protoio/common/common_objects.protoio/raw/project.protoio/raw/pass.proto.protoc-gen-openapiv2/options/annotations.proto2ÿ
 Raw
 createPassProject.raw.PassProject.io.Id"PÇ”‰ì"/raw/passProject:*íA2
 RawCreate Pass ProjectCreates a Pass Projectì
@@ -31,8 +31,8 @@ class ARpc
 getPassProject.io.Id.raw.PassProject"VÇ”‰ì/raw/passProject/{id}íA6
 RawGet Pass ProjectGets an existing Pass Projectî
 copyPassProject.raw.PassProjectCopyRequest.io.Id"\\Ç”‰ì"/raw/passProject/copy:*íA9
-RawCopy Pass ProjectCopies an existing Pass Projectá
-deletePassProject.io.Id.google.protobuf.Empty"—Ç”‰ì*/raw/passProject/{id}:*íA≠
+RawCopy Pass ProjectCopies an existing Pass ProjectÑ
+deletePassProject.io.Id.google.protobuf.Empty"ŒÇ”‰ì*/raw/passProject/{id}íA≠
 RawDelete Pass ProjectêDeletes an existing Pass Project by id. Deleting a Pass Project results in all passes being invalidated and removed. Needs to be used with care.e
 
 createPass	.raw.Pass.io.Id"DÇ”‰ì"	/raw/pass:*íA-

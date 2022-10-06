@@ -149,7 +149,7 @@ class InputField extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedLabel()
     {
-        return isset($this->localizedLabel) ? $this->localizedLabel : null;
+        return $this->localizedLabel;
     }
 
     public function hasLocalizedLabel()
@@ -211,7 +211,7 @@ class InputField extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedHelperText()
     {
-        return isset($this->localizedHelperText) ? $this->localizedHelperText : null;
+        return $this->localizedHelperText;
     }
 
     public function hasLocalizedHelperText()
@@ -273,7 +273,7 @@ class InputField extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedErrorMessage()
     {
-        return isset($this->localizedErrorMessage) ? $this->localizedErrorMessage : null;
+        return $this->localizedErrorMessage;
     }
 
     public function hasLocalizedErrorMessage()
@@ -335,7 +335,7 @@ class InputField extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedDefaultValue()
     {
-        return isset($this->localizedDefaultValue) ? $this->localizedDefaultValue : null;
+        return $this->localizedDefaultValue;
     }
 
     public function hasLocalizedDefaultValue()
@@ -397,7 +397,7 @@ class InputField extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedPlaceholder()
     {
-        return isset($this->localizedPlaceholder) ? $this->localizedPlaceholder : null;
+        return $this->localizedPlaceholder;
     }
 
     public function hasLocalizedPlaceholder()

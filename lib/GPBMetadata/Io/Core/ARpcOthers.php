@@ -18,21 +18,20 @@ class ARpcOthers
         \GPBMetadata\Google\Protobuf\GPBEmpty::initOnce();
         \GPBMetadata\Io\Common\CommonObjects::initOnce();
         \GPBMetadata\Io\Common\Project::initOnce();
-        \GPBMetadata\Io\Common\Message::initOnce();
         \GPBMetadata\Io\Common\Pagination::initOnce();
         \GPBMetadata\Io\Common\Filter::initOnce();
         \GPBMetadata\Io\Common\Integration::initOnce();
         \GPBMetadata\Io\User\User::initOnce();
         $pool->internalAddGeneratedFile(
             '
-„9
-io/core/a_rpc_others.protoiogoogle/protobuf/empty.proto.protoc-gen-openapiv2/options/annotations.protoio/common/common_objects.protoio/common/project.protoio/common/message.protoio/common/pagination.protoio/common/filter.protoio/common/integration.protoio/user/user.proto2ì
+¿6
+io/core/a_rpc_others.protoiogoogle/protobuf/empty.proto.protoc-gen-openapiv2/options/annotations.protoio/common/common_objects.protoio/common/project.protoio/common/pagination.protoio/common/filter.protoio/common/integration.protoio/user/user.proto2õ
 Users@
 
 createUser.io.NewUser.io.NewUserResponse"Ç”‰ì
 "/user:*5
-newUser.io.NewUser.io.JWT"Ç”‰ì"	/user/new:*6
-verify.io.Id.io.Boolean"Ç”‰ì/user/verify:*^
+newUser.io.NewUser.io.JWT"Ç”‰ì"	/user/new:*A
+verify.io.VerifyRequest.io.Boolean"Ç”‰ì/user/verify:*^
 resendVerificationEmail.google.protobuf.Empty.io.Boolean"Ç”‰ì"/user/verify/resend:*M
 getUser.google.protobuf.Empty.io.GetUserResponse"Ç”‰ì/user/profile4
 login.io.Credentials.io.JWT"Ç”‰ì"/login:*P
@@ -57,8 +56,8 @@ createUser.io.NewUser.io.NewUserResponse"Ç”‰ì
 400)
 \'There is a problem with the input data.J4
 403-
-+Returned when the user lacks authorization.¸
-deleteAuthorizationResource.io.Id.google.protobuf.Empty"ºÇ”‰ì*/user/oauth/{id}:*íAùDelete Authorization Resource:Deletes an oauth2 authorization resource from the databaseJ!
++Returned when the user lacks authorization.˘
+deleteAuthorizationResource.io.Id.google.protobuf.Empty"πÇ”‰ì*/user/oauth/{id}íAùDelete Authorization Resource:Deletes an oauth2 authorization resource from the databaseJ!
 403
 User lacks authorizationJ
 404
@@ -69,14 +68,7 @@ createUser.io.NewUser.io.NewUserResponse"Ç”‰ì
 404
 Record was not found.J%
 500
-There was an internal error.2è
-Messagesƒ
-sendMessage.io.Message.io.Id"üÇ”‰ì"/message:*íAàSend MessageFCreates a new message in the database and updates all relevant passes.J0
-400)
-\'There is a problem with the input data.ª
-getMessages.io.Pagination.io.Message"åÇ”‰ì	/messagesíAxGet Messages6Retrieves all messages matching the criteria provided.J0
-400)
-\'There is a problem with the input data.02√
+There was an internal error.2√
 IntegrationsÅ
 createIntegrations.io.IntegrationConfigs.io.Id" Ç”‰ì"/integrations/integration:*íA¢Create Integrations#Sets up integration configurations.J0
 400)

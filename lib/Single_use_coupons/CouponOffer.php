@@ -273,7 +273,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedOfferTitle()
     {
-        return isset($this->localizedOfferTitle) ? $this->localizedOfferTitle : null;
+        return $this->localizedOfferTitle;
     }
 
     public function hasLocalizedOfferTitle()
@@ -335,7 +335,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedOfferShortTitle()
     {
-        return isset($this->localizedOfferShortTitle) ? $this->localizedOfferShortTitle : null;
+        return $this->localizedOfferShortTitle;
     }
 
     public function hasLocalizedOfferShortTitle()
@@ -397,7 +397,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedOfferDetails()
     {
-        return isset($this->localizedOfferDetails) ? $this->localizedOfferDetails : null;
+        return $this->localizedOfferDetails;
     }
 
     public function hasLocalizedOfferDetails()
@@ -459,7 +459,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedOfferFinePrint()
     {
-        return isset($this->localizedOfferFinePrint) ? $this->localizedOfferFinePrint : null;
+        return $this->localizedOfferFinePrint;
     }
 
     public function hasLocalizedOfferFinePrint()
@@ -547,7 +547,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      */
     public function getQuota()
     {
-        return isset($this->quota) ? $this->quota : null;
+        return $this->quota;
     }
 
     public function hasQuota()
@@ -583,7 +583,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      */
     public function getCouponExpirySettings()
     {
-        return isset($this->couponExpirySettings) ? $this->couponExpirySettings : null;
+        return $this->couponExpirySettings;
     }
 
     public function hasCouponExpirySettings()
@@ -619,7 +619,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      */
     public function getRedemptionSettings()
     {
-        return isset($this->redemptionSettings) ? $this->redemptionSettings : null;
+        return $this->redemptionSettings;
     }
 
     public function hasRedemptionSettings()
@@ -655,7 +655,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      */
     public function getIssueStartDate()
     {
-        return isset($this->issueStartDate) ? $this->issueStartDate : null;
+        return $this->issueStartDate;
     }
 
     public function hasIssueStartDate()
@@ -691,7 +691,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      */
     public function getIssueEndDate()
     {
-        return isset($this->issueEndDate) ? $this->issueEndDate : null;
+        return $this->issueEndDate;
     }
 
     public function hasIssueEndDate()
@@ -727,7 +727,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -763,7 +763,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()
@@ -825,7 +825,7 @@ class CouponOffer extends \Google\Protobuf\Internal\Message
      */
     public function getDistributionSettings()
     {
-        return isset($this->distributionSettings) ? $this->distributionSettings : null;
+        return $this->distributionSettings;
     }
 
     public function hasDistributionSettings()

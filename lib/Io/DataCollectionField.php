@@ -232,7 +232,7 @@ class DataCollectionField extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedLabel()
     {
-        return isset($this->localizedLabel) ? $this->localizedLabel : null;
+        return $this->localizedLabel;
     }
 
     public function hasLocalizedLabel()
@@ -320,7 +320,7 @@ class DataCollectionField extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedDefaultValue()
     {
-        return isset($this->localizedDefaultValue) ? $this->localizedDefaultValue : null;
+        return $this->localizedDefaultValue;
     }
 
     public function hasLocalizedDefaultValue()

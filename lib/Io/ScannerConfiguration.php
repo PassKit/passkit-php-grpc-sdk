@@ -38,10 +38,10 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $membershipPermissions
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $couponPermissions
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $defaultMembershipAction
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $defaultCouponAction
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $membershipPermissions
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $couponPermissions
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $defaultMembershipAction
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $defaultCouponAction
      * }
      */
     public function __construct($data = NULL) {
@@ -60,7 +60,7 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.ScannerMembershipPermissions membershipPermissions = 1;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setMembershipPermissions($var)
@@ -82,7 +82,7 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.ScannerCouponPermissions couponPermissions = 2;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCouponPermissions($var)
@@ -104,7 +104,7 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.DefaultMembershipScanAction defaultMembershipAction = 3;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDefaultMembershipAction($var)
@@ -126,7 +126,7 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.DefaultCouponScanAction defaultCouponAction = 4;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDefaultCouponAction($var)

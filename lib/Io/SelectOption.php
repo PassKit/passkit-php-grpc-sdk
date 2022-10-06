@@ -116,7 +116,7 @@ class SelectOption extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedTextLabel()
     {
-        return isset($this->localizedTextLabel) ? $this->localizedTextLabel : null;
+        return $this->localizedTextLabel;
     }
 
     public function hasLocalizedTextLabel()

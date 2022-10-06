@@ -60,7 +60,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      *           Optional field that can be set if offers can only be redeemed after a certain date. Defaults to the offer issue start date. Needs to be greater than / equal to the offer issue start date, and less than / equal to offer issue end date.
      *     @type \Google\Protobuf\Timestamp $redemptionEndDate
      *           Optional field that can be set if offers can only be redeemed until a certain date. Defaults to the offer issue end date. Needs to be less than / equal to the offer issue end date.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $redemptionType
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $redemptionType
      *           Dictates redemption type; defaults to API.
      *     @type \Single_use_coupons\CustomerInitiatedCodeProvideOnRedeemSettings $codeProvidedOnRedeemSettings
      *           Settings for code provided on redemption; a list of valid codes and possible invalid-code error message needs to be provided.
@@ -83,7 +83,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      */
     public function getRedemptionStartDate()
     {
-        return isset($this->redemptionStartDate) ? $this->redemptionStartDate : null;
+        return $this->redemptionStartDate;
     }
 
     public function hasRedemptionStartDate()
@@ -119,7 +119,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      */
     public function getRedemptionEndDate()
     {
-        return isset($this->redemptionEndDate) ? $this->redemptionEndDate : null;
+        return $this->redemptionEndDate;
     }
 
     public function hasRedemptionEndDate()
@@ -162,7 +162,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      * Dictates redemption type; defaults to API.
      *
      * Generated from protobuf field <code>repeated .single_use_coupons.RedemptionType redemptionType = 3;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRedemptionType($var)
@@ -181,7 +181,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      */
     public function getCodeProvidedOnRedeemSettings()
     {
-        return isset($this->codeProvidedOnRedeemSettings) ? $this->codeProvidedOnRedeemSettings : null;
+        return $this->codeProvidedOnRedeemSettings;
     }
 
     public function hasCodeProvidedOnRedeemSettings()
@@ -217,7 +217,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      */
     public function getFixedCodeSettings()
     {
-        return isset($this->fixedCodeSettings) ? $this->fixedCodeSettings : null;
+        return $this->fixedCodeSettings;
     }
 
     public function hasFixedCodeSettings()
@@ -253,7 +253,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      */
     public function getStandardSettings()
     {
-        return isset($this->standardSettings) ? $this->standardSettings : null;
+        return $this->standardSettings;
     }
 
     public function hasStandardSettings()

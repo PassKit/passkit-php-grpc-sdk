@@ -115,7 +115,7 @@ class RedemptionDetails extends \Google\Protobuf\Internal\Message
      */
     public function getRedemptionDate()
     {
-        return isset($this->redemptionDate) ? $this->redemptionDate : null;
+        return $this->redemptionDate;
     }
 
     public function hasRedemptionDate()

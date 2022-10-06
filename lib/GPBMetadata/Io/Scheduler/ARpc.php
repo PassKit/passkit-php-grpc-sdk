@@ -18,24 +18,25 @@ class ARpc
         \GPBMetadata\Google\Protobuf\GPBEmpty::initOnce();
         \GPBMetadata\Io\Common\CommonObjects::initOnce();
         \GPBMetadata\Io\Scheduler\Scheduler::initOnce();
+        \GPBMetadata\Ct\Scheduler\Scheduler::initOnce();
         $pool->internalAddGeneratedFile(
             '
-Ü
-io/scheduler/a_rpc.proto	schedulergoogle/protobuf/empty.proto.protoc-gen-openapiv2/options/annotations.protoio/common/common_objects.protoio/scheduler/scheduler.proto2Î
-	Schedulerù
-createSchedulingJob.scheduler.SchedulingJob .scheduler.SchedulingJobResponse"…Ç”‰ì"/scheduling/job:*íA´
+Â
+io/scheduler/a_rpc.proto	schedulergoogle/protobuf/empty.proto.protoc-gen-openapiv2/options/annotations.protoio/common/common_objects.protoio/scheduler/scheduler.protoct/scheduler/scheduler.proto2¨
+	Schedulerè
+createSchedulingJob.ct.SchedulingJob.ct.SchedulingJobResponse"…Ç”‰ì"/scheduling/job:*íA´
 Scheduling JobsCreate Scheduling JobCreates a scheduling job.J0
 400)
 \'There is a problem with the input data.J4
 403-
-+Returned when the user lacks authorization.è
-getSchedulingJob.io.Id.scheduler.SchedulingJob"ÿÇ”‰ì/scheduling/job/{id}íA∏
++Returned when the user lacks authorization.à
+getSchedulingJob.io.Id.ct.SchedulingJob"ÿÇ”‰ì/scheduling/job/{id}íA∏
 Scheduling JobsGet Scheduling JobMRetrieves a scheduling job. Deleted job will return history logs only if any.J"
 403
 User lacks authorization.J
 404
-Record was not found.„
-updateSchedulingJob.scheduler.SchedulingJob .scheduler.SchedulingJobResponse"èÇ”‰ì/scheduling/job:*íAÒ
+Record was not found.’
+updateSchedulingJob.ct.SchedulingJob.ct.SchedulingJobResponse"èÇ”‰ì/scheduling/job:*íAÒ
 Scheduling JobsUpdate Scheduling JobxUpdates a scheduling job. Full SchedulerJob object is required. An empty or null value will override any existing value.J0
 400)
 \'There is a problem with the input data.J"
@@ -44,8 +45,8 @@ class ARpc
 404
 Record was not found.JW
 503P
-NServer is unavailable. Back off for 250ms and repeat request until successful.à
-patchSchedulingJob.scheduler.SchedulingJob .scheduler.SchedulingJobResponse"µÇ”‰ì2/scheduling/job:*íAó
+NServer is unavailable. Back off for 250ms and repeat request until successful.˙
+patchSchedulingJob.ct.SchedulingJob.ct.SchedulingJobResponse"µÇ”‰ì2/scheduling/job:*íAó
 Scheduling JobsPatch Scheduling JobPatch updates a scheduling job.J0
 400)
 \'There is a problem with the input data.J"
@@ -60,14 +61,14 @@ NServer is unavailable. Back off for 250ms and repeat request until successful.
 403-
 +Returned when the user lacks authorization.J
 404
-Record was not found.Å
-getSchedulingJobHistory.io.Id.scheduler.JobHistory"∆Ç”‰ì/scheduling/history/{id}íA¢
+Record was not found.˙
+getSchedulingJobHistory.io.Id.ct.JobHistory"∆Ç”‰ì/scheduling/history/{id}íA¢
 Job HistoriesGet Scheduling Job History1Retrieves a scheduling job history by the log id.J"
 403
 User lacks authorization.J
 404
-Record was not found.â
-listSchedulingJobHistories.scheduler.ListRequest.scheduler.JobHistory"πÇ”‰ì"/scheduling/history/list:*íAí
+Record was not found.Ç
+listSchedulingJobHistories.scheduler.ListRequest.ct.JobHistory"πÇ”‰ì"/scheduling/history/list:*íAí
 Job HistoriesList Scheduling Job HistoriesList scheduling job histories.J"
 403
 User lacks authorization.J

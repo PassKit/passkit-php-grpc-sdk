@@ -197,7 +197,7 @@ class Carrier extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedAirlineName()
     {
-        return isset($this->localizedAirlineName) ? $this->localizedAirlineName : null;
+        return $this->localizedAirlineName;
     }
 
     public function hasLocalizedAirlineName()

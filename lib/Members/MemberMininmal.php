@@ -213,7 +213,7 @@ class MemberMininmal extends \Google\Protobuf\Internal\Message
      */
     public function getPerson()
     {
-        return isset($this->person) ? $this->person : null;
+        return $this->person;
     }
 
     public function hasPerson()

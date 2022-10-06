@@ -24,7 +24,7 @@ class MultipleImages extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Io\ImageRecord[]|\Google\Protobuf\Internal\RepeatedField $images
+     *     @type array<\Io\ImageRecord>|\Google\Protobuf\Internal\RepeatedField $images
      * }
      */
     public function __construct($data = NULL) {
@@ -43,7 +43,7 @@ class MultipleImages extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.ImageRecord images = 1;</code>
-     * @param \Io\ImageRecord[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\ImageRecord>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setImages($var)

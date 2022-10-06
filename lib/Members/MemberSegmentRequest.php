@@ -53,7 +53,7 @@ class MemberSegmentRequest extends \Google\Protobuf\Internal\Message
      */
     public function getFilter()
     {
-        return isset($this->filter) ? $this->filter : null;
+        return $this->filter;
     }
 
     public function hasFilter()
@@ -89,7 +89,7 @@ class MemberSegmentRequest extends \Google\Protobuf\Internal\Message
      */
     public function getNewValues()
     {
-        return isset($this->newValues) ? $this->newValues : null;
+        return $this->newValues;
     }
 
     public function hasNewValues()

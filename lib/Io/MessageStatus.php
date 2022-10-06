@@ -12,37 +12,32 @@ use UnexpectedValueException;
 class MessageStatus
 {
     /**
-     * Generated from protobuf enum <code>CREATED = 0;</code>
+     * Generated from protobuf enum <code>MESSAGE_STATUS_DO_NOT_USE = 0;</code>
      */
-    const CREATED = 0;
+    const MESSAGE_STATUS_DO_NOT_USE = 0;
     /**
-     * Generated from protobuf enum <code>PROCESSING = 1;</code>
+     * Generated from protobuf enum <code>SCHEDULED = 1;</code>
      */
-    const PROCESSING = 1;
+    const SCHEDULED = 1;
     /**
-     * Generated from protobuf enum <code>ABORTED_WITH_ERRORS = 2;</code>
+     * Generated from protobuf enum <code>ACTIVE = 2;</code>
      */
-    const ABORTED_WITH_ERRORS = 2;
+    const ACTIVE = 2;
     /**
-     * Generated from protobuf enum <code>COMPLETED_WITH_WARNINGS = 3;</code>
+     * Generated from protobuf enum <code>EXPIRED = 3;</code>
      */
-    const COMPLETED_WITH_WARNINGS = 3;
+    const EXPIRED = 3;
     /**
-     * Generated from protobuf enum <code>COMPLETED_WITH_ERRORS = 4;</code>
+     * Generated from protobuf enum <code>CANCELLED = 4;</code>
      */
-    const COMPLETED_WITH_ERRORS = 4;
-    /**
-     * Generated from protobuf enum <code>COMPLETED_WITHOUT_ERRORS = 5;</code>
-     */
-    const COMPLETED_WITHOUT_ERRORS = 5;
+    const CANCELLED = 4;
 
     private static $valueToName = [
-        self::CREATED => 'CREATED',
-        self::PROCESSING => 'PROCESSING',
-        self::ABORTED_WITH_ERRORS => 'ABORTED_WITH_ERRORS',
-        self::COMPLETED_WITH_WARNINGS => 'COMPLETED_WITH_WARNINGS',
-        self::COMPLETED_WITH_ERRORS => 'COMPLETED_WITH_ERRORS',
-        self::COMPLETED_WITHOUT_ERRORS => 'COMPLETED_WITHOUT_ERRORS',
+        self::MESSAGE_STATUS_DO_NOT_USE => 'MESSAGE_STATUS_DO_NOT_USE',
+        self::SCHEDULED => 'SCHEDULED',
+        self::ACTIVE => 'ACTIVE',
+        self::EXPIRED => 'EXPIRED',
+        self::CANCELLED => 'CANCELLED',
     ];
 
     public static function name($value)

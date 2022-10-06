@@ -43,7 +43,7 @@ class ProjectByShortCodeResult extends \Google\Protobuf\Internal\Message
      */
     public function getProject()
     {
-        return isset($this->project) ? $this->project : null;
+        return $this->project;
     }
 
     public function hasProject()
@@ -75,7 +75,7 @@ class ProjectByShortCodeResult extends \Google\Protobuf\Internal\Message
      */
     public function getTemplate()
     {
-        return isset($this->template) ? $this->template : null;
+        return $this->template;
     }
 
     public function hasTemplate()

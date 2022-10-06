@@ -51,7 +51,7 @@ class TrackingSettings extends \Google\Protobuf\Internal\Message
      */
     public function getFacebookPixelSettings()
     {
-        return isset($this->facebookPixelSettings) ? $this->facebookPixelSettings : null;
+        return $this->facebookPixelSettings;
     }
 
     public function hasFacebookPixelSettings()
@@ -87,7 +87,7 @@ class TrackingSettings extends \Google\Protobuf\Internal\Message
      */
     public function getGoogleAnalyticsSettings()
     {
-        return isset($this->googleAnalyticsSettings) ? $this->googleAnalyticsSettings : null;
+        return $this->googleAnalyticsSettings;
     }
 
     public function hasGoogleAnalyticsSettings()

@@ -93,7 +93,7 @@ class EventLimitedFieldsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getScheduledStartDate()
     {
-        return isset($this->scheduledStartDate) ? $this->scheduledStartDate : null;
+        return $this->scheduledStartDate;
     }
 
     public function hasScheduledStartDate()
@@ -129,7 +129,7 @@ class EventLimitedFieldsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getActualStartDate()
     {
-        return isset($this->actualStartDate) ? $this->actualStartDate : null;
+        return $this->actualStartDate;
     }
 
     public function hasActualStartDate()
@@ -165,7 +165,7 @@ class EventLimitedFieldsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getEndDate()
     {
-        return isset($this->endDate) ? $this->endDate : null;
+        return $this->endDate;
     }
 
     public function hasEndDate()

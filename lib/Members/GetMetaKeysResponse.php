@@ -26,7 +26,7 @@ class GetMetaKeysResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $keys
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $keys
      *           An array of distinct meta keys.
      * }
      */
@@ -50,7 +50,7 @@ class GetMetaKeysResponse extends \Google\Protobuf\Internal\Message
      * An array of distinct meta keys.
      *
      * Generated from protobuf field <code>repeated string keys = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setKeys($var)

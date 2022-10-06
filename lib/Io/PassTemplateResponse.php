@@ -68,7 +68,7 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
      */
     public function getTemplate()
     {
-        return isset($this->template) ? $this->template : null;
+        return $this->template;
     }
 
     public function hasTemplate()
@@ -188,7 +188,7 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
      */
     public function getCreatedAt()
     {
-        return isset($this->createdAt) ? $this->createdAt : null;
+        return $this->createdAt;
     }
 
     public function hasCreatedAt()
@@ -220,7 +220,7 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
      */
     public function getUpdatedAt()
     {
-        return isset($this->updatedAt) ? $this->updatedAt : null;
+        return $this->updatedAt;
     }
 
     public function hasUpdatedAt()

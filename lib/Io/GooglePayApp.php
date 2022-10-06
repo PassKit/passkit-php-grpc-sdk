@@ -93,7 +93,7 @@ class GooglePayApp extends \Google\Protobuf\Internal\Message
      */
     public function getUrl()
     {
-        return isset($this->url) ? $this->url : null;
+        return $this->url;
     }
 
     public function hasUrl()
@@ -155,7 +155,7 @@ class GooglePayApp extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedTitle()
     {
-        return isset($this->localizedTitle) ? $this->localizedTitle : null;
+        return $this->localizedTitle;
     }
 
     public function hasLocalizedTitle()
@@ -217,7 +217,7 @@ class GooglePayApp extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedDescription()
     {
-        return isset($this->localizedDescription) ? $this->localizedDescription : null;
+        return $this->localizedDescription;
     }
 
     public function hasLocalizedDescription()
@@ -279,7 +279,7 @@ class GooglePayApp extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedUrlDescription()
     {
-        return isset($this->localizedUrlDescription) ? $this->localizedUrlDescription : null;
+        return $this->localizedUrlDescription;
     }
 
     public function hasLocalizedUrlDescription()

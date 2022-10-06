@@ -261,7 +261,7 @@ class Pass extends \Google\Protobuf\Internal\Message
      */
     public function getPersonalDetails()
     {
-        return isset($this->personalDetails) ? $this->personalDetails : null;
+        return $this->personalDetails;
     }
 
     public function hasPersonalDetails()
@@ -375,7 +375,7 @@ class Pass extends \Google\Protobuf\Internal\Message
      */
     public function getInvalidateDate()
     {
-        return isset($this->invalidateDate) ? $this->invalidateDate : null;
+        return $this->invalidateDate;
     }
 
     public function hasInvalidateDate()
@@ -411,7 +411,7 @@ class Pass extends \Google\Protobuf\Internal\Message
      */
     public function getExpiryDate()
     {
-        return isset($this->expiryDate) ? $this->expiryDate : null;
+        return $this->expiryDate;
     }
 
     public function hasExpiryDate()
@@ -447,7 +447,7 @@ class Pass extends \Google\Protobuf\Internal\Message
      */
     public function getPassOptions()
     {
-        return isset($this->passOptions) ? $this->passOptions : null;
+        return $this->passOptions;
     }
 
     public function hasPassOptions()
@@ -483,7 +483,7 @@ class Pass extends \Google\Protobuf\Internal\Message
      */
     public function getPassOverrides()
     {
-        return isset($this->passOverrides) ? $this->passOverrides : null;
+        return $this->passOverrides;
     }
 
     public function hasPassOverrides()
@@ -519,7 +519,7 @@ class Pass extends \Google\Protobuf\Internal\Message
      */
     public function getPassMetaData()
     {
-        return isset($this->passMetaData) ? $this->passMetaData : null;
+        return $this->passMetaData;
     }
 
     public function hasPassMetaData()
@@ -555,7 +555,7 @@ class Pass extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -591,7 +591,7 @@ class Pass extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()

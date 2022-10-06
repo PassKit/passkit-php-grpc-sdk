@@ -179,7 +179,7 @@ class Port extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedCityName()
     {
-        return isset($this->localizedCityName) ? $this->localizedCityName : null;
+        return $this->localizedCityName;
     }
 
     public function hasLocalizedCityName()
@@ -241,7 +241,7 @@ class Port extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedAirportName()
     {
-        return isset($this->localizedAirportName) ? $this->localizedAirportName : null;
+        return $this->localizedAirportName;
     }
 
     public function hasLocalizedAirportName()

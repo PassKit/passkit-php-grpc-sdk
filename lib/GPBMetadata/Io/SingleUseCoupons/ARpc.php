@@ -26,16 +26,16 @@ class ARpc
         \GPBMetadata\Io\SingleUseCoupons\Coupon::initOnce();
         $pool->internalAddGeneratedFile(
             '
-÷K
-!io/single_use_coupons/a_rpc.protosingle_use_couponsgoogle/api/annotations.protoio/common/common_objects.protoio/common/pagination.protoio/common/filter.protoio/common/reporting.protoio/common/personal.proto$io/single_use_coupons/campaign.proto!io/single_use_coupons/offer.proto"io/single_use_coupons/coupon.proto.protoc-gen-openapiv2/options/annotations.proto2ë@
+ñK
+!io/single_use_coupons/a_rpc.protosingle_use_couponsgoogle/api/annotations.protoio/common/common_objects.protoio/common/pagination.protoio/common/filter.protoio/common/reporting.protoio/common/personal.proto$io/single_use_coupons/campaign.proto!io/single_use_coupons/offer.proto"io/single_use_coupons/coupon.proto.protoc-gen-openapiv2/options/annotations.proto2å@
 SingleUseCouponsÀ
 createCouponCampaign".single_use_coupons.CouponCampaign.io.Id"|‚Óä“"/coupon/singleUse/campaign:*’AT
 Coupon CampaignsCreate Coupon Campaign(Creates a new Single Use Coupon CampaignÔ
 updateCouponCampaign".single_use_coupons.CouponCampaign".single_use_coupons.CouponCampaign"t‚Óä“/coupon/singleUse/campaign:*’AL
 Coupon CampaignsUpdate Coupon Campaign Updates an existing Pass Project´
 getCouponCampaign.io.Id".single_use_coupons.CouponCampaign"s‚Óä“!/coupon/singleUse/campaign/{id}’AI
-Coupon CampaignsGet Coupon Campaign Gets an existing Coupon Campaignž
-deleteCouponCampaign.io.Id.google.protobuf.Empty"å‚Óä“$*/coupon/singleUse/campaign/{id}:*’A·
+Coupon CampaignsGet Coupon Campaign Gets an existing Coupon Campaign›
+deleteCouponCampaign.io.Id.google.protobuf.Empty"â‚Óä“!*/coupon/singleUse/campaign/{id}’A·
 Coupon CampaignsDelete Coupon CampaignŠDeletes an existing Coupon Campaign by id. Deleting a Coupon Campaign results in the related offer being deleted, and all coupons being invalidated in the customers Mobile Wallet; rendering them unusable. This method needs to be used with care, this is irreversible.”
 listCouponCampaignsDeprecated.io.Pagination".single_use_coupons.CouponCampaign"¼‚Óä“/coupon/singleUse/campaigns’A•
 Coupon Campaigns"List Coupon Campaigns [DEPRECATED]][DEPRECATED: OR operator is not supported] Lists all Coupon Campaigns for the logged in user.0¾
@@ -50,8 +50,8 @@ class ARpc
 updateCouponOffer.single_use_coupons.CouponOffer.single_use_coupons.CouponOffer"k‚Óä“/coupon/singleUse/offer:*’AF
 Coupon OffersUpdate Coupon Offer Updates an existing Coupon Offer¢
 getCouponOffer.io.Id.single_use_coupons.CouponOffer"g‚Óä“/coupon/singleUse/offer/{id}’A@
-Coupon OffersGet Coupon OfferGets an existing Coupon OfferÛ
-deleteCouponOffer.io.Id.google.protobuf.Empty"¥‚Óä“!*/coupon/singleUse/offer/{id}:*’Aú
+Coupon OffersGet Coupon OfferGets an existing Coupon OfferØ
+deleteCouponOffer.io.Id.google.protobuf.Empty"¢‚Óä“*/coupon/singleUse/offer/{id}’Aú
 Coupon OffersDelete Coupon OfferÓDeletes an existing Coupon Offer by id. Deleting a Coupon Offer results in all coupons being invalidated in the customers Mobile Wallet; rendering them unusable. Needs to be used with care, this is irreversible.¡
 listCouponOffersDeprecated5.single_use_coupons.CouponOffersListRequestDeprecated.single_use_coupons.CouponOffer"¨‚Óä“/coupon/singleUse/offers’A„
 Coupon OffersList Coupon Offers [DEPRECATED]R[DEPRECATED: OR operator is not supported] Lists all Coupon Offers for a campaign.0¾

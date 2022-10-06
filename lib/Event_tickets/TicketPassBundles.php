@@ -26,7 +26,7 @@ class TicketPassBundles extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Io\PassBundle[]|\Google\Protobuf\Internal\RepeatedField $tickets
+     *     @type array<\Io\PassBundle>|\Google\Protobuf\Internal\RepeatedField $tickets
      *           An array of tickets.
      * }
      */
@@ -50,7 +50,7 @@ class TicketPassBundles extends \Google\Protobuf\Internal\Message
      * An array of tickets.
      *
      * Generated from protobuf field <code>repeated .io.PassBundle tickets = 1;</code>
-     * @param \Io\PassBundle[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\PassBundle>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTickets($var)

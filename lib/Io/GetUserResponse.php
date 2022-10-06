@@ -192,7 +192,7 @@ class GetUserResponse extends \Google\Protobuf\Internal\Message
      */
     public function getCreatedAt()
     {
-        return isset($this->createdAt) ? $this->createdAt : null;
+        return $this->createdAt;
     }
 
     public function hasCreatedAt()
@@ -224,7 +224,7 @@ class GetUserResponse extends \Google\Protobuf\Internal\Message
      */
     public function getExpiresAt()
     {
-        return isset($this->expiresAt) ? $this->expiresAt : null;
+        return $this->expiresAt;
     }
 
     public function hasExpiresAt()

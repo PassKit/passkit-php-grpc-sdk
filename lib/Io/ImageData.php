@@ -811,7 +811,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getStampConfig()
     {
-        return isset($this->stampConfig) ? $this->stampConfig : null;
+        return $this->stampConfig;
     }
 
     public function hasStampConfig()
@@ -847,7 +847,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedIcon()
     {
-        return isset($this->localizedIcon) ? $this->localizedIcon : null;
+        return $this->localizedIcon;
     }
 
     public function hasLocalizedIcon()
@@ -883,7 +883,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedLogo()
     {
-        return isset($this->localizedLogo) ? $this->localizedLogo : null;
+        return $this->localizedLogo;
     }
 
     public function hasLocalizedLogo()
@@ -919,7 +919,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedAppleLogo()
     {
-        return isset($this->localizedAppleLogo) ? $this->localizedAppleLogo : null;
+        return $this->localizedAppleLogo;
     }
 
     public function hasLocalizedAppleLogo()
@@ -955,7 +955,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedHero()
     {
-        return isset($this->localizedHero) ? $this->localizedHero : null;
+        return $this->localizedHero;
     }
 
     public function hasLocalizedHero()
@@ -991,7 +991,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedEventStrip()
     {
-        return isset($this->localizedEventStrip) ? $this->localizedEventStrip : null;
+        return $this->localizedEventStrip;
     }
 
     public function hasLocalizedEventStrip()
@@ -1027,7 +1027,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedStrip()
     {
-        return isset($this->localizedStrip) ? $this->localizedStrip : null;
+        return $this->localizedStrip;
     }
 
     public function hasLocalizedStrip()
@@ -1063,7 +1063,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedThumbnail()
     {
-        return isset($this->localizedThumbnail) ? $this->localizedThumbnail : null;
+        return $this->localizedThumbnail;
     }
 
     public function hasLocalizedThumbnail()
@@ -1099,7 +1099,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedBackground()
     {
-        return isset($this->localizedBackground) ? $this->localizedBackground : null;
+        return $this->localizedBackground;
     }
 
     public function hasLocalizedBackground()
@@ -1135,7 +1135,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedFooter()
     {
-        return isset($this->localizedFooter) ? $this->localizedFooter : null;
+        return $this->localizedFooter;
     }
 
     public function hasLocalizedFooter()
@@ -1171,7 +1171,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedSecurity()
     {
-        return isset($this->localizedSecurity) ? $this->localizedSecurity : null;
+        return $this->localizedSecurity;
     }
 
     public function hasLocalizedSecurity()
@@ -1207,7 +1207,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedPrivilege()
     {
-        return isset($this->localizedPrivilege) ? $this->localizedPrivilege : null;
+        return $this->localizedPrivilege;
     }
 
     public function hasLocalizedPrivilege()
@@ -1243,7 +1243,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedAirlineAlliance()
     {
-        return isset($this->localizedAirlineAlliance) ? $this->localizedAirlineAlliance : null;
+        return $this->localizedAirlineAlliance;
     }
 
     public function hasLocalizedAirlineAlliance()
@@ -1279,7 +1279,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedPersonalization()
     {
-        return isset($this->localizedPersonalization) ? $this->localizedPersonalization : null;
+        return $this->localizedPersonalization;
     }
 
     public function hasLocalizedPersonalization()
@@ -1315,7 +1315,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedBanner()
     {
-        return isset($this->localizedBanner) ? $this->localizedBanner : null;
+        return $this->localizedBanner;
     }
 
     public function hasLocalizedBanner()
@@ -1351,7 +1351,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedMessage()
     {
-        return isset($this->localizedMessage) ? $this->localizedMessage : null;
+        return $this->localizedMessage;
     }
 
     public function hasLocalizedMessage()

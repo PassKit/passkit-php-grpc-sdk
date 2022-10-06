@@ -44,13 +44,13 @@ class GoogleAnalyticsSettings extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $trackingIds
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $trackingIds
      *           list of Google Analytics ID's to track ('UA-XXXXX-Y', 'UA-XXXXX-B', etc).
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $dataCollectionPageEvents
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $dataCollectionPageEvents
      *           Events to send to Google on the data collection page.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $passRenderPageEvents
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $passRenderPageEvents
      *           Events to send to Google on the pass render page.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $customerInitiatedRedemption
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $customerInitiatedRedemption
      *           Events to send to Google on the custom initiated redemption page.
      * }
      */
@@ -74,7 +74,7 @@ class GoogleAnalyticsSettings extends \Google\Protobuf\Internal\Message
      * list of Google Analytics ID's to track ('UA-XXXXX-Y', 'UA-XXXXX-B', etc).
      *
      * Generated from protobuf field <code>repeated string trackingIds = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTrackingIds($var)
@@ -100,7 +100,7 @@ class GoogleAnalyticsSettings extends \Google\Protobuf\Internal\Message
      * Events to send to Google on the data collection page.
      *
      * Generated from protobuf field <code>repeated .io.GoogleAnalyticsDataCollectionPageEvent dataCollectionPageEvents = 2;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDataCollectionPageEvents($var)
@@ -126,7 +126,7 @@ class GoogleAnalyticsSettings extends \Google\Protobuf\Internal\Message
      * Events to send to Google on the pass render page.
      *
      * Generated from protobuf field <code>repeated .io.GoogleAnalyticsPassRenderPageEvent passRenderPageEvents = 3;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPassRenderPageEvents($var)
@@ -152,7 +152,7 @@ class GoogleAnalyticsSettings extends \Google\Protobuf\Internal\Message
      * Events to send to Google on the custom initiated redemption page.
      *
      * Generated from protobuf field <code>repeated .io.GoogleAnalyticsCustomerInitiatedRedemptionPageEvent customerInitiatedRedemption = 4;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCustomerInitiatedRedemption($var)

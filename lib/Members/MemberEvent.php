@@ -191,7 +191,7 @@ class MemberEvent extends \Google\Protobuf\Internal\Message
      */
     public function getMember()
     {
-        return isset($this->member) ? $this->member : null;
+        return $this->member;
     }
 
     public function hasMember()
@@ -513,7 +513,7 @@ class MemberEvent extends \Google\Protobuf\Internal\Message
      */
     public function getDate()
     {
-        return isset($this->date) ? $this->date : null;
+        return $this->date;
     }
 
     public function hasDate()
@@ -549,7 +549,7 @@ class MemberEvent extends \Google\Protobuf\Internal\Message
      */
     public function getRetainedUntilDate()
     {
-        return isset($this->retainedUntilDate) ? $this->retainedUntilDate : null;
+        return $this->retainedUntilDate;
     }
 
     public function hasRetainedUntilDate()
@@ -585,7 +585,7 @@ class MemberEvent extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()

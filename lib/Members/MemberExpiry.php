@@ -147,7 +147,7 @@ class MemberExpiry extends \Google\Protobuf\Internal\Message
      */
     public function getExpiryDate()
     {
-        return isset($this->expiryDate) ? $this->expiryDate : null;
+        return $this->expiryDate;
     }
 
     public function hasExpiryDate()

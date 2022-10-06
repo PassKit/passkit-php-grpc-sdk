@@ -51,7 +51,7 @@ class RedeemTicketRequest extends \Google\Protobuf\Internal\Message
      */
     public function getTicket()
     {
-        return isset($this->ticket) ? $this->ticket : null;
+        return $this->ticket;
     }
 
     public function hasTicket()
@@ -87,7 +87,7 @@ class RedeemTicketRequest extends \Google\Protobuf\Internal\Message
      */
     public function getRedemptionDetails()
     {
-        return isset($this->redemptionDetails) ? $this->redemptionDetails : null;
+        return $this->redemptionDetails;
     }
 
     public function hasRedemptionDetails()

@@ -24,7 +24,7 @@ class DbLink extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $links
+     *     @type array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $links
      * }
      */
     public function __construct($data = NULL) {
@@ -43,7 +43,7 @@ class DbLink extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.Link links = 1;</code>
-     * @param \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLinks($var)

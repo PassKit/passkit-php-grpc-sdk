@@ -205,7 +205,7 @@ class IdentityDetails extends \Google\Protobuf\Internal\Message
      */
     public function getDateOfBirth()
     {
-        return isset($this->dateOfBirth) ? $this->dateOfBirth : null;
+        return $this->dateOfBirth;
     }
 
     public function hasDateOfBirth()
@@ -267,7 +267,7 @@ class IdentityDetails extends \Google\Protobuf\Internal\Message
      */
     public function getIssuedDate()
     {
-        return isset($this->issuedDate) ? $this->issuedDate : null;
+        return $this->issuedDate;
     }
 
     public function hasIssuedDate()
@@ -303,7 +303,7 @@ class IdentityDetails extends \Google\Protobuf\Internal\Message
      */
     public function getExpiryDate()
     {
-        return isset($this->expiryDate) ? $this->expiryDate : null;
+        return $this->expiryDate;
     }
 
     public function hasExpiryDate()

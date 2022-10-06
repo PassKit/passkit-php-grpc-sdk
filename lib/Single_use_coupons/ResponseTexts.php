@@ -167,7 +167,7 @@ class ResponseTexts extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedRedeemConfirmationDialogBoxText()
     {
-        return isset($this->localizedRedeemConfirmationDialogBoxText) ? $this->localizedRedeemConfirmationDialogBoxText : null;
+        return $this->localizedRedeemConfirmationDialogBoxText;
     }
 
     public function hasLocalizedRedeemConfirmationDialogBoxText()
@@ -231,7 +231,7 @@ class ResponseTexts extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedCancelRedeemText()
     {
-        return isset($this->localizedCancelRedeemText) ? $this->localizedCancelRedeemText : null;
+        return $this->localizedCancelRedeemText;
     }
 
     public function hasLocalizedCancelRedeemText()
@@ -293,7 +293,7 @@ class ResponseTexts extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedAfterRedeemText()
     {
-        return isset($this->localizedAfterRedeemText) ? $this->localizedAfterRedeemText : null;
+        return $this->localizedAfterRedeemText;
     }
 
     public function hasLocalizedAfterRedeemText()
@@ -355,7 +355,7 @@ class ResponseTexts extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedCouponAlreadyRedeemedText()
     {
-        return isset($this->localizedCouponAlreadyRedeemedText) ? $this->localizedCouponAlreadyRedeemedText : null;
+        return $this->localizedCouponAlreadyRedeemedText;
     }
 
     public function hasLocalizedCouponAlreadyRedeemedText()
@@ -417,7 +417,7 @@ class ResponseTexts extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedOfferExpiredText()
     {
-        return isset($this->localizedOfferExpiredText) ? $this->localizedOfferExpiredText : null;
+        return $this->localizedOfferExpiredText;
     }
 
     public function hasLocalizedOfferExpiredText()
@@ -479,7 +479,7 @@ class ResponseTexts extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedCouponExpiredText()
     {
-        return isset($this->localizedCouponExpiredText) ? $this->localizedCouponExpiredText : null;
+        return $this->localizedCouponExpiredText;
     }
 
     public function hasLocalizedCouponExpiredText()

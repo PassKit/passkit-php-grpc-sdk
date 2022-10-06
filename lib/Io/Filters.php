@@ -52,7 +52,7 @@ class Filters extends \Google\Protobuf\Internal\Message
      *           Limit the number of records returned. If not specified, a default of 25 is used.  Enter -1 for all records.
      *     @type int $offset
      *           Allows you to offset the first record returned by the limit.
-     *     @type \Io\FilterGroup[]|\Google\Protobuf\Internal\RepeatedField $filterGroups
+     *     @type array<\Io\FilterGroup>|\Google\Protobuf\Internal\RepeatedField $filterGroups
      *     @type string $orderBy
      *           Field to order results by.
      *     @type bool $orderAsc
@@ -127,7 +127,7 @@ class Filters extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.FilterGroup filterGroups = 3;</code>
-     * @param \Io\FilterGroup[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\FilterGroup>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFilterGroups($var)

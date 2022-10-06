@@ -44,7 +44,7 @@ class LandingPageSettings extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $landingLocalizationOverride
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $landingLocalizationOverride
      *           Array of languages to display on the landing page, if you would like your language to be supported, please contact support.
      *     @type int $preferThirdPartyAndroidWallet
      *           Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
@@ -74,7 +74,7 @@ class LandingPageSettings extends \Google\Protobuf\Internal\Message
      * Array of languages to display on the landing page, if you would like your language to be supported, please contact support.
      *
      * Generated from protobuf field <code>repeated .io.LanguageCode landingLocalizationOverride = 1;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLandingLocalizationOverride($var)

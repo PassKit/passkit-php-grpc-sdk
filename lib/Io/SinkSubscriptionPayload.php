@@ -72,7 +72,7 @@ class SinkSubscriptionPayload extends \Google\Protobuf\Internal\Message
      */
     public function getPass()
     {
-        return isset($this->pass) ? $this->pass : null;
+        return $this->pass;
     }
 
     public function hasPass()

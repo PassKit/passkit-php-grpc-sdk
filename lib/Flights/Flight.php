@@ -265,7 +265,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      *           If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
      *     @type string $operatingFlightNumber
      *           If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $codeShareFlightNumbers
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $codeShareFlightNumbers
      *           If the flight has code shares, then enter the carrier code and flight number. If there is an operating carrier, then do not include this in the list. Code share carriers will not be validated.
      *     @type string $passTemplateId
      *           The pass template id.
@@ -275,11 +275,11 @@ class Flight extends \Google\Protobuf\Internal\Message
      *           Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
      *     @type bool $autoInvalidateCancelledPasses
      *           Deprecated: Use InvalidateCancelledPasses.
-     *     @type \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $locationMessages
+     *     @type array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $locationMessages
      *           A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults.
-     *     @type \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $beaconMessages
+     *     @type array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $beaconMessages
      *           A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designated defaults.
-     *     @type \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $links
+     *     @type array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $links
      *           A list of links to be appended to the end of each boarding pass.
      *     @type bool $suspendAutomaticUpdates
      *           Suspend automatic updates to all boarding passes for this flight.
@@ -420,7 +420,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     public function getDepartureDate()
     {
-        return isset($this->departureDate) ? $this->departureDate : null;
+        return $this->departureDate;
     }
 
     public function hasDepartureDate()
@@ -560,7 +560,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     public function getScheduledDepartureTime()
     {
-        return isset($this->scheduledDepartureTime) ? $this->scheduledDepartureTime : null;
+        return $this->scheduledDepartureTime;
     }
 
     public function hasScheduledDepartureTime()
@@ -596,7 +596,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     public function getEstimatedDepartureTime()
     {
-        return isset($this->estimatedDepartureTime) ? $this->estimatedDepartureTime : null;
+        return $this->estimatedDepartureTime;
     }
 
     public function hasEstimatedDepartureTime()
@@ -632,7 +632,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     public function getBoardingTime()
     {
-        return isset($this->boardingTime) ? $this->boardingTime : null;
+        return $this->boardingTime;
     }
 
     public function hasBoardingTime()
@@ -668,7 +668,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     public function getGateClosingTime()
     {
-        return isset($this->gateClosingTime) ? $this->gateClosingTime : null;
+        return $this->gateClosingTime;
     }
 
     public function hasGateClosingTime()
@@ -704,7 +704,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     public function getScheduledArrivalTime()
     {
-        return isset($this->scheduledArrivalTime) ? $this->scheduledArrivalTime : null;
+        return $this->scheduledArrivalTime;
     }
 
     public function hasScheduledArrivalTime()
@@ -740,7 +740,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     public function getEstimatedArrivalTime()
     {
-        return isset($this->estimatedArrivalTime) ? $this->estimatedArrivalTime : null;
+        return $this->estimatedArrivalTime;
     }
 
     public function hasEstimatedArrivalTime()
@@ -835,7 +835,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * If the flight has code shares, then enter the carrier code and flight number. If there is an operating carrier, then do not include this in the list. Code share carriers will not be validated.
      *
      * Generated from protobuf field <code>repeated string codeShareFlightNumbers = 18;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCodeShareFlightNumbers($var)
@@ -969,7 +969,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 24 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLocationMessages($var)
@@ -995,7 +995,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designated defaults.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 25 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBeaconMessages($var)
@@ -1021,7 +1021,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * A list of links to be appended to the end of each boarding pass.
      *
      * Generated from protobuf field <code>repeated .io.Link links = 26 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLinks($var)
@@ -1196,7 +1196,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     public function getMetrics()
     {
-        return isset($this->metrics) ? $this->metrics : null;
+        return $this->metrics;
     }
 
     public function hasMetrics()

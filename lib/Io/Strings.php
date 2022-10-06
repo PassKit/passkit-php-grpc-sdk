@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Repeated field of dynamically typed values (including string, bool, option, syntax)
+ * Repeated field of dynamically typed values (including string, bool, option, syntax).
  *
  * Generated from protobuf message <code>io.Strings</code>
  */
@@ -26,7 +26,7 @@ class Strings extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $response
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $response
      * }
      */
     public function __construct($data = NULL) {
@@ -45,7 +45,7 @@ class Strings extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string response = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setResponse($var)

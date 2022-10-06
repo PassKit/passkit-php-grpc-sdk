@@ -98,7 +98,7 @@ class Person extends \Google\Protobuf\Internal\Message
      *           Surname / Family name.
      *     @type string $forename
      *           Forename / Given name.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $otherNames
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $otherNames
      *           Other names.
      *     @type string $salutation
      *           Salutation or title.
@@ -192,7 +192,7 @@ class Person extends \Google\Protobuf\Internal\Message
      * Other names.
      *
      * Generated from protobuf field <code>repeated string otherNames = 3;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOtherNames($var)
@@ -315,7 +315,7 @@ class Person extends \Google\Protobuf\Internal\Message
      */
     public function getDateOfBirth()
     {
-        return isset($this->dateOfBirth) ? $this->dateOfBirth : null;
+        return $this->dateOfBirth;
     }
 
     public function hasDateOfBirth()

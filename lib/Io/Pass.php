@@ -171,7 +171,7 @@ class Pass extends \Google\Protobuf\Internal\Message
      */
     public function getPersonDetails()
     {
-        return isset($this->personDetails) ? $this->personDetails : null;
+        return $this->personDetails;
     }
 
     public function hasPersonDetails()
@@ -207,7 +207,7 @@ class Pass extends \Google\Protobuf\Internal\Message
      */
     public function getMetadata()
     {
-        return isset($this->metadata) ? $this->metadata : null;
+        return $this->metadata;
     }
 
     public function hasMetadata()

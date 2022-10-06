@@ -121,7 +121,7 @@ class UpdateExpiryRequest extends \Google\Protobuf\Internal\Message
      */
     public function getExpirySettings()
     {
-        return isset($this->expirySettings) ? $this->expirySettings : null;
+        return $this->expirySettings;
     }
 
     public function hasExpirySettings()

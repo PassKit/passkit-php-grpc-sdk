@@ -82,7 +82,7 @@ class AppleWalletFieldRenderOptions extends \Google\Protobuf\Internal\Message
      *     @type int $dateStyle
      *     @type int $timeStyle
      *     @type int $numberStyle
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $suppressLinkDetection
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $suppressLinkDetection
      *     @type bool $ignoreTimezone
      *           Render date and time values in the provided time, rather than switching to the local time of the user.
      *     @type bool $isRelativeDate
@@ -126,7 +126,7 @@ class AppleWalletFieldRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getPositionSettings()
     {
-        return isset($this->positionSettings) ? $this->positionSettings : null;
+        return $this->positionSettings;
     }
 
     public function hasPositionSettings()
@@ -186,7 +186,7 @@ class AppleWalletFieldRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedChangeMessage()
     {
-        return isset($this->localizedChangeMessage) ? $this->localizedChangeMessage : null;
+        return $this->localizedChangeMessage;
     }
 
     public function hasLocalizedChangeMessage()
@@ -291,7 +291,7 @@ class AppleWalletFieldRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.LinkDetector suppressLinkDetection = 9;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSuppressLinkDetection($var)

@@ -353,7 +353,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedAddress1Label()
     {
-        return isset($this->localizedAddress1Label) ? $this->localizedAddress1Label : null;
+        return $this->localizedAddress1Label;
     }
 
     public function hasLocalizedAddress1Label()
@@ -385,7 +385,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedAddress2Label()
     {
-        return isset($this->localizedAddress2Label) ? $this->localizedAddress2Label : null;
+        return $this->localizedAddress2Label;
     }
 
     public function hasLocalizedAddress2Label()
@@ -417,7 +417,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedCityLabel()
     {
-        return isset($this->localizedCityLabel) ? $this->localizedCityLabel : null;
+        return $this->localizedCityLabel;
     }
 
     public function hasLocalizedCityLabel()
@@ -449,7 +449,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedCountryLabel()
     {
-        return isset($this->localizedCountryLabel) ? $this->localizedCountryLabel : null;
+        return $this->localizedCountryLabel;
     }
 
     public function hasLocalizedCountryLabel()
@@ -481,7 +481,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedZipLabel()
     {
-        return isset($this->localizedZipLabel) ? $this->localizedZipLabel : null;
+        return $this->localizedZipLabel;
     }
 
     public function hasLocalizedZipLabel()
@@ -513,7 +513,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedAddress1Placeholder()
     {
-        return isset($this->localizedAddress1Placeholder) ? $this->localizedAddress1Placeholder : null;
+        return $this->localizedAddress1Placeholder;
     }
 
     public function hasLocalizedAddress1Placeholder()
@@ -545,7 +545,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedAddress2Placeholder()
     {
-        return isset($this->localizedAddress2Placeholder) ? $this->localizedAddress2Placeholder : null;
+        return $this->localizedAddress2Placeholder;
     }
 
     public function hasLocalizedAddress2Placeholder()
@@ -577,7 +577,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedCityPlaceholder()
     {
-        return isset($this->localizedCityPlaceholder) ? $this->localizedCityPlaceholder : null;
+        return $this->localizedCityPlaceholder;
     }
 
     public function hasLocalizedCityPlaceholder()
@@ -609,7 +609,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedCountryPlaceholder()
     {
-        return isset($this->localizedCountryPlaceholder) ? $this->localizedCountryPlaceholder : null;
+        return $this->localizedCountryPlaceholder;
     }
 
     public function hasLocalizedCountryPlaceholder()
@@ -641,7 +641,7 @@ class AddressRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedZipPlaceholder()
     {
-        return isset($this->localizedZipPlaceholder) ? $this->localizedZipPlaceholder : null;
+        return $this->localizedZipPlaceholder;
     }
 
     public function hasLocalizedZipPlaceholder()

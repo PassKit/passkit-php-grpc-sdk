@@ -67,7 +67,7 @@ class CouponOffersListRequestDeprecated extends \Google\Protobuf\Internal\Messag
      */
     public function getPagination()
     {
-        return isset($this->pagination) ? $this->pagination : null;
+        return $this->pagination;
     }
 
     public function hasPagination()

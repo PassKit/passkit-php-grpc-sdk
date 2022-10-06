@@ -50,7 +50,7 @@ class ProgramCopyRequest extends \Google\Protobuf\Internal\Message
      *           uuid of the program to copy.
      *     @type string $name
      *           optional name for the new program.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $status
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $status
      *           Status to set the copied program to.
      *     @type string $passTypeIdentifier
      *           Can optionally be provided if setting status to published (requires a prod cert).
@@ -128,7 +128,7 @@ class ProgramCopyRequest extends \Google\Protobuf\Internal\Message
      * Status to set the copied program to.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 3;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStatus($var)

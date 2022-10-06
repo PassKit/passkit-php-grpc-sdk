@@ -180,11 +180,11 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      *           When set controls how this pass is shared. For Apple wallet this uses the built in sharing functionality. For Google Pay, a sharing link will be added to the pass.
      *     @type \Io\AppleWalletSettings $appleWalletSettings
      *     @type \Io\GooglePaySettings $googlePaySettings
-     *     @type \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $locations
+     *     @type array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $locations
      *           A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
-     *     @type \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $beacons
+     *     @type array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $beacons
      *           A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
-     *     @type \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $links
+     *     @type array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $links
      *           A list of links to be shown on each pass.
      *     @type string $timezone
      *           Timezone string in IANA timezone format. If not provided defaults to Etc/UTC.
@@ -362,7 +362,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedOrganizationName()
     {
-        return isset($this->localizedOrganizationName) ? $this->localizedOrganizationName : null;
+        return $this->localizedOrganizationName;
     }
 
     public function hasLocalizedOrganizationName()
@@ -424,7 +424,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedDescription()
     {
-        return isset($this->localizedDescription) ? $this->localizedDescription : null;
+        return $this->localizedDescription;
     }
 
     public function hasLocalizedDescription()
@@ -460,7 +460,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getData()
     {
-        return isset($this->data) ? $this->data : null;
+        return $this->data;
     }
 
     public function hasData()
@@ -558,7 +558,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getColors()
     {
-        return isset($this->colors) ? $this->colors : null;
+        return $this->colors;
     }
 
     public function hasColors()
@@ -592,7 +592,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getBarcode()
     {
-        return isset($this->barcode) ? $this->barcode : null;
+        return $this->barcode;
     }
 
     public function hasBarcode()
@@ -626,7 +626,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getNfcEnabled()
     {
-        return isset($this->nfcEnabled) ? $this->nfcEnabled : null;
+        return $this->nfcEnabled;
     }
 
     public function hasNfcEnabled()
@@ -662,7 +662,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getSharing()
     {
-        return isset($this->sharing) ? $this->sharing : null;
+        return $this->sharing;
     }
 
     public function hasSharing()
@@ -696,7 +696,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getAppleWalletSettings()
     {
-        return isset($this->appleWalletSettings) ? $this->appleWalletSettings : null;
+        return $this->appleWalletSettings;
     }
 
     public function hasAppleWalletSettings()
@@ -728,7 +728,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getGooglePaySettings()
     {
-        return isset($this->googlePaySettings) ? $this->googlePaySettings : null;
+        return $this->googlePaySettings;
     }
 
     public function hasGooglePaySettings()
@@ -769,7 +769,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLocations($var)
@@ -795,7 +795,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBeacons($var)
@@ -821,7 +821,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * A list of links to be shown on each pass.
      *
      * Generated from protobuf field <code>repeated .io.Link links = 21;</code>
-     * @param \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLinks($var)
@@ -864,7 +864,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getExpirySettings()
     {
-        return isset($this->expirySettings) ? $this->expirySettings : null;
+        return $this->expirySettings;
     }
 
     public function hasExpirySettings()
@@ -898,7 +898,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getLandingPageSettings()
     {
-        return isset($this->landingPageSettings) ? $this->landingPageSettings : null;
+        return $this->landingPageSettings;
     }
 
     public function hasLandingPageSettings()

@@ -261,7 +261,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     public function getPerson()
     {
-        return isset($this->person) ? $this->person : null;
+        return $this->person;
     }
 
     public function hasPerson()
@@ -401,7 +401,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     public function getExpiryDate()
     {
-        return isset($this->expiryDate) ? $this->expiryDate : null;
+        return $this->expiryDate;
     }
 
     public function hasExpiryDate()
@@ -437,7 +437,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     public function getRedemptionDetails()
     {
-        return isset($this->redemptionDetails) ? $this->redemptionDetails : null;
+        return $this->redemptionDetails;
     }
 
     public function hasRedemptionDetails()
@@ -473,7 +473,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     public function getPassOverrides()
     {
-        return isset($this->passOverrides) ? $this->passOverrides : null;
+        return $this->passOverrides;
     }
 
     public function hasPassOverrides()
@@ -509,7 +509,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     public function getPassMetaData()
     {
-        return isset($this->passMetaData) ? $this->passMetaData : null;
+        return $this->passMetaData;
     }
 
     public function hasPassMetaData()
@@ -545,7 +545,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -581,7 +581,7 @@ class Coupon extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()

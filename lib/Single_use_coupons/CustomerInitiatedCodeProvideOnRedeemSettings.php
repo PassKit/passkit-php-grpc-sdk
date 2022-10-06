@@ -44,7 +44,7 @@ class CustomerInitiatedCodeProvideOnRedeemSettings extends \Google\Protobuf\Inte
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $validCodes
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $validCodes
      *           Optional array of valid codes that can be input on redemption.
      *     @type \Single_use_coupons\InputField $redemptionCodeInput
      *           Input field box for entering the redemption code.
@@ -74,7 +74,7 @@ class CustomerInitiatedCodeProvideOnRedeemSettings extends \Google\Protobuf\Inte
      * Optional array of valid codes that can be input on redemption.
      *
      * Generated from protobuf field <code>repeated string validCodes = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setValidCodes($var)
@@ -93,7 +93,7 @@ class CustomerInitiatedCodeProvideOnRedeemSettings extends \Google\Protobuf\Inte
      */
     public function getRedemptionCodeInput()
     {
-        return isset($this->redemptionCodeInput) ? $this->redemptionCodeInput : null;
+        return $this->redemptionCodeInput;
     }
 
     public function hasRedemptionCodeInput()
@@ -155,7 +155,7 @@ class CustomerInitiatedCodeProvideOnRedeemSettings extends \Google\Protobuf\Inte
      */
     public function getLocalizedSubmitButtonText()
     {
-        return isset($this->localizedSubmitButtonText) ? $this->localizedSubmitButtonText : null;
+        return $this->localizedSubmitButtonText;
     }
 
     public function hasLocalizedSubmitButtonText()

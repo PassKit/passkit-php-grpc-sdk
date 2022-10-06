@@ -58,7 +58,7 @@ class ProductionAnalyticsResponse extends \Google\Protobuf\Internal\Message
      *           Total number of pass redeemed for each device type.
      *     @type array|\Google\Protobuf\Internal\MapField $sources
      *           Total number of pass redeemed for each distribution source.
-     *     @type \Io\ChartDataPoints[]|\Google\Protobuf\Internal\RepeatedField $data
+     *     @type array<\Io\ChartDataPoints>|\Google\Protobuf\Internal\RepeatedField $data
      *           Breakdown of data by day, month or year.
      * }
      */
@@ -127,7 +127,7 @@ class ProductionAnalyticsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getDevices()
     {
-        return isset($this->devices) ? $this->devices : null;
+        return $this->devices;
     }
 
     public function hasDevices()
@@ -196,7 +196,7 @@ class ProductionAnalyticsResponse extends \Google\Protobuf\Internal\Message
      * Breakdown of data by day, month or year.
      *
      * Generated from protobuf field <code>repeated .io.ChartDataPoints data = 5;</code>
-     * @param \Io\ChartDataPoints[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\ChartDataPoints>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setData($var)

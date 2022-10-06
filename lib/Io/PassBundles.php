@@ -24,7 +24,7 @@ class PassBundles extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Io\PassBundle[]|\Google\Protobuf\Internal\RepeatedField $passes
+     *     @type array<\Io\PassBundle>|\Google\Protobuf\Internal\RepeatedField $passes
      * }
      */
     public function __construct($data = NULL) {
@@ -43,7 +43,7 @@ class PassBundles extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.PassBundle passes = 1;</code>
-     * @param \Io\PassBundle[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\PassBundle>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPasses($var)

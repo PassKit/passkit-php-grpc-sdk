@@ -208,7 +208,7 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedSubject()
     {
-        return isset($this->localizedSubject) ? $this->localizedSubject : null;
+        return $this->localizedSubject;
     }
 
     public function hasLocalizedSubject()
@@ -270,7 +270,7 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedBodyTextContent()
     {
-        return isset($this->localizedBodyTextContent) ? $this->localizedBodyTextContent : null;
+        return $this->localizedBodyTextContent;
     }
 
     public function hasLocalizedBodyTextContent()
@@ -332,7 +332,7 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedBodyHtmlContent()
     {
-        return isset($this->localizedBodyHtmlContent) ? $this->localizedBodyHtmlContent : null;
+        return $this->localizedBodyHtmlContent;
     }
 
     public function hasLocalizedBodyHtmlContent()
@@ -368,7 +368,7 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getConfiguration()
     {
-        return isset($this->configuration) ? $this->configuration : null;
+        return $this->configuration;
     }
 
     public function hasConfiguration()
@@ -534,7 +534,7 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedFooterTextContent()
     {
-        return isset($this->localizedFooterTextContent) ? $this->localizedFooterTextContent : null;
+        return $this->localizedFooterTextContent;
     }
 
     public function hasLocalizedFooterTextContent()
@@ -596,7 +596,7 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedFooterHtmlContent()
     {
-        return isset($this->localizedFooterHtmlContent) ? $this->localizedFooterHtmlContent : null;
+        return $this->localizedFooterHtmlContent;
     }
 
     public function hasLocalizedFooterHtmlContent()

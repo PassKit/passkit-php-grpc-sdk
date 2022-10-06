@@ -9,18 +9,22 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>io.ImportMembersRequest</code>
+ * Generated from protobuf message <code>io.ImportProtocolRequest</code>
  */
-class ImportMembersRequest extends \Google\Protobuf\Internal\Message
+class ImportProtocolRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string csvContent = 1;</code>
      */
     protected $csvContent = '';
     /**
-     * Generated from protobuf field <code>string programId = 2;</code>
+     * Generated from protobuf field <code>string classId = 2;</code>
      */
-    protected $programId = '';
+    protected $classId = '';
+    /**
+     * Generated from protobuf field <code>.io.PassProtocol protocol = 3;</code>
+     */
+    protected $protocol = 0;
 
     /**
      * Constructor.
@@ -29,7 +33,8 @@ class ImportMembersRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $csvContent
-     *     @type string $programId
+     *     @type string $classId
+     *     @type int $protocol
      * }
      */
     public function __construct($data = NULL) {
@@ -60,23 +65,45 @@ class ImportMembersRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string programId = 2;</code>
+     * Generated from protobuf field <code>string classId = 2;</code>
      * @return string
      */
-    public function getProgramId()
+    public function getClassId()
     {
-        return $this->programId;
+        return $this->classId;
     }
 
     /**
-     * Generated from protobuf field <code>string programId = 2;</code>
+     * Generated from protobuf field <code>string classId = 2;</code>
      * @param string $var
      * @return $this
      */
-    public function setProgramId($var)
+    public function setClassId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->programId = $var;
+        $this->classId = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.io.PassProtocol protocol = 3;</code>
+     * @return int
+     */
+    public function getProtocol()
+    {
+        return $this->protocol;
+    }
+
+    /**
+     * Generated from protobuf field <code>.io.PassProtocol protocol = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setProtocol($var)
+    {
+        GPBUtil::checkEnum($var, \Io\PassProtocol::class);
+        $this->protocol = $var;
 
         return $this;
     }

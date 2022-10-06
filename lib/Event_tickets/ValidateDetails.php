@@ -83,7 +83,7 @@ class ValidateDetails extends \Google\Protobuf\Internal\Message
      */
     public function getValidateDate()
     {
-        return isset($this->validateDate) ? $this->validateDate : null;
+        return $this->validateDate;
     }
 
     public function hasValidateDate()

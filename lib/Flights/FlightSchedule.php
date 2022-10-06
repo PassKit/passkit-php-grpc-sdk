@@ -70,7 +70,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
      */
     public function getMonday()
     {
-        return isset($this->monday) ? $this->monday : null;
+        return $this->monday;
     }
 
     public function hasMonday()
@@ -102,7 +102,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
      */
     public function getTuesday()
     {
-        return isset($this->tuesday) ? $this->tuesday : null;
+        return $this->tuesday;
     }
 
     public function hasTuesday()
@@ -134,7 +134,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
      */
     public function getWednesday()
     {
-        return isset($this->wednesday) ? $this->wednesday : null;
+        return $this->wednesday;
     }
 
     public function hasWednesday()
@@ -166,7 +166,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
      */
     public function getThursday()
     {
-        return isset($this->thursday) ? $this->thursday : null;
+        return $this->thursday;
     }
 
     public function hasThursday()
@@ -198,7 +198,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
      */
     public function getFriday()
     {
-        return isset($this->friday) ? $this->friday : null;
+        return $this->friday;
     }
 
     public function hasFriday()
@@ -230,7 +230,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
      */
     public function getSaturday()
     {
-        return isset($this->saturday) ? $this->saturday : null;
+        return $this->saturday;
     }
 
     public function hasSaturday()
@@ -262,7 +262,7 @@ class FlightSchedule extends \Google\Protobuf\Internal\Message
      */
     public function getSunday()
     {
-        return isset($this->sunday) ? $this->sunday : null;
+        return $this->sunday;
     }
 
     public function hasSunday()

@@ -259,7 +259,7 @@ class NewUserResponse extends \Google\Protobuf\Internal\Message
      */
     public function getExpiresAt()
     {
-        return isset($this->expiresAt) ? $this->expiresAt : null;
+        return $this->expiresAt;
     }
 
     public function hasExpiresAt()

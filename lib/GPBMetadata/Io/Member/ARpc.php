@@ -28,8 +28,8 @@ class ARpc
         \GPBMetadata\Io\Member\Tier::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ìX
-io/member/a_rpc.protomembersgoogle/protobuf/empty.protoio/common/common_objects.protoio/common/distribution.protoio/common/message.protoio/common/pagination.protoio/common/filter.protoio/common/personal.protoio/member/member_events.protoio/member/member.protoio/member/program.protoio/member/tier.proto.protoc-gen-openapiv2/options/annotations.proto2ﬂM
+àX
+io/member/a_rpc.protomembersgoogle/protobuf/empty.protoio/common/common_objects.protoio/common/distribution.protoio/common/message.protoio/common/pagination.protoio/common/filter.protoio/common/personal.protoio/member/member_events.protoio/member/member.protoio/member/program.protoio/member/tier.proto.protoc-gen-openapiv2/options/annotations.proto2‘M
 Members}
 createProgram.members.Program.io.Id"RÇ”‰ì"/members/program:*íA4
 ProgramsCreate ProgramCreates a program recordë
@@ -39,8 +39,8 @@ class ARpc
 getProgram.io.Id.members.Program"XÇ”‰ì/members/program/{id}íA8
 ProgramsGet ProgramGets an existing program recordí
 copyProgram.members.ProgramCopyRequest.io.Id"^Ç”‰ì"/members/program/copy:*íA;
-ProgramsCopy Program!Copies an existing program recordî
-deleteProgram.io.Id.google.protobuf.Empty"‚Ç”‰ì*/members/program/{id}:*íAæ
+ProgramsCopy Program!Copies an existing program recordë
+deleteProgram.io.Id.google.protobuf.Empty"ﬂÇ”‰ì*/members/program/{id}íAæ
 ProgramsDelete Program°Deletes an existing program record. Deleting a program results in all tiers, and members underneath it being invalidated and removed. Needs to be used with care.¿
 listProgramsDeprecated.io.Pagination.members.Program"ÅÇ”‰ì/members/programsíAe
 ProgramsList Programs [DEPRECATED]=[DEPRECATED: OR operator is not supported] Lists all programs0Ò
@@ -55,9 +55,9 @@ createTier.members.Tier.io.Id"CÇ”‰ì"/members/tier:*íA(
 updateTier.members.Tier.members.Tier"JÇ”‰ì/members/tier:*íA/
 TiersUpdate TierUpdates a tier by tier idó
 getTier.members.TierRequestInput.members.Tier"bÇ”‰ì$"/members/tier/{programId}/{tierId}íA5
-TiersGet Tier"Get a tier by program and tier ids÷
+TiersGet Tier"Get a tier by program and tier ids”
 
-deleteTier.members.TierRequestInput.google.protobuf.Empty"îÇ”‰ì\'*"/members/tier/{programId}/{tierId}:*íAd
+deleteTier.members.TierRequestInput.google.protobuf.Empty"ëÇ”‰ì$*"/members/tier/{programId}/{tierId}íAd
 TiersDelete TierNDeletes a tier and members who belong to the tier. Needs to be used with care.Ω
 listTiersDeprecated.members.ListRequestDeprecated.members.Tier"uÇ”‰ì/members/tiersíA\\
 TiersList Tiers [DEPRECATED]:[DEPRECATED: OR operator is not supported] Lists all tiers0‚
@@ -132,14 +132,14 @@ Set points]Set points for a member (identified by PassKit ID or External ID). S
 listMemberEvents.members.ListRequest.members.MemberEvent"{Ç”‰ì-"(/members/program/list/events/{programId}:*íAE
 ProgramsList member events%List all members events for a program0ê
  getMemberEventMetaKeysForProgram.io.Id.io.Strings"÷Ç”‰ì" /members/member/events/meta/{id}íA™
-Programs(Get Member Event Meta Keys for a ProgramtReturns a list of distinct meta field keys for the member events. Can be used for building filters / table headings.®
-listEventsForMember.io.Id.members.MemberEvent"qÇ”‰ì%" /members/member/list/events/{id}:*íAC
-MembersList member events$List all members events for a member0Ã
+Programs(Get Member Event Meta Keys for a ProgramtReturns a list of distinct meta field keys for the member events. Can be used for building filters / table headings.©
+listEventsForMember.io.Id.members.MemberEvent"rÇ”‰ì"" /members/member/list/events/{id}íAG
+MembersList events for member$List all members events for a member0Ã
 deleteMemberEvents.members.ListRequest.google.protobuf.Empty"áÇ”‰ì(*#/members/program/events/{programId}:*íAV
-ProgramsDeletes member events3Deletes all members events for a program and filter¥
-deleteEventsForMember.io.Id.google.protobuf.Empty"{Ç”‰ì */members/member/events/{id}:*íAR
-MembersDelete member events for member&Delete all members events for a member≤
-deleteMemberEvent.io.Id.google.protobuf.Empty"}Ç”‰ì#*/members/member/events/id/{id}:*íAQ
+ProgramsDeletes member events3Deletes all members events for a program and filter±
+deleteEventsForMember.io.Id.google.protobuf.Empty"xÇ”‰ì*/members/member/events/{id}íAR
+MembersDelete member events for member&Delete all members events for a memberØ
+deleteMemberEvent.io.Id.google.protobuf.Empty"zÇ”‰ì */members/member/events/id/{id}íAQ
 Members"Deletes an individual member event"Deletes an individual member event‡
 getProgramEnrolment.io.Id.io.EnrolmentUrls"≠Ç”‰ì!/members/enrol/url/program/{id}íAÇ
 Enrolment UrlsGet Program Enrolment Page URLPRetrieves enrolment page URL of the base tier and enrolment URLs for each tier .BÆ

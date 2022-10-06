@@ -106,7 +106,7 @@ class AnalyticsResponse extends \Google\Protobuf\Internal\Message
      *           Total number of passes installed for each device type.
      *     @type array|\Google\Protobuf\Internal\MapField $utmSourceBreakdown
      *           Total number of passes installed for each distribution source.
-     *     @type \Io\ChartDataPoints[]|\Google\Protobuf\Internal\RepeatedField $data
+     *     @type array<\Io\ChartDataPoints>|\Google\Protobuf\Internal\RepeatedField $data
      *           Breakdown of data by day, month or year.
      *     @type array|\Google\Protobuf\Internal\MapField $utmMediumBreakdown
      *           Breakdown of data by utm medium.
@@ -261,7 +261,7 @@ class AnalyticsResponse extends \Google\Protobuf\Internal\Message
      */
     public function getDeviceBreakdown()
     {
-        return isset($this->deviceBreakdown) ? $this->deviceBreakdown : null;
+        return $this->deviceBreakdown;
     }
 
     public function hasDeviceBreakdown()
@@ -330,7 +330,7 @@ class AnalyticsResponse extends \Google\Protobuf\Internal\Message
      * Breakdown of data by day, month or year.
      *
      * Generated from protobuf field <code>repeated .io.ChartDataPoints data = 8;</code>
-     * @param \Io\ChartDataPoints[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\ChartDataPoints>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setData($var)

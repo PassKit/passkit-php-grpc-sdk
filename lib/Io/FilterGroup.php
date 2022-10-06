@@ -34,7 +34,7 @@ class FilterGroup extends \Google\Protobuf\Internal\Message
      *
      *     @type int $condition
      *           Use AND or OR conditions to join each filter field. E.g. (tier_id = bronze AND tier_id = silver) (tier_id = bronze OR tier_id = silver)
-     *     @type \Io\FieldFilter[]|\Google\Protobuf\Internal\RepeatedField $fieldFilters
+     *     @type array<\Io\FieldFilter>|\Google\Protobuf\Internal\RepeatedField $fieldFilters
      *           Filter fields.
      * }
      */
@@ -84,7 +84,7 @@ class FilterGroup extends \Google\Protobuf\Internal\Message
      * Filter fields.
      *
      * Generated from protobuf field <code>repeated .io.FieldFilter fieldFilters = 2;</code>
-     * @param \Io\FieldFilter[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\FieldFilter>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFieldFilters($var)

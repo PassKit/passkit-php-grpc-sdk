@@ -85,7 +85,7 @@ class Passenger extends \Google\Protobuf\Internal\Message
      */
     public function getPassengerDetails()
     {
-        return isset($this->passengerDetails) ? $this->passengerDetails : null;
+        return $this->passengerDetails;
     }
 
     public function hasPassengerDetails()
@@ -121,7 +121,7 @@ class Passenger extends \Google\Protobuf\Internal\Message
      */
     public function getFrequentFlyerInfo()
     {
-        return isset($this->frequentFlyerInfo) ? $this->frequentFlyerInfo : null;
+        return $this->frequentFlyerInfo;
     }
 
     public function hasFrequentFlyerInfo()
@@ -157,7 +157,7 @@ class Passenger extends \Google\Protobuf\Internal\Message
      */
     public function getIdentityDetails()
     {
-        return isset($this->identityDetails) ? $this->identityDetails : null;
+        return $this->identityDetails;
     }
 
     public function hasIdentityDetails()
@@ -219,7 +219,7 @@ class Passenger extends \Google\Protobuf\Internal\Message
      */
     public function getInfantDetails()
     {
-        return isset($this->infantDetails) ? $this->infantDetails : null;
+        return $this->infantDetails;
     }
 
     public function hasInfantDetails()

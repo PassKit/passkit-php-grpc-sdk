@@ -70,7 +70,7 @@ class ListRequest extends \Google\Protobuf\Internal\Message
      */
     public function getFilters()
     {
-        return isset($this->filters) ? $this->filters : null;
+        return $this->filters;
     }
 
     public function hasFilters()

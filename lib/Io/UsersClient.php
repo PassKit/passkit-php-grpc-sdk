@@ -45,12 +45,12 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Io\Id $argument input argument
+     * @param \Io\VerifyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function verify(\Io\Id $argument,
+    public function verify(\Io\VerifyRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/io.Users/verify',
         $argument,

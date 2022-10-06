@@ -60,15 +60,15 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      *
      *     @type \Io\ImageIds $imageIds
      *           Image ID's of images to override for this pass.
-     *     @type \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $locations
+     *     @type array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $locations
      *           A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
-     *     @type \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $beacons
+     *     @type array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $beacons
      *           A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
-     *     @type \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $links
+     *     @type array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $links
      *           A list of (personalized) links to be shown on the pass.
      *     @type \Io\Colors $colors
      *           Stores custom pass colors.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $associatedStoreIdentifiers
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $associatedStoreIdentifiers
      *           A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * }
      */
@@ -85,7 +85,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      */
     public function getImageIds()
     {
-        return isset($this->imageIds) ? $this->imageIds : null;
+        return $this->imageIds;
     }
 
     public function hasImageIds()
@@ -128,7 +128,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLocations($var)
@@ -154,7 +154,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBeacons($var)
@@ -180,7 +180,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * A list of (personalized) links to be shown on the pass.
      *
      * Generated from protobuf field <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLinks($var)
@@ -199,7 +199,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      */
     public function getColors()
     {
-        return isset($this->colors) ? $this->colors : null;
+        return $this->colors;
     }
 
     public function hasColors()
@@ -242,7 +242,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAssociatedStoreIdentifiers($var)

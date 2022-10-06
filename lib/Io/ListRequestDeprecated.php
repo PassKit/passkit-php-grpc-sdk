@@ -94,7 +94,7 @@ class ListRequestDeprecated extends \Google\Protobuf\Internal\Message
      */
     public function getPagination()
     {
-        return isset($this->pagination) ? $this->pagination : null;
+        return $this->pagination;
     }
 
     public function hasPagination()

@@ -96,7 +96,7 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      *           Used to change the order of fields displayed on the data collection landing page.
      *     @type string $placeholder
      *           If placeholder is set or elementText is not set, then an input element will be rendered. The default is placeholder is an empty string.
-     *     @type \Io\SelectOption[]|\Google\Protobuf\Internal\RepeatedField $selectOptions
+     *     @type array<\Io\SelectOption>|\Google\Protobuf\Internal\RepeatedField $selectOptions
      *           If DataType.OPTIONS is set, then drop-down list will be rendered.
      *     @type \Io\LocalizedString $localizedPlaceholder
      *           Placeholder in localized language.
@@ -151,7 +151,7 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedHelpText()
     {
-        return isset($this->localizedHelpText) ? $this->localizedHelpText : null;
+        return $this->localizedHelpText;
     }
 
     public function hasLocalizedHelpText()
@@ -246,7 +246,7 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      * If DataType.OPTIONS is set, then drop-down list will be rendered.
      *
      * Generated from protobuf field <code>repeated .io.SelectOption selectOptions = 6;</code>
-     * @param \Io\SelectOption[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\SelectOption>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSelectOptions($var)
@@ -265,7 +265,7 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedPlaceholder()
     {
-        return isset($this->localizedPlaceholder) ? $this->localizedPlaceholder : null;
+        return $this->localizedPlaceholder;
     }
 
     public function hasLocalizedPlaceholder()
@@ -327,7 +327,7 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      */
     public function getAddressRenderOptions()
     {
-        return isset($this->addressRenderOptions) ? $this->addressRenderOptions : null;
+        return $this->addressRenderOptions;
     }
 
     public function hasAddressRenderOptions()

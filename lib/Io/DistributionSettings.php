@@ -38,7 +38,7 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $distributionChannels
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $distributionChannels
      *     @type \Io\EmailTemplate $welcomeEmail
      *           Welcome email settings
      *     @type \Io\SmsTemplate $welcomeSms
@@ -61,7 +61,7 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.DistributionChannel distributionChannels = 1;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDistributionChannels($var)
@@ -80,7 +80,7 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
      */
     public function getWelcomeEmail()
     {
-        return isset($this->welcomeEmail) ? $this->welcomeEmail : null;
+        return $this->welcomeEmail;
     }
 
     public function hasWelcomeEmail()
@@ -116,7 +116,7 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
      */
     public function getWelcomeSms()
     {
-        return isset($this->welcomeSms) ? $this->welcomeSms : null;
+        return $this->welcomeSms;
     }
 
     public function hasWelcomeSms()

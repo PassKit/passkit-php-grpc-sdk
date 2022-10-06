@@ -177,7 +177,7 @@ class GetEventRequest extends \Google\Protobuf\Internal\Message
      */
     public function getScheduledStartDate()
     {
-        return isset($this->scheduledStartDate) ? $this->scheduledStartDate : null;
+        return $this->scheduledStartDate;
     }
 
     public function hasScheduledStartDate()

@@ -14,6 +14,8 @@ use Google\Protobuf\Internal\GPBUtil;
 class Barcode extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Data to be encoded into the barcode.
+     *
      * Generated from protobuf field <code>string payload = 1;</code>
      */
     protected $payload = '';
@@ -22,6 +24,8 @@ class Barcode extends \Google\Protobuf\Internal\Message
      */
     protected $format = 0;
     /**
+     * Text to display underneath the barcode.
+     *
      * Generated from protobuf field <code>string altText = 3;</code>
      */
     protected $altText = '';
@@ -33,6 +37,24 @@ class Barcode extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string messageEncoding = 5;</code>
      */
     protected $messageEncoding = '';
+    /**
+     * Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+     *
+     * Generated from protobuf field <code>bool suppressSecurity = 6;</code>
+     */
+    protected $suppressSecurity = false;
+    /**
+     * Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+     *
+     * Generated from protobuf field <code>bool rotatingBarcode = 7;</code>
+     */
+    protected $rotatingBarcode = false;
+    /**
+     * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+     *
+     * Generated from protobuf field <code>.io.TOPTParameters totpParameters = 8;</code>
+     */
+    protected $totpParameters = null;
 
     /**
      * Constructor.
@@ -41,10 +63,18 @@ class Barcode extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $payload
+     *           Data to be encoded into the barcode.
      *     @type int $format
      *     @type string $altText
+     *           Text to display underneath the barcode.
      *     @type \Io\LocalizedString $localizedAltText
      *     @type string $messageEncoding
+     *     @type bool $suppressSecurity
+     *           Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+     *     @type bool $rotatingBarcode
+     *           Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+     *     @type \Io\TOPTParameters $totpParameters
+     *           Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
      * }
      */
     public function __construct($data = NULL) {
@@ -53,6 +83,8 @@ class Barcode extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Data to be encoded into the barcode.
+     *
      * Generated from protobuf field <code>string payload = 1;</code>
      * @return string
      */
@@ -62,6 +94,8 @@ class Barcode extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Data to be encoded into the barcode.
+     *
      * Generated from protobuf field <code>string payload = 1;</code>
      * @param string $var
      * @return $this
@@ -97,6 +131,8 @@ class Barcode extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Text to display underneath the barcode.
+     *
      * Generated from protobuf field <code>string altText = 3;</code>
      * @return string
      */
@@ -106,6 +142,8 @@ class Barcode extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Text to display underneath the barcode.
+     *
      * Generated from protobuf field <code>string altText = 3;</code>
      * @param string $var
      * @return $this
@@ -124,7 +162,7 @@ class Barcode extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedAltText()
     {
-        return isset($this->localizedAltText) ? $this->localizedAltText : null;
+        return $this->localizedAltText;
     }
 
     public function hasLocalizedAltText()
@@ -168,6 +206,94 @@ class Barcode extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->messageEncoding = $var;
+
+        return $this;
+    }
+
+    /**
+     * Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+     *
+     * Generated from protobuf field <code>bool suppressSecurity = 6;</code>
+     * @return bool
+     */
+    public function getSuppressSecurity()
+    {
+        return $this->suppressSecurity;
+    }
+
+    /**
+     * Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+     *
+     * Generated from protobuf field <code>bool suppressSecurity = 6;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSuppressSecurity($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->suppressSecurity = $var;
+
+        return $this;
+    }
+
+    /**
+     * Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+     *
+     * Generated from protobuf field <code>bool rotatingBarcode = 7;</code>
+     * @return bool
+     */
+    public function getRotatingBarcode()
+    {
+        return $this->rotatingBarcode;
+    }
+
+    /**
+     * Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+     *
+     * Generated from protobuf field <code>bool rotatingBarcode = 7;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setRotatingBarcode($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->rotatingBarcode = $var;
+
+        return $this;
+    }
+
+    /**
+     * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+     *
+     * Generated from protobuf field <code>.io.TOPTParameters totpParameters = 8;</code>
+     * @return \Io\TOPTParameters|null
+     */
+    public function getTotpParameters()
+    {
+        return $this->totpParameters;
+    }
+
+    public function hasTotpParameters()
+    {
+        return isset($this->totpParameters);
+    }
+
+    public function clearTotpParameters()
+    {
+        unset($this->totpParameters);
+    }
+
+    /**
+     * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+     *
+     * Generated from protobuf field <code>.io.TOPTParameters totpParameters = 8;</code>
+     * @param \Io\TOPTParameters $var
+     * @return $this
+     */
+    public function setTotpParameters($var)
+    {
+        GPBUtil::checkMessage($var, \Io\TOPTParameters::class);
+        $this->totpParameters = $var;
 
         return $this;
     }

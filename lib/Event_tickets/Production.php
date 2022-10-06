@@ -122,7 +122,7 @@ class Production extends \Google\Protobuf\Internal\Message
      *           If set will automatically delete the ticket and invalidate the pass in our system 1 day after the event end date (if set). If event date is not set, it will expire 1 day after event start date. If not set, the tickets will expire 90 days after issue. If the ticket is not auto invalidated it can be used for further engagement.
      *     @type int $autoInvalidateTicketsUponExpiry
      *           If set will automatically delete the ticket and invalidate the pass in our system upon ticket expiry. If not set, the tickets will expire 90 days after issue. If the ticket is not auto invalidated it can be used for further engagement.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $status
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $status
      *           The events status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *     @type string $passTypeIdentifier
      *           Leave empty for draft production. Needs to be set for productions where status contains PROJECT_PUBLISHED.
@@ -225,7 +225,7 @@ class Production extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedName()
     {
-        return isset($this->localizedName) ? $this->localizedName : null;
+        return $this->localizedName;
     }
 
     public function hasLocalizedName()
@@ -287,7 +287,7 @@ class Production extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedFinePrint()
     {
-        return isset($this->localizedFinePrint) ? $this->localizedFinePrint : null;
+        return $this->localizedFinePrint;
     }
 
     public function hasLocalizedFinePrint()
@@ -408,7 +408,7 @@ class Production extends \Google\Protobuf\Internal\Message
      * The events status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 10;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStatus($var)
@@ -453,7 +453,7 @@ class Production extends \Google\Protobuf\Internal\Message
      */
     public function getDistributionSettings()
     {
-        return isset($this->distributionSettings) ? $this->distributionSettings : null;
+        return $this->distributionSettings;
     }
 
     public function hasDistributionSettings()
@@ -489,7 +489,7 @@ class Production extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -525,7 +525,7 @@ class Production extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()

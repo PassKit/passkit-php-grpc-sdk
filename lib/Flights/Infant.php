@@ -101,7 +101,7 @@ class Infant extends \Google\Protobuf\Internal\Message
      */
     public function getInfantDetails()
     {
-        return isset($this->infantDetails) ? $this->infantDetails : null;
+        return $this->infantDetails;
     }
 
     public function hasInfantDetails()
@@ -137,7 +137,7 @@ class Infant extends \Google\Protobuf\Internal\Message
      */
     public function getIdentityDetails()
     {
-        return isset($this->identityDetails) ? $this->identityDetails : null;
+        return $this->identityDetails;
     }
 
     public function hasIdentityDetails()
@@ -199,7 +199,7 @@ class Infant extends \Google\Protobuf\Internal\Message
      */
     public function getConditionalItems()
     {
-        return isset($this->conditionalItems) ? $this->conditionalItems : null;
+        return $this->conditionalItems;
     }
 
     public function hasConditionalItems()

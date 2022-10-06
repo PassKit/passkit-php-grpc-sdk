@@ -73,7 +73,7 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
      *           The uuid for the class object.
      *     @type int $protocol
      *           The protocol of class object which owns this sink subscription.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $passEventId
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $passEventId
      *           Identifies pass event type you are subscribing to.
      *     @type int $status
      *     @type int $configType
@@ -185,7 +185,7 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
      * Identifies pass event type you are subscribing to.
      *
      * Generated from protobuf field <code>repeated .io.PassEventId passEventId = 4;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPassEventId($var)
@@ -272,7 +272,7 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
      */
     public function getCreatedAt()
     {
-        return isset($this->createdAt) ? $this->createdAt : null;
+        return $this->createdAt;
     }
 
     public function hasCreatedAt()
@@ -304,7 +304,7 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
      */
     public function getUpdatedAt()
     {
-        return isset($this->updatedAt) ? $this->updatedAt : null;
+        return $this->updatedAt;
     }
 
     public function hasUpdatedAt()

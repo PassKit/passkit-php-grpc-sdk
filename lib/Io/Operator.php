@@ -25,8 +25,8 @@ class Operator
     const PBOR = 1;
 
     private static $valueToName = [
-        self::PBAND => 'PBAND',
-        self::PBOR => 'PBOR',
+        self::PBAND => 'AND',
+        self::PBOR => 'OR',
     ];
 
     public static function name($value)
@@ -43,8 +43,12 @@ class Operator
     {
         $const = __CLASS__ . '::' . strtoupper($name);
         if (!defined($const)) {
-            throw new UnexpectedValueException(sprintf(
-                    'Enum %s has no value defined for name %s', __CLASS__, $name));
+            $pbconst =  __CLASS__. '::PB' . strtoupper($name);
+            if (!defined($pbconst)) {
+                throw new UnexpectedValueException(sprintf(
+                        'Enum %s has no value defined for name %s', __CLASS__, $name));
+            }
+            return constant($pbconst);
         }
         return constant($const);
     }

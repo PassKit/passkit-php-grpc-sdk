@@ -66,11 +66,11 @@ class Pagination extends \Google\Protobuf\Internal\Message
      *           Limit the number of records returned. If not specified, a default of 25 is used.  Enter -1 for all records.
      *     @type int $offset
      *           Allows you to offset the first record returned by the limit.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $filterField
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $filterField
      *           Array of column names to filter results by.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $filterValue
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $filterValue
      *           Array of values to test against the filter fields.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $filterOperator
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $filterOperator
      *           will be whitelisted operators in io core
      *     @type string $orderBy
      *           Field to order results by.
@@ -150,7 +150,7 @@ class Pagination extends \Google\Protobuf\Internal\Message
      * Array of column names to filter results by.
      *
      * Generated from protobuf field <code>repeated string filterField = 3;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFilterField($var)
@@ -176,7 +176,7 @@ class Pagination extends \Google\Protobuf\Internal\Message
      * Array of values to test against the filter fields.
      *
      * Generated from protobuf field <code>repeated string filterValue = 4;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFilterValue($var)
@@ -202,7 +202,7 @@ class Pagination extends \Google\Protobuf\Internal\Message
      * will be whitelisted operators in io core
      *
      * Generated from protobuf field <code>repeated string filterOperator = 5;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFilterOperator($var)

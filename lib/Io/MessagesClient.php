@@ -17,30 +17,72 @@ class MessagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Io\Id $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function getMessage(\Io\Id $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Messages/getMessage',
+        $argument,
+        ['\Io\Message', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Io\Message $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function sendMessage(\Io\Message $argument,
+    public function createMessage(\Io\Message $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/io.Messages/sendMessage',
+        return $this->_simpleRequest('/io.Messages/createMessage',
         $argument,
         ['\Io\Id', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Io\Pagination $argument input argument
+     * @param \Io\Message $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\ServerStreamingCall
+     * @return \Grpc\UnaryCall
      */
-    public function getMessages(\Io\Pagination $argument,
+    public function updateMessage(\Io\Message $argument,
       $metadata = [], $options = []) {
-        return $this->_serverStreamRequest('/io.Messages/getMessages',
+        return $this->_simpleRequest('/io.Messages/updateMessage',
         $argument,
-        ['\Io\Message', 'decode'],
+        ['\Google\Protobuf\GPBEmpty', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\Id $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function deleteMessage(\Io\Id $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Messages/deleteMessage',
+        $argument,
+        ['\Google\Protobuf\GPBEmpty', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\SendMessageRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function sendMessage(\Io\SendMessageRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Messages/sendMessage',
+        $argument,
+        ['\Io\SendMessageResponse', 'decode'],
         $metadata, $options);
     }
 

@@ -60,7 +60,7 @@ class PassRecoverySettings extends \Google\Protobuf\Internal\Message
      *           The header text for the error page.
      *     @type string $errorPageBody
      *           The body text for the error page.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $fieldsToMatchUponRecovery
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $fieldsToMatchUponRecovery
      *           Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
      * }
      */
@@ -188,7 +188,7 @@ class PassRecoverySettings extends \Google\Protobuf\Internal\Message
      * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
      *
      * Generated from protobuf field <code>repeated string fieldsToMatchUponRecovery = 5;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFieldsToMatchUponRecovery($var)

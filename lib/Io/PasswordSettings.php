@@ -211,7 +211,7 @@ class PasswordSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedInputLabelText()
     {
-        return isset($this->localizedInputLabelText) ? $this->localizedInputLabelText : null;
+        return $this->localizedInputLabelText;
     }
 
     public function hasLocalizedInputLabelText()
@@ -273,7 +273,7 @@ class PasswordSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedErrorText()
     {
-        return isset($this->localizedErrorText) ? $this->localizedErrorText : null;
+        return $this->localizedErrorText;
     }
 
     public function hasLocalizedErrorText()
@@ -335,7 +335,7 @@ class PasswordSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedHeaderText()
     {
-        return isset($this->localizedHeaderText) ? $this->localizedHeaderText : null;
+        return $this->localizedHeaderText;
     }
 
     public function hasLocalizedHeaderText()
@@ -397,7 +397,7 @@ class PasswordSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedButtonText()
     {
-        return isset($this->localizedButtonText) ? $this->localizedButtonText : null;
+        return $this->localizedButtonText;
     }
 
     public function hasLocalizedButtonText()
@@ -459,7 +459,7 @@ class PasswordSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedTitleText()
     {
-        return isset($this->localizedTitleText) ? $this->localizedTitleText : null;
+        return $this->localizedTitleText;
     }
 
     public function hasLocalizedTitleText()

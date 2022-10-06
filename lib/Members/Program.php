@@ -160,7 +160,7 @@ class Program extends \Google\Protobuf\Internal\Message
      *           Name of the membership programs; will be shown on the enrolment page (if set) and issuer name.
      *     @type \Io\LocalizedString $localizedName
      *           Localized name of the membership program.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $status
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $status
      *           The program status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *     @type \Io\Quota $quota
      *           The project quota.
@@ -184,7 +184,7 @@ class Program extends \Google\Protobuf\Internal\Message
      *           Points format for secondary points.
      *     @type \Io\Metrics $metrics
      *           Issued, installed, uninstalled and invalidated counts. Metrics are not writable.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $metaFieldsList
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $metaFieldsList
      *           A list of dynamic fields which can be used to filter members.
      *     @type \Google\Protobuf\Timestamp $created
      *           The date the program was created.
@@ -265,7 +265,7 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedName()
     {
-        return isset($this->localizedName) ? $this->localizedName : null;
+        return $this->localizedName;
     }
 
     public function hasLocalizedName()
@@ -308,7 +308,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * The program status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 4;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStatus($var)
@@ -327,7 +327,7 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     public function getQuota()
     {
-        return isset($this->quota) ? $this->quota : null;
+        return $this->quota;
     }
 
     public function hasQuota()
@@ -389,7 +389,7 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     public function getDistributionSettings()
     {
-        return isset($this->distributionSettings) ? $this->distributionSettings : null;
+        return $this->distributionSettings;
     }
 
     public function hasDistributionSettings()
@@ -503,7 +503,7 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedExpiryMessage()
     {
-        return isset($this->localizedExpiryMessage) ? $this->localizedExpiryMessage : null;
+        return $this->localizedExpiryMessage;
     }
 
     public function hasLocalizedExpiryMessage()
@@ -565,7 +565,7 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     public function getPointsType()
     {
-        return isset($this->pointsType) ? $this->pointsType : null;
+        return $this->pointsType;
     }
 
     public function hasPointsType()
@@ -601,7 +601,7 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     public function getSecondaryPointsType()
     {
-        return isset($this->secondaryPointsType) ? $this->secondaryPointsType : null;
+        return $this->secondaryPointsType;
     }
 
     public function hasSecondaryPointsType()
@@ -637,7 +637,7 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     public function getMetrics()
     {
-        return isset($this->metrics) ? $this->metrics : null;
+        return $this->metrics;
     }
 
     public function hasMetrics()
@@ -680,7 +680,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * A list of dynamic fields which can be used to filter members.
      *
      * Generated from protobuf field <code>repeated string metaFieldsList = 20;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setMetaFieldsList($var)
@@ -699,7 +699,7 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -735,7 +735,7 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()
@@ -797,7 +797,7 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     public function getApplyFieldToExternalIdOnEnrol()
     {
-        return isset($this->applyFieldToExternalIdOnEnrol) ? $this->applyFieldToExternalIdOnEnrol : null;
+        return $this->applyFieldToExternalIdOnEnrol;
     }
 
     public function hasApplyFieldToExternalIdOnEnrol()
@@ -833,7 +833,7 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     public function getEventCaptureSettings()
     {
-        return isset($this->eventCaptureSettings) ? $this->eventCaptureSettings : null;
+        return $this->eventCaptureSettings;
     }
 
     public function hasEventCaptureSettings()
@@ -869,7 +869,7 @@ class Program extends \Google\Protobuf\Internal\Message
      */
     public function getPassRecoverySettings()
     {
-        return isset($this->passRecoverySettings) ? $this->passRecoverySettings : null;
+        return $this->passRecoverySettings;
     }
 
     public function hasPassRecoverySettings()

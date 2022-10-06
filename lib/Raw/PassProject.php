@@ -82,7 +82,7 @@ class PassProject extends \Google\Protobuf\Internal\Message
      *           Name of the pass project; will be shown on the data collection page (if set) and as pass issuer name.
      *     @type \Io\LocalizedString $localizedName
      *           Localized name of the pass project
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $status
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $status
      *           The pass project status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT
      *     @type \Io\Quota $quota
      *           The pass project quota
@@ -161,7 +161,7 @@ class PassProject extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedName()
     {
-        return isset($this->localizedName) ? $this->localizedName : null;
+        return $this->localizedName;
     }
 
     public function hasLocalizedName()
@@ -204,7 +204,7 @@ class PassProject extends \Google\Protobuf\Internal\Message
      * The pass project status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 4;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStatus($var)
@@ -223,7 +223,7 @@ class PassProject extends \Google\Protobuf\Internal\Message
      */
     public function getQuota()
     {
-        return isset($this->quota) ? $this->quota : null;
+        return $this->quota;
     }
 
     public function hasQuota()
@@ -285,7 +285,7 @@ class PassProject extends \Google\Protobuf\Internal\Message
      */
     public function getDistributionSettings()
     {
-        return isset($this->distributionSettings) ? $this->distributionSettings : null;
+        return $this->distributionSettings;
     }
 
     public function hasDistributionSettings()
@@ -321,7 +321,7 @@ class PassProject extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -357,7 +357,7 @@ class PassProject extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()

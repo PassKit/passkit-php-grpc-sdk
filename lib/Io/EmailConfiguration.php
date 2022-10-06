@@ -31,6 +31,12 @@ class EmailConfiguration extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool EmailFromVerifiedForSending = 3;</code>
      */
     protected $EmailFromVerifiedForSending = false;
+    /**
+     * Indicated that bodyHtmlContent is custom HTML provided by the user.
+     *
+     * Generated from protobuf field <code>bool useCustomHtml = 4;</code>
+     */
+    protected $useCustomHtml = false;
 
     /**
      * Constructor.
@@ -44,6 +50,8 @@ class EmailConfiguration extends \Google\Protobuf\Internal\Message
      *           Sender's company / organization name.
      *     @type bool $EmailFromVerifiedForSending
      *           Indicates that PassKit is authorized to send from the emailFrom address (either via AWS or Google Cloud)
+     *     @type bool $useCustomHtml
+     *           Indicated that bodyHtmlContent is custom HTML provided by the user.
      * }
      */
     public function __construct($data = NULL) {
@@ -125,6 +133,32 @@ class EmailConfiguration extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->EmailFromVerifiedForSending = $var;
+
+        return $this;
+    }
+
+    /**
+     * Indicated that bodyHtmlContent is custom HTML provided by the user.
+     *
+     * Generated from protobuf field <code>bool useCustomHtml = 4;</code>
+     * @return bool
+     */
+    public function getUseCustomHtml()
+    {
+        return $this->useCustomHtml;
+    }
+
+    /**
+     * Indicated that bodyHtmlContent is custom HTML provided by the user.
+     *
+     * Generated from protobuf field <code>bool useCustomHtml = 4;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setUseCustomHtml($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->useCustomHtml = $var;
 
         return $this;
     }

@@ -229,7 +229,7 @@ class TicketType extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedName()
     {
-        return isset($this->localizedName) ? $this->localizedName : null;
+        return $this->localizedName;
     }
 
     public function hasLocalizedName()
@@ -291,7 +291,7 @@ class TicketType extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedTicketTypeConditions()
     {
-        return isset($this->localizedTicketTypeConditions) ? $this->localizedTicketTypeConditions : null;
+        return $this->localizedTicketTypeConditions;
     }
 
     public function hasLocalizedTicketTypeConditions()
@@ -379,7 +379,7 @@ class TicketType extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -415,7 +415,7 @@ class TicketType extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()

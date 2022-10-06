@@ -77,7 +77,7 @@ class CreateImageInput extends \Google\Protobuf\Internal\Message
      */
     public function getImageData()
     {
-        return isset($this->imageData) ? $this->imageData : null;
+        return $this->imageData;
     }
 
     public function hasImageData()

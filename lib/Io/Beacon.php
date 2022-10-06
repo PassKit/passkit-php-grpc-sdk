@@ -257,7 +257,7 @@ class Beacon extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedLockScreenMessage()
     {
-        return isset($this->localizedLockScreenMessage) ? $this->localizedLockScreenMessage : null;
+        return $this->localizedLockScreenMessage;
     }
 
     public function hasLocalizedLockScreenMessage()

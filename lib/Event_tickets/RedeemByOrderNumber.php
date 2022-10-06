@@ -145,7 +145,7 @@ class RedeemByOrderNumber extends \Google\Protobuf\Internal\Message
      */
     public function getRedemptionDetails()
     {
-        return isset($this->redemptionDetails) ? $this->redemptionDetails : null;
+        return $this->redemptionDetails;
     }
 
     public function hasRedemptionDetails()

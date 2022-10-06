@@ -147,7 +147,7 @@ class Sharing extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedDescription()
     {
-        return isset($this->localizedDescription) ? $this->localizedDescription : null;
+        return $this->localizedDescription;
     }
 
     public function hasLocalizedDescription()

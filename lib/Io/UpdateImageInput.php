@@ -145,7 +145,7 @@ class UpdateImageInput extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedImageData()
     {
-        return isset($this->localizedImageData) ? $this->localizedImageData : null;
+        return $this->localizedImageData;
     }
 
     public function hasLocalizedImageData()

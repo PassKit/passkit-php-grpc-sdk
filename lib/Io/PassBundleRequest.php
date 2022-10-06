@@ -34,7 +34,7 @@ class PassBundleRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $id
      *           The PassKit pass id that uniquely identifies the pass.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $format
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $format
      *           The format(s) of the pass required.  If omitted, the URL to the web landing page will be returned.
      * }
      */
@@ -84,7 +84,7 @@ class PassBundleRequest extends \Google\Protobuf\Internal\Message
      * The format(s) of the pass required.  If omitted, the URL to the web landing page will be returned.
      *
      * Generated from protobuf field <code>repeated .io.PassBundleFormat format = 2;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFormat($var)

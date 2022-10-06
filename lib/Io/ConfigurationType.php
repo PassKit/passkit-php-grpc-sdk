@@ -54,6 +54,18 @@ class ConfigurationType
      */
     const TESSITURA = 9;
     /**
+     * Generated from protobuf enum <code>ITERABLE = 10;</code>
+     */
+    const ITERABLE = 10;
+    /**
+     * Generated from protobuf enum <code>MOENGAGE = 11;</code>
+     */
+    const MOENGAGE = 11;
+    /**
+     * Generated from protobuf enum <code>ORACLE_RESPONSYS = 12;</code>
+     */
+    const ORACLE_RESPONSYS = 12;
+    /**
      * Generated from protobuf enum <code>_CONFIG_TYPE_1 = 100;</code>
      */
     const _CONFIG_TYPE_1 = 100;
@@ -69,6 +81,9 @@ class ConfigurationType
         self::MAILCHIMP => 'MAILCHIMP',
         self::SPROUT => 'SPROUT',
         self::TESSITURA => 'TESSITURA',
+        self::ITERABLE => 'ITERABLE',
+        self::MOENGAGE => 'MOENGAGE',
+        self::ORACLE_RESPONSYS => 'ORACLE_RESPONSYS',
         self::_CONFIG_TYPE_1 => '_CONFIG_TYPE_1',
     ];
 

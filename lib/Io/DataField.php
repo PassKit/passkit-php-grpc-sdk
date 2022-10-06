@@ -144,7 +144,7 @@ class DataField extends \Google\Protobuf\Internal\Message
      *           The currency code (e.g. USD, EUR) to display with money value if data type is set as currency.
      *     @type \Io\AppleWalletFieldRenderOptions $appleWalletFieldRenderOptions
      *     @type \Io\DataCollectionFieldRenderOptions $dataCollectionFieldRenderOptions
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $usage
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $usage
      *           Usage: indicates where the field is used (apple render, google render, data collection page)
      *     @type \Io\GooglePayFieldRenderOptions $googlePayFieldRenderOptions
      *     @type string $defaultTelCountryCode
@@ -292,7 +292,7 @@ class DataField extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedLabel()
     {
-        return isset($this->localizedLabel) ? $this->localizedLabel : null;
+        return $this->localizedLabel;
     }
 
     public function hasLocalizedLabel()
@@ -380,7 +380,7 @@ class DataField extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedDefaultValue()
     {
-        return isset($this->localizedDefaultValue) ? $this->localizedDefaultValue : null;
+        return $this->localizedDefaultValue;
     }
 
     public function hasLocalizedDefaultValue()
@@ -492,7 +492,7 @@ class DataField extends \Google\Protobuf\Internal\Message
      */
     public function getAppleWalletFieldRenderOptions()
     {
-        return isset($this->appleWalletFieldRenderOptions) ? $this->appleWalletFieldRenderOptions : null;
+        return $this->appleWalletFieldRenderOptions;
     }
 
     public function hasAppleWalletFieldRenderOptions()
@@ -524,7 +524,7 @@ class DataField extends \Google\Protobuf\Internal\Message
      */
     public function getDataCollectionFieldRenderOptions()
     {
-        return isset($this->dataCollectionFieldRenderOptions) ? $this->dataCollectionFieldRenderOptions : null;
+        return $this->dataCollectionFieldRenderOptions;
     }
 
     public function hasDataCollectionFieldRenderOptions()
@@ -565,7 +565,7 @@ class DataField extends \Google\Protobuf\Internal\Message
      * Usage: indicates where the field is used (apple render, google render, data collection page)
      *
      * Generated from protobuf field <code>repeated .io.UsageType usage = 15;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setUsage($var)
@@ -582,7 +582,7 @@ class DataField extends \Google\Protobuf\Internal\Message
      */
     public function getGooglePayFieldRenderOptions()
     {
-        return isset($this->googlePayFieldRenderOptions) ? $this->googlePayFieldRenderOptions : null;
+        return $this->googlePayFieldRenderOptions;
     }
 
     public function hasGooglePayFieldRenderOptions()

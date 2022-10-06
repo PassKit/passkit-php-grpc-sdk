@@ -146,7 +146,7 @@ class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedTitle()
     {
-        return isset($this->localizedTitle) ? $this->localizedTitle : null;
+        return $this->localizedTitle;
     }
 
     public function hasLocalizedTitle()
@@ -208,7 +208,7 @@ class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedRedemptionInstructions()
     {
-        return isset($this->localizedRedemptionInstructions) ? $this->localizedRedemptionInstructions : null;
+        return $this->localizedRedemptionInstructions;
     }
 
     public function hasLocalizedRedemptionInstructions()
@@ -332,7 +332,7 @@ class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedFooterText()
     {
-        return isset($this->localizedFooterText) ? $this->localizedFooterText : null;
+        return $this->localizedFooterText;
     }
 
     public function hasLocalizedFooterText()
@@ -368,7 +368,7 @@ class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message
      */
     public function getResponseTexts()
     {
-        return isset($this->responseTexts) ? $this->responseTexts : null;
+        return $this->responseTexts;
     }
 
     public function hasResponseTexts()
@@ -430,7 +430,7 @@ class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message
      */
     public function getCallToActionButton()
     {
-        return isset($this->callToActionButton) ? $this->callToActionButton : null;
+        return $this->callToActionButton;
     }
 
     public function hasCallToActionButton()

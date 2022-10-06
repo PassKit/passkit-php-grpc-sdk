@@ -201,25 +201,25 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      *           If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
      *     @type string $operatingFlightNumber
      *           If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $codeShareFlightNumbers
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $codeShareFlightNumbers
      *           If the flight has code shares, then enter the carrier code and flight number. If there is an operating carrier, then do not include this in the list.  Code share carriers will not be validated.
      *     @type string $origin
      *           The origin port of the flight. In the case of direct flights with multiple stops, this will represent the port where the route commences.
      *     @type string $destination
      *           The destination port of the flight. In the case of direct flights with multiple stops, this will represent the final port where the route terminates.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $transitPoints
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $transitPoints
      *           In the case of multiple stops, an ordered array of transit points, commencing with the first port after the origin and ending with the penultimate port.
      *     @type string $departureTerminal
      *           The default terminal that the flight departs from.
      *     @type string $arrivalTerminal
      *           The default terminal of the final destination.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $transitTerminals
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $transitTerminals
      *           In the case of multiple stops, an ordered array of transit terminals. The length of this array should match the number of transit points.
      *     @type int $boardingPolicy
      *           The Boarding Policy is used to determine informational labels on the pass.
      *     @type int $seatClassPolicy
      *           The Seat Class Policy is used to determine informational labels on the pass.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $alerts
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $alerts
      *           An array of alerts to subscribe to for the flight. Note that additional charges apply.
      *     @type string $passTemplateId
      *           The PassKit template id that will be used for boarding passes for this flight. It can be overwritten at the flight level.
@@ -227,11 +227,11 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      *           Minutes after scheduled arrival time to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
      *     @type bool $autoInvalidateCancelledPasses
      *           Deprecated: Use InvalidateCancelledPasses.
-     *     @type \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $locationMessages
+     *     @type array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $locationMessages
      *           A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
-     *     @type \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $beaconMessages
+     *     @type array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $beaconMessages
      *           A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
-     *     @type \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $defaultLinks
+     *     @type array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $defaultLinks
      *           A list of links to be appended to the end of each boarding pass.
      *     @type bool $ConditionalItems
      *           If PassKit are generating barcodes, include conditional items. Default false.
@@ -306,7 +306,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      */
     public function getValidFrom()
     {
-        return isset($this->validFrom) ? $this->validFrom : null;
+        return $this->validFrom;
     }
 
     public function hasValidFrom()
@@ -394,7 +394,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      */
     public function getSchedule()
     {
-        return isset($this->schedule) ? $this->schedule : null;
+        return $this->schedule;
     }
 
     public function hasSchedule()
@@ -489,7 +489,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * If the flight has code shares, then enter the carrier code and flight number. If there is an operating carrier, then do not include this in the list.  Code share carriers will not be validated.
      *
      * Generated from protobuf field <code>repeated string codeShareFlightNumbers = 9;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setCodeShareFlightNumbers($var)
@@ -567,7 +567,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * In the case of multiple stops, an ordered array of transit points, commencing with the first port after the origin and ending with the penultimate port.
      *
      * Generated from protobuf field <code>repeated string transitPoints = 12;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTransitPoints($var)
@@ -645,7 +645,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * In the case of multiple stops, an ordered array of transit terminals. The length of this array should match the number of transit points.
      *
      * Generated from protobuf field <code>repeated string transitTerminals = 15;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTransitTerminals($var)
@@ -723,7 +723,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * An array of alerts to subscribe to for the flight. Note that additional charges apply.
      *
      * Generated from protobuf field <code>repeated .flights.FlightAlerts alerts = 18;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAlerts($var)
@@ -831,7 +831,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLocationMessages($var)
@@ -857,7 +857,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBeaconMessages($var)
@@ -883,7 +883,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * A list of links to be appended to the end of each boarding pass.
      *
      * Generated from protobuf field <code>repeated .io.Link defaultLinks = 24;</code>
-     * @param \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDefaultLinks($var)

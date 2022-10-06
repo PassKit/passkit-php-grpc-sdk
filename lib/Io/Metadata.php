@@ -144,7 +144,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      *
      *     @type int $status
      *           Current status of the pass. Not Writable.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $lifecycleEvents
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $lifecycleEvents
      *           Events that the pass has attained. Not Writable.
      *     @type \Io\UTM $utm
      *           Contains UTM data if provided in the URL parameters (utm_source, utm_medium, utm_name, utm_term, utm_content). Can also be used to track channel (web / app, etc).
@@ -162,9 +162,9 @@ class Metadata extends \Google\Protobuf\Internal\Message
      *           User agent provided by the Wallet Application. Not Writable.
      *     @type string $renderUserAgent
      *           User agent where the landing page was rendered on. Not Writable.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $installDeviceAttributes
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $installDeviceAttributes
      *           User agent provided by the Wallet Application. Not Writable.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $renderDeviceAttributes
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $renderDeviceAttributes
      *           User agent where the landing page was rendered on. Not Writable.
      *     @type \Google\Protobuf\Timestamp $issueAt
      *           Date the pass record was created. Not Writable.
@@ -230,7 +230,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Events that the pass has attained. Not Writable.
      *
      * Generated from protobuf field <code>repeated .io.LifecycleEvents lifecycleEvents = 2;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLifecycleEvents($var)
@@ -249,7 +249,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      */
     public function getUtm()
     {
-        return isset($this->utm) ? $this->utm : null;
+        return $this->utm;
     }
 
     public function hasUtm()
@@ -363,7 +363,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      */
     public function getRenderLocation()
     {
-        return isset($this->renderLocation) ? $this->renderLocation : null;
+        return $this->renderLocation;
     }
 
     public function hasRenderLocation()
@@ -484,7 +484,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * User agent provided by the Wallet Application. Not Writable.
      *
      * Generated from protobuf field <code>repeated .io.DeviceAttributes installDeviceAttributes = 11;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setInstallDeviceAttributes($var)
@@ -510,7 +510,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * User agent where the landing page was rendered on. Not Writable.
      *
      * Generated from protobuf field <code>repeated .io.DeviceAttributes renderDeviceAttributes = 12;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRenderDeviceAttributes($var)
@@ -529,7 +529,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      */
     public function getIssueAt()
     {
-        return isset($this->issueAt) ? $this->issueAt : null;
+        return $this->issueAt;
     }
 
     public function hasIssueAt()
@@ -565,7 +565,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      */
     public function getRenderedAt()
     {
-        return isset($this->renderedAt) ? $this->renderedAt : null;
+        return $this->renderedAt;
     }
 
     public function hasRenderedAt()
@@ -601,7 +601,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      */
     public function getFirstInstalledAt()
     {
-        return isset($this->firstInstalledAt) ? $this->firstInstalledAt : null;
+        return $this->firstInstalledAt;
     }
 
     public function hasFirstInstalledAt()
@@ -637,7 +637,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      */
     public function getLastInstalledAt()
     {
-        return isset($this->lastInstalledAt) ? $this->lastInstalledAt : null;
+        return $this->lastInstalledAt;
     }
 
     public function hasLastInstalledAt()
@@ -673,7 +673,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      */
     public function getFirstUninstalledAt()
     {
-        return isset($this->firstUninstalledAt) ? $this->firstUninstalledAt : null;
+        return $this->firstUninstalledAt;
     }
 
     public function hasFirstUninstalledAt()
@@ -709,7 +709,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      */
     public function getLastUninstalledAt()
     {
-        return isset($this->lastUninstalledAt) ? $this->lastUninstalledAt : null;
+        return $this->lastUninstalledAt;
     }
 
     public function hasLastUninstalledAt()
@@ -745,7 +745,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      */
     public function getInvalidatedAt()
     {
-        return isset($this->invalidatedAt) ? $this->invalidatedAt : null;
+        return $this->invalidatedAt;
     }
 
     public function hasInvalidatedAt()
@@ -781,7 +781,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      */
     public function getLastUpdatedAt()
     {
-        return isset($this->lastUpdatedAt) ? $this->lastUpdatedAt : null;
+        return $this->lastUpdatedAt;
     }
 
     public function hasLastUpdatedAt()

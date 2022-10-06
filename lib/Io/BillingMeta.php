@@ -119,7 +119,7 @@ class BillingMeta extends \Google\Protobuf\Internal\Message
      */
     public function getBillingAddress()
     {
-        return isset($this->billingAddress) ? $this->billingAddress : null;
+        return $this->billingAddress;
     }
 
     public function hasBillingAddress()

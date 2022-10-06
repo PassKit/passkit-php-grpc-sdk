@@ -175,7 +175,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getDoorsOpen()
     {
-        return isset($this->doorsOpen) ? $this->doorsOpen : null;
+        return $this->doorsOpen;
     }
 
     public function hasDoorsOpen()
@@ -211,7 +211,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getScheduledStartDate()
     {
-        return isset($this->scheduledStartDate) ? $this->scheduledStartDate : null;
+        return $this->scheduledStartDate;
     }
 
     public function hasScheduledStartDate()
@@ -247,7 +247,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getActualStartDate()
     {
-        return isset($this->actualStartDate) ? $this->actualStartDate : null;
+        return $this->actualStartDate;
     }
 
     public function hasActualStartDate()
@@ -283,7 +283,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getEndDate()
     {
-        return isset($this->endDate) ? $this->endDate : null;
+        return $this->endDate;
     }
 
     public function hasEndDate()
@@ -319,7 +319,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getRelevantDate()
     {
-        return isset($this->relevantDate) ? $this->relevantDate : null;
+        return $this->relevantDate;
     }
 
     public function hasRelevantDate()
@@ -355,7 +355,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getQuota()
     {
-        return isset($this->quota) ? $this->quota : null;
+        return $this->quota;
     }
 
     public function hasQuota()
@@ -391,7 +391,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getMetrics()
     {
-        return isset($this->metrics) ? $this->metrics : null;
+        return $this->metrics;
     }
 
     public function hasMetrics()
@@ -427,7 +427,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -463,7 +463,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()

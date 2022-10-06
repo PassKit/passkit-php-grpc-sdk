@@ -28,7 +28,7 @@ class ListProgramsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Members\Program[]|\Google\Protobuf\Internal\RepeatedField $programs
+     *     @type array<\Members\Program>|\Google\Protobuf\Internal\RepeatedField $programs
      *           An array of programs.
      * }
      */
@@ -52,7 +52,7 @@ class ListProgramsResponse extends \Google\Protobuf\Internal\Message
      * An array of programs.
      *
      * Generated from protobuf field <code>repeated .members.Program programs = 1;</code>
-     * @param \Members\Program[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Members\Program>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setPrograms($var)

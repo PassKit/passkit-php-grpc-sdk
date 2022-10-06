@@ -43,7 +43,7 @@ class PassOptions extends \Google\Protobuf\Internal\Message
      */
     public function getApple()
     {
-        return isset($this->apple) ? $this->apple : null;
+        return $this->apple;
     }
 
     public function hasApple()
@@ -75,7 +75,7 @@ class PassOptions extends \Google\Protobuf\Internal\Message
      */
     public function getGoogle()
     {
-        return isset($this->google) ? $this->google : null;
+        return $this->google;
     }
 
     public function hasGoogle()

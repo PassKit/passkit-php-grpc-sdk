@@ -14,113 +14,75 @@ use Google\Protobuf\Internal\GPBUtil;
 class Message extends \Google\Protobuf\Internal\Message
 {
     /**
-     * the protocol that this message is associated with.
-     *
-     * Generated from protobuf field <code>.io.PassProtocol protocol = 1;</code>
+     * Generated from protobuf field <code>string id = 1;</code>
      */
-    protected $protocol = 0;
+    protected $id = '';
     /**
-     * the id of the company that made the message
+     * The message title. This is used as a label in iOS and as the title in Google Pay.
      *
-     * Generated from protobuf field <code>string companyId = 2;</code>
-     */
-    protected $companyId = '';
-    /**
-     * the higher level class id for the protocol.
-     *
-     * Generated from protobuf field <code>string classId = 3;</code>
-     */
-    protected $classId = '';
-    /**
-     * the unique id for this message
-     *
-     * Generated from protobuf field <code>string uuid = 4;</code>
-     */
-    protected $uuid = '';
-    /**
-     * the status of the message.
-     *
-     * Generated from protobuf field <code>.io.MessageStatus status = 5;</code>
-     */
-    protected $status = 0;
-    /**
-     * warning of any errors that may have occurred.
-     *
-     * Generated from protobuf field <code>string warning = 6;</code>
-     */
-    protected $warning = '';
-    /**
-     * Optional Image ID; for the Main Image that will be shown in Google Pay (Google Pay only; no image is shown for Apple Wallet).
-     *
-     * Generated from protobuf field <code>uint32 imageId = 7;</code>
-     */
-    protected $imageId = 0;
-    /**
-     * Title (summary) of the message.
-     *
-     * Generated from protobuf field <code>string title = 8;</code>
+     * Generated from protobuf field <code>string title = 2;</code>
      */
     protected $title = '';
     /**
-     * Localized title of the message.
+     * Localized message title.
      *
-     * Generated from protobuf field <code>.io.LocalizedString localizedTitle = 9;</code>
+     * Generated from protobuf field <code>.io.LocalizedString localizedTitle = 3;</code>
      */
     protected $localizedTitle = null;
     /**
-     * Content of the message (finer details).
+     * Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
      *
-     * Generated from protobuf field <code>string content = 10;</code>
+     * Generated from protobuf field <code>string plainTextContent = 4;</code>
      */
-    protected $content = '';
+    protected $plainTextContent = '';
     /**
-     * Localized content of the message.
+     * Localized plain text content.
      *
-     * Generated from protobuf field <code>.io.LocalizedString localizedContent = 11;</code>
+     * Generated from protobuf field <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
      */
-    protected $localizedContent = null;
+    protected $localizedPlainTextContent = null;
     /**
-     * Start date indicates when the message is shown on the pass.
+     * Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp startDate = 12;</code>
+     * Generated from protobuf field <code>string richTextContent = 6;</code>
      */
-    protected $startDate = null;
+    protected $richTextContent = '';
     /**
-     * End date indicates when the message is removed from the pass.
+     * Localized rich text content.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp endDate = 13;</code>
+     * Generated from protobuf field <code>.io.LocalizedString localizedRichTextContent = 7;</code>
      */
-    protected $endDate = null;
+    protected $localizedRichTextContent = null;
     /**
-     * optional filter used determine which members qualify for this message.
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
      *
-     * Generated from protobuf field <code>.io.Filter filter = 14;</code>
+     * Generated from protobuf field <code>repeated .io.Url urls = 8;</code>
      */
-    protected $filter = null;
+    private $urls;
     /**
-     * number of records this message will be sent to.
+     * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
      *
-     * Generated from protobuf field <code>uint32 recordsMatchingSegment = 15;</code>
+     * Generated from protobuf field <code>.io.ImageIds images = 9;</code>
      */
-    protected $recordsMatchingSegment = 0;
+    protected $images = null;
     /**
-     * number of records updated with this message.
+     * Priority the lower the priority, the lower down the message will be rendered when there are multiple messages. Defaults to a value of 10.
      *
-     * Generated from protobuf field <code>uint32 recordsSuccessfullyUpdate = 16;</code>
+     * Generated from protobuf field <code>uint32 priority = 10;</code>
      */
-    protected $recordsSuccessfullyUpdate = 0;
+    protected $priority = 0;
     /**
-     * number of records that failed updated with this message.
+     * The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
      *
-     * Generated from protobuf field <code>uint32 recordsFailedToUpdate = 17;</code>
+     * Generated from protobuf field <code>string displayFrom = 11;</code>
      */
-    protected $recordsFailedToUpdate = 0;
+    protected $displayFrom = '';
     /**
-     * The date the message was created in the PassKit system.
+     * The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 18;</code>
+     * Generated from protobuf field <code>string displayUntil = 12;</code>
      */
-    protected $created = null;
+    protected $displayUntil = '';
 
     /**
      * Constructor.
@@ -128,42 +90,29 @@ class Message extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $protocol
-     *           the protocol that this message is associated with.
-     *     @type string $companyId
-     *           the id of the company that made the message
-     *     @type string $classId
-     *           the higher level class id for the protocol.
-     *     @type string $uuid
-     *           the unique id for this message
-     *     @type int $status
-     *           the status of the message.
-     *     @type string $warning
-     *           warning of any errors that may have occurred.
-     *     @type int $imageId
-     *           Optional Image ID; for the Main Image that will be shown in Google Pay (Google Pay only; no image is shown for Apple Wallet).
+     *     @type string $id
      *     @type string $title
-     *           Title (summary) of the message.
+     *           The message title. This is used as a label in iOS and as the title in Google Pay.
      *     @type \Io\LocalizedString $localizedTitle
-     *           Localized title of the message.
-     *     @type string $content
-     *           Content of the message (finer details).
-     *     @type \Io\LocalizedString $localizedContent
-     *           Localized content of the message.
-     *     @type \Google\Protobuf\Timestamp $startDate
-     *           Start date indicates when the message is shown on the pass.
-     *     @type \Google\Protobuf\Timestamp $endDate
-     *           End date indicates when the message is removed from the pass.
-     *     @type \Io\Filter $filter
-     *           optional filter used determine which members qualify for this message.
-     *     @type int $recordsMatchingSegment
-     *           number of records this message will be sent to.
-     *     @type int $recordsSuccessfullyUpdate
-     *           number of records updated with this message.
-     *     @type int $recordsFailedToUpdate
-     *           number of records that failed updated with this message.
-     *     @type \Google\Protobuf\Timestamp $created
-     *           The date the message was created in the PassKit system.
+     *           Localized message title.
+     *     @type string $plainTextContent
+     *           Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
+     *     @type \Io\LocalizedString $localizedPlainTextContent
+     *           Localized plain text content.
+     *     @type string $richTextContent
+     *           Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
+     *     @type \Io\LocalizedString $localizedRichTextContent
+     *           Localized rich text content.
+     *     @type array<\Io\Url>|\Google\Protobuf\Internal\RepeatedField $urls
+     *           Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+     *     @type \Io\ImageIds $images
+     *           Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
+     *     @type int $priority
+     *           Priority the lower the priority, the lower down the message will be rendered when there are multiple messages. Defaults to a value of 10.
+     *     @type string $displayFrom
+     *           The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
+     *     @type string $displayUntil
+     *           The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
      * }
      */
     public function __construct($data = NULL) {
@@ -172,191 +121,31 @@ class Message extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * the protocol that this message is associated with.
-     *
-     * Generated from protobuf field <code>.io.PassProtocol protocol = 1;</code>
-     * @return int
-     */
-    public function getProtocol()
-    {
-        return $this->protocol;
-    }
-
-    /**
-     * the protocol that this message is associated with.
-     *
-     * Generated from protobuf field <code>.io.PassProtocol protocol = 1;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setProtocol($var)
-    {
-        GPBUtil::checkEnum($var, \Io\PassProtocol::class);
-        $this->protocol = $var;
-
-        return $this;
-    }
-
-    /**
-     * the id of the company that made the message
-     *
-     * Generated from protobuf field <code>string companyId = 2;</code>
+     * Generated from protobuf field <code>string id = 1;</code>
      * @return string
      */
-    public function getCompanyId()
+    public function getId()
     {
-        return $this->companyId;
+        return $this->id;
     }
 
     /**
-     * the id of the company that made the message
-     *
-     * Generated from protobuf field <code>string companyId = 2;</code>
+     * Generated from protobuf field <code>string id = 1;</code>
      * @param string $var
      * @return $this
      */
-    public function setCompanyId($var)
+    public function setId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->companyId = $var;
+        $this->id = $var;
 
         return $this;
     }
 
     /**
-     * the higher level class id for the protocol.
+     * The message title. This is used as a label in iOS and as the title in Google Pay.
      *
-     * Generated from protobuf field <code>string classId = 3;</code>
-     * @return string
-     */
-    public function getClassId()
-    {
-        return $this->classId;
-    }
-
-    /**
-     * the higher level class id for the protocol.
-     *
-     * Generated from protobuf field <code>string classId = 3;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setClassId($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->classId = $var;
-
-        return $this;
-    }
-
-    /**
-     * the unique id for this message
-     *
-     * Generated from protobuf field <code>string uuid = 4;</code>
-     * @return string
-     */
-    public function getUuid()
-    {
-        return $this->uuid;
-    }
-
-    /**
-     * the unique id for this message
-     *
-     * Generated from protobuf field <code>string uuid = 4;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setUuid($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->uuid = $var;
-
-        return $this;
-    }
-
-    /**
-     * the status of the message.
-     *
-     * Generated from protobuf field <code>.io.MessageStatus status = 5;</code>
-     * @return int
-     */
-    public function getStatus()
-    {
-        return $this->status;
-    }
-
-    /**
-     * the status of the message.
-     *
-     * Generated from protobuf field <code>.io.MessageStatus status = 5;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setStatus($var)
-    {
-        GPBUtil::checkEnum($var, \Io\MessageStatus::class);
-        $this->status = $var;
-
-        return $this;
-    }
-
-    /**
-     * warning of any errors that may have occurred.
-     *
-     * Generated from protobuf field <code>string warning = 6;</code>
-     * @return string
-     */
-    public function getWarning()
-    {
-        return $this->warning;
-    }
-
-    /**
-     * warning of any errors that may have occurred.
-     *
-     * Generated from protobuf field <code>string warning = 6;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setWarning($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->warning = $var;
-
-        return $this;
-    }
-
-    /**
-     * Optional Image ID; for the Main Image that will be shown in Google Pay (Google Pay only; no image is shown for Apple Wallet).
-     *
-     * Generated from protobuf field <code>uint32 imageId = 7;</code>
-     * @return int
-     */
-    public function getImageId()
-    {
-        return $this->imageId;
-    }
-
-    /**
-     * Optional Image ID; for the Main Image that will be shown in Google Pay (Google Pay only; no image is shown for Apple Wallet).
-     *
-     * Generated from protobuf field <code>uint32 imageId = 7;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setImageId($var)
-    {
-        GPBUtil::checkUint32($var);
-        $this->imageId = $var;
-
-        return $this;
-    }
-
-    /**
-     * Title (summary) of the message.
-     *
-     * Generated from protobuf field <code>string title = 8;</code>
+     * Generated from protobuf field <code>string title = 2;</code>
      * @return string
      */
     public function getTitle()
@@ -365,9 +154,9 @@ class Message extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Title (summary) of the message.
+     * The message title. This is used as a label in iOS and as the title in Google Pay.
      *
-     * Generated from protobuf field <code>string title = 8;</code>
+     * Generated from protobuf field <code>string title = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -380,14 +169,14 @@ class Message extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Localized title of the message.
+     * Localized message title.
      *
-     * Generated from protobuf field <code>.io.LocalizedString localizedTitle = 9;</code>
+     * Generated from protobuf field <code>.io.LocalizedString localizedTitle = 3;</code>
      * @return \Io\LocalizedString|null
      */
     public function getLocalizedTitle()
     {
-        return isset($this->localizedTitle) ? $this->localizedTitle : null;
+        return $this->localizedTitle;
     }
 
     public function hasLocalizedTitle()
@@ -401,9 +190,9 @@ class Message extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Localized title of the message.
+     * Localized message title.
      *
-     * Generated from protobuf field <code>.io.LocalizedString localizedTitle = 9;</code>
+     * Generated from protobuf field <code>.io.LocalizedString localizedTitle = 3;</code>
      * @param \Io\LocalizedString $var
      * @return $this
      */
@@ -416,285 +205,265 @@ class Message extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Content of the message (finer details).
+     * Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
      *
-     * Generated from protobuf field <code>string content = 10;</code>
+     * Generated from protobuf field <code>string plainTextContent = 4;</code>
      * @return string
      */
-    public function getContent()
+    public function getPlainTextContent()
     {
-        return $this->content;
+        return $this->plainTextContent;
     }
 
     /**
-     * Content of the message (finer details).
+     * Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
      *
-     * Generated from protobuf field <code>string content = 10;</code>
+     * Generated from protobuf field <code>string plainTextContent = 4;</code>
      * @param string $var
      * @return $this
      */
-    public function setContent($var)
+    public function setPlainTextContent($var)
     {
         GPBUtil::checkString($var, True);
-        $this->content = $var;
+        $this->plainTextContent = $var;
 
         return $this;
     }
 
     /**
-     * Localized content of the message.
+     * Localized plain text content.
      *
-     * Generated from protobuf field <code>.io.LocalizedString localizedContent = 11;</code>
+     * Generated from protobuf field <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
      * @return \Io\LocalizedString|null
      */
-    public function getLocalizedContent()
+    public function getLocalizedPlainTextContent()
     {
-        return isset($this->localizedContent) ? $this->localizedContent : null;
+        return $this->localizedPlainTextContent;
     }
 
-    public function hasLocalizedContent()
+    public function hasLocalizedPlainTextContent()
     {
-        return isset($this->localizedContent);
+        return isset($this->localizedPlainTextContent);
     }
 
-    public function clearLocalizedContent()
+    public function clearLocalizedPlainTextContent()
     {
-        unset($this->localizedContent);
+        unset($this->localizedPlainTextContent);
     }
 
     /**
-     * Localized content of the message.
+     * Localized plain text content.
      *
-     * Generated from protobuf field <code>.io.LocalizedString localizedContent = 11;</code>
+     * Generated from protobuf field <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
      * @param \Io\LocalizedString $var
      * @return $this
      */
-    public function setLocalizedContent($var)
+    public function setLocalizedPlainTextContent($var)
     {
         GPBUtil::checkMessage($var, \Io\LocalizedString::class);
-        $this->localizedContent = $var;
+        $this->localizedPlainTextContent = $var;
 
         return $this;
     }
 
     /**
-     * Start date indicates when the message is shown on the pass.
+     * Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp startDate = 12;</code>
-     * @return \Google\Protobuf\Timestamp|null
+     * Generated from protobuf field <code>string richTextContent = 6;</code>
+     * @return string
      */
-    public function getStartDate()
+    public function getRichTextContent()
     {
-        return isset($this->startDate) ? $this->startDate : null;
-    }
-
-    public function hasStartDate()
-    {
-        return isset($this->startDate);
-    }
-
-    public function clearStartDate()
-    {
-        unset($this->startDate);
+        return $this->richTextContent;
     }
 
     /**
-     * Start date indicates when the message is shown on the pass.
+     * Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp startDate = 12;</code>
-     * @param \Google\Protobuf\Timestamp $var
+     * Generated from protobuf field <code>string richTextContent = 6;</code>
+     * @param string $var
      * @return $this
      */
-    public function setStartDate($var)
+    public function setRichTextContent($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
-        $this->startDate = $var;
+        GPBUtil::checkString($var, True);
+        $this->richTextContent = $var;
 
         return $this;
     }
 
     /**
-     * End date indicates when the message is removed from the pass.
+     * Localized rich text content.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp endDate = 13;</code>
-     * @return \Google\Protobuf\Timestamp|null
+     * Generated from protobuf field <code>.io.LocalizedString localizedRichTextContent = 7;</code>
+     * @return \Io\LocalizedString|null
      */
-    public function getEndDate()
+    public function getLocalizedRichTextContent()
     {
-        return isset($this->endDate) ? $this->endDate : null;
+        return $this->localizedRichTextContent;
     }
 
-    public function hasEndDate()
+    public function hasLocalizedRichTextContent()
     {
-        return isset($this->endDate);
+        return isset($this->localizedRichTextContent);
     }
 
-    public function clearEndDate()
+    public function clearLocalizedRichTextContent()
     {
-        unset($this->endDate);
+        unset($this->localizedRichTextContent);
     }
 
     /**
-     * End date indicates when the message is removed from the pass.
+     * Localized rich text content.
      *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp endDate = 13;</code>
-     * @param \Google\Protobuf\Timestamp $var
+     * Generated from protobuf field <code>.io.LocalizedString localizedRichTextContent = 7;</code>
+     * @param \Io\LocalizedString $var
      * @return $this
      */
-    public function setEndDate($var)
+    public function setLocalizedRichTextContent($var)
     {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
-        $this->endDate = $var;
+        GPBUtil::checkMessage($var, \Io\LocalizedString::class);
+        $this->localizedRichTextContent = $var;
 
         return $this;
     }
 
     /**
-     * optional filter used determine which members qualify for this message.
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
      *
-     * Generated from protobuf field <code>.io.Filter filter = 14;</code>
-     * @return \Io\Filter|null
+     * Generated from protobuf field <code>repeated .io.Url urls = 8;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
-    public function getFilter()
+    public function getUrls()
     {
-        return isset($this->filter) ? $this->filter : null;
-    }
-
-    public function hasFilter()
-    {
-        return isset($this->filter);
-    }
-
-    public function clearFilter()
-    {
-        unset($this->filter);
+        return $this->urls;
     }
 
     /**
-     * optional filter used determine which members qualify for this message.
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
      *
-     * Generated from protobuf field <code>.io.Filter filter = 14;</code>
-     * @param \Io\Filter $var
+     * Generated from protobuf field <code>repeated .io.Url urls = 8;</code>
+     * @param array<\Io\Url>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
-    public function setFilter($var)
+    public function setUrls($var)
     {
-        GPBUtil::checkMessage($var, \Io\Filter::class);
-        $this->filter = $var;
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Io\Url::class);
+        $this->urls = $arr;
 
         return $this;
     }
 
     /**
-     * number of records this message will be sent to.
+     * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
      *
-     * Generated from protobuf field <code>uint32 recordsMatchingSegment = 15;</code>
+     * Generated from protobuf field <code>.io.ImageIds images = 9;</code>
+     * @return \Io\ImageIds|null
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    public function hasImages()
+    {
+        return isset($this->images);
+    }
+
+    public function clearImages()
+    {
+        unset($this->images);
+    }
+
+    /**
+     * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
+     *
+     * Generated from protobuf field <code>.io.ImageIds images = 9;</code>
+     * @param \Io\ImageIds $var
+     * @return $this
+     */
+    public function setImages($var)
+    {
+        GPBUtil::checkMessage($var, \Io\ImageIds::class);
+        $this->images = $var;
+
+        return $this;
+    }
+
+    /**
+     * Priority the lower the priority, the lower down the message will be rendered when there are multiple messages. Defaults to a value of 10.
+     *
+     * Generated from protobuf field <code>uint32 priority = 10;</code>
      * @return int
      */
-    public function getRecordsMatchingSegment()
+    public function getPriority()
     {
-        return $this->recordsMatchingSegment;
+        return $this->priority;
     }
 
     /**
-     * number of records this message will be sent to.
+     * Priority the lower the priority, the lower down the message will be rendered when there are multiple messages. Defaults to a value of 10.
      *
-     * Generated from protobuf field <code>uint32 recordsMatchingSegment = 15;</code>
+     * Generated from protobuf field <code>uint32 priority = 10;</code>
      * @param int $var
      * @return $this
      */
-    public function setRecordsMatchingSegment($var)
+    public function setPriority($var)
     {
         GPBUtil::checkUint32($var);
-        $this->recordsMatchingSegment = $var;
+        $this->priority = $var;
 
         return $this;
     }
 
     /**
-     * number of records updated with this message.
+     * The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
      *
-     * Generated from protobuf field <code>uint32 recordsSuccessfullyUpdate = 16;</code>
-     * @return int
+     * Generated from protobuf field <code>string displayFrom = 11;</code>
+     * @return string
      */
-    public function getRecordsSuccessfullyUpdate()
+    public function getDisplayFrom()
     {
-        return $this->recordsSuccessfullyUpdate;
+        return $this->displayFrom;
     }
 
     /**
-     * number of records updated with this message.
+     * The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
      *
-     * Generated from protobuf field <code>uint32 recordsSuccessfullyUpdate = 16;</code>
-     * @param int $var
+     * Generated from protobuf field <code>string displayFrom = 11;</code>
+     * @param string $var
      * @return $this
      */
-    public function setRecordsSuccessfullyUpdate($var)
+    public function setDisplayFrom($var)
     {
-        GPBUtil::checkUint32($var);
-        $this->recordsSuccessfullyUpdate = $var;
+        GPBUtil::checkString($var, True);
+        $this->displayFrom = $var;
 
         return $this;
     }
 
     /**
-     * number of records that failed updated with this message.
+     * The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
      *
-     * Generated from protobuf field <code>uint32 recordsFailedToUpdate = 17;</code>
-     * @return int
+     * Generated from protobuf field <code>string displayUntil = 12;</code>
+     * @return string
      */
-    public function getRecordsFailedToUpdate()
+    public function getDisplayUntil()
     {
-        return $this->recordsFailedToUpdate;
+        return $this->displayUntil;
     }
 
     /**
-     * number of records that failed updated with this message.
+     * The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
      *
-     * Generated from protobuf field <code>uint32 recordsFailedToUpdate = 17;</code>
-     * @param int $var
+     * Generated from protobuf field <code>string displayUntil = 12;</code>
+     * @param string $var
      * @return $this
      */
-    public function setRecordsFailedToUpdate($var)
+    public function setDisplayUntil($var)
     {
-        GPBUtil::checkUint32($var);
-        $this->recordsFailedToUpdate = $var;
-
-        return $this;
-    }
-
-    /**
-     * The date the message was created in the PassKit system.
-     *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 18;</code>
-     * @return \Google\Protobuf\Timestamp|null
-     */
-    public function getCreated()
-    {
-        return isset($this->created) ? $this->created : null;
-    }
-
-    public function hasCreated()
-    {
-        return isset($this->created);
-    }
-
-    public function clearCreated()
-    {
-        unset($this->created);
-    }
-
-    /**
-     * The date the message was created in the PassKit system.
-     *
-     * Generated from protobuf field <code>.google.protobuf.Timestamp created = 18;</code>
-     * @param \Google\Protobuf\Timestamp $var
-     * @return $this
-     */
-    public function setCreated($var)
-    {
-        GPBUtil::checkMessage($var, \Google\Protobuf\Timestamp::class);
-        $this->created = $var;
+        GPBUtil::checkString($var, True);
+        $this->displayUntil = $var;
 
         return $this;
     }

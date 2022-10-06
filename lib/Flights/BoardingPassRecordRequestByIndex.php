@@ -129,7 +129,7 @@ class BoardingPassRecordRequestByIndex extends \Google\Protobuf\Internal\Message
      */
     public function getDepartureDate()
     {
-        return isset($this->departureDate) ? $this->departureDate : null;
+        return $this->departureDate;
     }
 
     public function hasDepartureDate()

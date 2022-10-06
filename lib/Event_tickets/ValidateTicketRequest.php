@@ -85,7 +85,7 @@ class ValidateTicketRequest extends \Google\Protobuf\Internal\Message
      */
     public function getTicket()
     {
-        return isset($this->ticket) ? $this->ticket : null;
+        return $this->ticket;
     }
 
     public function hasTicket()
@@ -121,7 +121,7 @@ class ValidateTicketRequest extends \Google\Protobuf\Internal\Message
      */
     public function getValidateDetails()
     {
-        return isset($this->validateDetails) ? $this->validateDetails : null;
+        return $this->validateDetails;
     }
 
     public function hasValidateDetails()

@@ -94,7 +94,7 @@ class Venue extends \Google\Protobuf\Internal\Message
      *           Localized venue address.
      *     @type string $timezone
      *           Timezone applied for the event dates. e.g. America/New_York, Asia/Singapore, Europe/London.
-     *     @type \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $gpsCoords
+     *     @type array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $gpsCoords
      *           Optional GPS location details of the venue. If provided will be embedded into the ticket as the first GPS location.
      *     @type \Google\Protobuf\Timestamp $created
      *           The date the venue was created. Not writable.
@@ -193,7 +193,7 @@ class Venue extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedName()
     {
-        return isset($this->localizedName) ? $this->localizedName : null;
+        return $this->localizedName;
     }
 
     public function hasLocalizedName()
@@ -255,7 +255,7 @@ class Venue extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedAddress()
     {
-        return isset($this->localizedAddress) ? $this->localizedAddress : null;
+        return $this->localizedAddress;
     }
 
     public function hasLocalizedAddress()
@@ -324,7 +324,7 @@ class Venue extends \Google\Protobuf\Internal\Message
      * Optional GPS location details of the venue. If provided will be embedded into the ticket as the first GPS location.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation gpsCoords = 8;</code>
-     * @param \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setGpsCoords($var)
@@ -343,7 +343,7 @@ class Venue extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -379,7 +379,7 @@ class Venue extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()

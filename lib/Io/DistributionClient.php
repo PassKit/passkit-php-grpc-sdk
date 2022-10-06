@@ -73,16 +73,30 @@ class DistributionClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Io\ImportMembersRequest $argument input argument
+     * @param \Io\ImportProtocolRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function importMembers(\Io\ImportMembersRequest $argument,
+    public function importProtocolCsv(\Io\ImportProtocolRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/io.Distribution/importMembers',
+        return $this->_simpleRequest('/io.Distribution/importProtocolCsv',
         $argument,
         ['\Google\Protobuf\GPBEmpty', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\Payload $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function validateBarcode(\Io\Payload $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Distribution/validateBarcode',
+        $argument,
+        ['\Io\Payload', 'decode'],
         $metadata, $options);
     }
 

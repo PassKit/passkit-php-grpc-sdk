@@ -24,7 +24,7 @@ class DataCollectionFields extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Io\DataCollectionField[]|\Google\Protobuf\Internal\RepeatedField $fields
+     *     @type array<\Io\DataCollectionField>|\Google\Protobuf\Internal\RepeatedField $fields
      * }
      */
     public function __construct($data = NULL) {
@@ -43,7 +43,7 @@ class DataCollectionFields extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.DataCollectionField fields = 1;</code>
-     * @param \Io\DataCollectionField[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\DataCollectionField>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFields($var)

@@ -111,7 +111,7 @@ class RedemptionTimerSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedTimeHelpText()
     {
-        return isset($this->localizedTimeHelpText) ? $this->localizedTimeHelpText : null;
+        return $this->localizedTimeHelpText;
     }
 
     public function hasLocalizedTimeHelpText()

@@ -1,4 +1,8 @@
-# passkit-grpc-members-rest-sdk
+# PassKit PHP gRPC SDK
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![latest packaged version(s)](https://repology.org/badge/latest-versions/php.svg)](https://repology.org/project/php/versions)
+
 Use the PassKit PHP gRPC SDK to issue and manage Apple Wallet and Google Pay Passes from your PHP application.
 
 For more information, please visit [the documentation](https://docs.passkit.io).
@@ -24,7 +28,7 @@ For more information, please visit [the documentation](https://docs.passkit.io).
 
 ### Instal & Enable the gRPC PHP extension
 ```bash
-sudo pecl install grpc-1.32.0
+sudo pecl install grpc-1.48.1
 ```
 
 After installing the gRPC extension, make sure the extension is enabled in your `php.ini` file, (e.g. `/etc/php5/cli/php.ini`, `/etc/php5/apache2/php.ini`, or `/usr/local/etc/php/7.2/php.ini`), depending on where your PHP installation is.
@@ -46,7 +50,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "passkit/passkit-php-grpc-sdk": "1.0.0"
+    "passkit/passkit-php-grpc-sdk": "1.1.70"
   }
 }
 ```

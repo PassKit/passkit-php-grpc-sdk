@@ -174,7 +174,7 @@ class ChangeTierRequest extends \Google\Protobuf\Internal\Message
      */
     public function getEventDetails()
     {
-        return isset($this->eventDetails) ? $this->eventDetails : null;
+        return $this->eventDetails;
     }
 
     public function hasEventDetails()

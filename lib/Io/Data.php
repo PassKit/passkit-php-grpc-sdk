@@ -35,7 +35,7 @@ class Data extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Io\DataField[]|\Google\Protobuf\Internal\RepeatedField $dataFields
+     *     @type array<\Io\DataField>|\Google\Protobuf\Internal\RepeatedField $dataFields
      *           This allows you to configure individual data field that is rendered on the customer UI (data collection page and the pass).
      *           You can set data field purely for CRM analytics purpose and not show it on the customer UI.
      *     @type \Io\DataCollectionPageSettings $dataCollectionPageSettings
@@ -64,7 +64,7 @@ class Data extends \Google\Protobuf\Internal\Message
      * You can set data field purely for CRM analytics purpose and not show it on the customer UI.
      *
      * Generated from protobuf field <code>repeated .io.DataField dataFields = 1;</code>
-     * @param \Io\DataField[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\DataField>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDataFields($var)
@@ -83,7 +83,7 @@ class Data extends \Google\Protobuf\Internal\Message
      */
     public function getDataCollectionPageSettings()
     {
-        return isset($this->dataCollectionPageSettings) ? $this->dataCollectionPageSettings : null;
+        return $this->dataCollectionPageSettings;
     }
 
     public function hasDataCollectionPageSettings()

@@ -58,7 +58,7 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $validFrom
      *     @type \Google\Protobuf\Timestamp $validTo
      *     @type string $modulus
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $subjectAlternativeNames
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $subjectAlternativeNames
      *     @type string $ownerUsername
      * }
      */
@@ -139,7 +139,7 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
      */
     public function getValidFrom()
     {
-        return isset($this->validFrom) ? $this->validFrom : null;
+        return $this->validFrom;
     }
 
     public function hasValidFrom()
@@ -171,7 +171,7 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
      */
     public function getValidTo()
     {
-        return isset($this->validTo) ? $this->validTo : null;
+        return $this->validTo;
     }
 
     public function hasValidTo()
@@ -230,7 +230,7 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string subjectAlternativeNames = 7;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSubjectAlternativeNames($var)

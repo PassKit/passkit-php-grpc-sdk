@@ -212,7 +212,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedTitle()
     {
-        return isset($this->localizedTitle) ? $this->localizedTitle : null;
+        return $this->localizedTitle;
     }
 
     public function hasLocalizedTitle()
@@ -274,7 +274,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedDescription()
     {
-        return isset($this->localizedDescription) ? $this->localizedDescription : null;
+        return $this->localizedDescription;
     }
 
     public function hasLocalizedDescription()
@@ -334,7 +334,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedSubmitButtonText()
     {
-        return isset($this->localizedSubmitButtonText) ? $this->localizedSubmitButtonText : null;
+        return $this->localizedSubmitButtonText;
     }
 
     public function hasLocalizedSubmitButtonText()
@@ -394,7 +394,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedLoadingText()
     {
-        return isset($this->localizedLoadingText) ? $this->localizedLoadingText : null;
+        return $this->localizedLoadingText;
     }
 
     public function hasLocalizedLoadingText()
@@ -456,7 +456,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedThankYouText()
     {
-        return isset($this->localizedThankYouText) ? $this->localizedThankYouText : null;
+        return $this->localizedThankYouText;
     }
 
     public function hasLocalizedThankYouText()
@@ -518,7 +518,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedPageBackgroundColor()
     {
-        return isset($this->localizedPageBackgroundColor) ? $this->localizedPageBackgroundColor : null;
+        return $this->localizedPageBackgroundColor;
     }
 
     public function hasLocalizedPageBackgroundColor()
@@ -554,7 +554,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingSettings()
     {
-        return isset($this->trackingSettings) ? $this->trackingSettings : null;
+        return $this->trackingSettings;
     }
 
     public function hasTrackingSettings()
@@ -668,7 +668,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedFooterText()
     {
-        return isset($this->localizedFooterText) ? $this->localizedFooterText : null;
+        return $this->localizedFooterText;
     }
 
     public function hasLocalizedFooterText()
@@ -730,7 +730,7 @@ class DataCollectionPageSettings extends \Google\Protobuf\Internal\Message
      */
     public function getPasswordSettings()
     {
-        return isset($this->passwordSettings) ? $this->passwordSettings : null;
+        return $this->passwordSettings;
     }
 
     public function hasPasswordSettings()

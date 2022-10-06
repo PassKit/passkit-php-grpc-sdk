@@ -80,7 +80,7 @@ class SmsTemplate extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedContent()
     {
-        return isset($this->localizedContent) ? $this->localizedContent : null;
+        return $this->localizedContent;
     }
 
     public function hasLocalizedContent()

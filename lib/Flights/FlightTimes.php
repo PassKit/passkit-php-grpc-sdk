@@ -67,7 +67,7 @@ class FlightTimes extends \Google\Protobuf\Internal\Message
      */
     public function getScheduledDepartureTime()
     {
-        return isset($this->scheduledDepartureTime) ? $this->scheduledDepartureTime : null;
+        return $this->scheduledDepartureTime;
     }
 
     public function hasScheduledDepartureTime()
@@ -103,7 +103,7 @@ class FlightTimes extends \Google\Protobuf\Internal\Message
      */
     public function getBoardingTime()
     {
-        return isset($this->boardingTime) ? $this->boardingTime : null;
+        return $this->boardingTime;
     }
 
     public function hasBoardingTime()
@@ -139,7 +139,7 @@ class FlightTimes extends \Google\Protobuf\Internal\Message
      */
     public function getGateClosingTime()
     {
-        return isset($this->gateClosingTime) ? $this->gateClosingTime : null;
+        return $this->gateClosingTime;
     }
 
     public function hasGateClosingTime()
@@ -175,7 +175,7 @@ class FlightTimes extends \Google\Protobuf\Internal\Message
      */
     public function getScheduledArrivalTime()
     {
-        return isset($this->scheduledArrivalTime) ? $this->scheduledArrivalTime : null;
+        return $this->scheduledArrivalTime;
     }
 
     public function hasScheduledArrivalTime()

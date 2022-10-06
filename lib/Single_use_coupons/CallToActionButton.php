@@ -127,7 +127,7 @@ class CallToActionButton extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedButtonText()
     {
-        return isset($this->localizedButtonText) ? $this->localizedButtonText : null;
+        return $this->localizedButtonText;
     }
 
     public function hasLocalizedButtonText()
@@ -189,7 +189,7 @@ class CallToActionButton extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedLink()
     {
-        return isset($this->localizedLink) ? $this->localizedLink : null;
+        return $this->localizedLink;
     }
 
     public function hasLocalizedLink()

@@ -110,11 +110,11 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *           Reference ID is the ID used in the system where the transaction is coming from. Needs to be unique within the program.
      *     @type float $totalPrice
      *           The total amount of all order items. Based on POS setting, the totalPrice can already include the tax amount
-     *     @type \Io\OrderItem[]|\Google\Protobuf\Internal\RepeatedField $orderItems
+     *     @type array<\Io\OrderItem>|\Google\Protobuf\Internal\RepeatedField $orderItems
      *           List of order items in the  transaction
      *     @type float $discount
      *           The total discount amount
-     *     @type \Io\DiscountItem[]|\Google\Protobuf\Internal\RepeatedField $discountItems
+     *     @type array<\Io\DiscountItem>|\Google\Protobuf\Internal\RepeatedField $discountItems
      *           List of discount items
      *     @type float $serviceCharge
      *           The service charge amount
@@ -208,7 +208,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * List of order items in the  transaction
      *
      * Generated from protobuf field <code>repeated .io.OrderItem orderItems = 3;</code>
-     * @param \Io\OrderItem[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\OrderItem>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOrderItems($var)
@@ -260,7 +260,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * List of discount items
      *
      * Generated from protobuf field <code>repeated .io.DiscountItem discountItems = 5;</code>
-     * @param \Io\DiscountItem[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\DiscountItem>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setDiscountItems($var)
@@ -409,7 +409,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getTimestamp()
     {
-        return isset($this->timestamp) ? $this->timestamp : null;
+        return $this->timestamp;
     }
 
     public function hasTimestamp()
@@ -471,7 +471,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      */
     public function getLocation()
     {
-        return isset($this->location) ? $this->location : null;
+        return $this->location;
     }
 
     public function hasLocation()

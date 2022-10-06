@@ -172,7 +172,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      *           Optional field to set when the ticket expires. When the expiry date hits, it will automatically gray out the barcode.
      *     @type \Event_tickets\RedemptionDetails $redemptionDetails
      *           Contains details about the redemption (if the ticket is in a redeemed state). Not writable; set by the redeem endpoint.
-     *     @type \Event_tickets\ValidateDetails[]|\Google\Protobuf\Internal\RepeatedField $validateDetails
+     *     @type array<\Event_tickets\ValidateDetails>|\Google\Protobuf\Internal\RepeatedField $validateDetails
      *           Contains details about when the ticket was validated. Tickets can be validated multiple times. Not writable; set by the validate endpoint.
      *     @type \Io\PassOverrides $passOverrides
      *           Optional Pass level overrides for proximity & images.
@@ -249,7 +249,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      */
     public function getEvent()
     {
-        return isset($this->event) ? $this->event : null;
+        return $this->event;
     }
 
     public function hasEvent()
@@ -285,7 +285,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      */
     public function getTicketType()
     {
-        return isset($this->ticketType) ? $this->ticketType : null;
+        return $this->ticketType;
     }
 
     public function hasTicketType()
@@ -399,7 +399,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      */
     public function getSeatInfo()
     {
-        return isset($this->seatInfo) ? $this->seatInfo : null;
+        return $this->seatInfo;
     }
 
     public function hasSeatInfo()
@@ -435,7 +435,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      */
     public function getFaceValue()
     {
-        return isset($this->faceValue) ? $this->faceValue : null;
+        return $this->faceValue;
     }
 
     public function hasFaceValue()
@@ -471,7 +471,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      */
     public function getPerson()
     {
-        return isset($this->person) ? $this->person : null;
+        return $this->person;
     }
 
     public function hasPerson()
@@ -585,7 +585,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      */
     public function getExpiryDate()
     {
-        return isset($this->expiryDate) ? $this->expiryDate : null;
+        return $this->expiryDate;
     }
 
     public function hasExpiryDate()
@@ -621,7 +621,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      */
     public function getRedemptionDetails()
     {
-        return isset($this->redemptionDetails) ? $this->redemptionDetails : null;
+        return $this->redemptionDetails;
     }
 
     public function hasRedemptionDetails()
@@ -664,7 +664,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      * Contains details about when the ticket was validated. Tickets can be validated multiple times. Not writable; set by the validate endpoint.
      *
      * Generated from protobuf field <code>repeated .event_tickets.ValidateDetails validateDetails = 16;</code>
-     * @param \Event_tickets\ValidateDetails[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Event_tickets\ValidateDetails>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setValidateDetails($var)
@@ -683,7 +683,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      */
     public function getPassOverrides()
     {
-        return isset($this->passOverrides) ? $this->passOverrides : null;
+        return $this->passOverrides;
     }
 
     public function hasPassOverrides()
@@ -719,7 +719,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      */
     public function getPassMetaData()
     {
-        return isset($this->passMetaData) ? $this->passMetaData : null;
+        return $this->passMetaData;
     }
 
     public function hasPassMetaData()
@@ -755,7 +755,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -791,7 +791,7 @@ class Ticket extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()

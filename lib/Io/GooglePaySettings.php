@@ -76,7 +76,7 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      *           Custom template (takes a JSON ClassTemplateInfo object https://developers.google.com/pay/passes/rest/v1/ClassTemplateInfo)
      *     @type string $backgroundColor
      *           Override template background color
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $languageOverrides
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $languageOverrides
      *           The pass localisation will be restricted to languages in this list. Currently only available to Boarding Passes and restricted to a single language. Google are working on supporting multiple overrides and we will update this documentation once multiple languages are available.
      * }
      */
@@ -119,7 +119,7 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      */
     public function getAndroidApp()
     {
-        return isset($this->androidApp) ? $this->androidApp : null;
+        return $this->androidApp;
     }
 
     public function hasAndroidApp()
@@ -155,7 +155,7 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      */
     public function getIosApp()
     {
-        return isset($this->iosApp) ? $this->iosApp : null;
+        return $this->iosApp;
     }
 
     public function hasIosApp()
@@ -191,7 +191,7 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      */
     public function getWebApp()
     {
-        return isset($this->webApp) ? $this->webApp : null;
+        return $this->webApp;
     }
 
     public function hasWebApp()
@@ -286,7 +286,7 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      * The pass localisation will be restricted to languages in this list. Currently only available to Boarding Passes and restricted to a single language. Google are working on supporting multiple overrides and we will update this documentation once multiple languages are available.
      *
      * Generated from protobuf field <code>repeated .io.LanguageCode languageOverrides = 7;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLanguageOverrides($var)

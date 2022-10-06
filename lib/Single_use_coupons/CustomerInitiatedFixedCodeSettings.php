@@ -145,7 +145,7 @@ class CustomerInitiatedFixedCodeSettings extends \Google\Protobuf\Internal\Messa
      */
     public function getRedemptionTimer()
     {
-        return isset($this->redemptionTimer) ? $this->redemptionTimer : null;
+        return $this->redemptionTimer;
     }
 
     public function hasRedemptionTimer()

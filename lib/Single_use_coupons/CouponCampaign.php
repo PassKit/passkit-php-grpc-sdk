@@ -76,7 +76,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
      *           Name of the coupon campaign; used in the portal / API. Not shown to the end-customer.
      *     @type \Io\LocalizedString $localizedName
      *           Localized name of the coupon campaign.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $status
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $status
      *           The program status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *     @type string $passTypeIdentifier
      *           Leave empty for draft campaigns. Needs to be set for campaigns where status contains PROJECT_PUBLISHED.
@@ -153,7 +153,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedName()
     {
-        return isset($this->localizedName) ? $this->localizedName : null;
+        return $this->localizedName;
     }
 
     public function hasLocalizedName()
@@ -196,7 +196,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
      * The program status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 5;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setStatus($var)
@@ -267,7 +267,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -303,7 +303,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()

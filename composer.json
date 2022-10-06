@@ -6,9 +6,10 @@
         "php",
         "sdk",
         "api",
-        "grpc"
+        "grpc",
+        "wallet",
+        "mobile-wallet"
     ],
-    "version": "1.0.0",
     "homepage": "http://passkit.com",
     "license": "MIT",
     "authors": [
@@ -18,19 +19,23 @@
         }
     ],
     "require": {
-        "grpc/grpc": "^v1.30.0",
-        "google/protobuf": "^v3.13.0"
+        "grpc/grpc": "^v1.42.0",
+        "google/protobuf": "^v3.21.7"
     },
     "autoload": {
         "psr-4": {
             "Analytics\\": "lib/Analytics",
             "Cabin_codes\\": "lib/Cabin_codes",
+            "Ct\\": "lib/Ct",
             "Event_tickets\\": "lib/Event_tickets",
             "Flights\\": "lib/Flights",
             "Io\\": "lib/Io",
             "Members\\": "lib/Members",
+            "Raw\\": "lib/Raw",
+            "Scheduler\\": "lib/Scheduler",
             "Single_use_coupons\\": "lib/Single_use_coupons",
             "GPBMetadata\\Io\\": "lib/GPBMetadata/Io",
+            "GPBMetadata\\Ct\\": "lib/GPBMetadata/Ct",
             "GPBMetadata\\Google\\": "lib/extra/GPBMetadata/Google",
             "Google\\Api\\": "lib/extra/google/api"
         }

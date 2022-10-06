@@ -104,7 +104,7 @@ class WebhookConfig extends \Google\Protobuf\Internal\Message
      */
     public function getFieldMapping()
     {
-        return isset($this->fieldMapping) ? $this->fieldMapping : null;
+        return $this->fieldMapping;
     }
 
     public function hasFieldMapping()

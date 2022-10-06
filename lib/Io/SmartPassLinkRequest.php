@@ -51,7 +51,7 @@ class SmartPassLinkRequest extends \Google\Protobuf\Internal\Message
      */
     public function getProjectDistributionUrl()
     {
-        return isset($this->projectDistributionUrl) ? $this->projectDistributionUrl : null;
+        return $this->projectDistributionUrl;
     }
 
     public function hasProjectDistributionUrl()

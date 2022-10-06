@@ -125,7 +125,7 @@ class Seat extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedSeat()
     {
-        return isset($this->localizedSeat) ? $this->localizedSeat : null;
+        return $this->localizedSeat;
     }
 
     public function hasLocalizedSeat()
@@ -187,7 +187,7 @@ class Seat extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedRow()
     {
-        return isset($this->localizedRow) ? $this->localizedRow : null;
+        return $this->localizedRow;
     }
 
     public function hasLocalizedRow()
@@ -249,7 +249,7 @@ class Seat extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedSection()
     {
-        return isset($this->localizedSection) ? $this->localizedSection : null;
+        return $this->localizedSection;
     }
 
     public function hasLocalizedSection()
@@ -311,7 +311,7 @@ class Seat extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedGate()
     {
-        return isset($this->localizedGate) ? $this->localizedGate : null;
+        return $this->localizedGate;
     }
 
     public function hasLocalizedGate()

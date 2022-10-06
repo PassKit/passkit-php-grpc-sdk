@@ -275,7 +275,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedName()
     {
-        return isset($this->localizedName) ? $this->localizedName : null;
+        return $this->localizedName;
     }
 
     public function hasLocalizedName()
@@ -337,7 +337,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedSecondaryTierName()
     {
-        return isset($this->localizedSecondaryTierName) ? $this->localizedSecondaryTierName : null;
+        return $this->localizedSecondaryTierName;
     }
 
     public function hasLocalizedSecondaryTierName()
@@ -451,7 +451,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedTierUpgradeMessage()
     {
-        return isset($this->localizedTierUpgradeMessage) ? $this->localizedTierUpgradeMessage : null;
+        return $this->localizedTierUpgradeMessage;
     }
 
     public function hasLocalizedTierUpgradeMessage()
@@ -513,7 +513,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedTierDowngradeMessage()
     {
-        return isset($this->localizedTierDowngradeMessage) ? $this->localizedTierDowngradeMessage : null;
+        return $this->localizedTierDowngradeMessage;
     }
 
     public function hasLocalizedTierDowngradeMessage()
@@ -549,7 +549,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -585,7 +585,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()
@@ -673,7 +673,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      */
     public function getExpirySettings()
     {
-        return isset($this->expirySettings) ? $this->expirySettings : null;
+        return $this->expirySettings;
     }
 
     public function hasExpirySettings()
@@ -735,7 +735,7 @@ class Tier extends \Google\Protobuf\Internal\Message
      */
     public function getAllowTierEnrolment()
     {
-        return isset($this->allowTierEnrolment) ? $this->allowTierEnrolment : null;
+        return $this->allowTierEnrolment;
     }
 
     public function hasAllowTierEnrolment()

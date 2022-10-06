@@ -82,7 +82,7 @@ class Link extends \Google\Protobuf\Internal\Message
      *           This customises link text for different languages. Ignored by Google Pay passes.
      *     @type \Io\LocalizedString $localizedTitle
      *           This translates link title in different languages.
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $usage
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $usage
      *           Indicates which wallets the link should be rendered for (this allows to hide certain link on Apple Wallet, and vise versa).
      *     @type int $position
      *           Links will be rendered in order of their position, from lowest to highest. Position can be any value, E.g. 3 links with positions 30, 10, 20 would render 10 first, 20 second and 30 third.  If no position is provided, the order of the links cannot be guaranteed.
@@ -205,7 +205,7 @@ class Link extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedLink()
     {
-        return isset($this->localizedLink) ? $this->localizedLink : null;
+        return $this->localizedLink;
     }
 
     public function hasLocalizedLink()
@@ -241,7 +241,7 @@ class Link extends \Google\Protobuf\Internal\Message
      */
     public function getLocalizedTitle()
     {
-        return isset($this->localizedTitle) ? $this->localizedTitle : null;
+        return $this->localizedTitle;
     }
 
     public function hasLocalizedTitle()
@@ -284,7 +284,7 @@ class Link extends \Google\Protobuf\Internal\Message
      * Indicates which wallets the link should be rendered for (this allows to hide certain link on Apple Wallet, and vise versa).
      *
      * Generated from protobuf field <code>repeated .io.UsageType usage = 7;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setUsage($var)

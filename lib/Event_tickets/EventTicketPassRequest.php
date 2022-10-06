@@ -30,7 +30,7 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
      *     @type \Io\Id $ticketId
      *     @type \Event_tickets\TicketNumberRequest $ticketNumber
      *     @type \Event_tickets\OrderNumberRequest $orderNumber
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $format
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $format
      *           Optional. If omitted, return the URL to the web pass landing page. Not used when getting or deleting the underlying boarding pass record.
      * }
      */
@@ -135,7 +135,7 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
      * Optional. If omitted, return the URL to the web pass landing page. Not used when getting or deleting the underlying boarding pass record.
      *
      * Generated from protobuf field <code>repeated .io.PassBundleFormat format = 4;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setFormat($var)

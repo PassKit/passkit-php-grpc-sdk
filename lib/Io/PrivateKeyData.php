@@ -124,7 +124,7 @@ class PrivateKeyData extends \Google\Protobuf\Internal\Message
      */
     public function getExpiry()
     {
-        return isset($this->expiry) ? $this->expiry : null;
+        return $this->expiry;
     }
 
     public function hasExpiry()

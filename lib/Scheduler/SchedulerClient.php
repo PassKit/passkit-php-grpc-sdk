@@ -22,16 +22,16 @@ class SchedulerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Scheduler\SchedulingJob $argument input argument
+     * @param \Ct\SchedulingJob $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function createSchedulingJob(\Scheduler\SchedulingJob $argument,
+    public function createSchedulingJob(\Ct\SchedulingJob $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/scheduler.Scheduler/createSchedulingJob',
         $argument,
-        ['\Scheduler\SchedulingJobResponse', 'decode'],
+        ['\Ct\SchedulingJobResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -45,35 +45,35 @@ class SchedulerClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/scheduler.Scheduler/getSchedulingJob',
         $argument,
-        ['\Scheduler\SchedulingJob', 'decode'],
+        ['\Ct\SchedulingJob', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Scheduler\SchedulingJob $argument input argument
+     * @param \Ct\SchedulingJob $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function updateSchedulingJob(\Scheduler\SchedulingJob $argument,
+    public function updateSchedulingJob(\Ct\SchedulingJob $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/scheduler.Scheduler/updateSchedulingJob',
         $argument,
-        ['\Scheduler\SchedulingJobResponse', 'decode'],
+        ['\Ct\SchedulingJobResponse', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Scheduler\SchedulingJob $argument input argument
+     * @param \Ct\SchedulingJob $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function patchSchedulingJob(\Scheduler\SchedulingJob $argument,
+    public function patchSchedulingJob(\Ct\SchedulingJob $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/scheduler.Scheduler/patchSchedulingJob',
         $argument,
-        ['\Scheduler\SchedulingJobResponse', 'decode'],
+        ['\Ct\SchedulingJobResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -101,7 +101,7 @@ class SchedulerClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/scheduler.Scheduler/getSchedulingJobHistory',
         $argument,
-        ['\Scheduler\JobHistory', 'decode'],
+        ['\Ct\JobHistory', 'decode'],
         $metadata, $options);
     }
 
@@ -115,7 +115,7 @@ class SchedulerClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_serverStreamRequest('/scheduler.Scheduler/listSchedulingJobHistories',
         $argument,
-        ['\Scheduler\JobHistory', 'decode'],
+        ['\Ct\JobHistory', 'decode'],
         $metadata, $options);
     }
 

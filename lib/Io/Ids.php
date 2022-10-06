@@ -26,7 +26,7 @@ class Ids extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $id
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $id
      *           An array of unique identifiers for objects or records.
      * }
      */
@@ -50,7 +50,7 @@ class Ids extends \Google\Protobuf\Internal\Message
      * An array of unique identifiers for objects or records.
      *
      * Generated from protobuf field <code>repeated string id = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setId($var)

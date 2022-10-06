@@ -178,7 +178,7 @@ class Member extends \Google\Protobuf\Internal\Message
      *           Pass level overrides for proximity & images.
      *     @type \Io\Metadata $passMetaData
      *           Pass Metadata.
-     *     @type \Io\Note[]|\Google\Protobuf\Internal\RepeatedField $notes
+     *     @type array<\Io\Note>|\Google\Protobuf\Internal\RepeatedField $notes
      *           placeholder for notes.
      *     @type \Google\Protobuf\Timestamp $currentTierAwarded
      *           The date the current tier was awarded.
@@ -335,7 +335,7 @@ class Member extends \Google\Protobuf\Internal\Message
      */
     public function getPerson()
     {
-        return isset($this->person) ? $this->person : null;
+        return $this->person;
     }
 
     public function hasPerson()
@@ -501,7 +501,7 @@ class Member extends \Google\Protobuf\Internal\Message
      */
     public function getExpiryDate()
     {
-        return isset($this->expiryDate) ? $this->expiryDate : null;
+        return $this->expiryDate;
     }
 
     public function hasExpiryDate()
@@ -563,7 +563,7 @@ class Member extends \Google\Protobuf\Internal\Message
      */
     public function getPassOverrides()
     {
-        return isset($this->passOverrides) ? $this->passOverrides : null;
+        return $this->passOverrides;
     }
 
     public function hasPassOverrides()
@@ -599,7 +599,7 @@ class Member extends \Google\Protobuf\Internal\Message
      */
     public function getPassMetaData()
     {
-        return isset($this->passMetaData) ? $this->passMetaData : null;
+        return $this->passMetaData;
     }
 
     public function hasPassMetaData()
@@ -642,7 +642,7 @@ class Member extends \Google\Protobuf\Internal\Message
      * placeholder for notes.
      *
      * Generated from protobuf field <code>repeated .io.Note notes = 26;</code>
-     * @param \Io\Note[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\Note>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setNotes($var)
@@ -661,7 +661,7 @@ class Member extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentTierAwarded()
     {
-        return isset($this->currentTierAwarded) ? $this->currentTierAwarded : null;
+        return $this->currentTierAwarded;
     }
 
     public function hasCurrentTierAwarded()
@@ -697,7 +697,7 @@ class Member extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentTierExpires()
     {
-        return isset($this->currentTierExpires) ? $this->currentTierExpires : null;
+        return $this->currentTierExpires;
     }
 
     public function hasCurrentTierExpires()
@@ -733,7 +733,7 @@ class Member extends \Google\Protobuf\Internal\Message
      */
     public function getCreated()
     {
-        return isset($this->created) ? $this->created : null;
+        return $this->created;
     }
 
     public function hasCreated()
@@ -769,7 +769,7 @@ class Member extends \Google\Protobuf\Internal\Message
      */
     public function getUpdated()
     {
-        return isset($this->updated) ? $this->updated : null;
+        return $this->updated;
     }
 
     public function hasUpdated()

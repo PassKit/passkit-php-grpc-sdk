@@ -24,7 +24,7 @@ class Tickets extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Event_tickets\TicketLimitedFields[]|\Google\Protobuf\Internal\RepeatedField $tickets
+     *     @type array<\Event_tickets\TicketLimitedFields>|\Google\Protobuf\Internal\RepeatedField $tickets
      * }
      */
     public function __construct($data = NULL) {
@@ -43,7 +43,7 @@ class Tickets extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .event_tickets.TicketLimitedFields tickets = 1;</code>
-     * @param \Event_tickets\TicketLimitedFields[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Event_tickets\TicketLimitedFields>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTickets($var)

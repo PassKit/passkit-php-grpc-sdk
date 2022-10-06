@@ -28,7 +28,7 @@ class BoardingPassesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \Io\PassBundle[]|\Google\Protobuf\Internal\RepeatedField $boardingPasses
+     *     @type array<\Io\PassBundle>|\Google\Protobuf\Internal\RepeatedField $boardingPasses
      *           An array of boarding passes found relating to the PNR.
      * }
      */
@@ -52,7 +52,7 @@ class BoardingPassesResponse extends \Google\Protobuf\Internal\Message
      * An array of boarding passes found relating to the PNR.
      *
      * Generated from protobuf field <code>repeated .io.PassBundle boardingPasses = 1;</code>
-     * @param \Io\PassBundle[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\PassBundle>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBoardingPasses($var)

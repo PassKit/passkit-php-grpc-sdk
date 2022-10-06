@@ -236,7 +236,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      *           Id assigned by PassKit to represent the boarding pass record. It will be used as the serial number in Apple Wallet and as the Object identifier for Google Wallet. This field is not writable.
      *     @type string $operatingCarrierPNR
      *           PNR code of the carrier operating the flight, independent of code-share, lease or other issues.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $relatedPNRs
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $relatedPNRs
      *           Up to three related PNRs can be used to index the record and can be the marketing carrier PNR or a master PNR containing multiple bookings. If required, a related PNR can be followed by the two or three character designator of the carrier or CRS controlling the PNR, separated by an oblique.
      *     @type string $ticketNumber
      *           Ticket number can optionally be prefixed by the 3 digit airline code, followed by a 10 digit ticket number.  For ticket numbers less than 10 digits, pad with zeros.
@@ -270,7 +270,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      *           3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
      *     @type string $carryOnAllowance
      *           3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
-     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $ssrCodes
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $ssrCodes
      *           An array of SSR codes. Codes should be 4 capitalized letters. Codes may be annotated.
      *     @type string $osi
      *           Other service information that may be relevant to the booking.
@@ -288,11 +288,11 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      *           Privilege image id for display above the barcode on a Google Pay pass.
      *     @type string $footerImage
      *           Footer image id for display above the barcode on iOS devices.
-     *     @type \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $locationMessages
+     *     @type array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $locationMessages
      *           A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
-     *     @type \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $beaconMessages
+     *     @type array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $beaconMessages
      *           A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
-     *     @type \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $links
+     *     @type array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $links
      *           A list of links to be appended to the end of each boarding pass.
      *     @type string $barcodeAdditionalData
      *           If PassKit are generating barcodes, airline use data (IATA item 4) to be included in the barcode.
@@ -376,7 +376,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * Up to three related PNRs can be used to index the record and can be the marketing carrier PNR or a master PNR containing multiple bookings. If required, a related PNR can be followed by the two or three character designator of the carrier or CRS controlling the PNR, separated by an oblique.
      *
      * Generated from protobuf field <code>repeated string relatedPNRs = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRelatedPNRs($var)
@@ -551,7 +551,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      */
     public function getDepartureDate()
     {
-        return isset($this->departureDate) ? $this->departureDate : null;
+        return $this->departureDate;
     }
 
     public function hasDepartureDate()
@@ -587,7 +587,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      */
     public function getPassenger()
     {
-        return isset($this->passenger) ? $this->passenger : null;
+        return $this->passenger;
     }
 
     public function hasPassenger()
@@ -838,7 +838,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * An array of SSR codes. Codes should be 4 capitalized letters. Codes may be annotated.
      *
      * Generated from protobuf field <code>repeated string ssrCodes = 21;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setSsrCodes($var)
@@ -935,7 +935,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      */
     public function getConditionalItems()
     {
-        return isset($this->conditionalItems) ? $this->conditionalItems : null;
+        return $this->conditionalItems;
     }
 
     public function hasConditionalItems()
@@ -1082,7 +1082,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\GPSLocation[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLocationMessages($var)
@@ -1108,7 +1108,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\Beacon[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setBeaconMessages($var)
@@ -1134,7 +1134,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * A list of links to be appended to the end of each boarding pass.
      *
      * Generated from protobuf field <code>repeated .io.Link links = 32 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param \Io\Link[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLinks($var)
@@ -1205,7 +1205,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      */
     public function getAdditionalDataItems()
     {
-        return isset($this->additionalDataItems) ? $this->additionalDataItems : null;
+        return $this->additionalDataItems;
     }
 
     public function hasAdditionalDataItems()
@@ -1241,7 +1241,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      */
     public function getMetadata()
     {
-        return isset($this->metadata) ? $this->metadata : null;
+        return $this->metadata;
     }
 
     public function hasMetadata()

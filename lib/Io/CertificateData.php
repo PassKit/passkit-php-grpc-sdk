@@ -166,7 +166,7 @@ class CertificateData extends \Google\Protobuf\Internal\Message
      */
     public function getValidFrom()
     {
-        return isset($this->validFrom) ? $this->validFrom : null;
+        return $this->validFrom;
     }
 
     public function hasValidFrom()
@@ -198,7 +198,7 @@ class CertificateData extends \Google\Protobuf\Internal\Message
      */
     public function getValidTo()
     {
-        return isset($this->validTo) ? $this->validTo : null;
+        return $this->validTo;
     }
 
     public function hasValidTo()

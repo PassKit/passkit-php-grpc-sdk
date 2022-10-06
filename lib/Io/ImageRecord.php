@@ -56,7 +56,7 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
      *     @type string $name
      *     @type string $url
      *     @type int $use
-     *     @type int[]|\Google\Protobuf\Internal\RepeatedField $languages
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $languages
      *     @type string $ownerUsername
      *     @type \Google\Protobuf\Timestamp $createdAt
      *     @type \Google\Protobuf\Timestamp $updatedAt
@@ -166,7 +166,7 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.LanguageCode languages = 6;</code>
-     * @param int[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setLanguages($var)
@@ -205,7 +205,7 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
      */
     public function getCreatedAt()
     {
-        return isset($this->createdAt) ? $this->createdAt : null;
+        return $this->createdAt;
     }
 
     public function hasCreatedAt()
@@ -237,7 +237,7 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
      */
     public function getUpdatedAt()
     {
-        return isset($this->updatedAt) ? $this->updatedAt : null;
+        return $this->updatedAt;
     }
 
     public function hasUpdatedAt()
