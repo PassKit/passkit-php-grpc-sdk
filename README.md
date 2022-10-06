@@ -28,7 +28,7 @@ For more information, please visit [the documentation](https://docs.passkit.io).
 
 ### Instal & Enable the gRPC PHP extension
 ```bash
-sudo pecl install grpc-1.48.1
+sudo pecl install grpc-1.42.0
 ```
 
 After installing the gRPC extension, make sure the extension is enabled in your `php.ini` file, (e.g. `/etc/php5/cli/php.ini`, `/etc/php5/apache2/php.ini`, or `/usr/local/etc/php/7.2/php.ini`), depending on where your PHP installation is.
