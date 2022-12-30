@@ -59,6 +59,12 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string groupingIdentifier = 8;</code>
      */
     protected $groupingIdentifier = '';
+    /**
+     * Personal data requested for an Apple Wallet Pass (Requires Apple to whitelist your certificate for this service).
+     *
+     * Generated from protobuf field <code>.io.PersonalizationDetails PersonalizationDetails = 9;</code>
+     */
+    protected $PersonalizationDetails = null;
 
     /**
      * Constructor.
@@ -80,6 +86,8 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      *           List of country codes for the stores of the associated apps. This is required to render the pass correctly in the designer.
      *     @type int $transitType
      *     @type string $groupingIdentifier
+     *     @type \Io\PersonalizationDetails $PersonalizationDetails
+     *           Personal data requested for an Apple Wallet Pass (Requires Apple to whitelist your certificate for this service).
      * }
      */
     public function __construct($data = NULL) {
@@ -283,6 +291,42 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->groupingIdentifier = $var;
+
+        return $this;
+    }
+
+    /**
+     * Personal data requested for an Apple Wallet Pass (Requires Apple to whitelist your certificate for this service).
+     *
+     * Generated from protobuf field <code>.io.PersonalizationDetails PersonalizationDetails = 9;</code>
+     * @return \Io\PersonalizationDetails|null
+     */
+    public function getPersonalizationDetails()
+    {
+        return $this->PersonalizationDetails;
+    }
+
+    public function hasPersonalizationDetails()
+    {
+        return isset($this->PersonalizationDetails);
+    }
+
+    public function clearPersonalizationDetails()
+    {
+        unset($this->PersonalizationDetails);
+    }
+
+    /**
+     * Personal data requested for an Apple Wallet Pass (Requires Apple to whitelist your certificate for this service).
+     *
+     * Generated from protobuf field <code>.io.PersonalizationDetails PersonalizationDetails = 9;</code>
+     * @param \Io\PersonalizationDetails $var
+     * @return $this
+     */
+    public function setPersonalizationDetails($var)
+    {
+        GPBUtil::checkMessage($var, \Io\PersonalizationDetails::class);
+        $this->PersonalizationDetails = $var;
 
         return $this;
     }
