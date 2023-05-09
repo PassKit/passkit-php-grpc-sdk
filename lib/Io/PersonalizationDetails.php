@@ -22,9 +22,9 @@ class PersonalizationDetails extends \Google\Protobuf\Internal\Message
     /**
      * An array of the required validation items. [PERSONALIZE_NAME, PERSONALIZE_EMAIL_ADDRESS, PERSONALIZE_PHONE_NUMBER, PERSONALIZE_POSTAL_CODE]
      *
-     * Generated from protobuf field <code>repeated .io.PersonalizedDataField RequiredPersonalizationData = 2;</code>
+     * Generated from protobuf field <code>repeated .io.PersonalizedDataField requiredPersonalizationData = 2;</code>
      */
-    private $RequiredPersonalizationData;
+    private $requiredPersonalizationData;
     /**
      * A description of the program’s terms and conditions. This string can contain HTML link tags to external content.
      * If present, this information appears after the user enters their personal information and taps the Next button. The user then has the option to agree to the terms, or to cancel the sign-up process.
@@ -41,7 +41,7 @@ class PersonalizationDetails extends \Google\Protobuf\Internal\Message
      *
      *     @type string $description
      *           A brief description of the program for a pass that appears on the signup sheet, under the personalization logo.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $RequiredPersonalizationData
+     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $requiredPersonalizationData
      *           An array of the required validation items. [PERSONALIZE_NAME, PERSONALIZE_EMAIL_ADDRESS, PERSONALIZE_PHONE_NUMBER, PERSONALIZE_POSTAL_CODE]
      *     @type string $termsAndConditions
      *           A description of the program’s terms and conditions. This string can contain HTML link tags to external content.
@@ -82,25 +82,25 @@ class PersonalizationDetails extends \Google\Protobuf\Internal\Message
     /**
      * An array of the required validation items. [PERSONALIZE_NAME, PERSONALIZE_EMAIL_ADDRESS, PERSONALIZE_PHONE_NUMBER, PERSONALIZE_POSTAL_CODE]
      *
-     * Generated from protobuf field <code>repeated .io.PersonalizedDataField RequiredPersonalizationData = 2;</code>
+     * Generated from protobuf field <code>repeated .io.PersonalizedDataField requiredPersonalizationData = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getRequiredPersonalizationData()
     {
-        return $this->RequiredPersonalizationData;
+        return $this->requiredPersonalizationData;
     }
 
     /**
      * An array of the required validation items. [PERSONALIZE_NAME, PERSONALIZE_EMAIL_ADDRESS, PERSONALIZE_PHONE_NUMBER, PERSONALIZE_POSTAL_CODE]
      *
-     * Generated from protobuf field <code>repeated .io.PersonalizedDataField RequiredPersonalizationData = 2;</code>
+     * Generated from protobuf field <code>repeated .io.PersonalizedDataField requiredPersonalizationData = 2;</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setRequiredPersonalizationData($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Io\PersonalizedDataField::class);
-        $this->RequiredPersonalizationData = $arr;
+        $this->requiredPersonalizationData = $arr;
 
         return $this;
     }

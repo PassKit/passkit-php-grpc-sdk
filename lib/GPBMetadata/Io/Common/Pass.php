@@ -23,8 +23,8 @@ class Pass
         \GPBMetadata\Io\Common\Template::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ÿ
-io/common/pass.protoioio/common/links.protoio/common/metrics.protoio/common/personal.protoio/common/protocols.protoio/common/proximity.protoio/common/template.proto.protoc-gen-openapiv2/options/annotations.proto"ç
+œ
+io/common/pass.protoioio/common/links.protoio/common/metrics.protoio/common/personal.protoio/common/protocols.protoio/common/proximity.protoio/common/template.proto.protoc-gen-openapiv2/options/annotations.proto"„
 PassOverrides
 imageIds (2.io.ImageIds*
 	locations (2.io.GPSLocationB’A 
@@ -36,7 +36,8 @@ class Pass
 
 colors (2
 .io.Colors"
-associatedStoreIdentifiers (J"\\
+associatedStoreIdentifiers (
+appStoreIdentifiers (J"\\
 PassOptions&
 apple (2.io.AppleWalletSettings%
 google (2.io.GooglePaySettings"ÿ

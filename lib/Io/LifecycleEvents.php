@@ -84,11 +84,17 @@ class LifecycleEvents
      */
     const INVALIDATE_CONFIRMED = 524288;
     /**
-     * Pass has been personalised
+     * Pass has requested personalisation
      *
-     * Generated from protobuf enum <code>PASS_PERSONALISED = 1048576;</code>
+     * Generated from protobuf enum <code>PASS_PERSONALISATION_REQUESTED = 1048576;</code>
      */
-    const PASS_PERSONALISED = 1048576;
+    const PASS_PERSONALISATION_REQUESTED = 1048576;
+    /**
+     * Pass has been provided with personalised information
+     *
+     * Generated from protobuf enum <code>PASS_PERSONALISED = 2097152;</code>
+     */
+    const PASS_PERSONALISED = 2097152;
 
     private static $valueToName = [
         self::NO_STATUS => 'NO_STATUS',
@@ -103,6 +109,7 @@ class LifecycleEvents
         self::GOOGLE_PAY_RECORD_CREATED => 'GOOGLE_PAY_RECORD_CREATED',
         self::INVALIDATE_REQUESTED => 'INVALIDATE_REQUESTED',
         self::INVALIDATE_CONFIRMED => 'INVALIDATE_CONFIRMED',
+        self::PASS_PERSONALISATION_REQUESTED => 'PASS_PERSONALISATION_REQUESTED',
         self::PASS_PERSONALISED => 'PASS_PERSONALISED',
     ];
 

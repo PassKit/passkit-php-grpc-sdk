@@ -46,11 +46,17 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      */
     protected $colors = null;
     /**
-     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
      */
     private $associatedStoreIdentifiers;
+    /**
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *
+     * Generated from protobuf field <code>repeated uint64 appStoreIdentifiers = 8;</code>
+     */
+    private $appStoreIdentifiers;
 
     /**
      * Constructor.
@@ -69,6 +75,8 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      *     @type \Io\Colors $colors
      *           Stores custom pass colors.
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $associatedStoreIdentifiers
+     *           Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $appStoreIdentifiers
      *           A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * }
      */
@@ -228,7 +236,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -239,7 +247,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
@@ -249,6 +257,32 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::UINT32);
         $this->associatedStoreIdentifiers = $arr;
+
+        return $this;
+    }
+
+    /**
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *
+     * Generated from protobuf field <code>repeated uint64 appStoreIdentifiers = 8;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getAppStoreIdentifiers()
+    {
+        return $this->appStoreIdentifiers;
+    }
+
+    /**
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *
+     * Generated from protobuf field <code>repeated uint64 appStoreIdentifiers = 8;</code>
+     * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setAppStoreIdentifiers($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::UINT64);
+        $this->appStoreIdentifiers = $arr;
 
         return $this;
     }

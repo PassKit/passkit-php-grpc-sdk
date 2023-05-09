@@ -34,7 +34,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      */
     protected $appLaunchUrl = '';
     /**
-     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * Deprecated - use appStoreIdentifiers. A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
      */
@@ -62,9 +62,15 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     /**
      * Personal data requested for an Apple Wallet Pass (Requires Apple to whitelist your certificate for this service).
      *
-     * Generated from protobuf field <code>.io.PersonalizationDetails PersonalizationDetails = 9;</code>
+     * Generated from protobuf field <code>.io.PersonalizationDetails personalizationDetails = 9;</code>
      */
-    protected $PersonalizationDetails = null;
+    protected $personalizationDetails = null;
+    /**
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *
+     * Generated from protobuf field <code>repeated uint64 appStoreIdentifiers = 10;</code>
+     */
+    private $appStoreIdentifiers;
 
     /**
      * Constructor.
@@ -79,15 +85,17 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      *     @type string $appLaunchUrl
      *           This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $associatedStoreIdentifiers
-     *           A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *           Deprecated - use appStoreIdentifiers. A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *     @type int $maxDistance
      *           GPS lock screen messages will show at the lower of max distance and the pass default(unpublished) value.
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $appStoreCountries
      *           List of country codes for the stores of the associated apps. This is required to render the pass correctly in the designer.
      *     @type int $transitType
      *     @type string $groupingIdentifier
-     *     @type \Io\PersonalizationDetails $PersonalizationDetails
+     *     @type \Io\PersonalizationDetails $personalizationDetails
      *           Personal data requested for an Apple Wallet Pass (Requires Apple to whitelist your certificate for this service).
+     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $appStoreIdentifiers
+     *           A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * }
      */
     public function __construct($data = NULL) {
@@ -174,7 +182,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * Deprecated - use appStoreIdentifiers. A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -185,7 +193,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * Deprecated - use appStoreIdentifiers. A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
@@ -298,35 +306,61 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     /**
      * Personal data requested for an Apple Wallet Pass (Requires Apple to whitelist your certificate for this service).
      *
-     * Generated from protobuf field <code>.io.PersonalizationDetails PersonalizationDetails = 9;</code>
+     * Generated from protobuf field <code>.io.PersonalizationDetails personalizationDetails = 9;</code>
      * @return \Io\PersonalizationDetails|null
      */
     public function getPersonalizationDetails()
     {
-        return $this->PersonalizationDetails;
+        return $this->personalizationDetails;
     }
 
     public function hasPersonalizationDetails()
     {
-        return isset($this->PersonalizationDetails);
+        return isset($this->personalizationDetails);
     }
 
     public function clearPersonalizationDetails()
     {
-        unset($this->PersonalizationDetails);
+        unset($this->personalizationDetails);
     }
 
     /**
      * Personal data requested for an Apple Wallet Pass (Requires Apple to whitelist your certificate for this service).
      *
-     * Generated from protobuf field <code>.io.PersonalizationDetails PersonalizationDetails = 9;</code>
+     * Generated from protobuf field <code>.io.PersonalizationDetails personalizationDetails = 9;</code>
      * @param \Io\PersonalizationDetails $var
      * @return $this
      */
     public function setPersonalizationDetails($var)
     {
         GPBUtil::checkMessage($var, \Io\PersonalizationDetails::class);
-        $this->PersonalizationDetails = $var;
+        $this->personalizationDetails = $var;
+
+        return $this;
+    }
+
+    /**
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *
+     * Generated from protobuf field <code>repeated uint64 appStoreIdentifiers = 10;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getAppStoreIdentifiers()
+    {
+        return $this->appStoreIdentifiers;
+    }
+
+    /**
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *
+     * Generated from protobuf field <code>repeated uint64 appStoreIdentifiers = 10;</code>
+     * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setAppStoreIdentifiers($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::UINT64);
+        $this->appStoreIdentifiers = $arr;
 
         return $this;
     }

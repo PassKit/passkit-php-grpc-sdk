@@ -310,7 +310,7 @@ class HttpRule extends \Google\Protobuf\Internal\Message
      *           as the HTTP response body.
      *           NOTE: The referred field must be present at the top-level of the response
      *           message type.
-     *     @type \Google\Api\HttpRule[]|\Google\Protobuf\Internal\RepeatedField $additional_bindings
+     *     @type array<\Google\Api\HttpRule>|\Google\Protobuf\Internal\RepeatedField $additional_bindings
      *           Additional HTTP bindings for the selector. Nested bindings must
      *           not contain an `additional_bindings` field themselves (that is,
      *           the nesting may only be one level deep).
@@ -630,7 +630,7 @@ class HttpRule extends \Google\Protobuf\Internal\Message
      * the nesting may only be one level deep).
      *
      * Generated from protobuf field <code>repeated .google.api.HttpRule additional_bindings = 11;</code>
-     * @param \Google\Api\HttpRule[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @param array<\Google\Api\HttpRule>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setAdditionalBindings($var)
