@@ -322,6 +322,20 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Io\BulkPassActionRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function bulkVoidCoupons(\Io\BulkPassActionRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/single_use_coupons.SingleUseCoupons/bulkVoidCoupons',
+        $argument,
+        ['\Google\Protobuf\GPBEmpty', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Single_use_coupons\ListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

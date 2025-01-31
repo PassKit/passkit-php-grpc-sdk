@@ -101,6 +101,48 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Io\Id $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function getStampImageConfig(\Io\Id $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Images/getStampImageConfig',
+        $argument,
+        ['\Io\StampImageConfig', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\StampImageConfig $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function updateStampImageConfig(\Io\StampImageConfig $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Images/updateStampImageConfig',
+        $argument,
+        ['\Io\Id', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\StampImagePreviewRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function getStampImagePreview(\Io\StampImagePreviewRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Images/getStampImagePreview',
+        $argument,
+        ['\Io\StampImagePreview', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Io\LocalizedImageInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

@@ -445,6 +445,20 @@ class MembersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Io\BulkPassActionRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function bulkDeleteMembers(\Io\BulkPassActionRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/members.Members/bulkDeleteMembers',
+        $argument,
+        ['\Google\Protobuf\GPBEmpty', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Members\ListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

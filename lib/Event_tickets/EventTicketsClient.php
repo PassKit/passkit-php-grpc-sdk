@@ -580,6 +580,20 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Io\BulkPassActionRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function bulkDeleteTickets(\Io\BulkPassActionRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/event_tickets.EventTickets/bulkDeleteTickets',
+        $argument,
+        ['\Google\Protobuf\GPBEmpty', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Event_tickets\OrderNumberRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

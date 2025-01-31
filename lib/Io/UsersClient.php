@@ -101,6 +101,20 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Google\Protobuf\GPBEmpty $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function get2faBarcode(\Google\Protobuf\GPBEmpty $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Users/get2faBarcode',
+        $argument,
+        ['\Io\Url', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Io\Credentials $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -368,6 +382,20 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Google\Protobuf\GPBEmpty $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function refreshApiSecret(\Google\Protobuf\GPBEmpty $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Users/refreshApiSecret',
+        $argument,
+        ['\Google\Protobuf\GPBEmpty', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Io\DeleteAccountRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -378,6 +406,133 @@ class UsersClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/io.Users/deleteAccount',
         $argument,
         ['\Google\Protobuf\GPBEmpty', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Google\Protobuf\GPBEmpty $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function revokeLegacyCredentials(\Google\Protobuf\GPBEmpty $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Users/revokeLegacyCredentials',
+        $argument,
+        ['\Google\Protobuf\GPBEmpty', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Team Members
+     * @param \Io\NewTeamMember $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function createTeamMember(\Io\NewTeamMember $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Users/createTeamMember',
+        $argument,
+        ['\Io\Id', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\TeamMemberPermissions $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function createPermissionsForTeamMember(\Io\TeamMemberPermissions $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Users/createPermissionsForTeamMember',
+        $argument,
+        ['\Io\Id', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\TeamMemberPermissions $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function updateTeamMemberPermissions(\Io\TeamMemberPermissions $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Users/updateTeamMemberPermissions',
+        $argument,
+        ['\Io\TeamMemberPermissions', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\TeamMemberPermissions $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function patchTeamMemberPermissions(\Io\TeamMemberPermissions $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Users/patchTeamMemberPermissions',
+        $argument,
+        ['\Io\TeamMemberPermissions', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\Id $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function getTeamMember(\Io\Id $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Users/getTeamMember',
+        $argument,
+        ['\Io\GetTeamMemberResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Google\Protobuf\GPBEmpty $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
+     */
+    public function getTeamMembers(\Google\Protobuf\GPBEmpty $argument,
+      $metadata = [], $options = []) {
+        return $this->_serverStreamRequest('/io.Users/getTeamMembers',
+        $argument,
+        ['\Io\ListTeamMembersResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\Id $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function deleteTeamMember(\Io\Id $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Users/deleteTeamMember',
+        $argument,
+        ['\Google\Protobuf\GPBEmpty', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Io\AuditLogRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
+     */
+    public function getTeamMemberLogs(\Io\AuditLogRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_serverStreamRequest('/io.Users/getTeamMemberLogs',
+        $argument,
+        ['\Io\AuditLog', 'decode'],
         $metadata, $options);
     }
 
