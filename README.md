@@ -1,7 +1,7 @@
 # PassKit PHP SDK
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](http://poser.pugx.org/passkit/passkit-php-grpc-sdk/version)](https://packagist.org/packages/passkit/passkit-php-grpc-sdk)
+[![Version](https://poser.pugx.org/passkit/passkit-php-grpc-sdk/version)](https://packagist.org/packages/passkit/passkit-php-grpc-sdk)
 
 Use the PassKit PHP gRPC SDK to issue and manage Apple Wallet and Google Pay Passes from your PHP application.
 
