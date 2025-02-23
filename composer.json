@@ -37,7 +37,9 @@
             "GPBMetadata\\Io\\": "lib/GPBMetadata/Io",
             "GPBMetadata\\Ct\\": "lib/GPBMetadata/Ct",
             "GPBMetadata\\Google\\": "lib/extra/GPBMetadata/Google",
-            "Google\\Api\\": "lib/extra/google/api"
+            "Google\\Api\\": "lib/extra/google/api",
+            "GPBMetadata\\ProtocGenOpenapiv2\\": "lib/extra/GPBMetadata/ProtocGenOpenapiv2",
+            "Grpc\\Gateway\\Protoc_gen_openapiv2\\Options": "lib/extra/Grpc/Gateway/Protoc_gen_openapiv2/Options"
         }
     }
 }
