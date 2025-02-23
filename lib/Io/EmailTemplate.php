@@ -149,6 +149,24 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string darkModeContentBackgroundColor = 22;</code>
      */
     protected $darkModeContentBackgroundColor = '';
+    /**
+     * Header label for the email.
+     *
+     * Generated from protobuf field <code>string headerLabel = 23;</code>
+     */
+    protected $headerLabel = '';
+    /**
+     * Localized header label for the email.
+     *
+     * Generated from protobuf field <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+     */
+    protected $localizedHeaderLabel = null;
+    /**
+     * Header value for the email.
+     *
+     * Generated from protobuf field <code>string headerValue = 25;</code>
+     */
+    protected $headerValue = '';
 
     /**
      * Constructor.
@@ -200,6 +218,12 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
      *           Background color of the page in dark mode.
      *     @type string $darkModeContentBackgroundColor
      *           Background color of the message content in dark mode.
+     *     @type string $headerLabel
+     *           Header label for the email.
+     *     @type \Io\LocalizedString $localizedHeaderLabel
+     *           Localized header label for the email.
+     *     @type string $headerValue
+     *           Header value for the email.
      * }
      */
     public function __construct($data = NULL) {
@@ -835,6 +859,94 @@ class EmailTemplate extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->darkModeContentBackgroundColor = $var;
+
+        return $this;
+    }
+
+    /**
+     * Header label for the email.
+     *
+     * Generated from protobuf field <code>string headerLabel = 23;</code>
+     * @return string
+     */
+    public function getHeaderLabel()
+    {
+        return $this->headerLabel;
+    }
+
+    /**
+     * Header label for the email.
+     *
+     * Generated from protobuf field <code>string headerLabel = 23;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setHeaderLabel($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->headerLabel = $var;
+
+        return $this;
+    }
+
+    /**
+     * Localized header label for the email.
+     *
+     * Generated from protobuf field <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+     * @return \Io\LocalizedString|null
+     */
+    public function getLocalizedHeaderLabel()
+    {
+        return $this->localizedHeaderLabel;
+    }
+
+    public function hasLocalizedHeaderLabel()
+    {
+        return isset($this->localizedHeaderLabel);
+    }
+
+    public function clearLocalizedHeaderLabel()
+    {
+        unset($this->localizedHeaderLabel);
+    }
+
+    /**
+     * Localized header label for the email.
+     *
+     * Generated from protobuf field <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+     * @param \Io\LocalizedString $var
+     * @return $this
+     */
+    public function setLocalizedHeaderLabel($var)
+    {
+        GPBUtil::checkMessage($var, \Io\LocalizedString::class);
+        $this->localizedHeaderLabel = $var;
+
+        return $this;
+    }
+
+    /**
+     * Header value for the email.
+     *
+     * Generated from protobuf field <code>string headerValue = 25;</code>
+     * @return string
+     */
+    public function getHeaderValue()
+    {
+        return $this->headerValue;
+    }
+
+    /**
+     * Header value for the email.
+     *
+     * Generated from protobuf field <code>string headerValue = 25;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setHeaderValue($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->headerValue = $var;
 
         return $this;
     }

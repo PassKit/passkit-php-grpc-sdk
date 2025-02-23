@@ -58,6 +58,12 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .io.LanguageCode languageOverrides = 7;</code>
      */
     private $languageOverrides;
+    /**
+     * Specifies if the pass holder can take a screenshot of the pass.
+     *
+     * Generated from protobuf field <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
+     */
+    protected $screenshotEligibility = 0;
 
     /**
      * Constructor.
@@ -79,6 +85,8 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      *           Override template background color
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $languageOverrides
      *           The pass localisation will be restricted to languages in this list. Currently only available to Boarding Passes and restricted to a single language. Google are working on supporting multiple overrides and we will update this documentation once multiple languages are available.
+     *     @type int $screenshotEligibility
+     *           Specifies if the pass holder can take a screenshot of the pass.
      * }
      */
     public function __construct($data = NULL) {
@@ -294,6 +302,32 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Io\LanguageCode::class);
         $this->languageOverrides = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Specifies if the pass holder can take a screenshot of the pass.
+     *
+     * Generated from protobuf field <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
+     * @return int
+     */
+    public function getScreenshotEligibility()
+    {
+        return $this->screenshotEligibility;
+    }
+
+    /**
+     * Specifies if the pass holder can take a screenshot of the pass.
+     *
+     * Generated from protobuf field <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setScreenshotEligibility($var)
+    {
+        GPBUtil::checkEnum($var, \Io\ScreenshotEligibility::class);
+        $this->screenshotEligibility = $var;
 
         return $this;
     }

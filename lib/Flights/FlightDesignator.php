@@ -796,7 +796,9 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      */
     public function getAutoInvalidateCancelledPasses()
     {
-        @trigger_error('autoInvalidateCancelledPasses is deprecated.', E_USER_DEPRECATED);
+        if ($this->autoInvalidateCancelledPasses !== false) {
+            @trigger_error('autoInvalidateCancelledPasses is deprecated.', E_USER_DEPRECATED);
+        }
         return $this->autoInvalidateCancelledPasses;
     }
 

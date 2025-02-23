@@ -58,6 +58,10 @@ class GetUserResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint64 userPermissions = 10;</code>
      */
     protected $userPermissions = 0;
+    /**
+     * Generated from protobuf field <code>string userId = 11;</code>
+     */
+    protected $userId = '';
 
     /**
      * Constructor.
@@ -76,6 +80,7 @@ class GetUserResponse extends \Google\Protobuf\Internal\Message
      *     @type string $regionId
      *     @type int|string $userStatus
      *     @type int|string $userPermissions
+     *     @type string $userId
      * }
      */
     public function __construct($data = NULL) {
@@ -323,6 +328,28 @@ class GetUserResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint64($var);
         $this->userPermissions = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string userId = 11;</code>
+     * @return string
+     */
+    public function getUserId()
+    {
+        return $this->userId;
+    }
+
+    /**
+     * Generated from protobuf field <code>string userId = 11;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setUserId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->userId = $var;
 
         return $this;
     }
