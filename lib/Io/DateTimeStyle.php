@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum for styling date and time values.
+ *
  * Protobuf type <code>io.DateTimeStyle</code>
  */
 class DateTimeStyle
@@ -17,18 +19,26 @@ class DateTimeStyle
      */
     const DATE_TIME_STYLE_DO_NOT_USE = 0;
     /**
+     * Display date/time in short format (e.g., 1/1/22).
+     *
      * Generated from protobuf enum <code>DATE_TIME_STYLE_SHORT = 1;</code>
      */
     const DATE_TIME_STYLE_SHORT = 1;
     /**
+     * Medium format (e.g., Jan 1, 2022).
+     *
      * Generated from protobuf enum <code>DATE_TIME_STYLE_MEDIUM = 2;</code>
      */
     const DATE_TIME_STYLE_MEDIUM = 2;
     /**
+     * Long format (e.g., January 1, 2022).
+     *
      * Generated from protobuf enum <code>DATE_TIME_STYLE_LONG = 3;</code>
      */
     const DATE_TIME_STYLE_LONG = 3;
     /**
+     * Full format (e.g., Saturday, January 1, 2022).
+     *
      * Generated from protobuf enum <code>DATE_TIME_STYLE_FULL = 4;</code>
      */
     const DATE_TIME_STYLE_FULL = 4;

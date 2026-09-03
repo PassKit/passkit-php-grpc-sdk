@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Describes a seat's location, category, and venue mapping. Optional fields support localization and additional entrance/admission details. Required fields: none.
+ *
  * Generated from protobuf message <code>event_tickets.Seat</code>
  */
 class Seat extends \Google\Protobuf\Internal\Message

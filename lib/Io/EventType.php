@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enumerates supported event types.
+ *
  * Protobuf type <code>io.EventType</code>
  */
 class EventType

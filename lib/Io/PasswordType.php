@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum defining how passwords are handled.
+ *
  * Protobuf type <code>io.PasswordType</code>
  */
 class PasswordType
@@ -17,10 +19,14 @@ class PasswordType
      */
     const PASSWORD_TYPE_DO_NOT_USE = 0;
     /**
+     * No password required.
+     *
      * Generated from protobuf enum <code>PASSWORD_TYPE_NO_PASSWORD = 1;</code>
      */
     const PASSWORD_TYPE_NO_PASSWORD = 1;
     /**
+     * Password only login.
+     *
      * Generated from protobuf enum <code>PASSWORD_TYPE_PASSWORD_ONLY = 2;</code>
      */
     const PASSWORD_TYPE_PASSWORD_ONLY = 2;

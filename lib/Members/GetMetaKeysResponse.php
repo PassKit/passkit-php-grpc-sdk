@@ -6,10 +6,12 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Response containing a list of distinct metadata keys used across members.
+ *
  * Generated from protobuf message <code>members.GetMetaKeysResponse</code>
  */
 class GetMetaKeysResponse extends \Google\Protobuf\Internal\Message
@@ -27,7 +29,7 @@ class GetMetaKeysResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $keys
+     *     @type string[] $keys
      *           An array of distinct meta keys.
      * }
      */
@@ -40,7 +42,7 @@ class GetMetaKeysResponse extends \Google\Protobuf\Internal\Message
      * An array of distinct meta keys.
      *
      * Generated from protobuf field <code>repeated string keys = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getKeys()
     {
@@ -51,7 +53,7 @@ class GetMetaKeysResponse extends \Google\Protobuf\Internal\Message
      * An array of distinct meta keys.
      *
      * Generated from protobuf field <code>repeated string keys = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setKeys($var)

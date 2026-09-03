@@ -6,8 +6,8 @@
 namespace Flights;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Used to request digital boarding pass(es) by booking number. Either a journey leg or boarding point is required.

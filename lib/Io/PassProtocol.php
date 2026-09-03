@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum representing different protocols supported.
+ *
  * Protobuf type <code>io.PassProtocol</code>
  */
 class PassProtocol

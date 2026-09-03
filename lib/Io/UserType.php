@@ -8,19 +8,27 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * UserType describes the category of the user who made the request.
+ *
  * Protobuf type <code>io.UserType</code>
  */
 class UserType
 {
     /**
+     * Unknown or unspecified user type.
+     *
      * Generated from protobuf enum <code>UnknownUserType = 0;</code>
      */
     const UnknownUserType = 0;
     /**
+     * Regular user.
+     *
      * Generated from protobuf enum <code>User = 1;</code>
      */
     const User = 1;
     /**
+     * Team member with assigned roles and permissions.
+     *
      * Generated from protobuf enum <code>TeamMember = 2;</code>
      */
     const TeamMember = 2;

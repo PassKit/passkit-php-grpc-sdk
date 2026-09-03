@@ -8,24 +8,32 @@ namespace Members;
 use UnexpectedValueException;
 
 /**
+ * Defines whether a member profile image is required or optional during enrollment.
+ *
  * Protobuf type <code>members.ProfileImageSetting</code>
  */
 class ProfileImageSetting
 {
     /**
+     * No profile image is required or allowed.
+     *
      * Generated from protobuf enum <code>PROFILE_IMAGE_NONE = 0;</code>
      */
     const PROFILE_IMAGE_NONE = 0;
     /**
+     * Uploading a profile image is optional during enrollment.
+     *
      * Generated from protobuf enum <code>PROFILE_IMAGE_OPTIONAL = 1;</code>
      */
     const PROFILE_IMAGE_OPTIONAL = 1;
     /**
+     * A profile image must be uploaded during enrollment.
+     *
      * Generated from protobuf enum <code>PROFILE_IMAGE_REQUIRED = 2;</code>
      */
     const PROFILE_IMAGE_REQUIRED = 2;
     /**
-     * option to restict the profile image upload from the data collection page.
+     * Restricts uploading a profile image only from the internal data collection page (not public enrollment).
      *
      * Generated from protobuf enum <code>PROFILE_IMAGE_RESTRICTED = 3;</code>
      */

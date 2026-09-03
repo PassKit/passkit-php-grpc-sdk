@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a note associated with an api call.
+ *
  * Generated from protobuf message <code>io.Note</code>
  */
 class Note extends \Google\Protobuf\Internal\Message

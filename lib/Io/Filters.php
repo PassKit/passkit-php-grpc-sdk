@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Filters applies multiple filter conditions to retrieve matched records.
+ *
  * Generated from protobuf message <code>io.Filters</code>
  */
 class Filters extends \Google\Protobuf\Internal\Message
@@ -53,7 +55,7 @@ class Filters extends \Google\Protobuf\Internal\Message
      *           Limit the number of records returned. If not specified, a default of 25 is used.  Enter -1 for all records.
      *     @type int $offset
      *           Allows you to offset the first record returned by the limit.
-     *     @type array<\Io\FilterGroup>|\Google\Protobuf\Internal\RepeatedField $filterGroups
+     *     @type \Io\FilterGroup[] $filterGroups
      *     @type string $orderBy
      *           Field to order results by.
      *     @type bool $orderAsc
@@ -119,7 +121,7 @@ class Filters extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.FilterGroup filterGroups = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\FilterGroup>
      */
     public function getFilterGroups()
     {
@@ -128,7 +130,7 @@ class Filters extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.FilterGroup filterGroups = 3;</code>
-     * @param array<\Io\FilterGroup>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\FilterGroup[] $var
      * @return $this
      */
     public function setFilterGroups($var)

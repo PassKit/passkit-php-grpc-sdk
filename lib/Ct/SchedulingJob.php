@@ -6,8 +6,8 @@
 namespace Ct;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>ct.SchedulingJob</code>
@@ -123,7 +123,7 @@ class SchedulingJob extends \Google\Protobuf\Internal\Message
      *           Next scheduled run datetime. Read only.
      *     @type \Google\Protobuf\Timestamp $lastRunDatetime
      *           The datetime when the job was executed last time. Read only.
-     *     @type array<\Ct\JobHistory>|\Google\Protobuf\Internal\RepeatedField $logs
+     *     @type \Ct\JobHistory[] $logs
      *           5 latest logs of executed jobs. Read only.
      *     @type \Google\Protobuf\Timestamp $created
      *           Datetime the job was created. Read only.
@@ -412,7 +412,7 @@ class SchedulingJob extends \Google\Protobuf\Internal\Message
      * 5 latest logs of executed jobs. Read only.
      *
      * Generated from protobuf field <code>repeated .ct.JobHistory logs = 10;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Ct\JobHistory>
      */
     public function getLogs()
     {
@@ -423,7 +423,7 @@ class SchedulingJob extends \Google\Protobuf\Internal\Message
      * 5 latest logs of executed jobs. Read only.
      *
      * Generated from protobuf field <code>repeated .ct.JobHistory logs = 10;</code>
-     * @param array<\Ct\JobHistory>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Ct\JobHistory[] $var
      * @return $this
      */
     public function setLogs($var)

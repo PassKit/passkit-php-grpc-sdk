@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Combined response of a project and its associated pass template when fetched by short code.
+ *
  * Generated from protobuf message <code>io.ProjectByShortCodeResult</code>
  */
 class ProjectByShortCodeResult extends \Google\Protobuf\Internal\Message

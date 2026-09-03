@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Top-level input message used to initiate a dynamic API request to a third-party platform.
+ *
  * Generated from protobuf message <code>io.DynamicApiInput</code>
  */
 class DynamicApiInput extends \Google\Protobuf\Internal\Message

@@ -6,11 +6,11 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Pass settings only for Google Pay.
+ * Pass settings only for Google Wallet.
  *
  * Generated from protobuf message <code>io.GooglePaySettings</code>
  */
@@ -64,6 +64,12 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
      */
     protected $screenshotEligibility = 0;
+    /**
+     * Allows for merchant locations messages to be shown to pass holders.
+     *
+     * Generated from protobuf field <code>bool EnableMerchantLocations = 9;</code>
+     */
+    protected $EnableMerchantLocations = false;
 
     /**
      * Constructor.
@@ -83,10 +89,12 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      *           Custom template (takes a JSON ClassTemplateInfo object https://developers.google.com/pay/passes/rest/v1/ClassTemplateInfo)
      *     @type string $backgroundColor
      *           Override template background color
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $languageOverrides
+     *     @type int[] $languageOverrides
      *           The pass localisation will be restricted to languages in this list. Currently only available to Boarding Passes and restricted to a single language. Google are working on supporting multiple overrides and we will update this documentation once multiple languages are available.
      *     @type int $screenshotEligibility
      *           Specifies if the pass holder can take a screenshot of the pass.
+     *     @type bool $EnableMerchantLocations
+     *           Allows for merchant locations messages to be shown to pass holders.
      * }
      */
     public function __construct($data = NULL) {
@@ -284,7 +292,7 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      * The pass localisation will be restricted to languages in this list. Currently only available to Boarding Passes and restricted to a single language. Google are working on supporting multiple overrides and we will update this documentation once multiple languages are available.
      *
      * Generated from protobuf field <code>repeated .io.LanguageCode languageOverrides = 7;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getLanguageOverrides()
     {
@@ -295,7 +303,7 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
      * The pass localisation will be restricted to languages in this list. Currently only available to Boarding Passes and restricted to a single language. Google are working on supporting multiple overrides and we will update this documentation once multiple languages are available.
      *
      * Generated from protobuf field <code>repeated .io.LanguageCode languageOverrides = 7;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setLanguageOverrides($var)
@@ -328,6 +336,32 @@ class GooglePaySettings extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Io\ScreenshotEligibility::class);
         $this->screenshotEligibility = $var;
+
+        return $this;
+    }
+
+    /**
+     * Allows for merchant locations messages to be shown to pass holders.
+     *
+     * Generated from protobuf field <code>bool EnableMerchantLocations = 9;</code>
+     * @return bool
+     */
+    public function getEnableMerchantLocations()
+    {
+        return $this->EnableMerchantLocations;
+    }
+
+    /**
+     * Allows for merchant locations messages to be shown to pass holders.
+     *
+     * Generated from protobuf field <code>bool EnableMerchantLocations = 9;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setEnableMerchantLocations($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->EnableMerchantLocations = $var;
 
         return $this;
     }

@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Response that contains an array of ticket summary entries. Required fields: none.
+ *
  * Generated from protobuf message <code>event_tickets.Tickets</code>
  */
 class Tickets extends \Google\Protobuf\Internal\Message
@@ -25,7 +27,7 @@ class Tickets extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Event_tickets\TicketLimitedFields>|\Google\Protobuf\Internal\RepeatedField $tickets
+     *     @type \Event_tickets\TicketLimitedFields[] $tickets
      * }
      */
     public function __construct($data = NULL) {
@@ -35,7 +37,7 @@ class Tickets extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .event_tickets.TicketLimitedFields tickets = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Event_tickets\TicketLimitedFields>
      */
     public function getTickets()
     {
@@ -44,7 +46,7 @@ class Tickets extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .event_tickets.TicketLimitedFields tickets = 1;</code>
-     * @param array<\Event_tickets\TicketLimitedFields>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Event_tickets\TicketLimitedFields[] $var
      * @return $this
      */
     public function setTickets($var)

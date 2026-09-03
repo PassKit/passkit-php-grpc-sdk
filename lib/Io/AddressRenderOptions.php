@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Customization options for rendering address input fields on data collection forms.
+ *
  * Generated from protobuf message <code>io.AddressRenderOptions</code>
  */
 class AddressRenderOptions extends \Google\Protobuf\Internal\Message

@@ -6,8 +6,8 @@
 namespace Flights;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A carrier record contains details of the carrier.  The carrier will be the issuer of the boarding pass and may be used as a marketing or operating carrier.
@@ -35,7 +35,7 @@ class Carrier extends \Google\Protobuf\Internal\Message
      */
     protected $iataAccountingCode = 0;
     /**
-     * The name of the airline. This will be printed below the logo on the Google Pay pass.
+     * The name of the airline. This is printed below the logo on the Google Wallet pass.
      *
      * Generated from protobuf field <code>string airlineName = 4;</code>
      */
@@ -72,7 +72,7 @@ class Carrier extends \Google\Protobuf\Internal\Message
      *     @type int $iataAccountingCode
      *           The IATA accounting code / AWB prefix.  If no code has been allocated, enter zero.
      *     @type string $airlineName
-     *           The name of the airline. This will be printed below the logo on the Google Pay pass.
+     *           The name of the airline. This is printed below the logo on the Google Wallet pass.
      *     @type \Io\LocalizedString $localizedAirlineName
      *           The localized airline name, if applicable.
      *     @type string $passTypeIdentifier
@@ -165,7 +165,7 @@ class Carrier extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The name of the airline. This will be printed below the logo on the Google Pay pass.
+     * The name of the airline. This is printed below the logo on the Google Wallet pass.
      *
      * Generated from protobuf field <code>string airlineName = 4;</code>
      * @return string
@@ -176,7 +176,7 @@ class Carrier extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The name of the airline. This will be printed below the logo on the Google Pay pass.
+     * The name of the airline. This is printed below the logo on the Google Wallet pass.
      *
      * Generated from protobuf field <code>string airlineName = 4;</code>
      * @param string $var

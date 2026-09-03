@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Some point based loyalty programs will pass on transaction information (can be used for segmenting, additional reporting, and/or showing transactions on back of the pass).
@@ -111,11 +111,11 @@ class Transaction extends \Google\Protobuf\Internal\Message
      *           Reference ID is the ID used in the system where the transaction is coming from. Needs to be unique within the program.
      *     @type float $totalPrice
      *           The total amount of all order items. Based on POS setting, the totalPrice can already include the tax amount
-     *     @type array<\Io\OrderItem>|\Google\Protobuf\Internal\RepeatedField $orderItems
+     *     @type \Io\OrderItem[] $orderItems
      *           List of order items in the  transaction
      *     @type float $discount
      *           The total discount amount
-     *     @type array<\Io\DiscountItem>|\Google\Protobuf\Internal\RepeatedField $discountItems
+     *     @type \Io\DiscountItem[] $discountItems
      *           List of discount items
      *     @type float $serviceCharge
      *           The service charge amount
@@ -198,7 +198,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * List of order items in the  transaction
      *
      * Generated from protobuf field <code>repeated .io.OrderItem orderItems = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\OrderItem>
      */
     public function getOrderItems()
     {
@@ -209,7 +209,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * List of order items in the  transaction
      *
      * Generated from protobuf field <code>repeated .io.OrderItem orderItems = 3;</code>
-     * @param array<\Io\OrderItem>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\OrderItem[] $var
      * @return $this
      */
     public function setOrderItems($var)
@@ -250,7 +250,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * List of discount items
      *
      * Generated from protobuf field <code>repeated .io.DiscountItem discountItems = 5;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\DiscountItem>
      */
     public function getDiscountItems()
     {
@@ -261,7 +261,7 @@ class Transaction extends \Google\Protobuf\Internal\Message
      * List of discount items
      *
      * Generated from protobuf field <code>repeated .io.DiscountItem discountItems = 5;</code>
-     * @param array<\Io\DiscountItem>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\DiscountItem[] $var
      * @return $this
      */
     public function setDiscountItems($var)

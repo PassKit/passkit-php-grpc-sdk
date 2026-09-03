@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to retrieve a single event based on production, venue, and start time. Required fields: productionId or productionUid, venueId or venueUid, scheduledStartDate.
+ *
  * Generated from protobuf message <code>event_tickets.GetEventRequest</code>
  */
 class GetEventRequest extends \Google\Protobuf\Internal\Message

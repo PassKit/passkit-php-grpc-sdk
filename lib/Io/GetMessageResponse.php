@@ -6,39 +6,55 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Response containing metadata for a single message.
+ *
  * Generated from protobuf message <code>io.GetMessageResponse</code>
  */
 class GetMessageResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The full message object including content, title, timing, etc.
+     *
      * Generated from protobuf field <code>.io.Message message = 1;</code>
      */
     protected $message = null;
     /**
+     * Current status of the message (e.g. ACTIVE, EXPIRED).
+     *
      * Generated from protobuf field <code>.io.MessageStatus status = 2;</code>
      */
     protected $status = 0;
     /**
+     * Number of recipients the message was delivered to.
+     *
      * Generated from protobuf field <code>uint32 recipients = 3;</code>
      */
     protected $recipients = 0;
     /**
+     * Timestamp when the message was distributed (sent).
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp distributedAt = 4;</code>
      */
     protected $distributedAt = null;
     /**
+     * Timestamp when the message was withdrawn (no longer displayed).
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
      */
     protected $withdrawnAt = null;
     /**
+     * Timestamp when the message was created.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 6;</code>
      */
     protected $createdAt = null;
     /**
+     * Timestamp when the message was last updated.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 7;</code>
      */
     protected $updatedAt = null;
@@ -50,12 +66,19 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Io\Message $message
+     *           The full message object including content, title, timing, etc.
      *     @type int $status
+     *           Current status of the message (e.g. ACTIVE, EXPIRED).
      *     @type int $recipients
+     *           Number of recipients the message was delivered to.
      *     @type \Google\Protobuf\Timestamp $distributedAt
+     *           Timestamp when the message was distributed (sent).
      *     @type \Google\Protobuf\Timestamp $withdrawnAt
+     *           Timestamp when the message was withdrawn (no longer displayed).
      *     @type \Google\Protobuf\Timestamp $createdAt
+     *           Timestamp when the message was created.
      *     @type \Google\Protobuf\Timestamp $updatedAt
+     *           Timestamp when the message was last updated.
      * }
      */
     public function __construct($data = NULL) {
@@ -64,6 +87,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The full message object including content, title, timing, etc.
+     *
      * Generated from protobuf field <code>.io.Message message = 1;</code>
      * @return \Io\Message|null
      */
@@ -83,6 +108,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The full message object including content, title, timing, etc.
+     *
      * Generated from protobuf field <code>.io.Message message = 1;</code>
      * @param \Io\Message $var
      * @return $this
@@ -96,6 +123,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Current status of the message (e.g. ACTIVE, EXPIRED).
+     *
      * Generated from protobuf field <code>.io.MessageStatus status = 2;</code>
      * @return int
      */
@@ -105,6 +134,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Current status of the message (e.g. ACTIVE, EXPIRED).
+     *
      * Generated from protobuf field <code>.io.MessageStatus status = 2;</code>
      * @param int $var
      * @return $this
@@ -118,6 +149,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Number of recipients the message was delivered to.
+     *
      * Generated from protobuf field <code>uint32 recipients = 3;</code>
      * @return int
      */
@@ -127,6 +160,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Number of recipients the message was delivered to.
+     *
      * Generated from protobuf field <code>uint32 recipients = 3;</code>
      * @param int $var
      * @return $this
@@ -140,6 +175,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp when the message was distributed (sent).
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp distributedAt = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -159,6 +196,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp when the message was distributed (sent).
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp distributedAt = 4;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
@@ -172,6 +211,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp when the message was withdrawn (no longer displayed).
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -191,6 +232,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp when the message was withdrawn (no longer displayed).
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
@@ -204,6 +247,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp when the message was created.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 6;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -223,6 +268,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp when the message was created.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 6;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
@@ -236,6 +283,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp when the message was last updated.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 7;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -255,6 +304,8 @@ class GetMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp when the message was last updated.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 7;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this

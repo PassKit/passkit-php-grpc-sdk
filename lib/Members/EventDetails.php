@@ -6,72 +6,72 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Details on the event. These info will be stored in Member Event.
+ * Additional details about a member event. These fields will be stored in the Member Event record.
  *
  * Generated from protobuf message <code>members.EventDetails</code>
  */
 class EventDetails extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Address the event took place.
+     * Address where the event occurred.
      *
      * Generated from protobuf field <code>string address = 1;</code>
      */
     protected $address = '';
     /**
-     * Latitude the event took place.
+     * Latitude where the event occurred.
      *
      * Generated from protobuf field <code>double lat = 2;</code>
      */
     protected $lat = 0.0;
     /**
-     * Longitude the event took place.
+     * Longitude where the event occurred.
      *
      * Generated from protobuf field <code>double lon = 3;</code>
      */
     protected $lon = 0.0;
     /**
-     * Altitude the event took place (in metres).
+     * Altitude where the event occurred, in meters.
      *
      * Generated from protobuf field <code>int32 alt = 4;</code>
      */
     protected $alt = 0;
     /**
-     * External unique ID of the event.
+     * External unique ID associated with the event.
      *
      * Generated from protobuf field <code>string externalEventId = 5;</code>
      */
     protected $externalEventId = '';
     /**
-     * External device ID of the device that was used to capture the event (for example when using an external scanning app).
+     * External device ID of the device used to capture the event (e.g., from an external scanning app).
      *
      * Generated from protobuf field <code>string externalDeviceId = 6;</code>
      */
     protected $externalDeviceId = '';
     /**
-     * External service ID of the service that was used for capturing the event (for example when using an external scanning app).
+     * External service ID of the service used to capture the event (e.g., an external scanning platform).
      *
      * Generated from protobuf field <code>string externalServiceId = 7;</code>
      */
     protected $externalServiceId = '';
     /**
-     * Any meta data (for example gathered on scanning) that is relevant to the event (# of points earner, bill spent, device meta-data, etc).
+     * Additional metadata related to the event (e.g., points earned, bill amount, device information).
      *
      * Generated from protobuf field <code>map<string, string> metaData = 8;</code>
      */
     private $metaData;
     /**
-     * Any relevant notes for the event.
+     * Any additional notes related to the event.
      *
      * Generated from protobuf field <code>string notes = 9;</code>
      */
     protected $notes = '';
     /**
-     * External user ID of the logged in user that captured the event (for example when using an external scanning app).
+     * External user ID of the logged-in user who captured the event (e.g., via an external app).
      *
      * Generated from protobuf field <code>string externalUserId = 10;</code>
      */
@@ -84,25 +84,25 @@ class EventDetails extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $address
-     *           Address the event took place.
+     *           Address where the event occurred.
      *     @type float $lat
-     *           Latitude the event took place.
+     *           Latitude where the event occurred.
      *     @type float $lon
-     *           Longitude the event took place.
+     *           Longitude where the event occurred.
      *     @type int $alt
-     *           Altitude the event took place (in metres).
+     *           Altitude where the event occurred, in meters.
      *     @type string $externalEventId
-     *           External unique ID of the event.
+     *           External unique ID associated with the event.
      *     @type string $externalDeviceId
-     *           External device ID of the device that was used to capture the event (for example when using an external scanning app).
+     *           External device ID of the device used to capture the event (e.g., from an external scanning app).
      *     @type string $externalServiceId
-     *           External service ID of the service that was used for capturing the event (for example when using an external scanning app).
+     *           External service ID of the service used to capture the event (e.g., an external scanning platform).
      *     @type array|\Google\Protobuf\Internal\MapField $metaData
-     *           Any meta data (for example gathered on scanning) that is relevant to the event (# of points earner, bill spent, device meta-data, etc).
+     *           Additional metadata related to the event (e.g., points earned, bill amount, device information).
      *     @type string $notes
-     *           Any relevant notes for the event.
+     *           Any additional notes related to the event.
      *     @type string $externalUserId
-     *           External user ID of the logged in user that captured the event (for example when using an external scanning app).
+     *           External user ID of the logged-in user who captured the event (e.g., via an external app).
      * }
      */
     public function __construct($data = NULL) {
@@ -111,7 +111,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Address the event took place.
+     * Address where the event occurred.
      *
      * Generated from protobuf field <code>string address = 1;</code>
      * @return string
@@ -122,7 +122,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Address the event took place.
+     * Address where the event occurred.
      *
      * Generated from protobuf field <code>string address = 1;</code>
      * @param string $var
@@ -137,7 +137,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Latitude the event took place.
+     * Latitude where the event occurred.
      *
      * Generated from protobuf field <code>double lat = 2;</code>
      * @return float
@@ -148,7 +148,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Latitude the event took place.
+     * Latitude where the event occurred.
      *
      * Generated from protobuf field <code>double lat = 2;</code>
      * @param float $var
@@ -163,7 +163,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Longitude the event took place.
+     * Longitude where the event occurred.
      *
      * Generated from protobuf field <code>double lon = 3;</code>
      * @return float
@@ -174,7 +174,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Longitude the event took place.
+     * Longitude where the event occurred.
      *
      * Generated from protobuf field <code>double lon = 3;</code>
      * @param float $var
@@ -189,7 +189,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Altitude the event took place (in metres).
+     * Altitude where the event occurred, in meters.
      *
      * Generated from protobuf field <code>int32 alt = 4;</code>
      * @return int
@@ -200,7 +200,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Altitude the event took place (in metres).
+     * Altitude where the event occurred, in meters.
      *
      * Generated from protobuf field <code>int32 alt = 4;</code>
      * @param int $var
@@ -215,7 +215,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * External unique ID of the event.
+     * External unique ID associated with the event.
      *
      * Generated from protobuf field <code>string externalEventId = 5;</code>
      * @return string
@@ -226,7 +226,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * External unique ID of the event.
+     * External unique ID associated with the event.
      *
      * Generated from protobuf field <code>string externalEventId = 5;</code>
      * @param string $var
@@ -241,7 +241,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * External device ID of the device that was used to capture the event (for example when using an external scanning app).
+     * External device ID of the device used to capture the event (e.g., from an external scanning app).
      *
      * Generated from protobuf field <code>string externalDeviceId = 6;</code>
      * @return string
@@ -252,7 +252,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * External device ID of the device that was used to capture the event (for example when using an external scanning app).
+     * External device ID of the device used to capture the event (e.g., from an external scanning app).
      *
      * Generated from protobuf field <code>string externalDeviceId = 6;</code>
      * @param string $var
@@ -267,7 +267,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * External service ID of the service that was used for capturing the event (for example when using an external scanning app).
+     * External service ID of the service used to capture the event (e.g., an external scanning platform).
      *
      * Generated from protobuf field <code>string externalServiceId = 7;</code>
      * @return string
@@ -278,7 +278,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * External service ID of the service that was used for capturing the event (for example when using an external scanning app).
+     * External service ID of the service used to capture the event (e.g., an external scanning platform).
      *
      * Generated from protobuf field <code>string externalServiceId = 7;</code>
      * @param string $var
@@ -293,7 +293,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Any meta data (for example gathered on scanning) that is relevant to the event (# of points earner, bill spent, device meta-data, etc).
+     * Additional metadata related to the event (e.g., points earned, bill amount, device information).
      *
      * Generated from protobuf field <code>map<string, string> metaData = 8;</code>
      * @return \Google\Protobuf\Internal\MapField
@@ -304,7 +304,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Any meta data (for example gathered on scanning) that is relevant to the event (# of points earner, bill spent, device meta-data, etc).
+     * Additional metadata related to the event (e.g., points earned, bill amount, device information).
      *
      * Generated from protobuf field <code>map<string, string> metaData = 8;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
@@ -319,7 +319,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Any relevant notes for the event.
+     * Any additional notes related to the event.
      *
      * Generated from protobuf field <code>string notes = 9;</code>
      * @return string
@@ -330,7 +330,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Any relevant notes for the event.
+     * Any additional notes related to the event.
      *
      * Generated from protobuf field <code>string notes = 9;</code>
      * @param string $var
@@ -345,7 +345,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * External user ID of the logged in user that captured the event (for example when using an external scanning app).
+     * External user ID of the logged-in user who captured the event (e.g., via an external app).
      *
      * Generated from protobuf field <code>string externalUserId = 10;</code>
      * @return string
@@ -356,7 +356,7 @@ class EventDetails extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * External user ID of the logged in user that captured the event (for example when using an external scanning app).
+     * External user ID of the logged-in user who captured the event (e.g., via an external app).
      *
      * Generated from protobuf field <code>string externalUserId = 10;</code>
      * @param string $var

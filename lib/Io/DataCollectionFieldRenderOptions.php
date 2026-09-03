@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Customise how data field is rendered on the data collection landing page.
@@ -82,6 +82,12 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string localizedDayPlaceholder = 12;</code>
      */
     protected $localizedDayPlaceholder = '';
+    /**
+     * Allows for a separate data type for the data collection page. If not provided, the main field data type will be used. 
+     *
+     * Generated from protobuf field <code>.io.DataType collectionDataType = 13;</code>
+     */
+    protected $collectionDataType = 0;
 
     /**
      * Constructor.
@@ -97,7 +103,7 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      *           Used to change the order of fields displayed on the data collection landing page.
      *     @type string $placeholder
      *           If placeholder is set or elementText is not set, then an input element will be rendered. The default is placeholder is an empty string.
-     *     @type array<\Io\SelectOption>|\Google\Protobuf\Internal\RepeatedField $selectOptions
+     *     @type \Io\SelectOption[] $selectOptions
      *           If DataType.OPTIONS is set, then drop-down list will be rendered.
      *     @type \Io\LocalizedString $localizedPlaceholder
      *           Placeholder in localized language.
@@ -111,6 +117,8 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      *           Localized text rendered on month select placeholder of DATE_YYYYMM and DATE_MMDD.
      *     @type string $localizedDayPlaceholder
      *           Localized text rendered on day select placeholder of DATE_MMDD.
+     *     @type int $collectionDataType
+     *           Allows for a separate data type for the data collection page. If not provided, the main field data type will be used. 
      * }
      */
     public function __construct($data = NULL) {
@@ -236,7 +244,7 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      * If DataType.OPTIONS is set, then drop-down list will be rendered.
      *
      * Generated from protobuf field <code>repeated .io.SelectOption selectOptions = 6;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\SelectOption>
      */
     public function getSelectOptions()
     {
@@ -247,7 +255,7 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
      * If DataType.OPTIONS is set, then drop-down list will be rendered.
      *
      * Generated from protobuf field <code>repeated .io.SelectOption selectOptions = 6;</code>
-     * @param array<\Io\SelectOption>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\SelectOption[] $var
      * @return $this
      */
     public function setSelectOptions($var)
@@ -430,6 +438,32 @@ class DataCollectionFieldRenderOptions extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->localizedDayPlaceholder = $var;
+
+        return $this;
+    }
+
+    /**
+     * Allows for a separate data type for the data collection page. If not provided, the main field data type will be used. 
+     *
+     * Generated from protobuf field <code>.io.DataType collectionDataType = 13;</code>
+     * @return int
+     */
+    public function getCollectionDataType()
+    {
+        return $this->collectionDataType;
+    }
+
+    /**
+     * Allows for a separate data type for the data collection page. If not provided, the main field data type will be used. 
+     *
+     * Generated from protobuf field <code>.io.DataType collectionDataType = 13;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setCollectionDataType($var)
+    {
+        GPBUtil::checkEnum($var, \Io\DataType::class);
+        $this->collectionDataType = $var;
 
         return $this;
     }

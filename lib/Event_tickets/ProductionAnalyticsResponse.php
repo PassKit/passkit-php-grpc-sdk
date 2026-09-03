@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Contains analytics data for a specific Production, including redemption counts, device breakdown, and distribution sources. Useful for reporting and tracking performance over time. Required fields: none.
+ *
  * Generated from protobuf message <code>event_tickets.ProductionAnalyticsResponse</code>
  */
 class ProductionAnalyticsResponse extends \Google\Protobuf\Internal\Message
@@ -59,7 +61,7 @@ class ProductionAnalyticsResponse extends \Google\Protobuf\Internal\Message
      *           Total number of pass redeemed for each device type.
      *     @type array|\Google\Protobuf\Internal\MapField $sources
      *           Total number of pass redeemed for each distribution source.
-     *     @type array<\Io\ChartDataPoints>|\Google\Protobuf\Internal\RepeatedField $data
+     *     @type \Io\ChartDataPoints[] $data
      *           Breakdown of data by day, month or year.
      * }
      */
@@ -186,7 +188,7 @@ class ProductionAnalyticsResponse extends \Google\Protobuf\Internal\Message
      * Breakdown of data by day, month or year.
      *
      * Generated from protobuf field <code>repeated .io.ChartDataPoints data = 5;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\ChartDataPoints>
      */
     public function getData()
     {
@@ -197,7 +199,7 @@ class ProductionAnalyticsResponse extends \Google\Protobuf\Internal\Message
      * Breakdown of data by day, month or year.
      *
      * Generated from protobuf field <code>repeated .io.ChartDataPoints data = 5;</code>
-     * @param array<\Io\ChartDataPoints>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\ChartDataPoints[] $var
      * @return $this
      */
     public function setData($var)

@@ -6,11 +6,11 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * The Program Details
+ * Program configuration for managing a membership program’s rules, statuses, and options.
  *
  * Generated from protobuf message <code>members.Program</code>
  */
@@ -149,7 +149,7 @@ class Program extends \Google\Protobuf\Internal\Message
      *           Name of the membership programs; will be shown on the enrolment page (if set) and issuer name.
      *     @type \Io\LocalizedString $localizedName
      *           Localized name of the membership program.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $status
+     *     @type int[] $status
      *           The program status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *     @type \Io\Quota $quota
      *           The project quota.
@@ -169,7 +169,7 @@ class Program extends \Google\Protobuf\Internal\Message
      *           Points format for secondary points.
      *     @type \Io\Metrics $metrics
      *           Issued, installed, uninstalled and invalidated counts. Metrics are not writable.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $metaFieldsList
+     *     @type string[] $metaFieldsList
      *           A list of dynamic fields which can be used to filter members.
      *     @type \Google\Protobuf\Timestamp $created
      *           The date the program was created.
@@ -282,7 +282,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * The program status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 4;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getStatus()
     {
@@ -293,7 +293,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * The program status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 4;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setStatus($var)
@@ -602,7 +602,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * A list of dynamic fields which can be used to filter members.
      *
      * Generated from protobuf field <code>repeated string metaFieldsList = 20;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getMetaFieldsList()
     {
@@ -613,7 +613,7 @@ class Program extends \Google\Protobuf\Internal\Message
      * A list of dynamic fields which can be used to filter members.
      *
      * Generated from protobuf field <code>repeated string metaFieldsList = 20;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setMetaFieldsList($var)

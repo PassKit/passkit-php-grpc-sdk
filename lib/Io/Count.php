@@ -6,16 +6,18 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a numeric count of items or results.
+ *
  * Generated from protobuf message <code>io.Count</code>
  */
 class Count extends \Google\Protobuf\Internal\Message
 {
     /**
-     * set as int32 so JSON renders as an integer
+     * Set as int32 so JSON renders as an integer.
      *
      * Generated from protobuf field <code>int32 total = 1;</code>
      */
@@ -28,7 +30,7 @@ class Count extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $total
-     *           set as int32 so JSON renders as an integer
+     *           Set as int32 so JSON renders as an integer.
      * }
      */
     public function __construct($data = NULL) {
@@ -37,7 +39,7 @@ class Count extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * set as int32 so JSON renders as an integer
+     * Set as int32 so JSON renders as an integer.
      *
      * Generated from protobuf field <code>int32 total = 1;</code>
      * @return int
@@ -48,7 +50,7 @@ class Count extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * set as int32 so JSON renders as an integer
+     * Set as int32 so JSON renders as an integer.
      *
      * Generated from protobuf field <code>int32 total = 1;</code>
      * @param int $var

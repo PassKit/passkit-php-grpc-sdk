@@ -8,11 +8,15 @@ namespace Single_use_coupons;
 use UnexpectedValueException;
 
 /**
+ * Enum defining the type of expiry logic applied to issued coupons.
+ *
  * Protobuf type <code>single_use_coupons.CouponExpiryType</code>
  */
 class CouponExpiryType
 {
     /**
+     * Do not use
+     *
      * Generated from protobuf enum <code>EXPIRY_DO_NOT_USE = 0;</code>
      */
     const EXPIRY_DO_NOT_USE = 0;

@@ -6,15 +6,19 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Filter object for coupon analytics.
+ *
  * Generated from protobuf message <code>io.CouponAnalyticsFilter</code>
  */
 class CouponAnalyticsFilter extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The offer ID to filter analytics by.
+     *
      * Generated from protobuf field <code>string offerId = 1;</code>
      */
     protected $offerId = '';
@@ -26,6 +30,7 @@ class CouponAnalyticsFilter extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $offerId
+     *           The offer ID to filter analytics by.
      * }
      */
     public function __construct($data = NULL) {
@@ -34,6 +39,8 @@ class CouponAnalyticsFilter extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The offer ID to filter analytics by.
+     *
      * Generated from protobuf field <code>string offerId = 1;</code>
      * @return string
      */
@@ -43,6 +50,8 @@ class CouponAnalyticsFilter extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The offer ID to filter analytics by.
+     *
      * Generated from protobuf field <code>string offerId = 1;</code>
      * @param string $var
      * @return $this

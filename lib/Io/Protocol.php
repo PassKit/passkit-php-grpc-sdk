@@ -6,24 +6,30 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request structure for protocol-level operations (e.g. pass listings).
+ *
  * Generated from protobuf message <code>io.Protocol</code>
  */
 class Protocol extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Protocol used (e.g. MEMBER, COUPON, etc).
+     *
      * Generated from protobuf field <code>.io.Protocol protocol = 1;</code>
      */
     protected $protocol = null;
     /**
+     * Class ID associated with the protocol (e.g. programId).
+     *
      * Generated from protobuf field <code>string classId = 2;</code>
      */
     protected $classId = '';
     /**
-     * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+     * Optional pagination configuration.
      *
      * Generated from protobuf field <code>.io.Pagination pagination = 3;</code>
      */
@@ -36,9 +42,11 @@ class Protocol extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Io\Protocol $protocol
+     *           Protocol used (e.g. MEMBER, COUPON, etc).
      *     @type string $classId
+     *           Class ID associated with the protocol (e.g. programId).
      *     @type \Io\Pagination $pagination
-     *           Optional pagination criteria. If not provided, then all passes for the class will be selected.
+     *           Optional pagination configuration.
      * }
      */
     public function __construct($data = NULL) {
@@ -47,6 +55,8 @@ class Protocol extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Protocol used (e.g. MEMBER, COUPON, etc).
+     *
      * Generated from protobuf field <code>.io.Protocol protocol = 1;</code>
      * @return \Io\Protocol|null
      */
@@ -66,6 +76,8 @@ class Protocol extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Protocol used (e.g. MEMBER, COUPON, etc).
+     *
      * Generated from protobuf field <code>.io.Protocol protocol = 1;</code>
      * @param \Io\Protocol $var
      * @return $this
@@ -79,6 +91,8 @@ class Protocol extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Class ID associated with the protocol (e.g. programId).
+     *
      * Generated from protobuf field <code>string classId = 2;</code>
      * @return string
      */
@@ -88,6 +102,8 @@ class Protocol extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Class ID associated with the protocol (e.g. programId).
+     *
      * Generated from protobuf field <code>string classId = 2;</code>
      * @param string $var
      * @return $this
@@ -101,7 +117,7 @@ class Protocol extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+     * Optional pagination configuration.
      *
      * Generated from protobuf field <code>.io.Pagination pagination = 3;</code>
      * @return \Io\Pagination|null
@@ -122,7 +138,7 @@ class Protocol extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+     * Optional pagination configuration.
      *
      * Generated from protobuf field <code>.io.Pagination pagination = 3;</code>
      * @param \Io\Pagination $var

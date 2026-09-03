@@ -6,19 +6,25 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to retrieve the default template for a given protocol and revision.
+ *
  * Generated from protobuf message <code>io.DefaultTemplateRequest</code>
  */
 class DefaultTemplateRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The protocol for which the default template is requested (e.g., MEMBERSHIP, EVENT_TICKETING).
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 1;</code>
      */
     protected $protocol = 0;
     /**
+     * The revision number of the protocol's template.
+     *
      * Generated from protobuf field <code>uint32 revision = 2;</code>
      */
     protected $revision = 0;
@@ -30,7 +36,9 @@ class DefaultTemplateRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $protocol
+     *           The protocol for which the default template is requested (e.g., MEMBERSHIP, EVENT_TICKETING).
      *     @type int $revision
+     *           The revision number of the protocol's template.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,6 +47,8 @@ class DefaultTemplateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The protocol for which the default template is requested (e.g., MEMBERSHIP, EVENT_TICKETING).
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 1;</code>
      * @return int
      */
@@ -48,6 +58,8 @@ class DefaultTemplateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The protocol for which the default template is requested (e.g., MEMBERSHIP, EVENT_TICKETING).
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 1;</code>
      * @param int $var
      * @return $this
@@ -61,6 +73,8 @@ class DefaultTemplateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The revision number of the protocol's template.
+     *
      * Generated from protobuf field <code>uint32 revision = 2;</code>
      * @return int
      */
@@ -70,6 +84,8 @@ class DefaultTemplateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The revision number of the protocol's template.
+     *
      * Generated from protobuf field <code>uint32 revision = 2;</code>
      * @param int $var
      * @return $this

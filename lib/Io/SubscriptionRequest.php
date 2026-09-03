@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Message to identify a subscription using the protocol and subscription ID.
+ *
  * Generated from protobuf message <code>io.SubscriptionRequest</code>
  */
 class SubscriptionRequest extends \Google\Protobuf\Internal\Message

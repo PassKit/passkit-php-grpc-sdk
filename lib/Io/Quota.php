@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Quota provides usage and status information for various metered event types. The key is one of the values from pk.MeteredEventType.
+ *
  * Generated from protobuf message <code>io.Quota</code>
  */
 class Quota extends \Google\Protobuf\Internal\Message

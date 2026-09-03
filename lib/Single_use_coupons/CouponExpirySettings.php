@@ -6,15 +6,19 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Defines the expiry behavior for a coupon offer.
+ *
  * Generated from protobuf message <code>single_use_coupons.CouponExpirySettings</code>
  */
 class CouponExpirySettings extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The coupon expiry type.
+     *
      * Generated from protobuf field <code>.single_use_coupons.CouponExpiryType couponExpiryType = 1;</code>
      */
     protected $couponExpiryType = 0;
@@ -34,6 +38,7 @@ class CouponExpirySettings extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $couponExpiryType
+     *           The coupon expiry type.
      *     @type int $expireAfterXDays
      *           Number of days the coupon card is expired after the issue date.
      *           The expiry time is 23:59:59 of expiry day. Please set couponExpiryType as EXPIRE_AFTER_X_DAYS.
@@ -46,6 +51,8 @@ class CouponExpirySettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The coupon expiry type.
+     *
      * Generated from protobuf field <code>.single_use_coupons.CouponExpiryType couponExpiryType = 1;</code>
      * @return int
      */
@@ -55,6 +62,8 @@ class CouponExpirySettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The coupon expiry type.
+     *
      * Generated from protobuf field <code>.single_use_coupons.CouponExpiryType couponExpiryType = 1;</code>
      * @param int $var
      * @return $this

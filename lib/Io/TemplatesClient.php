@@ -4,6 +4,7 @@
 namespace Io;
 
 /**
+ * Manages pass templates and designs for Apple Wallet, Google Wallet, and data collection forms.
  */
 class TemplatesClient extends \Grpc\BaseStub {
 
@@ -17,10 +18,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a pass template for a protocol and revision. Required fields: protocol, revision, name, colors, fields.
      * @param \Io\PassTemplate $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createTemplate(\Io\PassTemplate $argument,
       $metadata = [], $options = []) {
@@ -31,10 +33,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates an existing pass template. Required Fields: id
      * @param \Io\PassTemplate $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\PassTemplate>
      */
     public function updateTemplate(\Io\PassTemplate $argument,
       $metadata = [], $options = []) {
@@ -45,10 +48,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a pass template by ID. Required Fields: id
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\PassTemplateResponse>
      */
     public function getTemplate(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -59,10 +63,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves the default pass template for a given protocol and revision. Required Fields: protocol, revision
      * @param \Io\DefaultTemplateRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\PassTemplate>
      */
     public function getDefaultTemplate(\Io\DefaultTemplateRequest $argument,
       $metadata = [], $options = []) {
@@ -73,10 +78,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Copies an existing pass template and returns a new ID. Required Fields: id
      * @param \Io\CopyObjectInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function copyTemplate(\Io\CopyObjectInput $argument,
       $metadata = [], $options = []) {
@@ -87,10 +93,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a pass template. Required Fields: id
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteTemplate(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -101,6 +108,7 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED: OR operator is not supported] Retrieves all user-owned pass templates matching filters. Required Fields: pagination.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -115,6 +123,7 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves all user-owned pass templates matching filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -129,6 +138,7 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED: OR operator is not supported] Retrieves all company-wide pass templates matching filters. Required Fields: pagination.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -143,6 +153,7 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves all company-wide pass templates matching filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -157,10 +168,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of company-wide pass templates matching filters. Required Fields: pagination.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countTemplatesDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -171,10 +183,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a count of company-wide pass templates matching filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countTemplates(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -185,10 +198,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of user-owned pass templates matching filters. Required Fields: filters.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countTemplatesForUserDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -199,10 +213,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a count of user-owned pass templates matching filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countTemplatesForUser(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -213,10 +228,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a new location object. Required Fields: latitude, longitude, message.
      * @param \Io\GPSLocation $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createLocation(\Io\GPSLocation $argument,
       $metadata = [], $options = []) {
@@ -227,10 +243,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates an existing location. Required Fields: id.
      * @param \Io\GPSLocation $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\GPSLocation>
      */
     public function updateLocation(\Io\GPSLocation $argument,
       $metadata = [], $options = []) {
@@ -241,10 +258,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a single location by ID. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\GPSLocation>
      */
     public function getLocation(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -255,6 +273,7 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED: OR operator is not supported] Lists all location objects matching filters. Required Fields: pagination.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -269,6 +288,7 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all location objects matching filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -283,10 +303,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Copies a location record and returns a new ID. Required Fields: id.
      * @param \Io\CopyObjectInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function copyLocation(\Io\CopyObjectInput $argument,
       $metadata = [], $options = []) {
@@ -297,10 +318,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a location object. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteLocation(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -311,10 +333,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of locations that match the supplied criteria. Required: pagination.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countLocationsDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -325,10 +348,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Counts the number of location records that match the supplied filters. Required: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countLocations(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -339,10 +363,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a new beacon object. Required Fields: proximityUUID, lockscreenMessage.
      * @param \Io\Beacon $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createBeacon(\Io\Beacon $argument,
       $metadata = [], $options = []) {
@@ -353,10 +378,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates an existing beacon object. Required Fields: id.
      * @param \Io\Beacon $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Beacon>
      */
     public function updateBeacon(\Io\Beacon $argument,
       $metadata = [], $options = []) {
@@ -367,10 +393,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a single beacon by ID. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Beacon>
      */
     public function getBeacon(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -381,6 +408,7 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED: OR operator is not supported] Retrieves beacon objects that match the supplied criteria. Required Fields: pagination.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -395,6 +423,7 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all beacon objects that match the provided filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -409,10 +438,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Copies a beacon record and returns a new ID. Required Fields: id.
      * @param \Io\CopyObjectInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function copyBeacon(\Io\CopyObjectInput $argument,
       $metadata = [], $options = []) {
@@ -423,10 +453,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a beacon object. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteBeacon(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -437,10 +468,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of beacons that match the supplied criteria. Required Fields: pagination.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countBeaconsDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -451,10 +483,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Returns the count of beacons that match the supplied filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countBeacons(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -465,10 +498,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a new link object. Required Fields: url, title, type.
      * @param \Io\Link $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createLink(\Io\Link $argument,
       $metadata = [], $options = []) {
@@ -479,10 +513,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates an existing link object. Required Fields: id.
      * @param \Io\Link $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Link>
      */
     public function updateLink(\Io\Link $argument,
       $metadata = [], $options = []) {
@@ -493,10 +528,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a single link by ID. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Link>
      */
     public function getLink(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -507,6 +543,7 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED: OR operator is not supported] Retrieves links objects that match the supplied criteria. Required Fields: pagination.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -521,6 +558,7 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all link objects that match the provided filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -535,10 +573,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Copies a link record and returns a new ID. Required Fields: id.
      * @param \Io\CopyObjectInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function copyLink(\Io\CopyObjectInput $argument,
       $metadata = [], $options = []) {
@@ -549,10 +588,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a link object. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteLink(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -563,10 +603,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of links that match the supplied criteria. Required Fields: pagination.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countLinksDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -577,10 +618,11 @@ class TemplatesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Returns the count of links that match the supplied filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countLinks(\Io\Filters $argument,
       $metadata = [], $options = []) {

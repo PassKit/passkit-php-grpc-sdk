@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Lightweight request version of an event, typically used in filters or references. Required fields: productionId, venueId, scheduledStartDate.
+ *
  * Generated from protobuf message <code>event_tickets.EventLimitedFieldsRequest</code>
  */
 class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
@@ -51,7 +53,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      */
     protected $endDate = null;
     /**
-     * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Pay will always notify the user 3 hours before the event start date that they have an upcoming event.
+     * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Wallet notifies the user three hours before the event start date that they have an upcoming event.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp relevantDate = 7;</code>
      */
@@ -112,12 +114,12 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $endDate
      *           The date/time when the event ends. If the event spans multiple days, it should be the end date/time on the last day.
      *     @type \Google\Protobuf\Timestamp $relevantDate
-     *           Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Pay will always notify the user 3 hours before the event start date that they have an upcoming event.
+     *           Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Wallet notifies the user three hours before the event start date that they have an upcoming event.
      *     @type \Io\Quota $quota
      *           The quota for the event. If set to 0, then it is unlimited. If the quota is reached no new tickets can be issued.
      *     @type \Io\Metrics $metrics
      *           Performance analytics for the event. Not writable.
-     *     @type array<\Event_tickets\EventHours>|\Google\Protobuf\Internal\RepeatedField $relevantDates
+     *     @type \Event_tickets\EventHours[] $relevantDates
      *           Event hours are for multi-day events for Apple poster style tickets. Each time period can be a maximum of 24 hours.
      *     @type \Io\EventSemanticTags $semanticTags
      *           Semantic Tags are used mainly by Apple poster event tickets to create a rich event guide on the back side of the pass.
@@ -329,7 +331,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Pay will always notify the user 3 hours before the event start date that they have an upcoming event.
+     * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Wallet notifies the user three hours before the event start date that they have an upcoming event.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp relevantDate = 7;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -350,7 +352,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Pay will always notify the user 3 hours before the event start date that they have an upcoming event.
+     * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Wallet notifies the user three hours before the event start date that they have an upcoming event.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp relevantDate = 7;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -440,7 +442,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      * Event hours are for multi-day events for Apple poster style tickets. Each time period can be a maximum of 24 hours.
      *
      * Generated from protobuf field <code>repeated .event_tickets.EventHours relevantDates = 12;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Event_tickets\EventHours>
      */
     public function getRelevantDates()
     {
@@ -451,7 +453,7 @@ class EventLimitedFieldsRequest extends \Google\Protobuf\Internal\Message
      * Event hours are for multi-day events for Apple poster style tickets. Each time period can be a maximum of 24 hours.
      *
      * Generated from protobuf field <code>repeated .event_tickets.EventHours relevantDates = 12;</code>
-     * @param array<\Event_tickets\EventHours>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Event_tickets\EventHours[] $var
      * @return $this
      */
     public function setRelevantDates($var)

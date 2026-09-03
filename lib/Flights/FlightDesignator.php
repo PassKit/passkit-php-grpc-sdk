@@ -6,8 +6,8 @@
 namespace Flights;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * carrier code and flight number and valid from represent the primary key.
@@ -179,6 +179,12 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.io.Toggle invalidateCancelledPasses = 27 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $invalidateCancelledPasses = 0;
+    /**
+     * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
+     *
+     * Generated from protobuf field <code>.flights.FlightURLs urls = 37;</code>
+     */
+    protected $urls = null;
 
     /**
      * Constructor.
@@ -202,25 +208,25 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      *           If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
      *     @type string $operatingFlightNumber
      *           If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $codeShareFlightNumbers
+     *     @type string[] $codeShareFlightNumbers
      *           If the flight has code shares, then enter the carrier code and flight number. If there is an operating carrier, then do not include this in the list.  Code share carriers will not be validated.
      *     @type string $origin
      *           The origin port of the flight. In the case of direct flights with multiple stops, this will represent the port where the route commences.
      *     @type string $destination
      *           The destination port of the flight. In the case of direct flights with multiple stops, this will represent the final port where the route terminates.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $transitPoints
+     *     @type string[] $transitPoints
      *           In the case of multiple stops, an ordered array of transit points, commencing with the first port after the origin and ending with the penultimate port.
      *     @type string $departureTerminal
      *           The default terminal that the flight departs from.
      *     @type string $arrivalTerminal
      *           The default terminal of the final destination.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $transitTerminals
+     *     @type string[] $transitTerminals
      *           In the case of multiple stops, an ordered array of transit terminals. The length of this array should match the number of transit points.
      *     @type int $boardingPolicy
      *           The Boarding Policy is used to determine informational labels on the pass.
      *     @type int $seatClassPolicy
      *           The Seat Class Policy is used to determine informational labels on the pass.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $alerts
+     *     @type int[] $alerts
      *           An array of alerts to subscribe to for the flight. Note that additional charges apply.
      *     @type string $passTemplateId
      *           The PassKit template id that will be used for boarding passes for this flight. It can be overwritten at the flight level.
@@ -228,11 +234,11 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      *           Minutes after scheduled arrival time to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
      *     @type bool $autoInvalidateCancelledPasses
      *           Deprecated: Use InvalidateCancelledPasses.
-     *     @type array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $locationMessages
+     *     @type \Io\GPSLocation[] $locationMessages
      *           A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
-     *     @type array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $beaconMessages
+     *     @type \Io\Beacon[] $beaconMessages
      *           A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
-     *     @type array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $defaultLinks
+     *     @type \Io\Link[] $defaultLinks
      *           A list of links to be appended to the end of each boarding pass.
      *     @type bool $ConditionalItems
      *           If PassKit are generating barcodes, include conditional items. Default false.
@@ -240,6 +246,8 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      *           If PassKit are generating barcodes, default airline use data (IATA item 4). This can be overwritten at the flight and boarding pass level.
      *     @type int $invalidateCancelledPasses
      *           Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+     *     @type \Flights\FlightURLs $urls
+     *           URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
      * }
      */
     public function __construct($data = NULL) {
@@ -479,7 +487,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * If the flight has code shares, then enter the carrier code and flight number. If there is an operating carrier, then do not include this in the list.  Code share carriers will not be validated.
      *
      * Generated from protobuf field <code>repeated string codeShareFlightNumbers = 9;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getCodeShareFlightNumbers()
     {
@@ -490,7 +498,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * If the flight has code shares, then enter the carrier code and flight number. If there is an operating carrier, then do not include this in the list.  Code share carriers will not be validated.
      *
      * Generated from protobuf field <code>repeated string codeShareFlightNumbers = 9;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setCodeShareFlightNumbers($var)
@@ -557,7 +565,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * In the case of multiple stops, an ordered array of transit points, commencing with the first port after the origin and ending with the penultimate port.
      *
      * Generated from protobuf field <code>repeated string transitPoints = 12;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getTransitPoints()
     {
@@ -568,7 +576,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * In the case of multiple stops, an ordered array of transit points, commencing with the first port after the origin and ending with the penultimate port.
      *
      * Generated from protobuf field <code>repeated string transitPoints = 12;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setTransitPoints($var)
@@ -635,7 +643,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * In the case of multiple stops, an ordered array of transit terminals. The length of this array should match the number of transit points.
      *
      * Generated from protobuf field <code>repeated string transitTerminals = 15;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getTransitTerminals()
     {
@@ -646,7 +654,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * In the case of multiple stops, an ordered array of transit terminals. The length of this array should match the number of transit points.
      *
      * Generated from protobuf field <code>repeated string transitTerminals = 15;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setTransitTerminals($var)
@@ -713,7 +721,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * An array of alerts to subscribe to for the flight. Note that additional charges apply.
      *
      * Generated from protobuf field <code>repeated .flights.FlightAlerts alerts = 18;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getAlerts()
     {
@@ -724,7 +732,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * An array of alerts to subscribe to for the flight. Note that additional charges apply.
      *
      * Generated from protobuf field <code>repeated .flights.FlightAlerts alerts = 18;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setAlerts($var)
@@ -823,7 +831,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\GPSLocation>
      */
     public function getLocationMessages()
     {
@@ -834,7 +842,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\GPSLocation[] $var
      * @return $this
      */
     public function setLocationMessages($var)
@@ -849,7 +857,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\Beacon>
      */
     public function getBeaconMessages()
     {
@@ -860,7 +868,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\Beacon[] $var
      * @return $this
      */
     public function setBeaconMessages($var)
@@ -875,7 +883,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * A list of links to be appended to the end of each boarding pass.
      *
      * Generated from protobuf field <code>repeated .io.Link defaultLinks = 24;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\Link>
      */
     public function getDefaultLinks()
     {
@@ -886,7 +894,7 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
      * A list of links to be appended to the end of each boarding pass.
      *
      * Generated from protobuf field <code>repeated .io.Link defaultLinks = 24;</code>
-     * @param array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\Link[] $var
      * @return $this
      */
     public function setDefaultLinks($var)
@@ -971,6 +979,42 @@ class FlightDesignator extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Io\Toggle::class);
         $this->invalidateCancelledPasses = $var;
+
+        return $this;
+    }
+
+    /**
+     * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
+     *
+     * Generated from protobuf field <code>.flights.FlightURLs urls = 37;</code>
+     * @return \Flights\FlightURLs|null
+     */
+    public function getUrls()
+    {
+        return $this->urls;
+    }
+
+    public function hasUrls()
+    {
+        return isset($this->urls);
+    }
+
+    public function clearUrls()
+    {
+        unset($this->urls);
+    }
+
+    /**
+     * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
+     *
+     * Generated from protobuf field <code>.flights.FlightURLs urls = 37;</code>
+     * @param \Flights\FlightURLs $var
+     * @return $this
+     */
+    public function setUrls($var)
+    {
+        GPBUtil::checkMessage($var, \Flights\FlightURLs::class);
+        $this->urls = $var;
 
         return $this;
     }

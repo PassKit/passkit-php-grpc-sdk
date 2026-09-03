@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Configuration for a webhook endpoint.
+ *
  * Generated from protobuf message <code>io.WebhookConfig</code>
  */
 class WebhookConfig extends \Google\Protobuf\Internal\Message
@@ -21,6 +23,8 @@ class WebhookConfig extends \Google\Protobuf\Internal\Message
      */
     protected $targetUrl = '';
     /**
+     * The HTTP method to use when calling the webhook (e.g., POST, PUT).
+     *
      * Generated from protobuf field <code>.io.ActionMethod actionMethod = 2;</code>
      */
     protected $actionMethod = 0;
@@ -46,6 +50,7 @@ class WebhookConfig extends \Google\Protobuf\Internal\Message
      *     @type string $targetUrl
      *           The destination url for PassKit backend to send the data to.
      *     @type int $actionMethod
+     *           The HTTP method to use when calling the webhook (e.g., POST, PUT).
      *     @type \Io\FieldMapping $fieldMapping
      *           Set source fields (fields used within the PassKit platform) and destination fields (fields set on the third party app).
      *     @type string $signingSecret
@@ -84,6 +89,8 @@ class WebhookConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The HTTP method to use when calling the webhook (e.g., POST, PUT).
+     *
      * Generated from protobuf field <code>.io.ActionMethod actionMethod = 2;</code>
      * @return int
      */
@@ -93,6 +100,8 @@ class WebhookConfig extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The HTTP method to use when calling the webhook (e.g., POST, PUT).
+     *
      * Generated from protobuf field <code>.io.ActionMethod actionMethod = 2;</code>
      * @param int $var
      * @return $this

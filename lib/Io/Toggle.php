@@ -8,19 +8,27 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * A toggle value to indicate on/off states.
+ *
  * Protobuf type <code>io.Toggle</code>
  */
 class Toggle
 {
     /**
+     * Default or undefined state.
+     *
      * Generated from protobuf enum <code>DO_NOT_USE = 0;</code>
      */
     const DO_NOT_USE = 0;
     /**
+     * Indicates the feature or flag is enabled.
+     *
      * Generated from protobuf enum <code>ON = 1;</code>
      */
     const ON = 1;
     /**
+     * Indicates the feature or flag is disabled.
+     *
      * Generated from protobuf enum <code>OFF = 2;</code>
      */
     const OFF = 2;

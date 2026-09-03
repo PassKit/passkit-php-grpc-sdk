@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum to specify the period grouping for analytics data.
+ *
  * Protobuf type <code>io.Period</code>
  */
 class Period

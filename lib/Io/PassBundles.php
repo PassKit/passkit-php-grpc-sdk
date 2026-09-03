@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Wrapper for multiple pass bundles.
+ *
  * Generated from protobuf message <code>io.PassBundles</code>
  */
 class PassBundles extends \Google\Protobuf\Internal\Message
@@ -25,7 +27,7 @@ class PassBundles extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Io\PassBundle>|\Google\Protobuf\Internal\RepeatedField $passes
+     *     @type \Io\PassBundle[] $passes
      * }
      */
     public function __construct($data = NULL) {
@@ -35,7 +37,7 @@ class PassBundles extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.PassBundle passes = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\PassBundle>
      */
     public function getPasses()
     {
@@ -44,7 +46,7 @@ class PassBundles extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.PassBundle passes = 1;</code>
-     * @param array<\Io\PassBundle>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\PassBundle[] $var
      * @return $this
      */
     public function setPasses($var)

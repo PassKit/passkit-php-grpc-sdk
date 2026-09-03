@@ -6,10 +6,12 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Settings controlling how and when coupons can be redeemed.
+ *
  * Generated from protobuf message <code>single_use_coupons.RedemptionSettings</code>
  */
 class RedemptionSettings extends \Google\Protobuf\Internal\Message
@@ -61,7 +63,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      *           Optional field that can be set if offers can only be redeemed after a certain date. Defaults to the offer issue start date. Needs to be greater than / equal to the offer issue start date, and less than / equal to offer issue end date.
      *     @type \Google\Protobuf\Timestamp $redemptionEndDate
      *           Optional field that can be set if offers can only be redeemed until a certain date. Defaults to the offer issue end date. Needs to be less than / equal to the offer issue end date.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $redemptionType
+     *     @type int[] $redemptionType
      *           Dictates redemption type; defaults to API.
      *     @type \Single_use_coupons\CustomerInitiatedCodeProvideOnRedeemSettings $codeProvidedOnRedeemSettings
      *           Settings for code provided on redemption; a list of valid codes and possible invalid-code error message needs to be provided.
@@ -152,7 +154,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      * Dictates redemption type; defaults to API.
      *
      * Generated from protobuf field <code>repeated .single_use_coupons.RedemptionType redemptionType = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getRedemptionType()
     {
@@ -163,7 +165,7 @@ class RedemptionSettings extends \Google\Protobuf\Internal\Message
      * Dictates redemption type; defaults to API.
      *
      * Generated from protobuf field <code>repeated .single_use_coupons.RedemptionType redemptionType = 3;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setRedemptionType($var)

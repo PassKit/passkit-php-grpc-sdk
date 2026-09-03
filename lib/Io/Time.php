@@ -6,30 +6,30 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * A fixed time without timezone information.
+ * A time without timezone information.
  *
  * Generated from protobuf message <code>io.Time</code>
  */
 class Time extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Hour.
+     * Hour (0–23).
      *
      * Generated from protobuf field <code>int32 hour = 1;</code>
      */
     protected $hour = 0;
     /**
-     * Minute.
+     * Minute (0–59).
      *
      * Generated from protobuf field <code>int32 minute = 2;</code>
      */
     protected $minute = 0;
     /**
-     * Second.
+     * Second (0–59).
      *
      * Generated from protobuf field <code>int32 second = 3;</code>
      */
@@ -42,11 +42,11 @@ class Time extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $hour
-     *           Hour.
+     *           Hour (0–23).
      *     @type int $minute
-     *           Minute.
+     *           Minute (0–59).
      *     @type int $second
-     *           Second.
+     *           Second (0–59).
      * }
      */
     public function __construct($data = NULL) {
@@ -55,7 +55,7 @@ class Time extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hour.
+     * Hour (0–23).
      *
      * Generated from protobuf field <code>int32 hour = 1;</code>
      * @return int
@@ -66,7 +66,7 @@ class Time extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hour.
+     * Hour (0–23).
      *
      * Generated from protobuf field <code>int32 hour = 1;</code>
      * @param int $var
@@ -81,7 +81,7 @@ class Time extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Minute.
+     * Minute (0–59).
      *
      * Generated from protobuf field <code>int32 minute = 2;</code>
      * @return int
@@ -92,7 +92,7 @@ class Time extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Minute.
+     * Minute (0–59).
      *
      * Generated from protobuf field <code>int32 minute = 2;</code>
      * @param int $var
@@ -107,7 +107,7 @@ class Time extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Second.
+     * Second (0–59).
      *
      * Generated from protobuf field <code>int32 second = 3;</code>
      * @return int
@@ -118,7 +118,7 @@ class Time extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Second.
+     * Second (0–59).
      *
      * Generated from protobuf field <code>int32 second = 3;</code>
      * @param int $var

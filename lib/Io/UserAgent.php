@@ -6,55 +6,79 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Captures information about the user's device, browser, and compatibility.
+ *
  * Generated from protobuf message <code>io.UserAgent</code>
  */
 class UserAgent extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The raw user agent string received from the client.
+     *
      * Generated from protobuf field <code>string raw = 1;</code>
      */
     protected $raw = '';
     /**
+     * The device platform (e.g. "Macintosh", "iPhone", "Android").
+     *
      * Generated from protobuf field <code>string platform = 2;</code>
      */
     protected $platform = '';
     /**
+     * The operating system name (e.g. "iOS", "Windows", "Android").
+     *
      * Generated from protobuf field <code>string os = 3;</code>
      */
     protected $os = '';
     /**
+     * The version of the operating system (e.g. "14.4", "10", "12.5.1").
+     *
      * Generated from protobuf field <code>string osVersion = 4;</code>
      */
     protected $osVersion = '';
     /**
+     * The rendering engine used by the browser (e.g. "WebKit", "Blink").
+     *
      * Generated from protobuf field <code>string engine = 5;</code>
      */
     protected $engine = '';
     /**
+     * The version of the rendering engine (e.g. "605.1.15").
+     *
      * Generated from protobuf field <code>string engineVersion = 6;</code>
      */
     protected $engineVersion = '';
     /**
+     * The browser name (e.g. "Safari", "Chrome", "Firefox").
+     *
      * Generated from protobuf field <code>string browser = 7;</code>
      */
     protected $browser = '';
     /**
+     * The version of the browser (e.g. "91.0.4472.124").
+     *
      * Generated from protobuf field <code>string browserVersion = 8;</code>
      */
     protected $browserVersion = '';
     /**
+     * The localization setting of the user (e.g. "en-US", "fr-FR").
+     *
      * Generated from protobuf field <code>string localization = 9;</code>
      */
     protected $localization = '';
     /**
+     * Indicates whether the device is a mobile device.
+     *
      * Generated from protobuf field <code>bool mobile = 10;</code>
      */
     protected $mobile = false;
     /**
+     * Indicates whether the browser and device are compatible with digital wallet functionality (e.g. Apple Wallet or Google Wallet).
+     *
      * Generated from protobuf field <code>bool walletCompatible = 11;</code>
      */
     protected $walletCompatible = false;
@@ -66,16 +90,27 @@ class UserAgent extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $raw
+     *           The raw user agent string received from the client.
      *     @type string $platform
+     *           The device platform (e.g. "Macintosh", "iPhone", "Android").
      *     @type string $os
+     *           The operating system name (e.g. "iOS", "Windows", "Android").
      *     @type string $osVersion
+     *           The version of the operating system (e.g. "14.4", "10", "12.5.1").
      *     @type string $engine
+     *           The rendering engine used by the browser (e.g. "WebKit", "Blink").
      *     @type string $engineVersion
+     *           The version of the rendering engine (e.g. "605.1.15").
      *     @type string $browser
+     *           The browser name (e.g. "Safari", "Chrome", "Firefox").
      *     @type string $browserVersion
+     *           The version of the browser (e.g. "91.0.4472.124").
      *     @type string $localization
+     *           The localization setting of the user (e.g. "en-US", "fr-FR").
      *     @type bool $mobile
+     *           Indicates whether the device is a mobile device.
      *     @type bool $walletCompatible
+     *           Indicates whether the browser and device are compatible with digital wallet functionality (e.g. Apple Wallet or Google Wallet).
      * }
      */
     public function __construct($data = NULL) {
@@ -84,6 +119,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The raw user agent string received from the client.
+     *
      * Generated from protobuf field <code>string raw = 1;</code>
      * @return string
      */
@@ -93,6 +130,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The raw user agent string received from the client.
+     *
      * Generated from protobuf field <code>string raw = 1;</code>
      * @param string $var
      * @return $this
@@ -106,6 +145,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The device platform (e.g. "Macintosh", "iPhone", "Android").
+     *
      * Generated from protobuf field <code>string platform = 2;</code>
      * @return string
      */
@@ -115,6 +156,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The device platform (e.g. "Macintosh", "iPhone", "Android").
+     *
      * Generated from protobuf field <code>string platform = 2;</code>
      * @param string $var
      * @return $this
@@ -128,6 +171,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The operating system name (e.g. "iOS", "Windows", "Android").
+     *
      * Generated from protobuf field <code>string os = 3;</code>
      * @return string
      */
@@ -137,6 +182,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The operating system name (e.g. "iOS", "Windows", "Android").
+     *
      * Generated from protobuf field <code>string os = 3;</code>
      * @param string $var
      * @return $this
@@ -150,6 +197,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The version of the operating system (e.g. "14.4", "10", "12.5.1").
+     *
      * Generated from protobuf field <code>string osVersion = 4;</code>
      * @return string
      */
@@ -159,6 +208,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The version of the operating system (e.g. "14.4", "10", "12.5.1").
+     *
      * Generated from protobuf field <code>string osVersion = 4;</code>
      * @param string $var
      * @return $this
@@ -172,6 +223,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The rendering engine used by the browser (e.g. "WebKit", "Blink").
+     *
      * Generated from protobuf field <code>string engine = 5;</code>
      * @return string
      */
@@ -181,6 +234,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The rendering engine used by the browser (e.g. "WebKit", "Blink").
+     *
      * Generated from protobuf field <code>string engine = 5;</code>
      * @param string $var
      * @return $this
@@ -194,6 +249,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The version of the rendering engine (e.g. "605.1.15").
+     *
      * Generated from protobuf field <code>string engineVersion = 6;</code>
      * @return string
      */
@@ -203,6 +260,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The version of the rendering engine (e.g. "605.1.15").
+     *
      * Generated from protobuf field <code>string engineVersion = 6;</code>
      * @param string $var
      * @return $this
@@ -216,6 +275,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The browser name (e.g. "Safari", "Chrome", "Firefox").
+     *
      * Generated from protobuf field <code>string browser = 7;</code>
      * @return string
      */
@@ -225,6 +286,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The browser name (e.g. "Safari", "Chrome", "Firefox").
+     *
      * Generated from protobuf field <code>string browser = 7;</code>
      * @param string $var
      * @return $this
@@ -238,6 +301,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The version of the browser (e.g. "91.0.4472.124").
+     *
      * Generated from protobuf field <code>string browserVersion = 8;</code>
      * @return string
      */
@@ -247,6 +312,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The version of the browser (e.g. "91.0.4472.124").
+     *
      * Generated from protobuf field <code>string browserVersion = 8;</code>
      * @param string $var
      * @return $this
@@ -260,6 +327,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The localization setting of the user (e.g. "en-US", "fr-FR").
+     *
      * Generated from protobuf field <code>string localization = 9;</code>
      * @return string
      */
@@ -269,6 +338,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The localization setting of the user (e.g. "en-US", "fr-FR").
+     *
      * Generated from protobuf field <code>string localization = 9;</code>
      * @param string $var
      * @return $this
@@ -282,6 +353,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Indicates whether the device is a mobile device.
+     *
      * Generated from protobuf field <code>bool mobile = 10;</code>
      * @return bool
      */
@@ -291,6 +364,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Indicates whether the device is a mobile device.
+     *
      * Generated from protobuf field <code>bool mobile = 10;</code>
      * @param bool $var
      * @return $this
@@ -304,6 +379,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Indicates whether the browser and device are compatible with digital wallet functionality (e.g. Apple Wallet or Google Wallet).
+     *
      * Generated from protobuf field <code>bool walletCompatible = 11;</code>
      * @return bool
      */
@@ -313,6 +390,8 @@ class UserAgent extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Indicates whether the browser and device are compatible with digital wallet functionality (e.g. Apple Wallet or Google Wallet).
+     *
      * Generated from protobuf field <code>bool walletCompatible = 11;</code>
      * @param bool $var
      * @return $this

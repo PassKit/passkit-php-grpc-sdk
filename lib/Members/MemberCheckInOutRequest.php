@@ -6,10 +6,12 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to check a member into or out of an event or location.
+ *
  * Generated from protobuf message <code>members.MemberCheckInOutRequest</code>
  */
 class MemberCheckInOutRequest extends \Google\Protobuf\Internal\Message

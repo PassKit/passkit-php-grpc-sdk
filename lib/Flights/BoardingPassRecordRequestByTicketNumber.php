@@ -6,8 +6,8 @@
 namespace Flights;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Boarding passes are indexed by ticket number and leg or boarding point. Either a journey leg or boarding point is required.

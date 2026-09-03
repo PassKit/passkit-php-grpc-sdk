@@ -8,63 +8,93 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * DeviceAttributes is a bitmask enum describing capabilities or properties of a device.
+ *
  * Protobuf type <code>io.DeviceAttributes</code>
  */
 class DeviceAttributes
 {
     /**
+     * No attributes are set.
+     *
      * Generated from protobuf enum <code>NoAttributes = 0;</code>
      */
     const NoAttributes = 0;
     /**
+     * Device is running iOS.
+     *
      * Generated from protobuf enum <code>Ios = 1;</code>
      */
     const Ios = 1;
     /**
+     * Device is running Android.
+     *
      * Generated from protobuf enum <code>Android = 2;</code>
      */
     const Android = 2;
     /**
+     * Device supports a wallet application.
+     *
      * Generated from protobuf enum <code>SupportWallet = 4;</code>
      */
     const SupportWallet = 4;
     /**
+     * Device has a wallet scanner installed.
+     *
      * Generated from protobuf enum <code>WalletScanner = 8;</code>
      */
     const WalletScanner = 8;
     /**
+     * Device runs a background wallet daemon.
+     *
      * Generated from protobuf enum <code>WalletDaemon = 16;</code>
      */
     const WalletDaemon = 16;
     /**
+     * Device supports .pkpass files.
+     *
      * Generated from protobuf enum <code>WalletPasses = 32;</code>
      */
     const WalletPasses = 32;
     /**
+     * Device is running Windows.
+     *
      * Generated from protobuf enum <code>Windows = 64;</code>
      */
     const Windows = 64;
     /**
+     * Device is running macOS.
+     *
      * Generated from protobuf enum <code>OSX = 128;</code>
      */
     const OSX = 128;
     /**
+     * Device is running Linux.
+     *
      * Generated from protobuf enum <code>Linux = 256;</code>
      */
     const Linux = 256;
     /**
+     * Device is a mobile form factor.
+     *
      * Generated from protobuf enum <code>Mobile = 512;</code>
      */
     const Mobile = 512;
     /**
+     * Device is a desktop form factor.
+     *
      * Generated from protobuf enum <code>Desktop = 1024;</code>
      */
     const Desktop = 1024;
     /**
+     * Device is a tablet.
+     *
      * Generated from protobuf enum <code>Tablet = 2048;</code>
      */
     const Tablet = 2048;
     /**
+     * Device is an unsupported version of iOS.
+     *
      * Generated from protobuf enum <code>UnsupportedIos = 4096;</code>
      */
     const UnsupportedIos = 4096;

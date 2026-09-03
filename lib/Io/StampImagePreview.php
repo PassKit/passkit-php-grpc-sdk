@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * A string-encoded preview of the rendered stamp image.
+ *
  * Generated from protobuf message <code>io.StampImagePreview</code>
  */
 class StampImagePreview extends \Google\Protobuf\Internal\Message

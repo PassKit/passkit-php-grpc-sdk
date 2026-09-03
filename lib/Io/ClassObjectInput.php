@@ -6,26 +6,30 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Input format for linking objects to classes.
+ *
  * Generated from protobuf message <code>io.ClassObjectInput</code>
  */
 class ClassObjectInput extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Protocol of the object (e.g. member, coupon, etc).
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 1;</code>
      */
     protected $protocol = 0;
     /**
-     * The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+     * Object ID (e.g. tierId, offerId).
      *
      * Generated from protobuf field <code>string objectId = 2;</code>
      */
     protected $objectId = '';
     /**
-     * The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+     * Optional class ID for context (e.g. for Member protocol).
      *
      * Generated from protobuf field <code>string classId = 3;</code>
      */
@@ -38,10 +42,11 @@ class ClassObjectInput extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $protocol
+     *           Protocol of the object (e.g. member, coupon, etc).
      *     @type string $objectId
-     *           The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+     *           Object ID (e.g. tierId, offerId).
      *     @type string $classId
-     *           The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+     *           Optional class ID for context (e.g. for Member protocol).
      * }
      */
     public function __construct($data = NULL) {
@@ -50,6 +55,8 @@ class ClassObjectInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Protocol of the object (e.g. member, coupon, etc).
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 1;</code>
      * @return int
      */
@@ -59,6 +66,8 @@ class ClassObjectInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Protocol of the object (e.g. member, coupon, etc).
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 1;</code>
      * @param int $var
      * @return $this
@@ -72,7 +81,7 @@ class ClassObjectInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+     * Object ID (e.g. tierId, offerId).
      *
      * Generated from protobuf field <code>string objectId = 2;</code>
      * @return string
@@ -83,7 +92,7 @@ class ClassObjectInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+     * Object ID (e.g. tierId, offerId).
      *
      * Generated from protobuf field <code>string objectId = 2;</code>
      * @param string $var
@@ -98,7 +107,7 @@ class ClassObjectInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+     * Optional class ID for context (e.g. for Member protocol).
      *
      * Generated from protobuf field <code>string classId = 3;</code>
      * @return string
@@ -109,7 +118,7 @@ class ClassObjectInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+     * Optional class ID for context (e.g. for Member protocol).
      *
      * Generated from protobuf field <code>string classId = 3;</code>
      * @param string $var

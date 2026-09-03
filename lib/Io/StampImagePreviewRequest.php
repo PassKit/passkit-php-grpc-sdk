@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to preview the stamp card design based on configuration and state.
+ *
  * Generated from protobuf message <code>io.StampImagePreviewRequest</code>
  */
 class StampImagePreviewRequest extends \Google\Protobuf\Internal\Message

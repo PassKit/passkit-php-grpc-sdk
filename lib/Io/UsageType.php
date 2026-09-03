@@ -8,7 +8,7 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
- * UsageType is used to indicate where a field or link is used / rendered
+ * Specifies where a field or link should be rendered or used.
  *
  * Protobuf type <code>io.UsageType</code>
  */
@@ -19,19 +19,19 @@ class UsageType
      */
     const NO_USAGE = 0;
     /**
-     * Rendered on Apple Wallet
+     * Used by Apple Wallet.
      *
      * Generated from protobuf enum <code>USAGE_APPLE_WALLET = 1;</code>
      */
     const USAGE_APPLE_WALLET = 1;
     /**
-     * Rendered on Google Pay
+     * Used by Google Wallet.
      *
      * Generated from protobuf enum <code>USAGE_GOOGLE_PAY = 2;</code>
      */
     const USAGE_GOOGLE_PAY = 2;
     /**
-     * Rendered on data collection page
+     * Used on a user-facing data collection form.
      *
      * Generated from protobuf enum <code>USAGE_DATA_COLLECTION_PAGE = 4;</code>
      */

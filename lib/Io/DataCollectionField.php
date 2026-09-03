@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a single field in a data collection form.
+ *
  * Generated from protobuf message <code>io.DataCollectionField</code>
  */
 class DataCollectionField extends \Google\Protobuf\Internal\Message

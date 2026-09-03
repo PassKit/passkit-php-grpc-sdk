@@ -17,10 +17,11 @@ class IntegrationsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates integration configurations for a pass type. Required Fields: protocol, classId, integrations.
      * @param \Io\IntegrationConfigs $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createIntegrations(\Io\IntegrationConfigs $argument,
       $metadata = [], $options = []) {
@@ -31,10 +32,11 @@ class IntegrationsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves integration configurations for a protocol and class. Required Fields: protocol, classId.
      * @param \Io\ProtocolIdInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\IntegrationConfigs>
      */
     public function getIntegrations(\Io\ProtocolIdInput $argument,
       $metadata = [], $options = []) {
@@ -45,10 +47,11 @@ class IntegrationsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates integration configurations for a pass type. Required Fields: protocol, classId, integrations.
      * @param \Io\IntegrationConfigs $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function updateIntegrations(\Io\IntegrationConfigs $argument,
       $metadata = [], $options = []) {
@@ -59,10 +62,11 @@ class IntegrationsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes integration configurations for a protocol and class. Required Fields: protocol, classId.
      * @param \Io\ProtocolIdInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteIntegrations(\Io\ProtocolIdInput $argument,
       $metadata = [], $options = []) {
@@ -73,10 +77,11 @@ class IntegrationsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a sink subscription to receive webhook callbacks after specific events. Required Fields: protocol, classId, event, url.
      * @param \Io\SinkSubscription $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createSinkSubscription(\Io\SinkSubscription $argument,
       $metadata = [], $options = []) {
@@ -87,10 +92,11 @@ class IntegrationsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a sink subscription configuration. Required Fields: protocol, subscriptionId.
      * @param \Io\SubscriptionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\SinkSubscription>
      */
     public function getSinkSubscription(\Io\SubscriptionRequest $argument,
       $metadata = [], $options = []) {
@@ -101,6 +107,7 @@ class IntegrationsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED] Lists sink subscriptions by segment with optional pagination. Required Fields: pagination.
      * @param \Io\ListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -115,6 +122,7 @@ class IntegrationsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all sink subscriptions by segment with optional pagination. Required Fields: filters.
      * @param \Io\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -129,10 +137,11 @@ class IntegrationsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates a sink subscription configuration. Required Fields: protocol, classId, event, url.
      * @param \Io\SinkSubscription $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function updateSinkSubscription(\Io\SinkSubscription $argument,
       $metadata = [], $options = []) {
@@ -143,10 +152,11 @@ class IntegrationsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a sink subscription configuration. Required Fields: protocol, subscriptionId.
      * @param \Io\SubscriptionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteSinkSubscription(\Io\SubscriptionRequest $argument,
       $metadata = [], $options = []) {
@@ -157,10 +167,11 @@ class IntegrationsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Returns a sample sink subscription payload. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\SinkSubscription>
      */
     public function getSampleSubscriptionEvent(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -171,10 +182,11 @@ class IntegrationsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Dynamically calls an external API using configured credentials. Required Fields: url, method, headers, body (depending on the API).
      * @param \Io\DynamicApiInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\DynamicApiResponse>
      */
     public function callDynamicApi(\Io\DynamicApiInput $argument,
       $metadata = [], $options = []) {

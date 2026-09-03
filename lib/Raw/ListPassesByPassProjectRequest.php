@@ -6,10 +6,12 @@
 namespace Raw;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to list passes for a given Pass Project. Filters can be applied to narrow down results.
+ *
  * Generated from protobuf message <code>raw.ListPassesByPassProjectRequest</code>
  */
 class ListPassesByPassProjectRequest extends \Google\Protobuf\Internal\Message

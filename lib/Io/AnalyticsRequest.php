@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * The request message for fetching analytics data.
+ *
  * Generated from protobuf message <code>io.AnalyticsRequest</code>
  */
 class AnalyticsRequest extends \Google\Protobuf\Internal\Message

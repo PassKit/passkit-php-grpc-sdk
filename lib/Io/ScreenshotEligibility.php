@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Defines whether a pass is eligible to be shared via screenshot.
+ *
  * Protobuf type <code>io.ScreenshotEligibility</code>
  */
 class ScreenshotEligibility

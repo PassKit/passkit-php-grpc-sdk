@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Venue defines the location where the event takes place and includes address, timezone, and optional event URLs. Required fields: name, address, timezone.
+ *
  * Generated from protobuf message <code>event_tickets.Venue</code>
  */
 class Venue extends \Google\Protobuf\Internal\Message
@@ -107,7 +109,7 @@ class Venue extends \Google\Protobuf\Internal\Message
      *           Localized venue address.
      *     @type string $timezone
      *           Timezone applied for the event dates. e.g. America/New_York, Asia/Singapore, Europe/London.
-     *     @type array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $gpsCoords
+     *     @type \Io\GPSLocation[] $gpsCoords
      *           Optional GPS location details of the venue. If provided will be embedded into the ticket as the first GPS location.
      *     @type \Event_tickets\EventUrls $eventUrls
      *           Event URLs integrate with Apple's poster event ticket (NFC and iCloud Binding required) to create a rich event guide on the back of the pass. If you do not have access to an NFC certificate, you should use links in the pass design to provide similar information.
@@ -330,7 +332,7 @@ class Venue extends \Google\Protobuf\Internal\Message
      * Optional GPS location details of the venue. If provided will be embedded into the ticket as the first GPS location.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation gpsCoords = 8;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\GPSLocation>
      */
     public function getGpsCoords()
     {
@@ -341,7 +343,7 @@ class Venue extends \Google\Protobuf\Internal\Message
      * Optional GPS location details of the venue. If provided will be embedded into the ticket as the first GPS location.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation gpsCoords = 8;</code>
-     * @param array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\GPSLocation[] $var
      * @return $this
      */
     public function setGpsCoords($var)

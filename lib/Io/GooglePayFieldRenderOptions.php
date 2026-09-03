@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Customise how data field is rendered on the front and back of the pass.
@@ -17,7 +17,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class GooglePayFieldRenderOptions extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Determines which field the data will be mapped to on the Google Pay pass. Note, not all Google Pay fields support
+     * Determines which field the data is mapped to on the Google Wallet pass. Not all Google Wallet fields support
      * labels or localization.  Where not supported, label and localization options will be ignored.
      *
      * Generated from protobuf field <code>.io.GooglePayField googlePayPosition = 1;</code>
@@ -37,7 +37,7 @@ class GooglePayFieldRenderOptions extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $googlePayPosition
-     *           Determines which field the data will be mapped to on the Google Pay pass. Note, not all Google Pay fields support
+     *           Determines which field the data is mapped to on the Google Wallet pass. Not all Google Wallet fields support
      *           labels or localization.  Where not supported, label and localization options will be ignored.
      *     @type int $textModulePriority
      *           If the field type is a text module, the priority of the text module.
@@ -49,7 +49,7 @@ class GooglePayFieldRenderOptions extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Determines which field the data will be mapped to on the Google Pay pass. Note, not all Google Pay fields support
+     * Determines which field the data is mapped to on the Google Wallet pass. Not all Google Wallet fields support
      * labels or localization.  Where not supported, label and localization options will be ignored.
      *
      * Generated from protobuf field <code>.io.GooglePayField googlePayPosition = 1;</code>
@@ -61,7 +61,7 @@ class GooglePayFieldRenderOptions extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Determines which field the data will be mapped to on the Google Pay pass. Note, not all Google Pay fields support
+     * Determines which field the data is mapped to on the Google Wallet pass. Not all Google Wallet fields support
      * labels or localization.  Where not supported, label and localization options will be ignored.
      *
      * Generated from protobuf field <code>.io.GooglePayField googlePayPosition = 1;</code>

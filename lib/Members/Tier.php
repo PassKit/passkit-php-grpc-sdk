@@ -6,11 +6,11 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * The Tier object; will override certain details of the pass (colours, logo's, dynamic back fields, and labels).
+ * Tier definition for a membership program. A tier overrides default program settings such as design, colors, labels, and enrollment behavior.
  *
  * Generated from protobuf message <code>members.Tier</code>
  */

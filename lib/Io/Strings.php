@@ -6,11 +6,11 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Repeated field of dynamically typed values (including string, bool, option, syntax).
+ * Wrapper for a repeated string response. Useful for flexible or generic outputs.
  *
  * Generated from protobuf message <code>io.Strings</code>
  */
@@ -27,7 +27,7 @@ class Strings extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $response
+     *     @type string[] $response
      * }
      */
     public function __construct($data = NULL) {
@@ -37,7 +37,7 @@ class Strings extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string response = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getResponse()
     {
@@ -46,7 +46,7 @@ class Strings extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string response = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setResponse($var)

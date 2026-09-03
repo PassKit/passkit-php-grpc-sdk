@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * A group of field filters, combined using a logical condition (AND/OR).
+ *
  * Generated from protobuf message <code>io.FilterGroup</code>
  */
 class FilterGroup extends \Google\Protobuf\Internal\Message
@@ -35,7 +37,7 @@ class FilterGroup extends \Google\Protobuf\Internal\Message
      *
      *     @type int $condition
      *           Use AND or OR conditions to join each filter field. E.g. (tier_id = bronze AND tier_id = silver) (tier_id = bronze OR tier_id = silver)
-     *     @type array<\Io\FieldFilter>|\Google\Protobuf\Internal\RepeatedField $fieldFilters
+     *     @type \Io\FieldFilter[] $fieldFilters
      *           Filter fields.
      * }
      */
@@ -74,7 +76,7 @@ class FilterGroup extends \Google\Protobuf\Internal\Message
      * Filter fields.
      *
      * Generated from protobuf field <code>repeated .io.FieldFilter fieldFilters = 2;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\FieldFilter>
      */
     public function getFieldFilters()
     {
@@ -85,7 +87,7 @@ class FilterGroup extends \Google\Protobuf\Internal\Message
      * Filter fields.
      *
      * Generated from protobuf field <code>repeated .io.FieldFilter fieldFilters = 2;</code>
-     * @param array<\Io\FieldFilter>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\FieldFilter[] $var
      * @return $this
      */
     public function setFieldFilters($var)

@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * The response message containing analytics statistics.
+ *
  * Generated from protobuf message <code>io.AnalyticsResponse</code>
  */
 class AnalyticsResponse extends \Google\Protobuf\Internal\Message
@@ -107,7 +109,7 @@ class AnalyticsResponse extends \Google\Protobuf\Internal\Message
      *           Total number of passes installed for each device type.
      *     @type array|\Google\Protobuf\Internal\MapField $utmSourceBreakdown
      *           Total number of passes installed for each distribution source.
-     *     @type array<\Io\ChartDataPoints>|\Google\Protobuf\Internal\RepeatedField $data
+     *     @type \Io\ChartDataPoints[] $data
      *           Breakdown of data by day, month or year.
      *     @type array|\Google\Protobuf\Internal\MapField $utmMediumBreakdown
      *           Breakdown of data by utm medium.
@@ -320,7 +322,7 @@ class AnalyticsResponse extends \Google\Protobuf\Internal\Message
      * Breakdown of data by day, month or year.
      *
      * Generated from protobuf field <code>repeated .io.ChartDataPoints data = 8;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\ChartDataPoints>
      */
     public function getData()
     {
@@ -331,7 +333,7 @@ class AnalyticsResponse extends \Google\Protobuf\Internal\Message
      * Breakdown of data by day, month or year.
      *
      * Generated from protobuf field <code>repeated .io.ChartDataPoints data = 8;</code>
-     * @param array<\Io\ChartDataPoints>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\ChartDataPoints[] $var
      * @return $this
      */
     public function setData($var)

@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a file as raw byte data.
+ *
  * Generated from protobuf message <code>io.FileBytes</code>
  */
 class FileBytes extends \Google\Protobuf\Internal\Message

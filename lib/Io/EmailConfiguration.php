@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * SMTP configuration options for outbound email.
+ *
  * Generated from protobuf message <code>io.EmailConfiguration</code>
  */
 class EmailConfiguration extends \Google\Protobuf\Internal\Message

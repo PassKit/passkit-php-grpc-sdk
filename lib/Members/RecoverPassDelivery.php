@@ -8,7 +8,7 @@ namespace Members;
 use UnexpectedValueException;
 
 /**
- * Defines what medium we deliver the recovered pass.
+ * Defines the delivery method used when recovering a member’s pass.
  *
  * Protobuf type <code>members.RecoverPassDelivery</code>
  */

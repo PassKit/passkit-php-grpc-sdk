@@ -6,19 +6,26 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to list all events within a production.
+ * Required fields: productionId or productionUid.
+ *
  * Generated from protobuf message <code>event_tickets.EventListRequest</code>
  */
 class EventListRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * PassKit generated venue id (22 characters).
+     *
      * Generated from protobuf field <code>string venueId = 3;</code>
      */
     protected $venueId = '';
     /**
+     * Optional filter object; defines the segment.
+     *
      * Generated from protobuf field <code>.io.Filters filters = 4;</code>
      */
     protected $filters = null;
@@ -35,7 +42,9 @@ class EventListRequest extends \Google\Protobuf\Internal\Message
      *     @type string $productionUid
      *           Production UID. Required if productionId is not provided.
      *     @type string $venueId
+     *           PassKit generated venue id (22 characters).
      *     @type \Io\Filters $filters
+     *           Optional filter object; defines the segment.
      * }
      */
     public function __construct($data = NULL) {
@@ -106,6 +115,8 @@ class EventListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PassKit generated venue id (22 characters).
+     *
      * Generated from protobuf field <code>string venueId = 3;</code>
      * @return string
      */
@@ -115,6 +126,8 @@ class EventListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PassKit generated venue id (22 characters).
+     *
      * Generated from protobuf field <code>string venueId = 3;</code>
      * @param string $var
      * @return $this
@@ -128,6 +141,8 @@ class EventListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional filter object; defines the segment.
+     *
      * Generated from protobuf field <code>.io.Filters filters = 4;</code>
      * @return \Io\Filters|null
      */
@@ -147,6 +162,8 @@ class EventListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional filter object; defines the segment.
+     *
      * Generated from protobuf field <code>.io.Filters filters = 4;</code>
      * @param \Io\Filters $var
      * @return $this

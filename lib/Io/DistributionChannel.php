@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Specifies the available distribution channels for pass delivery.
+ *
  * Protobuf type <code>io.DistributionChannel</code>
  */
 class DistributionChannel

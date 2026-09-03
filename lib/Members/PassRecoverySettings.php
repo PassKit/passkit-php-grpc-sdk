@@ -6,11 +6,11 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * PassRecoverySettings details the logic for recovering a pass.
+ * Configuration for how users can recover their pass (e.g., via email, SMS).
  *
  * Generated from protobuf message <code>members.PassRecoverySettings</code>
  */
@@ -61,7 +61,7 @@ class PassRecoverySettings extends \Google\Protobuf\Internal\Message
      *           The header text for the error page.
      *     @type string $errorPageBody
      *           The body text for the error page.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $fieldsToMatchUponRecovery
+     *     @type string[] $fieldsToMatchUponRecovery
      *           Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
      * }
      */
@@ -178,7 +178,7 @@ class PassRecoverySettings extends \Google\Protobuf\Internal\Message
      * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
      *
      * Generated from protobuf field <code>repeated string fieldsToMatchUponRecovery = 5;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getFieldsToMatchUponRecovery()
     {
@@ -189,7 +189,7 @@ class PassRecoverySettings extends \Google\Protobuf\Internal\Message
      * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
      *
      * Generated from protobuf field <code>repeated string fieldsToMatchUponRecovery = 5;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setFieldsToMatchUponRecovery($var)

@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enumeration of supported fields for Google Wallet passes.
+ *
  * Protobuf type <code>io.GooglePayField</code>
  */
 class GooglePayField

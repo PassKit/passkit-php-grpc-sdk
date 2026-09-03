@@ -6,39 +6,55 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Address contains structured address fields for a person or location.
+ *
  * Generated from protobuf message <code>io.Address</code>
  */
 class Address extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The first line of the street address (e.g. house number and street name).
+     *
      * Generated from protobuf field <code>string addressLine1 = 1;</code>
      */
     protected $addressLine1 = '';
     /**
+     * The second line of the address (e.g. apartment, suite, unit, building, floor).
+     *
      * Generated from protobuf field <code>string addressLine2 = 2;</code>
      */
     protected $addressLine2 = '';
     /**
+     * The third line of the address if additional space is needed.
+     *
      * Generated from protobuf field <code>string addressLine3 = 3;</code>
      */
     protected $addressLine3 = '';
     /**
+     * The city or locality.
+     *
      * Generated from protobuf field <code>string city = 4;</code>
      */
     protected $city = '';
     /**
+     * The state, province, or region.
+     *
      * Generated from protobuf field <code>string state = 5;</code>
      */
     protected $state = '';
     /**
+     * The postal or ZIP code.
+     *
      * Generated from protobuf field <code>string zipCode = 6;</code>
      */
     protected $zipCode = '';
     /**
+     * The ISO 3166-1 alpha-2 country code (e.g. "US", "HK").
+     *
      * Generated from protobuf field <code>string countryCode = 7;</code>
      */
     protected $countryCode = '';
@@ -50,12 +66,19 @@ class Address extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $addressLine1
+     *           The first line of the street address (e.g. house number and street name).
      *     @type string $addressLine2
+     *           The second line of the address (e.g. apartment, suite, unit, building, floor).
      *     @type string $addressLine3
+     *           The third line of the address if additional space is needed.
      *     @type string $city
+     *           The city or locality.
      *     @type string $state
+     *           The state, province, or region.
      *     @type string $zipCode
+     *           The postal or ZIP code.
      *     @type string $countryCode
+     *           The ISO 3166-1 alpha-2 country code (e.g. "US", "HK").
      * }
      */
     public function __construct($data = NULL) {
@@ -64,6 +87,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The first line of the street address (e.g. house number and street name).
+     *
      * Generated from protobuf field <code>string addressLine1 = 1;</code>
      * @return string
      */
@@ -73,6 +98,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The first line of the street address (e.g. house number and street name).
+     *
      * Generated from protobuf field <code>string addressLine1 = 1;</code>
      * @param string $var
      * @return $this
@@ -86,6 +113,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The second line of the address (e.g. apartment, suite, unit, building, floor).
+     *
      * Generated from protobuf field <code>string addressLine2 = 2;</code>
      * @return string
      */
@@ -95,6 +124,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The second line of the address (e.g. apartment, suite, unit, building, floor).
+     *
      * Generated from protobuf field <code>string addressLine2 = 2;</code>
      * @param string $var
      * @return $this
@@ -108,6 +139,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The third line of the address if additional space is needed.
+     *
      * Generated from protobuf field <code>string addressLine3 = 3;</code>
      * @return string
      */
@@ -117,6 +150,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The third line of the address if additional space is needed.
+     *
      * Generated from protobuf field <code>string addressLine3 = 3;</code>
      * @param string $var
      * @return $this
@@ -130,6 +165,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The city or locality.
+     *
      * Generated from protobuf field <code>string city = 4;</code>
      * @return string
      */
@@ -139,6 +176,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The city or locality.
+     *
      * Generated from protobuf field <code>string city = 4;</code>
      * @param string $var
      * @return $this
@@ -152,6 +191,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The state, province, or region.
+     *
      * Generated from protobuf field <code>string state = 5;</code>
      * @return string
      */
@@ -161,6 +202,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The state, province, or region.
+     *
      * Generated from protobuf field <code>string state = 5;</code>
      * @param string $var
      * @return $this
@@ -174,6 +217,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The postal or ZIP code.
+     *
      * Generated from protobuf field <code>string zipCode = 6;</code>
      * @return string
      */
@@ -183,6 +228,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The postal or ZIP code.
+     *
      * Generated from protobuf field <code>string zipCode = 6;</code>
      * @param string $var
      * @return $this
@@ -196,6 +243,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The ISO 3166-1 alpha-2 country code (e.g. "US", "HK").
+     *
      * Generated from protobuf field <code>string countryCode = 7;</code>
      * @return string
      */
@@ -205,6 +254,8 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The ISO 3166-1 alpha-2 country code (e.g. "US", "HK").
+     *
      * Generated from protobuf field <code>string countryCode = 7;</code>
      * @param string $var
      * @return $this

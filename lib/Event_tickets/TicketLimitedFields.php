@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Lightweight representation of a ticket with key details used in summaries or filtered responses. Required fields: event, ticketTypeUid.
+ *
  * Generated from protobuf message <code>event_tickets.TicketLimitedFields</code>
  */
 class TicketLimitedFields extends \Google\Protobuf\Internal\Message
@@ -187,7 +189,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      *           Optional field to set when the ticket expires. When the expiry date hits, it will automatically gray out the barcode.
      *     @type \Event_tickets\RedemptionDetails $redemptionDetails
      *           Contains details about the redemption (if the ticket is in a redeemed state). Not writable; set by the redeem endpoint.
-     *     @type array<\Event_tickets\ValidateDetails>|\Google\Protobuf\Internal\RepeatedField $validateDetails
+     *     @type \Event_tickets\ValidateDetails[] $validateDetails
      *           Contains details about when the ticket was validated. Tickets can be validated multiple times. Not writable; set by the validate endpoint.
      *     @type \Io\PassOverrides $passOverrides
      *           Optional Pass level overrides for proximity & images.
@@ -740,7 +742,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * Contains details about when the ticket was validated. Tickets can be validated multiple times. Not writable; set by the validate endpoint.
      *
      * Generated from protobuf field <code>repeated .event_tickets.ValidateDetails validateDetails = 18;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Event_tickets\ValidateDetails>
      */
     public function getValidateDetails()
     {
@@ -751,7 +753,7 @@ class TicketLimitedFields extends \Google\Protobuf\Internal\Message
      * Contains details about when the ticket was validated. Tickets can be validated multiple times. Not writable; set by the validate endpoint.
      *
      * Generated from protobuf field <code>repeated .event_tickets.ValidateDetails validateDetails = 18;</code>
-     * @param array<\Event_tickets\ValidateDetails>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Event_tickets\ValidateDetails[] $var
      * @return $this
      */
     public function setValidateDetails($var)

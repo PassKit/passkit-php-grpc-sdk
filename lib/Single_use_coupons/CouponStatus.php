@@ -8,6 +8,8 @@ namespace Single_use_coupons;
 use UnexpectedValueException;
 
 /**
+ * Enum representing the redemption state of a coupon.
+ *
  * Protobuf type <code>single_use_coupons.CouponStatus</code>
  */
 class CouponStatus

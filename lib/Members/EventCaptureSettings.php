@@ -6,10 +6,12 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Settings for event capture and behavior during member events (e.g., check-ins).
+ *
  * Generated from protobuf message <code>members.EventCaptureSettings</code>
  */
 class EventCaptureSettings extends \Google\Protobuf\Internal\Message

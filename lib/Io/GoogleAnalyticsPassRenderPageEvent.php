@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum of events used on the pass render page for Google Analytics.
+ *
  * Protobuf type <code>io.GoogleAnalyticsPassRenderPageEvent</code>
  */
 class GoogleAnalyticsPassRenderPageEvent
@@ -35,7 +37,7 @@ class GoogleAnalyticsPassRenderPageEvent
      */
     const GA_PP_EVENT_VIEW_PASS_IN_APPLE_WALLET_CLICK = 3;
     /**
-     * When a user clicks the Save to Google Pay button.
+     * When a user clicks the Save to Google Wallet button.
      *
      * Generated from protobuf enum <code>GA_PP_EVENT_SAVE_TO_GOOGLE_PAY_CLICK = 4;</code>
      */

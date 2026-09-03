@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum describing events common to all protocols.
+ *
  * Protobuf type <code>io.ProtocolCommonEvents</code>
  */
 class ProtocolCommonEvents

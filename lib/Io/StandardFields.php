@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum defining standard fields that can be included in the pass.
+ *
  * Protobuf type <code>io.StandardFields</code>
  */
 class StandardFields
@@ -17,26 +19,38 @@ class StandardFields
      */
     const STANDARD_FIELDS_DO_NOT_USE = 0;
     /**
+     * Used to include standard message fields.
+     *
      * Generated from protobuf enum <code>STANDARD_MESSAGES = 1;</code>
      */
     const STANDARD_MESSAGES = 1;
     /**
+     * Used to include standard legal text.
+     *
      * Generated from protobuf enum <code>STANDARD_LEGAL = 2;</code>
      */
     const STANDARD_LEGAL = 2;
     /**
+     * Used to include the standard expiry date field.
+     *
      * Generated from protobuf enum <code>STANDARD_EXPIRY_DATE = 3;</code>
      */
     const STANDARD_EXPIRY_DATE = 3;
     /**
+     * Used to include standard useful links.
+     *
      * Generated from protobuf enum <code>STANDARD_USEFUL_LINKS = 4;</code>
      */
     const STANDARD_USEFUL_LINKS = 4;
     /**
+     * Used to include an opt-out checkbox or section.
+     *
      * Generated from protobuf enum <code>STANDARD_OPT_OUT = 5;</code>
      */
     const STANDARD_OPT_OUT = 5;
     /**
+     * Used to include standard locations on the pass.
+     *
      * Generated from protobuf enum <code>STANDARD_LOCATIONS = 6;</code>
      */
     const STANDARD_LOCATIONS = 6;

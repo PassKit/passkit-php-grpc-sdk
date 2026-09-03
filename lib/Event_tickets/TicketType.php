@@ -6,11 +6,11 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * The Ticket Type Details
+ * Defines a ticket type and its associated settings and pass templates. Required fields: productionId, name, beforeRedeemPassTemplateId.
  *
  * Generated from protobuf message <code>event_tickets.TicketType</code>
  */

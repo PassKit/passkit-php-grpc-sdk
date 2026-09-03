@@ -6,15 +6,19 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request payload containing a CSR (Certificate Signing Request).
+ *
  * Generated from protobuf message <code>io.CertificateSigningRequest</code>
  */
 class CertificateSigningRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * PEM-encoded certificate signing request.
+     *
      * Generated from protobuf field <code>string csr = 1;</code>
      */
     protected $csr = '';
@@ -26,6 +30,7 @@ class CertificateSigningRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $csr
+     *           PEM-encoded certificate signing request.
      * }
      */
     public function __construct($data = NULL) {
@@ -34,6 +39,8 @@ class CertificateSigningRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PEM-encoded certificate signing request.
+     *
      * Generated from protobuf field <code>string csr = 1;</code>
      * @return string
      */
@@ -43,6 +50,8 @@ class CertificateSigningRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PEM-encoded certificate signing request.
+     *
      * Generated from protobuf field <code>string csr = 1;</code>
      * @param string $var
      * @return $this

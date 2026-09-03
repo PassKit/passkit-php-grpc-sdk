@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Filters tickets for a specific event using venue ID or UID and a start date. Required fields: venueId or venueUid, scheduledStartDate.
+ *
  * Generated from protobuf message <code>event_tickets.EventFilterByVenueAndStart</code>
  */
 class EventFilterByVenueAndStart extends \Google\Protobuf\Internal\Message

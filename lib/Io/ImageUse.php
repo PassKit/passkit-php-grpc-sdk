@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Representing the use-case for each image.
+ *
  * Protobuf type <code>io.ImageUse</code>
  */
 class ImageUse
@@ -19,24 +21,29 @@ class ImageUse
      */
     const icon = 0;
     /**
-     * Logo is circle-cropped by Google Pay, a 15% safety margin is recommended (660px x 660px).
+     * Logo is circle-cropped by Google Wallet, a 15% safety margin is recommended (660px x 660px).
      *
      * Generated from protobuf enum <code>logo = 1;</code>
      */
     const logo = 1;
     /**
-     * Apple logo can be used where a rectangular design is preferred for Apple Passes only.  If omitted, the square
-     * logo image will be used.  (<=480px x 150px).
+     * Apple logo can be used where a rectangular design is preferred for Apple Passes only.  If omitted, the square logo image will be used.  (<=480px x 150px).
      *
      * Generated from protobuf enum <code>appleLogo = 2;</code>
      */
     const appleLogo = 2;
     /**
-     * Hero is the Google Pay strip and is also used in the dialog box when installing (1032px x 336px).
+     * Hero is the Google Wallet strip and is also used in the dialog box when installing (1032px x 336px).
      *
      * Generated from protobuf enum <code>hero = 3;</code>
      */
     const hero = 3;
+    /**
+     * RichHero is the Google Wallet full face image for passes issued after late 2026 (1032px x 812px).
+     *
+     * Generated from protobuf enum <code>richHero = 26;</code>
+     */
+    const richHero = 26;
     /**
      * Apple Wallet strip image for EventTicket pass types (1125px x 294px).
      *
@@ -70,21 +77,21 @@ class ImageUse
      */
     const footer = 8;
     /**
-     * Google Pay - used to denote a security program on boarding pass types (E.g. TSA PreCheck®).  Width of 1600px is.
+     * Google Wallet - used to denote a security program on boarding pass types (E.g. TSA PreCheck®).  Width of 1600px is.
      * shared with the boarding privilege logo (<=1600px x 80px).
      *
      * Generated from protobuf enum <code>security = 9;</code>
      */
     const security = 9;
     /**
-     * Google Pay - used to denote a boarding privilege.  Width of 1600px is shared with the security program logo.
+     * Google Wallet - used to denote a boarding privilege.  Width of 1600px is shared with the security program logo.
      * (<=1600px x 80px)
      *
      * Generated from protobuf enum <code>privilege = 10;</code>
      */
     const privilege = 10;
     /**
-     * Google Pay - used to denote airline alliance on boarding pass types (<=1600px x 80px).
+     * Google Wallet - used to denote airline alliance on boarding pass types (<=1600px x 80px).
      *
      * Generated from protobuf enum <code>airlineAlliance = 11;</code>
      */
@@ -103,7 +110,7 @@ class ImageUse
      */
     const banner = 13;
     /**
-     * used for Google Pay in wallet promotional messages - for Apple Pay, the message will be rendered on a mobile
+     * used for Google Wallet in wallet promotional messages - for Apple Pay, the message will be rendered on a mobile
      * website (1860px x <=930px).
      *
      * Generated from protobuf enum <code>message = 14;</code>
@@ -116,7 +123,7 @@ class ImageUse
      */
     const profile = 15;
     /**
-     * used for user App images in Google Pay (Google approval required, 300px x 300px).
+     * used for user App images in Google Wallet (Google approval required, 300px x 300px).
      *
      * Generated from protobuf enum <code>appImage = 16;</code>
      */
@@ -158,11 +165,11 @@ class ImageUse
      */
     const artwork = 23;
     /**
-     * used in the top left hand corner for Apple poster style Event tickets (<=378px x 30px)
+     * used in the top left hand corner for Apple poster style Event tickets, and Semantic Boarding Passes (<=378px x 90px).
      *
-     * Generated from protobuf enum <code>posterLogo = 24;</code>
+     * Generated from protobuf enum <code>primaryLogo = 24;</code>
      */
-    const posterLogo = 24;
+    const primaryLogo = 24;
     /**
      * used to present a venue map for an Apple poster style Event Ticket.  Width should be Ratio should be at least 1074px wide and have a 16:9 or 4:5 to avoid cropping.
      *
@@ -175,6 +182,7 @@ class ImageUse
         self::logo => 'logo',
         self::appleLogo => 'appleLogo',
         self::hero => 'hero',
+        self::richHero => 'richHero',
         self::eventStrip => 'eventStrip',
         self::strip => 'strip',
         self::thumbnail => 'thumbnail',
@@ -194,7 +202,7 @@ class ImageUse
         self::wideLogo => 'wideLogo',
         self::secondaryLogo => 'secondaryLogo',
         self::artwork => 'artwork',
-        self::posterLogo => 'posterLogo',
+        self::primaryLogo => 'primaryLogo',
         self::venueMap => 'venueMap',
     ];
 

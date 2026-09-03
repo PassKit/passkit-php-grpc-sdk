@@ -8,24 +8,26 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum defining supported Android wallets for rendering passes.
+ *
  * Protobuf type <code>io.SupportedAndroidWallet</code>
  */
 class SupportedAndroidWallet
 {
     /**
-     * For legacy support, a setting of do not use will default to WalletPasses.
+     * Defaults to WalletPasses if unspecified.
      *
      * Generated from protobuf enum <code>ANDROID_WALLET_DO_NOT_USE = 0;</code>
      */
     const ANDROID_WALLET_DO_NOT_USE = 0;
     /**
-     * Android PassWallet https://passwallet.net.
+     * Android PassWallet (https://passwallet.net)
      *
      * Generated from protobuf enum <code>ANDROID_WALLET_PASSWALLET = 1;</code>
      */
     const ANDROID_WALLET_PASSWALLET = 1;
     /**
-     * WalletPasses https://walletpasses.io (Default).
+     * WalletPasses (https://walletpasses.io)
      *
      * Generated from protobuf enum <code>ANDROID_WALLET_WALLETPASSES = 2;</code>
      */

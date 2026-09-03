@@ -6,33 +6,39 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request object for updating personal details on a pass holder.
+ *
  * Generated from protobuf message <code>io.PersonRequest</code>
  */
 class PersonRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Pass Id (22 characters).
+     * The unique PassKit pass ID (22 characters).
      *
      * Generated from protobuf field <code>string id = 1;</code>
      */
     protected $id = '';
     /**
-     * External Id of the pass holder. Needs to provide Class Id as well.
+     * The external identifier for the pass holder.
+     * Used as an alternative to pass ID when paired with class ID.
      *
      * Generated from protobuf field <code>string externalId = 2;</code>
      */
     protected $externalId = '';
     /**
-     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     * The class ID (e.g. member program ID, coupon campaign ID).
+     * Required if externalId is used.
      *
      * Generated from protobuf field <code>string classId = 3;</code>
      */
     protected $classId = '';
     /**
+     * The updated person details.
+     *
      * Generated from protobuf field <code>.io.Person person = 4;</code>
      */
     protected $person = null;
@@ -44,12 +50,15 @@ class PersonRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
-     *           Pass Id (22 characters).
+     *           The unique PassKit pass ID (22 characters).
      *     @type string $externalId
-     *           External Id of the pass holder. Needs to provide Class Id as well.
+     *           The external identifier for the pass holder.
+     *           Used as an alternative to pass ID when paired with class ID.
      *     @type string $classId
-     *           The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     *           The class ID (e.g. member program ID, coupon campaign ID).
+     *           Required if externalId is used.
      *     @type \Io\Person $person
+     *           The updated person details.
      * }
      */
     public function __construct($data = NULL) {
@@ -58,7 +67,7 @@ class PersonRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Pass Id (22 characters).
+     * The unique PassKit pass ID (22 characters).
      *
      * Generated from protobuf field <code>string id = 1;</code>
      * @return string
@@ -69,7 +78,7 @@ class PersonRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Pass Id (22 characters).
+     * The unique PassKit pass ID (22 characters).
      *
      * Generated from protobuf field <code>string id = 1;</code>
      * @param string $var
@@ -84,7 +93,8 @@ class PersonRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * External Id of the pass holder. Needs to provide Class Id as well.
+     * The external identifier for the pass holder.
+     * Used as an alternative to pass ID when paired with class ID.
      *
      * Generated from protobuf field <code>string externalId = 2;</code>
      * @return string
@@ -95,7 +105,8 @@ class PersonRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * External Id of the pass holder. Needs to provide Class Id as well.
+     * The external identifier for the pass holder.
+     * Used as an alternative to pass ID when paired with class ID.
      *
      * Generated from protobuf field <code>string externalId = 2;</code>
      * @param string $var
@@ -110,7 +121,8 @@ class PersonRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     * The class ID (e.g. member program ID, coupon campaign ID).
+     * Required if externalId is used.
      *
      * Generated from protobuf field <code>string classId = 3;</code>
      * @return string
@@ -121,7 +133,8 @@ class PersonRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     * The class ID (e.g. member program ID, coupon campaign ID).
+     * Required if externalId is used.
      *
      * Generated from protobuf field <code>string classId = 3;</code>
      * @param string $var
@@ -136,6 +149,8 @@ class PersonRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The updated person details.
+     *
      * Generated from protobuf field <code>.io.Person person = 4;</code>
      * @return \Io\Person|null
      */
@@ -155,6 +170,8 @@ class PersonRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The updated person details.
+     *
      * Generated from protobuf field <code>.io.Person person = 4;</code>
      * @param \Io\Person $var
      * @return $this

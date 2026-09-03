@@ -8,44 +8,44 @@ namespace Members;
 use UnexpectedValueException;
 
 /**
- * List of allowed member statuses
+ * Enum representing possible states for a member.
  *
  * Protobuf type <code>members.MemberStatus</code>
  */
 class MemberStatus
 {
     /**
-     * Member has successfully enrolled in the program.
+     * Member is enrolled but not yet active.
      *
      * Generated from protobuf enum <code>ENROLLED = 0;</code>
      */
     const ENROLLED = 0;
     /**
-     * Member is active.
+     * Member is active and eligible to use benefits.
      *
      * Generated from protobuf enum <code>ACTIVE = 1;</code>
      */
     const ACTIVE = 1;
     /**
-     * Member is checked in.
+     * Member is checked into a location or event.
      *
      * Generated from protobuf enum <code>CHECKED_IN = 2;</code>
      */
     const CHECKED_IN = 2;
     /**
-     * For expired members.
+     * Member enrollment has expired.
      *
      * Generated from protobuf enum <code>EXPIRED = 3;</code>
      */
     const EXPIRED = 3;
     /**
-     * Member is checked out.
+     * Member is checked out from a location or event.
      *
      * Generated from protobuf enum <code>CHECKED_OUT = 4;</code>
      */
     const CHECKED_OUT = 4;
     /**
-     * For members who's records have been deleted.
+     * Member record is deleted.
      *
      * Generated from protobuf enum <code>DELETED = 5;</code>
      */

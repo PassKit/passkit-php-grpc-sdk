@@ -6,113 +6,169 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * See image 'Use' enum for descriptions and sizes.
+ * Used to manage image IDs by use case. Required fields: icon.
  *
  * Generated from protobuf message <code>io.ImageIds</code>
  */
 class ImageIds extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Mandatory icon, used in Apple Wallet lock screen (87px x 87px).
+     *
      * Generated from protobuf field <code>string icon = 1;</code>
      */
     protected $icon = '';
     /**
+     * Logo is circle-cropped by Google Wallet, a 15% safety margin is recommended (660px x 660px).
+     *
      * Generated from protobuf field <code>string logo = 2;</code>
      */
     protected $logo = '';
     /**
+     * Apple logo for rectangular designs in Apple Passes. (≤480px x 150px)
+     *
      * Generated from protobuf field <code>string appleLogo = 3;</code>
      */
     protected $appleLogo = '';
     /**
+     * Google Wallet hero strip and install dialog. (1032px x 336px).
+     *
      * Generated from protobuf field <code>string hero = 4;</code>
      */
     protected $hero = '';
     /**
+     * RichHero is the Google Wallet full face image for passes issued after late 2026 (1032px x 812px).
+     *
+     * Generated from protobuf field <code>string richHero = 26;</code>
+     */
+    protected $richHero = '';
+    /**
+     * Apple Wallet strip for EventTicket passes. (1125px x 294px).
+     *
      * Generated from protobuf field <code>string eventStrip = 5;</code>
      */
     protected $eventStrip = '';
     /**
+     * Apple Wallet strip for non-EventTicket passes. (1125px x 432px).
+     *
      * Generated from protobuf field <code>string strip = 6;</code>
      */
     protected $strip = '';
     /**
+     * Used on Membership and Apple Event Ticket passes. (≥320px x ≥320px, ratio 2:3–3:2).
+     *
      * Generated from protobuf field <code>string thumbnail = 7;</code>
      */
     protected $thumbnail = '';
     /**
+     * Background for Apple Event Ticket designs. Can be low quality. (180px x 220px).
+     *
      * Generated from protobuf field <code>string background = 8;</code>
      */
     protected $background = '';
     /**
+     * Appears above barcode in Apple Wallet Boarding passes. (858px x 45px).
+     *
      * Generated from protobuf field <code>string footer = 9;</code>
      */
     protected $footer = '';
     /**
+     * Google Wallet boarding pass security program (e.g. TSA PreCheck®). (≤1600px x 80px).
+     *
      * Generated from protobuf field <code>string security = 10;</code>
      */
     protected $security = '';
     /**
+     * Google Wallet boarding privilege logo. Shares width with security. (≤1600px x 80px).
+     *
      * Generated from protobuf field <code>string privilege = 11;</code>
      */
     protected $privilege = '';
     /**
+     * Google Wallet airline alliance logo for boarding passes. (≤1600px x 80px).
+     *
      * Generated from protobuf field <code>string airlineAlliance = 12;</code>
      */
     protected $airlineAlliance = '';
     /**
+     * Apple Pay NFC personalization passes. Appears post-terms. (≤450px x 120px).
+     *
      * Generated from protobuf field <code>string personalization = 13;</code>
      */
     protected $personalization = '';
     /**
+     * For landing pages or email campaigns. Treated as \@2x.
+     *
      * Generated from protobuf field <code>string banner = 14;</code>
      */
     protected $banner = '';
     /**
+     * Wallet promo messages (Google) or mobile web (Apple). (1860px x ≤930px).
+     *
      * Generated from protobuf field <code>string message = 15;</code>
      */
     protected $message = '';
     /**
+     * User profile photo. (300px x 300px).
+     *
      * Generated from protobuf field <code>string profile = 16;</code>
      */
     protected $profile = '';
     /**
+     * Google Wallet app image - Requires Google pre-authorization (300px x 300px).
+     *
      * Generated from protobuf field <code>string appImage = 17;</code>
      */
     protected $appImage = '';
     /**
+     * Custom image when a stamp is applied.
+     *
      * Generated from protobuf field <code>string stampedImage = 18;</code>
      */
     protected $stampedImage = '';
     /**
+     * Custom image for unpunched stamp.
+     *
      * Generated from protobuf field <code>string unstampedImage = 19;</code>
      */
     protected $unstampedImage = '';
     /**
+     * Configured stamp image with stampImageConfig record.
+     *
      * Generated from protobuf field <code>string stampImage = 20;</code>
      */
     protected $stampImage = '';
     /**
+     * Google Wallet wide header logo. (1280px x 400px).
+     *
      * Generated from protobuf field <code>string wideLogo = 21;</code>
      */
     protected $wideLogo = '';
     /**
+     * Apple Event Ticket footer inset logo. (≤405px x 36px).
+     *
      * Generated from protobuf field <code>string secondaryLogo = 22;</code>
      */
     protected $secondaryLogo = '';
     /**
+     * Apple poster-style Event Ticket background. (1074px x 1344px).
+     *
      * Generated from protobuf field <code>string artwork = 23;</code>
      */
     protected $artwork = '';
     /**
-     * Generated from protobuf field <code>string posterLogo = 24;</code>
+     * Apple logo used in the top left hand corner for Apple poster style Event tickets and Semantic Boarding Passes (≤378px x 30px).
+     *
+     * Generated from protobuf field <code>string primaryLogo = 24;</code>
      */
-    protected $posterLogo = '';
+    protected $primaryLogo = '';
     /**
+     * Venue map image for poster-style Apple Event Tickets. (min 1074px width, 16:9 or 4:5 ratio).
+     *
      * Generated from protobuf field <code>string venueMap = 25;</code>
      */
     protected $venueMap = '';
@@ -124,30 +180,57 @@ class ImageIds extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $icon
+     *           Mandatory icon, used in Apple Wallet lock screen (87px x 87px).
      *     @type string $logo
+     *           Logo is circle-cropped by Google Wallet, a 15% safety margin is recommended (660px x 660px).
      *     @type string $appleLogo
+     *           Apple logo for rectangular designs in Apple Passes. (≤480px x 150px)
      *     @type string $hero
+     *           Google Wallet hero strip and install dialog. (1032px x 336px).
+     *     @type string $richHero
+     *           RichHero is the Google Wallet full face image for passes issued after late 2026 (1032px x 812px).
      *     @type string $eventStrip
+     *           Apple Wallet strip for EventTicket passes. (1125px x 294px).
      *     @type string $strip
+     *           Apple Wallet strip for non-EventTicket passes. (1125px x 432px).
      *     @type string $thumbnail
+     *           Used on Membership and Apple Event Ticket passes. (≥320px x ≥320px, ratio 2:3–3:2).
      *     @type string $background
+     *           Background for Apple Event Ticket designs. Can be low quality. (180px x 220px).
      *     @type string $footer
+     *           Appears above barcode in Apple Wallet Boarding passes. (858px x 45px).
      *     @type string $security
+     *           Google Wallet boarding pass security program (e.g. TSA PreCheck®). (≤1600px x 80px).
      *     @type string $privilege
+     *           Google Wallet boarding privilege logo. Shares width with security. (≤1600px x 80px).
      *     @type string $airlineAlliance
+     *           Google Wallet airline alliance logo for boarding passes. (≤1600px x 80px).
      *     @type string $personalization
+     *           Apple Pay NFC personalization passes. Appears post-terms. (≤450px x 120px).
      *     @type string $banner
+     *           For landing pages or email campaigns. Treated as \@2x.
      *     @type string $message
+     *           Wallet promo messages (Google) or mobile web (Apple). (1860px x ≤930px).
      *     @type string $profile
+     *           User profile photo. (300px x 300px).
      *     @type string $appImage
+     *           Google Wallet app image - Requires Google pre-authorization (300px x 300px).
      *     @type string $stampedImage
+     *           Custom image when a stamp is applied.
      *     @type string $unstampedImage
+     *           Custom image for unpunched stamp.
      *     @type string $stampImage
+     *           Configured stamp image with stampImageConfig record.
      *     @type string $wideLogo
+     *           Google Wallet wide header logo. (1280px x 400px).
      *     @type string $secondaryLogo
+     *           Apple Event Ticket footer inset logo. (≤405px x 36px).
      *     @type string $artwork
-     *     @type string $posterLogo
+     *           Apple poster-style Event Ticket background. (1074px x 1344px).
+     *     @type string $primaryLogo
+     *           Apple logo used in the top left hand corner for Apple poster style Event tickets and Semantic Boarding Passes (≤378px x 30px).
      *     @type string $venueMap
+     *           Venue map image for poster-style Apple Event Tickets. (min 1074px width, 16:9 or 4:5 ratio).
      * }
      */
     public function __construct($data = NULL) {
@@ -156,6 +239,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Mandatory icon, used in Apple Wallet lock screen (87px x 87px).
+     *
      * Generated from protobuf field <code>string icon = 1;</code>
      * @return string
      */
@@ -165,6 +250,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Mandatory icon, used in Apple Wallet lock screen (87px x 87px).
+     *
      * Generated from protobuf field <code>string icon = 1;</code>
      * @param string $var
      * @return $this
@@ -178,6 +265,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Logo is circle-cropped by Google Wallet, a 15% safety margin is recommended (660px x 660px).
+     *
      * Generated from protobuf field <code>string logo = 2;</code>
      * @return string
      */
@@ -187,6 +276,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Logo is circle-cropped by Google Wallet, a 15% safety margin is recommended (660px x 660px).
+     *
      * Generated from protobuf field <code>string logo = 2;</code>
      * @param string $var
      * @return $this
@@ -200,6 +291,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple logo for rectangular designs in Apple Passes. (≤480px x 150px)
+     *
      * Generated from protobuf field <code>string appleLogo = 3;</code>
      * @return string
      */
@@ -209,6 +302,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple logo for rectangular designs in Apple Passes. (≤480px x 150px)
+     *
      * Generated from protobuf field <code>string appleLogo = 3;</code>
      * @param string $var
      * @return $this
@@ -222,6 +317,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet hero strip and install dialog. (1032px x 336px).
+     *
      * Generated from protobuf field <code>string hero = 4;</code>
      * @return string
      */
@@ -231,6 +328,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet hero strip and install dialog. (1032px x 336px).
+     *
      * Generated from protobuf field <code>string hero = 4;</code>
      * @param string $var
      * @return $this
@@ -244,6 +343,34 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * RichHero is the Google Wallet full face image for passes issued after late 2026 (1032px x 812px).
+     *
+     * Generated from protobuf field <code>string richHero = 26;</code>
+     * @return string
+     */
+    public function getRichHero()
+    {
+        return $this->richHero;
+    }
+
+    /**
+     * RichHero is the Google Wallet full face image for passes issued after late 2026 (1032px x 812px).
+     *
+     * Generated from protobuf field <code>string richHero = 26;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRichHero($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->richHero = $var;
+
+        return $this;
+    }
+
+    /**
+     * Apple Wallet strip for EventTicket passes. (1125px x 294px).
+     *
      * Generated from protobuf field <code>string eventStrip = 5;</code>
      * @return string
      */
@@ -253,6 +380,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple Wallet strip for EventTicket passes. (1125px x 294px).
+     *
      * Generated from protobuf field <code>string eventStrip = 5;</code>
      * @param string $var
      * @return $this
@@ -266,6 +395,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple Wallet strip for non-EventTicket passes. (1125px x 432px).
+     *
      * Generated from protobuf field <code>string strip = 6;</code>
      * @return string
      */
@@ -275,6 +406,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple Wallet strip for non-EventTicket passes. (1125px x 432px).
+     *
      * Generated from protobuf field <code>string strip = 6;</code>
      * @param string $var
      * @return $this
@@ -288,6 +421,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Used on Membership and Apple Event Ticket passes. (≥320px x ≥320px, ratio 2:3–3:2).
+     *
      * Generated from protobuf field <code>string thumbnail = 7;</code>
      * @return string
      */
@@ -297,6 +432,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Used on Membership and Apple Event Ticket passes. (≥320px x ≥320px, ratio 2:3–3:2).
+     *
      * Generated from protobuf field <code>string thumbnail = 7;</code>
      * @param string $var
      * @return $this
@@ -310,6 +447,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Background for Apple Event Ticket designs. Can be low quality. (180px x 220px).
+     *
      * Generated from protobuf field <code>string background = 8;</code>
      * @return string
      */
@@ -319,6 +458,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Background for Apple Event Ticket designs. Can be low quality. (180px x 220px).
+     *
      * Generated from protobuf field <code>string background = 8;</code>
      * @param string $var
      * @return $this
@@ -332,6 +473,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Appears above barcode in Apple Wallet Boarding passes. (858px x 45px).
+     *
      * Generated from protobuf field <code>string footer = 9;</code>
      * @return string
      */
@@ -341,6 +484,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Appears above barcode in Apple Wallet Boarding passes. (858px x 45px).
+     *
      * Generated from protobuf field <code>string footer = 9;</code>
      * @param string $var
      * @return $this
@@ -354,6 +499,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet boarding pass security program (e.g. TSA PreCheck®). (≤1600px x 80px).
+     *
      * Generated from protobuf field <code>string security = 10;</code>
      * @return string
      */
@@ -363,6 +510,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet boarding pass security program (e.g. TSA PreCheck®). (≤1600px x 80px).
+     *
      * Generated from protobuf field <code>string security = 10;</code>
      * @param string $var
      * @return $this
@@ -376,6 +525,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet boarding privilege logo. Shares width with security. (≤1600px x 80px).
+     *
      * Generated from protobuf field <code>string privilege = 11;</code>
      * @return string
      */
@@ -385,6 +536,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet boarding privilege logo. Shares width with security. (≤1600px x 80px).
+     *
      * Generated from protobuf field <code>string privilege = 11;</code>
      * @param string $var
      * @return $this
@@ -398,6 +551,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet airline alliance logo for boarding passes. (≤1600px x 80px).
+     *
      * Generated from protobuf field <code>string airlineAlliance = 12;</code>
      * @return string
      */
@@ -407,6 +562,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet airline alliance logo for boarding passes. (≤1600px x 80px).
+     *
      * Generated from protobuf field <code>string airlineAlliance = 12;</code>
      * @param string $var
      * @return $this
@@ -420,6 +577,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple Pay NFC personalization passes. Appears post-terms. (≤450px x 120px).
+     *
      * Generated from protobuf field <code>string personalization = 13;</code>
      * @return string
      */
@@ -429,6 +588,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple Pay NFC personalization passes. Appears post-terms. (≤450px x 120px).
+     *
      * Generated from protobuf field <code>string personalization = 13;</code>
      * @param string $var
      * @return $this
@@ -442,6 +603,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * For landing pages or email campaigns. Treated as \@2x.
+     *
      * Generated from protobuf field <code>string banner = 14;</code>
      * @return string
      */
@@ -451,6 +614,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * For landing pages or email campaigns. Treated as \@2x.
+     *
      * Generated from protobuf field <code>string banner = 14;</code>
      * @param string $var
      * @return $this
@@ -464,6 +629,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Wallet promo messages (Google) or mobile web (Apple). (1860px x ≤930px).
+     *
      * Generated from protobuf field <code>string message = 15;</code>
      * @return string
      */
@@ -473,6 +640,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Wallet promo messages (Google) or mobile web (Apple). (1860px x ≤930px).
+     *
      * Generated from protobuf field <code>string message = 15;</code>
      * @param string $var
      * @return $this
@@ -486,6 +655,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * User profile photo. (300px x 300px).
+     *
      * Generated from protobuf field <code>string profile = 16;</code>
      * @return string
      */
@@ -495,6 +666,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * User profile photo. (300px x 300px).
+     *
      * Generated from protobuf field <code>string profile = 16;</code>
      * @param string $var
      * @return $this
@@ -508,6 +681,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet app image - Requires Google pre-authorization (300px x 300px).
+     *
      * Generated from protobuf field <code>string appImage = 17;</code>
      * @return string
      */
@@ -517,6 +692,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet app image - Requires Google pre-authorization (300px x 300px).
+     *
      * Generated from protobuf field <code>string appImage = 17;</code>
      * @param string $var
      * @return $this
@@ -530,6 +707,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Custom image when a stamp is applied.
+     *
      * Generated from protobuf field <code>string stampedImage = 18;</code>
      * @return string
      */
@@ -539,6 +718,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Custom image when a stamp is applied.
+     *
      * Generated from protobuf field <code>string stampedImage = 18;</code>
      * @param string $var
      * @return $this
@@ -552,6 +733,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Custom image for unpunched stamp.
+     *
      * Generated from protobuf field <code>string unstampedImage = 19;</code>
      * @return string
      */
@@ -561,6 +744,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Custom image for unpunched stamp.
+     *
      * Generated from protobuf field <code>string unstampedImage = 19;</code>
      * @param string $var
      * @return $this
@@ -574,6 +759,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Configured stamp image with stampImageConfig record.
+     *
      * Generated from protobuf field <code>string stampImage = 20;</code>
      * @return string
      */
@@ -583,6 +770,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Configured stamp image with stampImageConfig record.
+     *
      * Generated from protobuf field <code>string stampImage = 20;</code>
      * @param string $var
      * @return $this
@@ -596,6 +785,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet wide header logo. (1280px x 400px).
+     *
      * Generated from protobuf field <code>string wideLogo = 21;</code>
      * @return string
      */
@@ -605,6 +796,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet wide header logo. (1280px x 400px).
+     *
      * Generated from protobuf field <code>string wideLogo = 21;</code>
      * @param string $var
      * @return $this
@@ -618,6 +811,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple Event Ticket footer inset logo. (≤405px x 36px).
+     *
      * Generated from protobuf field <code>string secondaryLogo = 22;</code>
      * @return string
      */
@@ -627,6 +822,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple Event Ticket footer inset logo. (≤405px x 36px).
+     *
      * Generated from protobuf field <code>string secondaryLogo = 22;</code>
      * @param string $var
      * @return $this
@@ -640,6 +837,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple poster-style Event Ticket background. (1074px x 1344px).
+     *
      * Generated from protobuf field <code>string artwork = 23;</code>
      * @return string
      */
@@ -649,6 +848,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple poster-style Event Ticket background. (1074px x 1344px).
+     *
      * Generated from protobuf field <code>string artwork = 23;</code>
      * @param string $var
      * @return $this
@@ -662,28 +863,34 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string posterLogo = 24;</code>
+     * Apple logo used in the top left hand corner for Apple poster style Event tickets and Semantic Boarding Passes (≤378px x 30px).
+     *
+     * Generated from protobuf field <code>string primaryLogo = 24;</code>
      * @return string
      */
-    public function getPosterLogo()
+    public function getPrimaryLogo()
     {
-        return $this->posterLogo;
+        return $this->primaryLogo;
     }
 
     /**
-     * Generated from protobuf field <code>string posterLogo = 24;</code>
+     * Apple logo used in the top left hand corner for Apple poster style Event tickets and Semantic Boarding Passes (≤378px x 30px).
+     *
+     * Generated from protobuf field <code>string primaryLogo = 24;</code>
      * @param string $var
      * @return $this
      */
-    public function setPosterLogo($var)
+    public function setPrimaryLogo($var)
     {
         GPBUtil::checkString($var, True);
-        $this->posterLogo = $var;
+        $this->primaryLogo = $var;
 
         return $this;
     }
 
     /**
+     * Venue map image for poster-style Apple Event Tickets. (min 1074px width, 16:9 or 4:5 ratio).
+     *
      * Generated from protobuf field <code>string venueMap = 25;</code>
      * @return string
      */
@@ -693,6 +900,8 @@ class ImageIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Venue map image for poster-style Apple Event Tickets. (min 1074px width, 16:9 or 4:5 ratio).
+     *
      * Generated from protobuf field <code>string venueMap = 25;</code>
      * @param string $var
      * @return $this

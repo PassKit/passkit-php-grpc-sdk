@@ -6,10 +6,12 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Defines the hosted redemption page shown to customers.
+ *
  * Generated from protobuf message <code>single_use_coupons.StandardPassKitHostedPage</code>
  */
 class StandardPassKitHostedPage extends \Google\Protobuf\Internal\Message

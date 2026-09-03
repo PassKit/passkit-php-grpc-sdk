@@ -6,8 +6,8 @@
 namespace Flights;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Port is an optional record that allows the carrier to overwrite default airport names and their localizations.  A port can represent an origin, destination or transit port of a direct flight with stops.  If a port record does not exist, this information will be automatically populated with publicly available data.
@@ -64,6 +64,30 @@ class Port extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string timezone = 8;</code>
      */
     protected $timezone = '';
+    /**
+     * A list of security programs available at the airport. For use with Apple Semantic boarding passes.
+     *
+     * Generated from protobuf field <code>repeated .flights.AirportSecurityPrograms securityPrograms = 9;</code>
+     */
+    private $securityPrograms;
+    /**
+     * A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -> InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
+     *
+     * Generated from protobuf field <code>string documentsVerifiedText = 10;</code>
+     */
+    protected $documentsVerifiedText = '';
+    /**
+     * The localized documents verified text.
+     *
+     * Generated from protobuf field <code>.io.LocalizedString localizedDocumentsVerifiedText = 11;</code>
+     */
+    protected $localizedDocumentsVerifiedText = null;
+    /**
+     * Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
+     *
+     * Generated from protobuf field <code>repeated string loungeIds = 13;</code>
+     */
+    private $loungeIds;
 
     /**
      * Constructor.
@@ -87,6 +111,14 @@ class Port extends \Google\Protobuf\Internal\Message
      *           The ISO 3166 country code of the port.
      *     @type string $timezone
      *           The timezone of the airport in IANA timezone format. This is required to ensure the correct rendering of times and dates in the time local to the port.
+     *     @type int[] $securityPrograms
+     *           A list of security programs available at the airport. For use with Apple Semantic boarding passes.
+     *     @type string $documentsVerifiedText
+     *           A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -> InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
+     *     @type \Io\LocalizedString $localizedDocumentsVerifiedText
+     *           The localized documents verified text.
+     *     @type string[] $loungeIds
+     *           Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
      * }
      */
     public function __construct($data = NULL) {
@@ -318,6 +350,120 @@ class Port extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->timezone = $var;
+
+        return $this;
+    }
+
+    /**
+     * A list of security programs available at the airport. For use with Apple Semantic boarding passes.
+     *
+     * Generated from protobuf field <code>repeated .flights.AirportSecurityPrograms securityPrograms = 9;</code>
+     * @return RepeatedField<int>
+     */
+    public function getSecurityPrograms()
+    {
+        return $this->securityPrograms;
+    }
+
+    /**
+     * A list of security programs available at the airport. For use with Apple Semantic boarding passes.
+     *
+     * Generated from protobuf field <code>repeated .flights.AirportSecurityPrograms securityPrograms = 9;</code>
+     * @param int[] $var
+     * @return $this
+     */
+    public function setSecurityPrograms($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Flights\AirportSecurityPrograms::class);
+        $this->securityPrograms = $arr;
+
+        return $this;
+    }
+
+    /**
+     * A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -> InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
+     *
+     * Generated from protobuf field <code>string documentsVerifiedText = 10;</code>
+     * @return string
+     */
+    public function getDocumentsVerifiedText()
+    {
+        return $this->documentsVerifiedText;
+    }
+
+    /**
+     * A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -> InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
+     *
+     * Generated from protobuf field <code>string documentsVerifiedText = 10;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDocumentsVerifiedText($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->documentsVerifiedText = $var;
+
+        return $this;
+    }
+
+    /**
+     * The localized documents verified text.
+     *
+     * Generated from protobuf field <code>.io.LocalizedString localizedDocumentsVerifiedText = 11;</code>
+     * @return \Io\LocalizedString|null
+     */
+    public function getLocalizedDocumentsVerifiedText()
+    {
+        return $this->localizedDocumentsVerifiedText;
+    }
+
+    public function hasLocalizedDocumentsVerifiedText()
+    {
+        return isset($this->localizedDocumentsVerifiedText);
+    }
+
+    public function clearLocalizedDocumentsVerifiedText()
+    {
+        unset($this->localizedDocumentsVerifiedText);
+    }
+
+    /**
+     * The localized documents verified text.
+     *
+     * Generated from protobuf field <code>.io.LocalizedString localizedDocumentsVerifiedText = 11;</code>
+     * @param \Io\LocalizedString $var
+     * @return $this
+     */
+    public function setLocalizedDocumentsVerifiedText($var)
+    {
+        GPBUtil::checkMessage($var, \Io\LocalizedString::class);
+        $this->localizedDocumentsVerifiedText = $var;
+
+        return $this;
+    }
+
+    /**
+     * Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
+     *
+     * Generated from protobuf field <code>repeated string loungeIds = 13;</code>
+     * @return RepeatedField<string>
+     */
+    public function getLoungeIds()
+    {
+        return $this->loungeIds;
+    }
+
+    /**
+     * Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
+     *
+     * Generated from protobuf field <code>repeated string loungeIds = 13;</code>
+     * @param string[] $var
+     * @return $this
+     */
+    public function setLoungeIds($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->loungeIds = $arr;
 
         return $this;
     }

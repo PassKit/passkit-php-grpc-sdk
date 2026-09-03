@@ -19,8 +19,8 @@
         }
     ],
     "require": {
-        "grpc/grpc": "^v1.57.0",
-        "google/protobuf": "^v4.29.3"
+        "grpc/grpc": "^v1.82.0",
+        "google/protobuf": "^v5.36.1"
     },
     "autoload": {
         "psr-4": {

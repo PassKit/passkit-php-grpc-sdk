@@ -8,6 +8,8 @@ namespace Members;
 use UnexpectedValueException;
 
 /**
+ * Enum representing event types recorded for a member.
+ *
  * Protobuf type <code>members.MemberEvents</code>
  */
 class MemberEvents

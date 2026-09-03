@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Input required to create a new image entry. Required fields: name, imageData.
+ *
  * Generated from protobuf message <code>io.CreateImageInput</code>
  */
 class CreateImageInput extends \Google\Protobuf\Internal\Message

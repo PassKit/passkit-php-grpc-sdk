@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum defining number display styles.
+ *
  * Protobuf type <code>io.NumberStyle</code>
  */
 class NumberStyle
@@ -17,18 +19,26 @@ class NumberStyle
      */
     const NUMBER_STYLE_DO_NOT_USE = 0;
     /**
+     * Display as a decimal (e.g., 1,000.00).
+     *
      * Generated from protobuf enum <code>NUMBER_STYLE_DECIMAL = 1;</code>
      */
     const NUMBER_STYLE_DECIMAL = 1;
     /**
+     * Display as a percent (e.g., 50%).
+     *
      * Generated from protobuf enum <code>NUMBER_STYLE_PERCENT = 2;</code>
      */
     const NUMBER_STYLE_PERCENT = 2;
     /**
+     * Display in scientific notation (e.g., 1.0e3).
+     *
      * Generated from protobuf enum <code>NUMBER_STYLE_SCIENTIFIC = 3;</code>
      */
     const NUMBER_STYLE_SCIENTIFIC = 3;
     /**
+     * Spell out the number (e.g., "one thousand").
+     *
      * Generated from protobuf enum <code>NUMBER_STYLE_SPELL = 4;</code>
      */
     const NUMBER_STYLE_SPELL = 4;

@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Filter used to find projects by their current status.
+ *
  * Generated from protobuf message <code>io.ProjectStatusFilter</code>
  */
 class ProjectStatusFilter extends \Google\Protobuf\Internal\Message

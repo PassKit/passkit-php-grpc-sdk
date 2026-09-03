@@ -6,12 +6,11 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * SMS contains details for a sending an sms to customers.
- * Uses the default PassKit SMS provider and sending credentials.
+ * SMS contains details for a sending an sms to customers. Uses the default PassKit SMS provider and sending credentials.
  *
  * Generated from protobuf message <code>io.SmsTemplate</code>
  */

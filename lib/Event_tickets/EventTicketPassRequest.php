@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to retrieve a ticket pass (URL or format) by ID, ticket number, or order number. Required fields: ticketId or ticketNumber or orderNumber.
+ *
  * Generated from protobuf message <code>event_tickets.EventTicketPassRequest</code>
  */
 class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
@@ -29,9 +31,12 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Io\Id $ticketId
+     *           PassKit generated ticket id (22 characters).
      *     @type \Event_tickets\TicketNumberRequest $ticketNumber
+     *           Ticket Number.
      *     @type \Event_tickets\OrderNumberRequest $orderNumber
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $format
+     *           Order Number.
+     *     @type int[] $format
      *           Optional. If omitted, return the URL to the web pass landing page. Not used when getting or deleting the underlying boarding pass record.
      * }
      */
@@ -41,6 +46,8 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PassKit generated ticket id (22 characters).
+     *
      * Generated from protobuf field <code>.io.Id ticketId = 1;</code>
      * @return \Io\Id|null
      */
@@ -55,6 +62,8 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PassKit generated ticket id (22 characters).
+     *
      * Generated from protobuf field <code>.io.Id ticketId = 1;</code>
      * @param \Io\Id $var
      * @return $this
@@ -68,6 +77,8 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Ticket Number.
+     *
      * Generated from protobuf field <code>.event_tickets.TicketNumberRequest ticketNumber = 2;</code>
      * @return \Event_tickets\TicketNumberRequest|null
      */
@@ -82,6 +93,8 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Ticket Number.
+     *
      * Generated from protobuf field <code>.event_tickets.TicketNumberRequest ticketNumber = 2;</code>
      * @param \Event_tickets\TicketNumberRequest $var
      * @return $this
@@ -95,6 +108,8 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Order Number.
+     *
      * Generated from protobuf field <code>.event_tickets.OrderNumberRequest orderNumber = 3;</code>
      * @return \Event_tickets\OrderNumberRequest|null
      */
@@ -109,6 +124,8 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Order Number.
+     *
      * Generated from protobuf field <code>.event_tickets.OrderNumberRequest orderNumber = 3;</code>
      * @param \Event_tickets\OrderNumberRequest $var
      * @return $this
@@ -125,7 +142,7 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
      * Optional. If omitted, return the URL to the web pass landing page. Not used when getting or deleting the underlying boarding pass record.
      *
      * Generated from protobuf field <code>repeated .io.PassBundleFormat format = 4;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getFormat()
     {
@@ -136,7 +153,7 @@ class EventTicketPassRequest extends \Google\Protobuf\Internal\Message
      * Optional. If omitted, return the URL to the web pass landing page. Not used when getting or deleting the underlying boarding pass record.
      *
      * Generated from protobuf field <code>repeated .io.PassBundleFormat format = 4;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setFormat($var)

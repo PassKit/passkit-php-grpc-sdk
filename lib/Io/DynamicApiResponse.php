@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * The response returned from a dynamic API call to a third-party platform.
+ *
  * Generated from protobuf message <code>io.DynamicApiResponse</code>
  */
 class DynamicApiResponse extends \Google\Protobuf\Internal\Message

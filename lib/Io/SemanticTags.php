@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Metadata used across different protocols (e.g. events, flights). Includes info like names, locations, seats, pricing, and travel details.
+ *
  * Generated from protobuf message <code>io.SemanticTags</code>
  */
 class SemanticTags extends \Google\Protobuf\Internal\Message
@@ -591,7 +593,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
      *     @type \Io\LocalizedString $localizedAirlineCode
      *     @type string $attendeeName
      *     @type \Io\LocalizedString $localizedAttendeeName
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $artistIds
+     *     @type string[] $artistIds
      *     @type string $awayTeamAbbreviation
      *     @type \Io\LocalizedString $localizedAwayTeamAbbreviation
      *     @type string $awayTeamLocation
@@ -670,12 +672,12 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $originalBoardingDate
      *     @type \Google\Protobuf\Timestamp $originalDepartureDate
      *     @type \Io\SemanticPersonName $passengerName
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $performerNames
+     *     @type string[] $performerNames
      *     @type string $priorityStatus
      *     @type \Io\LocalizedString $localizedPriorityStatus
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $albumIds
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $playlistIds
-     *     @type array<\Io\SemanticSeat>|\Google\Protobuf\Internal\RepeatedField $seats
+     *     @type string[] $albumIds
+     *     @type string[] $playlistIds
+     *     @type \Io\SemanticSeat[] $seats
      *     @type string $securityScreening
      *     @type \Io\LocalizedString $localizedSecurityScreening
      *     @type bool $silenceRequested
@@ -708,7 +710,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
      *     @type \Io\LocalizedString $localizedVenueRegionName
      *     @type string $venueRoom
      *     @type \Io\LocalizedString $localizedVenueRoom
-     *     @type array<\Io\SemanticWifiNetwork>|\Google\Protobuf\Internal\RepeatedField $wifiAccess
+     *     @type \Io\SemanticWifiNetwork[] $wifiAccess
      *     @type \Google\Protobuf\Timestamp $venueFanZoneOpenDate
      *     @type \Google\Protobuf\Timestamp $venueGatesOpenDate
      *     @type \Google\Protobuf\Timestamp $venueParkingLotsOpenDate
@@ -1000,7 +1002,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string artistIds = 11;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getArtistIds()
     {
@@ -1009,7 +1011,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string artistIds = 11;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setArtistIds($var)
@@ -3158,7 +3160,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string performerNames = 90;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getPerformerNames()
     {
@@ -3167,7 +3169,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string performerNames = 90;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setPerformerNames($var)
@@ -3234,7 +3236,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string albumIds = 93;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getAlbumIds()
     {
@@ -3243,7 +3245,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string albumIds = 93;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setAlbumIds($var)
@@ -3256,7 +3258,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string playlistIds = 94;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getPlaylistIds()
     {
@@ -3265,7 +3267,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated string playlistIds = 94;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setPlaylistIds($var)
@@ -3278,7 +3280,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.SemanticSeat seats = 95;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\SemanticSeat>
      */
     public function getSeats()
     {
@@ -3287,7 +3289,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.SemanticSeat seats = 95;</code>
-     * @param array<\Io\SemanticSeat>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\SemanticSeat[] $var
      * @return $this
      */
     public function setSeats($var)
@@ -4184,7 +4186,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.SemanticWifiNetwork wifiAccess = 128;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\SemanticWifiNetwork>
      */
     public function getWifiAccess()
     {
@@ -4193,7 +4195,7 @@ class SemanticTags extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.SemanticWifiNetwork wifiAccess = 128;</code>
-     * @param array<\Io\SemanticWifiNetwork>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\SemanticWifiNetwork[] $var
      * @return $this
      */
     public function setWifiAccess($var)

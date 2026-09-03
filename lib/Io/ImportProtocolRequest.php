@@ -6,23 +6,31 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Import passes from a CSV file into a class.
+ *
  * Generated from protobuf message <code>io.ImportProtocolRequest</code>
  */
 class ImportProtocolRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Raw CSV content with records.
+     *
      * Generated from protobuf field <code>string csvContent = 1;</code>
      */
     protected $csvContent = '';
     /**
+     * Class Id e.g. programId, campaignId, producionId etc.
+     *
      * Generated from protobuf field <code>string classId = 2;</code>
      */
     protected $classId = '';
     /**
+     * PassKit protocol type.
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 3;</code>
      */
     protected $protocol = 0;
@@ -34,8 +42,11 @@ class ImportProtocolRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $csvContent
+     *           Raw CSV content with records.
      *     @type string $classId
+     *           Class Id e.g. programId, campaignId, producionId etc.
      *     @type int $protocol
+     *           PassKit protocol type.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,6 +55,8 @@ class ImportProtocolRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Raw CSV content with records.
+     *
      * Generated from protobuf field <code>string csvContent = 1;</code>
      * @return string
      */
@@ -53,6 +66,8 @@ class ImportProtocolRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Raw CSV content with records.
+     *
      * Generated from protobuf field <code>string csvContent = 1;</code>
      * @param string $var
      * @return $this
@@ -66,6 +81,8 @@ class ImportProtocolRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Class Id e.g. programId, campaignId, producionId etc.
+     *
      * Generated from protobuf field <code>string classId = 2;</code>
      * @return string
      */
@@ -75,6 +92,8 @@ class ImportProtocolRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Class Id e.g. programId, campaignId, producionId etc.
+     *
      * Generated from protobuf field <code>string classId = 2;</code>
      * @param string $var
      * @return $this
@@ -88,6 +107,8 @@ class ImportProtocolRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PassKit protocol type.
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 3;</code>
      * @return int
      */
@@ -97,6 +118,8 @@ class ImportProtocolRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PassKit protocol type.
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 3;</code>
      * @param int $var
      * @return $this

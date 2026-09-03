@@ -6,10 +6,12 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Minimal member information stored within an event record.
+ *
  * Generated from protobuf message <code>members.MemberMininmal</code>
  */
 class MemberMininmal extends \Google\Protobuf\Internal\Message

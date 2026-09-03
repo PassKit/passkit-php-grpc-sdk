@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum of events used on the data collection page for Google Analytics.
+ *
  * Protobuf type <code>io.GoogleAnalyticsDataCollectionPageEvent</code>
  */
 class GoogleAnalyticsDataCollectionPageEvent

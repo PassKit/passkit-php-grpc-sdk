@@ -6,10 +6,12 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Current points balance for a member across primary, secondary, and tier points.
+ *
  * Generated from protobuf message <code>members.MemberPoints</code>
  */
 class MemberPoints extends \Google\Protobuf\Internal\Message

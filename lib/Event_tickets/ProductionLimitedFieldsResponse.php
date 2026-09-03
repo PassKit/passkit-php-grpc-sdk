@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Lightweight response version of a Production, typically used inside other responses (such as Events) to avoid including full configuration data. Required fields: none.
+ *
  * Generated from protobuf message <code>event_tickets.ProductionLimitedFieldsResponse</code>
  */
 class ProductionLimitedFieldsResponse extends \Google\Protobuf\Internal\Message

@@ -8,32 +8,32 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
- * PassBundleFormat is used to specify which format(s) to provide the pass content.
+ * PassBundleFormat specifies the format(s) used to deliver the pass.
  *
  * Protobuf type <code>io.PassBundleFormat</code>
  */
 class PassBundleFormat
 {
     /**
-     * The URL to the web landing page.
+     * Web landing page URL.
      *
      * Generated from protobuf enum <code>PASS_URL = 0;</code>
      */
     const PASS_URL = 0;
     /**
-     * A URL that can be used in an Android app or email. Note that this is not recommended for web use.
+     * Google Wallet pass install URL.
      *
      * Generated from protobuf enum <code>GOOGLE_URL = 2;</code>
      */
     const GOOGLE_URL = 2;
     /**
-     * The Base64 encoded bytes of the Apple Wallet pass bundle.
+     * Base64 encoded bytes for Apple Wallet pass file (.pkpass).
      *
      * Generated from protobuf enum <code>APPLE_PASS_BUNDLE = 8;</code>
      */
     const APPLE_PASS_BUNDLE = 8;
     /**
-     * The URL to a landing page for multiple passes containing a common identifier.
+     * URL for multiple pass install by shared identifier.
      *
      * Generated from protobuf enum <code>MULTI_LINK = 16;</code>
      */

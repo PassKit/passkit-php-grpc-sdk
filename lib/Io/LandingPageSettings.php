@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Configuration options for customizing the pass landing page.
+ *
  * Generated from protobuf message <code>io.LandingPageSettings</code>
  */
 class LandingPageSettings extends \Google\Protobuf\Internal\Message
@@ -21,7 +23,7 @@ class LandingPageSettings extends \Google\Protobuf\Internal\Message
      */
     private $landingLocalizationOverride;
     /**
-     * Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
+     * Set to on to present a third-party wallet instead of Google Wallet as the default option to Android users.
      *
      * Generated from protobuf field <code>.io.Toggle preferThirdPartyAndroidWallet = 2;</code>
      */
@@ -45,10 +47,10 @@ class LandingPageSettings extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $landingLocalizationOverride
+     *     @type int[] $landingLocalizationOverride
      *           Array of languages to display on the landing page, if you would like your language to be supported, please contact support.
      *     @type int $preferThirdPartyAndroidWallet
-     *           Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
+     *           Set to on to present a third-party wallet instead of Google Wallet as the default option to Android users.
      *     @type int $preferredAndroidWallet
      *           Preferred Android Wallet.
      *     @type array|\Google\Protobuf\Internal\MapField $localizedTextOverrides
@@ -64,7 +66,7 @@ class LandingPageSettings extends \Google\Protobuf\Internal\Message
      * Array of languages to display on the landing page, if you would like your language to be supported, please contact support.
      *
      * Generated from protobuf field <code>repeated .io.LanguageCode landingLocalizationOverride = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getLandingLocalizationOverride()
     {
@@ -75,7 +77,7 @@ class LandingPageSettings extends \Google\Protobuf\Internal\Message
      * Array of languages to display on the landing page, if you would like your language to be supported, please contact support.
      *
      * Generated from protobuf field <code>repeated .io.LanguageCode landingLocalizationOverride = 1;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setLandingLocalizationOverride($var)
@@ -87,7 +89,7 @@ class LandingPageSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
+     * Set to on to present a third-party wallet instead of Google Wallet as the default option to Android users.
      *
      * Generated from protobuf field <code>.io.Toggle preferThirdPartyAndroidWallet = 2;</code>
      * @return int
@@ -98,7 +100,7 @@ class LandingPageSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
+     * Set to on to present a third-party wallet instead of Google Wallet as the default option to Android users.
      *
      * Generated from protobuf field <code>.io.Toggle preferThirdPartyAndroidWallet = 2;</code>
      * @param int $var

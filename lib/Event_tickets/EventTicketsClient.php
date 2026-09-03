@@ -3,10 +3,11 @@
 
 // Original file comments:
 // *
-// Events Protocol is designed to get your Digital Event Tickets into Apple Wallet and Google Pay, from theatre and cinema, to sport events and concerts.
+// Events Protocol is designed to get your Digital Event Tickets into Apple Wallet and Google Wallet, from theatre and cinema, to sport events and concerts.
 namespace Event_tickets;
 
 /**
+ * Manages event-ticket productions, venues, events, ticket types, tickets, validation, and redemption. Ticket types belong to a production; issued tickets are associated with an event and ticket type.
  */
 class EventTicketsClient extends \Grpc\BaseStub {
 
@@ -20,10 +21,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a new Production record. Required fields: name.
      * @param \Event_tickets\Production $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createProduction(\Event_tickets\Production $argument,
       $metadata = [], $options = []) {
@@ -34,10 +36,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Partially updates an existing Production. Required fields: id and fields to update. Note: changes will update and affect all existing Events & Tickets related to this Production.
      * @param \Event_tickets\Production $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Production>
      */
     public function patchProduction(\Event_tickets\Production $argument,
       $metadata = [], $options = []) {
@@ -48,10 +51,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Fully updates an existing Production. Required fields: id and all required fields are required. Note: changes will update and affect all existing Events & Tickets related to this Production.
      * @param \Event_tickets\Production $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Production>
      */
     public function updateProduction(\Event_tickets\Production $argument,
       $metadata = [], $options = []) {
@@ -62,10 +66,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a Production by ID. Required fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Production>
      */
     public function getProduction(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -76,10 +81,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a Production and all associated Events and Tickets. Required fields: id. Use with caution, as this action is irreversible.
      * @param \Event_tickets\Production $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteProduction(\Event_tickets\Production $argument,
       $metadata = [], $options = []) {
@@ -90,6 +96,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all Productions for the authenticated user. Supports filtering options to narrow down the results based on specific criteria.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -104,10 +111,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves analytics for a specific Production. Required fields: classId and protocol.
      * @param \Io\AnalyticsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\ProductionAnalyticsResponse>
      */
     public function getAnalytics(\Io\AnalyticsRequest $argument,
       $metadata = [], $options = []) {
@@ -118,10 +126,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a copy of an existing Production. Required fields: id.
      * @param \Event_tickets\ProductionCopyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function copyProduction(\Event_tickets\ProductionCopyRequest $argument,
       $metadata = [], $options = []) {
@@ -132,10 +141,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a new Venue record. Required fields: name and address.
      * @param \Event_tickets\Venue $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createVenue(\Event_tickets\Venue $argument,
       $metadata = [], $options = []) {
@@ -146,10 +156,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Fully updates an existing Venue. Required fields: id and all required fields are required. Note: changes will update and affect all existing Events & Tickets related to this Venue.
      * @param \Event_tickets\Venue $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Venue>
      */
     public function updateVenue(\Event_tickets\Venue $argument,
       $metadata = [], $options = []) {
@@ -160,10 +171,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Partially updates an existing Venue. Required fields: id and fields to update. Note: changes will update and affect all existing Events & Tickets related to this Venue.
      * @param \Event_tickets\Venue $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Venue>
      */
     public function patchVenue(\Event_tickets\Venue $argument,
       $metadata = [], $options = []) {
@@ -174,10 +186,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a Venue by ID. Required fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Venue>
      */
     public function getVenueById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -188,10 +201,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a Venue and all associated Events and Tickets. Required fields: id. Use with caution, as this action is irreversible.
      * @param \Event_tickets\Venue $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteVenue(\Event_tickets\Venue $argument,
       $metadata = [], $options = []) {
@@ -202,6 +216,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all Venues for the authenticated user. Supports filtering options to narrow down the results based on specific criteria.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -216,10 +231,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates an event for a production at a venue. Required fields: production and venue.
      * @param \Event_tickets\Event $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createEvent(\Event_tickets\Event $argument,
       $metadata = [], $options = []) {
@@ -230,10 +246,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Fully updates an existing Event. Required fields: id and all required fields are required. Note: changes will update & affect all existing tickets related to this event. Production and Venue cannot be changed from this endpoint.
      * @param \Event_tickets\Event $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Event>
      */
     public function updateEvent(\Event_tickets\Event $argument,
       $metadata = [], $options = []) {
@@ -244,10 +261,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Partially updates an existing Event. Required fields: id and fields to update. Note: changes will update & affect all existing tickets related to this event. Production and Venue cannot be changed from this endpoint.
      * @param \Event_tickets\Event $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Event>
      */
     public function patchEvent(\Event_tickets\Event $argument,
       $metadata = [], $options = []) {
@@ -258,10 +276,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves an Event by ID. Required fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Event>
      */
     public function getEventById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -272,10 +291,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves an Event by start date and venue. Required fields: productionId, venueId, startDate.
      * @param \Event_tickets\GetEventRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Event>
      */
     public function getEventByStartDateAndVenue(\Event_tickets\GetEventRequest $argument,
       $metadata = [], $options = []) {
@@ -286,10 +306,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes an Event and all associated Tickets. Required fields: id. Use with caution, as this action is irreversible.
      * @param \Event_tickets\Event $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteEvent(\Event_tickets\Event $argument,
       $metadata = [], $options = []) {
@@ -300,6 +321,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists Events for a Production. Required fields: productionId. Supports filtering options to narrow down the results based on specific criteria.
      * @param \Event_tickets\EventListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -314,10 +336,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a new Ticket Type. Required fields: name, productionId and beforeRedeemPassTemplateId.
      * @param \Event_tickets\TicketType $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createTicketType(\Event_tickets\TicketType $argument,
       $metadata = [], $options = []) {
@@ -328,10 +351,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Fully updates an existing Ticket Type. Required fields: name, productionId, beforeRedeemPassTemplateId and all required fields are required. Note: changes will update & affect all existing Tickets related to this Ticket Type.
      * @param \Event_tickets\TicketType $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\TicketType>
      */
     public function updateTicketType(\Event_tickets\TicketType $argument,
       $metadata = [], $options = []) {
@@ -342,10 +366,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Partially updates an existing Ticket Type. Required fields: name, productionId, beforeRedeemPassTemplateId fields to update. Note: changes will update & affect all existing Tickets related to this Ticket Type.
      * @param \Event_tickets\TicketType $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\TicketType>
      */
     public function patchTicketType(\Event_tickets\TicketType $argument,
       $metadata = [], $options = []) {
@@ -356,10 +381,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a Ticket Type by ID. Required fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\TicketType>
      */
     public function getTicketTypeById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -370,10 +396,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a Ticket Type by User Defined ID. Required fields: productionId, uid.
      * @param \Event_tickets\GetByUidRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\TicketType>
      */
     public function getTicketTypeByUserDefinedId(\Event_tickets\GetByUidRequest $argument,
       $metadata = [], $options = []) {
@@ -384,10 +411,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a Ticket Type and all associated Tickets. Required fields: id, or productionId and uid. Use with caution, as this action is irreversible.
      * @param \Event_tickets\TicketType $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteTicketType(\Event_tickets\TicketType $argument,
       $metadata = [], $options = []) {
@@ -398,6 +426,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all Ticket Types for a Production. Required fields: productionId. Supports filtering options to narrow down the results based on specific criteria.
      * @param \Event_tickets\TicketTypeListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -412,10 +441,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Issues a ticket using PassKit IDs for its ticket type and event. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
      * @param \Event_tickets\IssueTicketRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function issueTicket(\Event_tickets\IssueTicketRequest $argument,
       $metadata = [], $options = []) {
@@ -426,10 +456,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Issues a new Ticket by User Defined IDs. Required fields: productionUid, venueUid, ticketTypeUid, event.startDate and ticket.ticketNumber.
      * @param \Event_tickets\Ticket $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\IssueTicketResponseIds>
      */
     public function issueTicketById(\Event_tickets\Ticket $argument,
       $metadata = [], $options = []) {
@@ -440,10 +471,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates an existing Ticket. Required fields: id or (ticketNumber + productionId).
      * @param \Event_tickets\Ticket $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function updateTicket(\Event_tickets\Ticket $argument,
       $metadata = [], $options = []) {
@@ -454,10 +486,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates personal information for a ticket holder. Required fields: ticketId or (ticketNumber + productionId), person.
      * @param \Event_tickets\EventTicketPerson $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function patchPerson(\Event_tickets\EventTicketPerson $argument,
       $metadata = [], $options = []) {
@@ -468,10 +501,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Validates a ticket without redeeming it. Required fields: id or ticketNumber with productionId.
      * @param \Event_tickets\ValidateTicketRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\ValidateTicketResponse>
      */
     public function validateTicket(\Event_tickets\ValidateTicketRequest $argument,
       $metadata = [], $options = []) {
@@ -482,10 +516,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Redeems a ticket and records the redemption. Required fields: id or ticketNumber with productionId.
      * @param \Event_tickets\RedeemTicketRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function redeemTicket(\Event_tickets\RedeemTicketRequest $argument,
       $metadata = [], $options = []) {
@@ -496,10 +531,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Redeems multiple Tickets by order number. Required fields: productionid or productionUid, and orderNumber.
      * @param \Event_tickets\RedeemByOrderNumber $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Ids>
      */
     public function redeemTicketsByOrderNumber(\Event_tickets\RedeemByOrderNumber $argument,
       $metadata = [], $options = []) {
@@ -510,10 +546,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a Ticket by ID. Required fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Ticket>
      */
     public function getTicketById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -524,10 +561,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a Ticket by ticket number. Required fields: productionId and ticketNumber.
      * @param \Event_tickets\TicketNumberRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Ticket>
      */
     public function getTicketByTicketNumber(\Event_tickets\TicketNumberRequest $argument,
       $metadata = [], $options = []) {
@@ -538,10 +576,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves Tickets by order number. Required fields: productionId and orderNumber.
      * @param \Event_tickets\OrderNumberRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Event_tickets\Tickets>
      */
     public function getTicketsByOrderNumber(\Event_tickets\OrderNumberRequest $argument,
       $metadata = [], $options = []) {
@@ -552,10 +591,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves the digital pass bundle for a ticket. Required fields: ticketId, or productionId with ticketNumber or orderNumber.
      * @param \Event_tickets\EventTicketPassRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\PassBundles>
      */
     public function getEventTicketPass(\Event_tickets\EventTicketPassRequest $argument,
       $metadata = [], $options = []) {
@@ -566,10 +606,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a Ticket. Required fields: id or (ticketNumber + productionId).
      * @param \Event_tickets\TicketId $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteTicket(\Event_tickets\TicketId $argument,
       $metadata = [], $options = []) {
@@ -580,10 +621,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes multiple Tickets using a filter. Required fields: classId, protocol and filters.
      * @param \Io\BulkPassActionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function bulkDeleteTickets(\Io\BulkPassActionRequest $argument,
       $metadata = [], $options = []) {
@@ -594,10 +636,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes Tickets by order number. Required fields: productionId or productionUid and orderNumber.
      * @param \Event_tickets\OrderNumberRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteTicketsByOrderNumber(\Event_tickets\OrderNumberRequest $argument,
       $metadata = [], $options = []) {
@@ -608,6 +651,7 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all Tickets for a Production. Required fields: productionId + ticketTypeId + eventId.
      * @param \Event_tickets\TicketListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -622,10 +666,11 @@ class EventTicketsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Counts the number of Tickets matching the filter. Required fields: productionId + ticketTypeId + eventId.
      * @param \Event_tickets\TicketListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countTickets(\Event_tickets\TicketListRequest $argument,
       $metadata = [], $options = []) {

@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Facebook Pixel configuration for tracking page views and interactions.
+ *
  * Generated from protobuf message <code>io.FacebookPixelSettings</code>
  */
 class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
@@ -65,17 +67,17 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      *
      *     @type string $pixelId
      *           The Facebook Pixel ID of the account.
-     *     @type array<\Io\StandardEvent>|\Google\Protobuf\Internal\RepeatedField $dataCollectionPageStandardEvents
+     *     @type \Io\StandardEvent[] $dataCollectionPageStandardEvents
      *           List of standard events for the data collection page
-     *     @type array<\Io\CustomEvent>|\Google\Protobuf\Internal\RepeatedField $dataCollectionPageCustomEvents
+     *     @type \Io\CustomEvent[] $dataCollectionPageCustomEvents
      *           List of custom events for the data collection page
-     *     @type array<\Io\StandardEvent>|\Google\Protobuf\Internal\RepeatedField $passPageStandardEvents
+     *     @type \Io\StandardEvent[] $passPageStandardEvents
      *           List of standard events for the pass render page
-     *     @type array<\Io\CustomEvent>|\Google\Protobuf\Internal\RepeatedField $passPageCustomEvents
+     *     @type \Io\CustomEvent[] $passPageCustomEvents
      *           List of custom events for the pass render page
-     *     @type array<\Io\StandardEvent>|\Google\Protobuf\Internal\RepeatedField $customerInitiatedRedemptionPageStandardEvents
+     *     @type \Io\StandardEvent[] $customerInitiatedRedemptionPageStandardEvents
      *           List of standard events for the coupon customer initiated redemption page
-     *     @type array<\Io\CustomEvent>|\Google\Protobuf\Internal\RepeatedField $customerInitiatedRedemptionPageCustomEvents
+     *     @type \Io\CustomEvent[] $customerInitiatedRedemptionPageCustomEvents
      *           List of custom events for the coupon customer initiated redemption page
      * }
      */
@@ -114,7 +116,7 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      * List of standard events for the data collection page
      *
      * Generated from protobuf field <code>repeated .io.StandardEvent dataCollectionPageStandardEvents = 2;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\StandardEvent>
      */
     public function getDataCollectionPageStandardEvents()
     {
@@ -125,7 +127,7 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      * List of standard events for the data collection page
      *
      * Generated from protobuf field <code>repeated .io.StandardEvent dataCollectionPageStandardEvents = 2;</code>
-     * @param array<\Io\StandardEvent>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\StandardEvent[] $var
      * @return $this
      */
     public function setDataCollectionPageStandardEvents($var)
@@ -140,7 +142,7 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      * List of custom events for the data collection page
      *
      * Generated from protobuf field <code>repeated .io.CustomEvent dataCollectionPageCustomEvents = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\CustomEvent>
      */
     public function getDataCollectionPageCustomEvents()
     {
@@ -151,7 +153,7 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      * List of custom events for the data collection page
      *
      * Generated from protobuf field <code>repeated .io.CustomEvent dataCollectionPageCustomEvents = 3;</code>
-     * @param array<\Io\CustomEvent>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\CustomEvent[] $var
      * @return $this
      */
     public function setDataCollectionPageCustomEvents($var)
@@ -166,7 +168,7 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      * List of standard events for the pass render page
      *
      * Generated from protobuf field <code>repeated .io.StandardEvent passPageStandardEvents = 4;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\StandardEvent>
      */
     public function getPassPageStandardEvents()
     {
@@ -177,7 +179,7 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      * List of standard events for the pass render page
      *
      * Generated from protobuf field <code>repeated .io.StandardEvent passPageStandardEvents = 4;</code>
-     * @param array<\Io\StandardEvent>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\StandardEvent[] $var
      * @return $this
      */
     public function setPassPageStandardEvents($var)
@@ -192,7 +194,7 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      * List of custom events for the pass render page
      *
      * Generated from protobuf field <code>repeated .io.CustomEvent passPageCustomEvents = 5;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\CustomEvent>
      */
     public function getPassPageCustomEvents()
     {
@@ -203,7 +205,7 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      * List of custom events for the pass render page
      *
      * Generated from protobuf field <code>repeated .io.CustomEvent passPageCustomEvents = 5;</code>
-     * @param array<\Io\CustomEvent>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\CustomEvent[] $var
      * @return $this
      */
     public function setPassPageCustomEvents($var)
@@ -218,7 +220,7 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      * List of standard events for the coupon customer initiated redemption page
      *
      * Generated from protobuf field <code>repeated .io.StandardEvent customerInitiatedRedemptionPageStandardEvents = 6;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\StandardEvent>
      */
     public function getCustomerInitiatedRedemptionPageStandardEvents()
     {
@@ -229,7 +231,7 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      * List of standard events for the coupon customer initiated redemption page
      *
      * Generated from protobuf field <code>repeated .io.StandardEvent customerInitiatedRedemptionPageStandardEvents = 6;</code>
-     * @param array<\Io\StandardEvent>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\StandardEvent[] $var
      * @return $this
      */
     public function setCustomerInitiatedRedemptionPageStandardEvents($var)
@@ -244,7 +246,7 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      * List of custom events for the coupon customer initiated redemption page
      *
      * Generated from protobuf field <code>repeated .io.CustomEvent customerInitiatedRedemptionPageCustomEvents = 7;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\CustomEvent>
      */
     public function getCustomerInitiatedRedemptionPageCustomEvents()
     {
@@ -255,7 +257,7 @@ class FacebookPixelSettings extends \Google\Protobuf\Internal\Message
      * List of custom events for the coupon customer initiated redemption page
      *
      * Generated from protobuf field <code>repeated .io.CustomEvent customerInitiatedRedemptionPageCustomEvents = 7;</code>
-     * @param array<\Io\CustomEvent>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\CustomEvent[] $var
      * @return $this
      */
     public function setCustomerInitiatedRedemptionPageCustomEvents($var)

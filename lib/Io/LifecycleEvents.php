@@ -31,7 +31,7 @@ class LifecycleEvents
      */
     const INSTALLED_APPLE = 2;
     /**
-     * Pass has been installed in at least one Google Pay account.
+     * Pass has been installed in at least one Google Wallet account.
      *
      * Generated from protobuf enum <code>INSTALLED_GOOGLE = 4;</code>
      */
@@ -49,7 +49,7 @@ class LifecycleEvents
      */
     const UNINSTALLED_APPLE = 1024;
     /**
-     * Pass has been uninstalled from at least one Google Pay account.
+     * Pass has been uninstalled from at least one Google Wallet account.
      *
      * Generated from protobuf enum <code>UNINSTALLED_GOOGLE = 2048;</code>
      */
@@ -67,7 +67,7 @@ class LifecycleEvents
      */
     const APPLE_PASS_CREATED = 8192;
     /**
-     * A Google Pay record has been created.
+     * A Google Wallet record has been created.
      *
      * Generated from protobuf enum <code>GOOGLE_PAY_RECORD_CREATED = 16384;</code>
      */

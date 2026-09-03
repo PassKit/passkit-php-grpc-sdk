@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Installation breakdown by device type.
+ *
  * Generated from protobuf message <code>io.DeviceBreakdown</code>
  */
 class DeviceBreakdown extends \Google\Protobuf\Internal\Message
@@ -21,7 +23,7 @@ class DeviceBreakdown extends \Google\Protobuf\Internal\Message
      */
     protected $appleWallet = 0;
     /**
-     * Total number of passes installed in Google Pay.
+     * Total number of passes installed in Google Wallet.
      *
      * Generated from protobuf field <code>uint32 googlePay = 2;</code>
      */
@@ -42,7 +44,7 @@ class DeviceBreakdown extends \Google\Protobuf\Internal\Message
      *     @type int $appleWallet
      *           Total number of passes installed in Apple Wallet.
      *     @type int $googlePay
-     *           Total number of passes installed in Google Pay.
+     *           Total number of passes installed in Google Wallet.
      *     @type int $otherWallet
      *           Total number of passes installed in Other Wallet.
      * }
@@ -79,7 +81,7 @@ class DeviceBreakdown extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Total number of passes installed in Google Pay.
+     * Total number of passes installed in Google Wallet.
      *
      * Generated from protobuf field <code>uint32 googlePay = 2;</code>
      * @return int
@@ -90,7 +92,7 @@ class DeviceBreakdown extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Total number of passes installed in Google Pay.
+     * Total number of passes installed in Google Wallet.
      *
      * Generated from protobuf field <code>uint32 googlePay = 2;</code>
      * @param int $var

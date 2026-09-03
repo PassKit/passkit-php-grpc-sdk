@@ -6,11 +6,11 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Images strings can be either a base64 image or a url. See image 'Use' enum for descriptions and sizes.
+ * Used to provide image data by use case, as either base64 or a URL. See image 'Use' enum for descriptions and sizes.
  *
  * Generated from protobuf message <code>io.ImageData</code>
  */
@@ -23,7 +23,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     protected $icon = '';
     /**
-     * Logo is circle-cropped by Google Pay, a 15% safety margin is recommended (660px x 660px).
+     * Logo is circle-cropped by Google Wallet, a 15% safety margin is recommended (660px x 660px).
      *
      * Generated from protobuf field <code>string logo = 2;</code>
      */
@@ -35,11 +35,17 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     protected $appleLogo = '';
     /**
-     * Hero is the Google Pay strip and is also used in the dialog box when installing (1032px x 336px).
+     * Hero is the Google Wallet strip and is also used in the dialog box when installing (1032px x 336px).
      *
      * Generated from protobuf field <code>string hero = 4;</code>
      */
     protected $hero = '';
+    /**
+     * RichHero is the Google Wallet full face image for passes issued after late 2026 (1032px x 812px).
+     *
+     * Generated from protobuf field <code>string richHero = 26;</code>
+     */
+    protected $richHero = '';
     /**
      * Apple Wallet strip image for EventTicket pass types (1125px x 294px).
      *
@@ -71,19 +77,19 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     protected $footer = '';
     /**
-     * Google Pay - used to denote a security program on boarding pass types (E.g. TSA PreCheck®).  Width of 1600px is shared with the boarding privilege logo (<=1600px x 80px).
+     * Google Wallet - used to denote a security program on boarding pass types (E.g. TSA PreCheck®).  Width of 1600px is shared with the boarding privilege logo (<=1600px x 80px).
      *
      * Generated from protobuf field <code>string security = 10;</code>
      */
     protected $security = '';
     /**
-     * Google Pay - used to denote a boarding privilege.  Width of 1600px is shared with the security program logo (<=1600px x 80px).
+     * Google Wallet - used to denote a boarding privilege.  Width of 1600px is shared with the security program logo (<=1600px x 80px).
      *
      * Generated from protobuf field <code>string privilege = 11;</code>
      */
     protected $privilege = '';
     /**
-     * Google Pay - used to denote airline alliance on boarding pass types (<=1600px x 80px).
+     * Google Wallet - used to denote airline alliance on boarding pass types (<=1600px x 80px).
      *
      * Generated from protobuf field <code>string airlineAlliance = 12;</code>
      */
@@ -101,7 +107,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     protected $banner = '';
     /**
-     * Used for Google Pay in wallet promotional messages - for Apple Pay, the message will be rendered on a mobile website (1860px x <=930px).
+     * Used for Google Wallet in wallet promotional messages - for Apple Pay, the message will be rendered on a mobile website (1860px x <=930px).
      *
      * Generated from protobuf field <code>string message = 15;</code>
      */
@@ -113,7 +119,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     protected $profile = '';
     /**
-     * Used for user app images in Google Pay Passes (300px x 300px). Cannot be localized.
+     * Used for user app images in Google Wallet Passes (300px x 300px). Cannot be localized.
      *
      * Generated from protobuf field <code>string appImage = 17;</code>
      */
@@ -155,11 +161,11 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     protected $artwork = '';
     /**
-     * Used in the top left hand corner for Apple poster style Event tickets (<=378px x 90px)
+     * Used in the top left hand corner for Apple primary style Event tickets and Semantic Boarding Passes (<=378px x 90px).
      *
-     * Generated from protobuf field <code>string posterLogo = 24;</code>
+     * Generated from protobuf field <code>string primaryLogo = 24;</code>
      */
-    protected $posterLogo = '';
+    protected $primaryLogo = '';
     /**
      * Used to present a venue map for an Apple poster style Event Ticket.  Width should be Ratio should be at least 1320px wide and have a 16:9 or 4:5 to avoid cropping.
      *
@@ -190,6 +196,12 @@ class ImageData extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.io.LocalizedString localizedHero = 34;</code>
      */
     protected $localizedHero = null;
+    /**
+     * Sets different richHero images for non-default languages.
+     *
+     * Generated from protobuf field <code>.io.LocalizedString localizedRichHero = 51;</code>
+     */
+    protected $localizedRichHero = null;
     /**
      * Sets different event strip images for non-default languages.
      *
@@ -275,11 +287,11 @@ class ImageData extends \Google\Protobuf\Internal\Message
      */
     protected $localizedArtwork = null;
     /**
-     * Sets different posterLogo images for non-default languages.
+     * Sets different primaryLogo images for non-default languages.
      *
-     * Generated from protobuf field <code>.io.LocalizedString localizedPosterLogo = 49;</code>
+     * Generated from protobuf field <code>.io.LocalizedString localizedPrimaryLogo = 49;</code>
      */
-    protected $localizedPosterLogo = null;
+    protected $localizedPrimaryLogo = null;
     /**
      * Sets different venueMap images for non-default languages.
      *
@@ -296,11 +308,13 @@ class ImageData extends \Google\Protobuf\Internal\Message
      *     @type string $icon
      *           Mandatory icon, used in Apple Wallet lock screen (87px x 87px).
      *     @type string $logo
-     *           Logo is circle-cropped by Google Pay, a 15% safety margin is recommended (660px x 660px).
+     *           Logo is circle-cropped by Google Wallet, a 15% safety margin is recommended (660px x 660px).
      *     @type string $appleLogo
      *           Apple logo can be used where a rectangular design is preferred for Apple Passes only.  If ommitted, the square logo image will be used.  (<=480px x 150px).
      *     @type string $hero
-     *           Hero is the Google Pay strip and is also used in the dialog box when installing (1032px x 336px).
+     *           Hero is the Google Wallet strip and is also used in the dialog box when installing (1032px x 336px).
+     *     @type string $richHero
+     *           RichHero is the Google Wallet full face image for passes issued after late 2026 (1032px x 812px).
      *     @type string $eventStrip
      *           Apple Wallet strip image for EventTicket pass types (1125px x 294px).
      *     @type string $strip
@@ -312,21 +326,21 @@ class ImageData extends \Google\Protobuf\Internal\Message
      *     @type string $footer
      *           Displays above the barcode for Apple Wallet Boarding pass tickets (858px x 45px)
      *     @type string $security
-     *           Google Pay - used to denote a security program on boarding pass types (E.g. TSA PreCheck®).  Width of 1600px is shared with the boarding privilege logo (<=1600px x 80px).
+     *           Google Wallet - used to denote a security program on boarding pass types (E.g. TSA PreCheck®).  Width of 1600px is shared with the boarding privilege logo (<=1600px x 80px).
      *     @type string $privilege
-     *           Google Pay - used to denote a boarding privilege.  Width of 1600px is shared with the security program logo (<=1600px x 80px).
+     *           Google Wallet - used to denote a boarding privilege.  Width of 1600px is shared with the security program logo (<=1600px x 80px).
      *     @type string $airlineAlliance
-     *           Google Pay - used to denote airline alliance on boarding pass types (<=1600px x 80px).
+     *           Google Wallet - used to denote airline alliance on boarding pass types (<=1600px x 80px).
      *     @type string $personalization
      *           For Apple Pay NFC passes whitelisted for personalization. Image is displayed after terms are presented (<=450px x 120px).
      *     @type string $banner
      *           Used on a landing page or email.  Image has no size constraints and will be treated as \@2x pixel density.
      *     @type string $message
-     *           Used for Google Pay in wallet promotional messages - for Apple Pay, the message will be rendered on a mobile website (1860px x <=930px).
+     *           Used for Google Wallet in wallet promotional messages - for Apple Pay, the message will be rendered on a mobile website (1860px x <=930px).
      *     @type string $profile
      *           Used for user Profile images (300px x 300px). Cannot be localized.
      *     @type string $appImage
-     *           Used for user app images in Google Pay Passes (300px x 300px). Cannot be localized.
+     *           Used for user app images in Google Wallet Passes (300px x 300px). Cannot be localized.
      *     @type string $stampedImage
      *           Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
      *     @type string $unstampedImage
@@ -339,8 +353,8 @@ class ImageData extends \Google\Protobuf\Internal\Message
      *           Used in the bottom right hand footer inset of an Apple poster Event Ticket (<=405px x 36px).
      *     @type string $artwork
      *           Used in the background of Apple poster Event Tickets. Image should be a compelling visual representation of the event (1074px x 1344px).
-     *     @type string $posterLogo
-     *           Used in the top left hand corner for Apple poster style Event tickets (<=378px x 90px)
+     *     @type string $primaryLogo
+     *           Used in the top left hand corner for Apple primary style Event tickets and Semantic Boarding Passes (<=378px x 90px).
      *     @type string $venueMap
      *           Used to present a venue map for an Apple poster style Event Ticket.  Width should be Ratio should be at least 1320px wide and have a 16:9 or 4:5 to avoid cropping.
      *     @type \Io\LocalizedString $localizedIcon
@@ -351,6 +365,8 @@ class ImageData extends \Google\Protobuf\Internal\Message
      *           Sets different Apple Logo images for non-default languages.
      *     @type \Io\LocalizedString $localizedHero
      *           Sets different hero images for non-default languages.
+     *     @type \Io\LocalizedString $localizedRichHero
+     *           Sets different richHero images for non-default languages.
      *     @type \Io\LocalizedString $localizedEventStrip
      *           Sets different event strip images for non-default languages.
      *     @type \Io\LocalizedString $localizedStrip
@@ -379,8 +395,8 @@ class ImageData extends \Google\Protobuf\Internal\Message
      *           Sets different secondaryLogo images for non-default languages.
      *     @type \Io\LocalizedString $localizedArtwork
      *           Sets different artwork images for non-default languages.
-     *     @type \Io\LocalizedString $localizedPosterLogo
-     *           Sets different posterLogo images for non-default languages.
+     *     @type \Io\LocalizedString $localizedPrimaryLogo
+     *           Sets different primaryLogo images for non-default languages.
      *     @type \Io\LocalizedString $localizedVenueMap
      *           Sets different venueMap images for non-default languages.
      * }
@@ -417,7 +433,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Logo is circle-cropped by Google Pay, a 15% safety margin is recommended (660px x 660px).
+     * Logo is circle-cropped by Google Wallet, a 15% safety margin is recommended (660px x 660px).
      *
      * Generated from protobuf field <code>string logo = 2;</code>
      * @return string
@@ -428,7 +444,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Logo is circle-cropped by Google Pay, a 15% safety margin is recommended (660px x 660px).
+     * Logo is circle-cropped by Google Wallet, a 15% safety margin is recommended (660px x 660px).
      *
      * Generated from protobuf field <code>string logo = 2;</code>
      * @param string $var
@@ -469,7 +485,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hero is the Google Pay strip and is also used in the dialog box when installing (1032px x 336px).
+     * Hero is the Google Wallet strip and is also used in the dialog box when installing (1032px x 336px).
      *
      * Generated from protobuf field <code>string hero = 4;</code>
      * @return string
@@ -480,7 +496,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Hero is the Google Pay strip and is also used in the dialog box when installing (1032px x 336px).
+     * Hero is the Google Wallet strip and is also used in the dialog box when installing (1032px x 336px).
      *
      * Generated from protobuf field <code>string hero = 4;</code>
      * @param string $var
@@ -490,6 +506,32 @@ class ImageData extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->hero = $var;
+
+        return $this;
+    }
+
+    /**
+     * RichHero is the Google Wallet full face image for passes issued after late 2026 (1032px x 812px).
+     *
+     * Generated from protobuf field <code>string richHero = 26;</code>
+     * @return string
+     */
+    public function getRichHero()
+    {
+        return $this->richHero;
+    }
+
+    /**
+     * RichHero is the Google Wallet full face image for passes issued after late 2026 (1032px x 812px).
+     *
+     * Generated from protobuf field <code>string richHero = 26;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRichHero($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->richHero = $var;
 
         return $this;
     }
@@ -625,7 +667,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Google Pay - used to denote a security program on boarding pass types (E.g. TSA PreCheck®).  Width of 1600px is shared with the boarding privilege logo (<=1600px x 80px).
+     * Google Wallet - used to denote a security program on boarding pass types (E.g. TSA PreCheck®).  Width of 1600px is shared with the boarding privilege logo (<=1600px x 80px).
      *
      * Generated from protobuf field <code>string security = 10;</code>
      * @return string
@@ -636,7 +678,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Google Pay - used to denote a security program on boarding pass types (E.g. TSA PreCheck®).  Width of 1600px is shared with the boarding privilege logo (<=1600px x 80px).
+     * Google Wallet - used to denote a security program on boarding pass types (E.g. TSA PreCheck®).  Width of 1600px is shared with the boarding privilege logo (<=1600px x 80px).
      *
      * Generated from protobuf field <code>string security = 10;</code>
      * @param string $var
@@ -651,7 +693,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Google Pay - used to denote a boarding privilege.  Width of 1600px is shared with the security program logo (<=1600px x 80px).
+     * Google Wallet - used to denote a boarding privilege.  Width of 1600px is shared with the security program logo (<=1600px x 80px).
      *
      * Generated from protobuf field <code>string privilege = 11;</code>
      * @return string
@@ -662,7 +704,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Google Pay - used to denote a boarding privilege.  Width of 1600px is shared with the security program logo (<=1600px x 80px).
+     * Google Wallet - used to denote a boarding privilege.  Width of 1600px is shared with the security program logo (<=1600px x 80px).
      *
      * Generated from protobuf field <code>string privilege = 11;</code>
      * @param string $var
@@ -677,7 +719,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Google Pay - used to denote airline alliance on boarding pass types (<=1600px x 80px).
+     * Google Wallet - used to denote airline alliance on boarding pass types (<=1600px x 80px).
      *
      * Generated from protobuf field <code>string airlineAlliance = 12;</code>
      * @return string
@@ -688,7 +730,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Google Pay - used to denote airline alliance on boarding pass types (<=1600px x 80px).
+     * Google Wallet - used to denote airline alliance on boarding pass types (<=1600px x 80px).
      *
      * Generated from protobuf field <code>string airlineAlliance = 12;</code>
      * @param string $var
@@ -755,7 +797,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Used for Google Pay in wallet promotional messages - for Apple Pay, the message will be rendered on a mobile website (1860px x <=930px).
+     * Used for Google Wallet in wallet promotional messages - for Apple Pay, the message will be rendered on a mobile website (1860px x <=930px).
      *
      * Generated from protobuf field <code>string message = 15;</code>
      * @return string
@@ -766,7 +808,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Used for Google Pay in wallet promotional messages - for Apple Pay, the message will be rendered on a mobile website (1860px x <=930px).
+     * Used for Google Wallet in wallet promotional messages - for Apple Pay, the message will be rendered on a mobile website (1860px x <=930px).
      *
      * Generated from protobuf field <code>string message = 15;</code>
      * @param string $var
@@ -807,7 +849,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Used for user app images in Google Pay Passes (300px x 300px). Cannot be localized.
+     * Used for user app images in Google Wallet Passes (300px x 300px). Cannot be localized.
      *
      * Generated from protobuf field <code>string appImage = 17;</code>
      * @return string
@@ -818,7 +860,7 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Used for user app images in Google Pay Passes (300px x 300px). Cannot be localized.
+     * Used for user app images in Google Wallet Passes (300px x 300px). Cannot be localized.
      *
      * Generated from protobuf field <code>string appImage = 17;</code>
      * @param string $var
@@ -999,27 +1041,27 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Used in the top left hand corner for Apple poster style Event tickets (<=378px x 90px)
+     * Used in the top left hand corner for Apple primary style Event tickets and Semantic Boarding Passes (<=378px x 90px).
      *
-     * Generated from protobuf field <code>string posterLogo = 24;</code>
+     * Generated from protobuf field <code>string primaryLogo = 24;</code>
      * @return string
      */
-    public function getPosterLogo()
+    public function getPrimaryLogo()
     {
-        return $this->posterLogo;
+        return $this->primaryLogo;
     }
 
     /**
-     * Used in the top left hand corner for Apple poster style Event tickets (<=378px x 90px)
+     * Used in the top left hand corner for Apple primary style Event tickets and Semantic Boarding Passes (<=378px x 90px).
      *
-     * Generated from protobuf field <code>string posterLogo = 24;</code>
+     * Generated from protobuf field <code>string primaryLogo = 24;</code>
      * @param string $var
      * @return $this
      */
-    public function setPosterLogo($var)
+    public function setPrimaryLogo($var)
     {
         GPBUtil::checkString($var, True);
-        $this->posterLogo = $var;
+        $this->primaryLogo = $var;
 
         return $this;
     }
@@ -1190,6 +1232,42 @@ class ImageData extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Io\LocalizedString::class);
         $this->localizedHero = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets different richHero images for non-default languages.
+     *
+     * Generated from protobuf field <code>.io.LocalizedString localizedRichHero = 51;</code>
+     * @return \Io\LocalizedString|null
+     */
+    public function getLocalizedRichHero()
+    {
+        return $this->localizedRichHero;
+    }
+
+    public function hasLocalizedRichHero()
+    {
+        return isset($this->localizedRichHero);
+    }
+
+    public function clearLocalizedRichHero()
+    {
+        unset($this->localizedRichHero);
+    }
+
+    /**
+     * Sets different richHero images for non-default languages.
+     *
+     * Generated from protobuf field <code>.io.LocalizedString localizedRichHero = 51;</code>
+     * @param \Io\LocalizedString $var
+     * @return $this
+     */
+    public function setLocalizedRichHero($var)
+    {
+        GPBUtil::checkMessage($var, \Io\LocalizedString::class);
+        $this->localizedRichHero = $var;
 
         return $this;
     }
@@ -1699,37 +1777,37 @@ class ImageData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Sets different posterLogo images for non-default languages.
+     * Sets different primaryLogo images for non-default languages.
      *
-     * Generated from protobuf field <code>.io.LocalizedString localizedPosterLogo = 49;</code>
+     * Generated from protobuf field <code>.io.LocalizedString localizedPrimaryLogo = 49;</code>
      * @return \Io\LocalizedString|null
      */
-    public function getLocalizedPosterLogo()
+    public function getLocalizedPrimaryLogo()
     {
-        return $this->localizedPosterLogo;
+        return $this->localizedPrimaryLogo;
     }
 
-    public function hasLocalizedPosterLogo()
+    public function hasLocalizedPrimaryLogo()
     {
-        return isset($this->localizedPosterLogo);
+        return isset($this->localizedPrimaryLogo);
     }
 
-    public function clearLocalizedPosterLogo()
+    public function clearLocalizedPrimaryLogo()
     {
-        unset($this->localizedPosterLogo);
+        unset($this->localizedPrimaryLogo);
     }
 
     /**
-     * Sets different posterLogo images for non-default languages.
+     * Sets different primaryLogo images for non-default languages.
      *
-     * Generated from protobuf field <code>.io.LocalizedString localizedPosterLogo = 49;</code>
+     * Generated from protobuf field <code>.io.LocalizedString localizedPrimaryLogo = 49;</code>
      * @param \Io\LocalizedString $var
      * @return $this
      */
-    public function setLocalizedPosterLogo($var)
+    public function setLocalizedPrimaryLogo($var)
     {
         GPBUtil::checkMessage($var, \Io\LocalizedString::class);
-        $this->localizedPosterLogo = $var;
+        $this->localizedPrimaryLogo = $var;
 
         return $this;
     }

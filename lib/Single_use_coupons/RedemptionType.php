@@ -8,6 +8,8 @@ namespace Single_use_coupons;
 use UnexpectedValueException;
 
 /**
+ * Enum defining the allowed methods for redeeming a coupon.
+ *
  * Protobuf type <code>single_use_coupons.RedemptionType</code>
  */
 class RedemptionType

@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents event date information with optional time and timezone.
+ *
  * Generated from protobuf message <code>io.SemanticEventDateInfo</code>
  */
 class SemanticEventDateInfo extends \Google\Protobuf\Internal\Message

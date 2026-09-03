@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Defines the barcode settings for a pass.
+ *
  * Generated from protobuf message <code>io.Barcode</code>
  */
 class Barcode extends \Google\Protobuf\Internal\Message
@@ -39,13 +41,13 @@ class Barcode extends \Google\Protobuf\Internal\Message
      */
     protected $messageEncoding = '';
     /**
-     * Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+     * Set to true if you do not wish Google Wallet passes to display the security shimmer animation.
      *
      * Generated from protobuf field <code>bool suppressSecurity = 6;</code>
      */
     protected $suppressSecurity = false;
     /**
-     * Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+     * Set to true to enable TOTP rotating barcode support for Google Wallet passes.
      *
      * Generated from protobuf field <code>bool rotatingBarcode = 7;</code>
      */
@@ -71,9 +73,9 @@ class Barcode extends \Google\Protobuf\Internal\Message
      *     @type \Io\LocalizedString $localizedAltText
      *     @type string $messageEncoding
      *     @type bool $suppressSecurity
-     *           Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+     *           Set to true if you do not wish Google Wallet passes to display the security shimmer animation.
      *     @type bool $rotatingBarcode
-     *           Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+     *           Set to true to enable TOTP rotating barcode support for Google Wallet passes.
      *     @type \Io\TOPTParameters $totpParameters
      *           Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
      * }
@@ -212,7 +214,7 @@ class Barcode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+     * Set to true if you do not wish Google Wallet passes to display the security shimmer animation.
      *
      * Generated from protobuf field <code>bool suppressSecurity = 6;</code>
      * @return bool
@@ -223,7 +225,7 @@ class Barcode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+     * Set to true if you do not wish Google Wallet passes to display the security shimmer animation.
      *
      * Generated from protobuf field <code>bool suppressSecurity = 6;</code>
      * @param bool $var
@@ -238,7 +240,7 @@ class Barcode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+     * Set to true to enable TOTP rotating barcode support for Google Wallet passes.
      *
      * Generated from protobuf field <code>bool rotatingBarcode = 7;</code>
      * @return bool
@@ -249,7 +251,7 @@ class Barcode extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+     * Set to true to enable TOTP rotating barcode support for Google Wallet passes.
      *
      * Generated from protobuf field <code>bool rotatingBarcode = 7;</code>
      * @param bool $var

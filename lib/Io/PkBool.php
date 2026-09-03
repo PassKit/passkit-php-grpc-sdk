@@ -6,11 +6,11 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * To be used for booleans where we want users to be able to set to off / false via the API.
+ * Wrapper message to explicitly pass a boolean value.
  *
  * Generated from protobuf message <code>io.PkBool</code>
  */

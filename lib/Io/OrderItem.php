@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a single item in a transaction order.
+ *
  * Generated from protobuf message <code>io.OrderItem</code>
  */
 class OrderItem extends \Google\Protobuf\Internal\Message

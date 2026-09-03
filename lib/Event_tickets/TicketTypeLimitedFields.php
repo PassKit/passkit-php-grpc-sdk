@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Lightweight representation of a ticket type with essential fields only. Required fields: id or uid, name.
+ *
  * Generated from protobuf message <code>event_tickets.TicketTypeLimitedFields</code>
  */
 class TicketTypeLimitedFields extends \Google\Protobuf\Internal\Message

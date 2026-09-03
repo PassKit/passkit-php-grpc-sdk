@@ -6,10 +6,12 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to earn (add) or burn (deduct) points from a member’s account.
+ *
  * Generated from protobuf message <code>members.EarnBurnPointsRequest</code>
  */
 class EarnBurnPointsRequest extends \Google\Protobuf\Internal\Message
@@ -51,6 +53,8 @@ class EarnBurnPointsRequest extends \Google\Protobuf\Internal\Message
      */
     protected $tierPoints = 0;
     /**
+     *Any relevant details for the event.
+     *
      * Generated from protobuf field <code>.members.EventDetails eventDetails = 7;</code>
      */
     protected $eventDetails = null;
@@ -80,6 +84,7 @@ class EarnBurnPointsRequest extends \Google\Protobuf\Internal\Message
      *     @type int $tierPoints
      *           The amount of tier points earned or burnt. The amount needs to be greater than or equal to 0.
      *     @type \Members\EventDetails $eventDetails
+     *          Any relevant details for the event.
      *     @type string $tierId
      *           Optional field to change the tierIf of the member.
      * }
@@ -246,6 +251,8 @@ class EarnBurnPointsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Any relevant details for the event.
+     *
      * Generated from protobuf field <code>.members.EventDetails eventDetails = 7;</code>
      * @return \Members\EventDetails|null
      */
@@ -265,6 +272,8 @@ class EarnBurnPointsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Any relevant details for the event.
+     *
      * Generated from protobuf field <code>.members.EventDetails eventDetails = 7;</code>
      * @param \Members\EventDetails $var
      * @return $this

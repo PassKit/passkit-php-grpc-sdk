@@ -6,15 +6,19 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a start and end time of an event.
+ *
  * Generated from protobuf message <code>event_tickets.EventHours</code>
  */
 class EventHours extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Start time of the event.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp startTime = 1;</code>
      */
     protected $startTime = null;
@@ -30,6 +34,7 @@ class EventHours extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Google\Protobuf\Timestamp $startTime
+     *           Start time of the event.
      *     @type \Google\Protobuf\Timestamp $endTime
      * }
      */
@@ -39,6 +44,8 @@ class EventHours extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Start time of the event.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp startTime = 1;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -58,6 +65,8 @@ class EventHours extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Start time of the event.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp startTime = 1;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this

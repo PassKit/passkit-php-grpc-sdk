@@ -8,23 +8,33 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Channel indicates the origin of a request.
+ *
  * Protobuf type <code>io.Channel</code>
  */
 class Channel
 {
     /**
+     * Unknown source.
+     *
      * Generated from protobuf enum <code>UnknownChannel = 0;</code>
      */
     const UnknownChannel = 0;
     /**
+     * Request originated from the web application.
+     *
      * Generated from protobuf enum <code>Web = 1;</code>
      */
     const Web = 1;
     /**
+     * Request originated via the public API.
+     *
      * Generated from protobuf enum <code>API = 2;</code>
      */
     const API = 2;
     /**
+     * Request originated from a mobile or desktop app.
+     *
      * Generated from protobuf enum <code>App = 3;</code>
      */
     const App = 3;

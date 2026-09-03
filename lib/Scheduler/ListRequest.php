@@ -6,10 +6,12 @@
 namespace Scheduler;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * ListRequest is used to retrieve a list of scheduled executions for a given job. Required Fields: jobId.
+ *
  * Generated from protobuf message <code>scheduler.ListRequest</code>
  */
 class ListRequest extends \Google\Protobuf\Internal\Message

@@ -6,19 +6,25 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Used to provide credentials required for NFC certificate signing.
+ *
  * Generated from protobuf message <code>io.NFCSigningCredentialsRequest</code>
  */
 class NFCSigningCredentialsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Password for the certificate (e.g. for .p12 file).
+     *
      * Generated from protobuf field <code>string password = 1;</code>
      */
     protected $password = '';
     /**
+     * ID of the private key used to sign the certificate.
+     *
      * Generated from protobuf field <code>string privateKeyId = 2;</code>
      */
     protected $privateKeyId = '';
@@ -30,7 +36,9 @@ class NFCSigningCredentialsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $password
+     *           Password for the certificate (e.g. for .p12 file).
      *     @type string $privateKeyId
+     *           ID of the private key used to sign the certificate.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,6 +47,8 @@ class NFCSigningCredentialsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Password for the certificate (e.g. for .p12 file).
+     *
      * Generated from protobuf field <code>string password = 1;</code>
      * @return string
      */
@@ -48,6 +58,8 @@ class NFCSigningCredentialsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Password for the certificate (e.g. for .p12 file).
+     *
      * Generated from protobuf field <code>string password = 1;</code>
      * @param string $var
      * @return $this
@@ -61,6 +73,8 @@ class NFCSigningCredentialsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * ID of the private key used to sign the certificate.
+     *
      * Generated from protobuf field <code>string privateKeyId = 2;</code>
      * @return string
      */
@@ -70,6 +84,8 @@ class NFCSigningCredentialsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * ID of the private key used to sign the certificate.
+     *
      * Generated from protobuf field <code>string privateKeyId = 2;</code>
      * @param string $var
      * @return $this

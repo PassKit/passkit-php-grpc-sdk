@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * A single binary image blob.
+ *
  * Generated from protobuf message <code>io.ImageBundle</code>
  */
 class ImageBundle extends \Google\Protobuf\Internal\Message

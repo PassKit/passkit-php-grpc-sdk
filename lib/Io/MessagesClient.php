@@ -17,10 +17,11 @@ class MessagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a single message by its ID. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Message>
      */
     public function getMessage(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -31,10 +32,11 @@ class MessagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a new message that can be linked to a pass or class. Required Fields: id.
      * @param \Io\Message $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createMessage(\Io\Message $argument,
       $metadata = [], $options = []) {
@@ -45,10 +47,11 @@ class MessagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates an existing message by ID. Required Fields: id.
      * @param \Io\Message $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function updateMessage(\Io\Message $argument,
       $metadata = [], $options = []) {
@@ -59,10 +62,11 @@ class MessagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a message by its ID. Required Fields: id. Note: Deleting a message removes it from all linked passes.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteMessage(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -73,10 +77,11 @@ class MessagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Sends a message to specified pass IDs or to all passes in a class. Required: passId, protocol.
      * @param \Io\SendMessageRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\SendMessageResponse>
      */
     public function sendMessage(\Io\SendMessageRequest $argument,
       $metadata = [], $options = []) {

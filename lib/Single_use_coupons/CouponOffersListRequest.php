@@ -6,19 +6,25 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to list coupon offers with filtering options.
+ *
  * Generated from protobuf message <code>single_use_coupons.CouponOffersListRequest</code>
  */
 class CouponOffersListRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Campaign Id.
+     *
      * Generated from protobuf field <code>string campaignId = 1;</code>
      */
     protected $campaignId = '';
     /**
+     * Filters to apply when listing offers (e.g., by date created, status).
+     *
      * Generated from protobuf field <code>.io.Filters filters = 2;</code>
      */
     protected $filters = null;
@@ -30,7 +36,9 @@ class CouponOffersListRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $campaignId
+     *           Campaign Id.
      *     @type \Io\Filters $filters
+     *           Filters to apply when listing offers (e.g., by date created, status).
      * }
      */
     public function __construct($data = NULL) {
@@ -39,6 +47,8 @@ class CouponOffersListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Campaign Id.
+     *
      * Generated from protobuf field <code>string campaignId = 1;</code>
      * @return string
      */
@@ -48,6 +58,8 @@ class CouponOffersListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Campaign Id.
+     *
      * Generated from protobuf field <code>string campaignId = 1;</code>
      * @param string $var
      * @return $this
@@ -61,6 +73,8 @@ class CouponOffersListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Filters to apply when listing offers (e.g., by date created, status).
+     *
      * Generated from protobuf field <code>.io.Filters filters = 2;</code>
      * @return \Io\Filters|null
      */
@@ -80,6 +94,8 @@ class CouponOffersListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Filters to apply when listing offers (e.g., by date created, status).
+     *
      * Generated from protobuf field <code>.io.Filters filters = 2;</code>
      * @param \Io\Filters $var
      * @return $this

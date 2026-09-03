@@ -6,11 +6,11 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * The member record
+ * Member record.
  *
  * Generated from protobuf message <code>members.Member</code>
  */
@@ -89,7 +89,7 @@ class Member extends \Google\Protobuf\Internal\Message
      */
     protected $expiryDate = null;
     /**
-     * Member status.
+     * Current member status (e.g., ACTIVE, EXPIRED, DELETED).
      *
      * Generated from protobuf field <code>.members.MemberStatus status = 19;</code>
      */
@@ -180,12 +180,12 @@ class Member extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $expiryDate
      *           Indicates when the membership card expires. When the expiry date hits, it will automatically gray out the barcode. Records that have been expired for longer than 90 days will be permanently deleted.  A pass that has expired can be reactivated by updating the expiry date.
      *     @type int $status
-     *           Member status.
+     *           Current member status (e.g., ACTIVE, EXPIRED, DELETED).
      *     @type \Io\PassOverrides $passOverrides
      *           Pass level overrides for proximity & images.
      *     @type \Io\Metadata $passMetaData
      *           Pass Metadata.
-     *     @type array<\Io\Note>|\Google\Protobuf\Internal\RepeatedField $notes
+     *     @type \Io\Note[] $notes
      *           placeholder for notes.
      *     @type \Google\Protobuf\Timestamp $currentTierAwarded
      *           The date the current tier was awarded.
@@ -539,7 +539,7 @@ class Member extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Member status.
+     * Current member status (e.g., ACTIVE, EXPIRED, DELETED).
      *
      * Generated from protobuf field <code>.members.MemberStatus status = 19;</code>
      * @return int
@@ -550,7 +550,7 @@ class Member extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Member status.
+     * Current member status (e.g., ACTIVE, EXPIRED, DELETED).
      *
      * Generated from protobuf field <code>.members.MemberStatus status = 19;</code>
      * @param int $var
@@ -640,7 +640,7 @@ class Member extends \Google\Protobuf\Internal\Message
      * placeholder for notes.
      *
      * Generated from protobuf field <code>repeated .io.Note notes = 26;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\Note>
      */
     public function getNotes()
     {
@@ -651,7 +651,7 @@ class Member extends \Google\Protobuf\Internal\Message
      * placeholder for notes.
      *
      * Generated from protobuf field <code>repeated .io.Note notes = 26;</code>
-     * @param array<\Io\Note>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\Note[] $var
      * @return $this
      */
     public function setNotes($var)

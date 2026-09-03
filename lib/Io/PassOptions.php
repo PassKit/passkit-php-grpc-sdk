@@ -6,19 +6,25 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * PassOptions contains settings specific to each pass platform.
+ *
  * Generated from protobuf message <code>io.PassOptions</code>
  */
 class PassOptions extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Apple Wallet-specific pass rendering and behavior options.
+     *
      * Generated from protobuf field <code>.io.AppleWalletSettings apple = 1;</code>
      */
     protected $apple = null;
     /**
+     * Google Wallet-specific pass rendering and behavior options.
+     *
      * Generated from protobuf field <code>.io.GooglePaySettings google = 2;</code>
      */
     protected $google = null;
@@ -30,7 +36,9 @@ class PassOptions extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Io\AppleWalletSettings $apple
+     *           Apple Wallet-specific pass rendering and behavior options.
      *     @type \Io\GooglePaySettings $google
+     *           Google Wallet-specific pass rendering and behavior options.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,6 +47,8 @@ class PassOptions extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple Wallet-specific pass rendering and behavior options.
+     *
      * Generated from protobuf field <code>.io.AppleWalletSettings apple = 1;</code>
      * @return \Io\AppleWalletSettings|null
      */
@@ -58,6 +68,8 @@ class PassOptions extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple Wallet-specific pass rendering and behavior options.
+     *
      * Generated from protobuf field <code>.io.AppleWalletSettings apple = 1;</code>
      * @param \Io\AppleWalletSettings $var
      * @return $this
@@ -71,6 +83,8 @@ class PassOptions extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet-specific pass rendering and behavior options.
+     *
      * Generated from protobuf field <code>.io.GooglePaySettings google = 2;</code>
      * @return \Io\GooglePaySettings|null
      */
@@ -90,6 +104,8 @@ class PassOptions extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Google Wallet-specific pass rendering and behavior options.
+     *
      * Generated from protobuf field <code>.io.GooglePaySettings google = 2;</code>
      * @param \Io\GooglePaySettings $var
      * @return $this

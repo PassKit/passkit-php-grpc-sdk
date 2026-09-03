@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Payload sent when a sink subscription event is triggered.
+ *
  * Generated from protobuf message <code>io.SinkSubscriptionPayload</code>
  */
 class SinkSubscriptionPayload extends \Google\Protobuf\Internal\Message

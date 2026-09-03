@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Seat assignment and related metadata for event or transportation.
+ *
  * Generated from protobuf message <code>io.SemanticSeat</code>
  */
 class SemanticSeat extends \Google\Protobuf\Internal\Message

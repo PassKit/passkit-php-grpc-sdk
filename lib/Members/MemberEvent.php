@@ -6,11 +6,11 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * The Member Event record
+ * Record of an event that occurred for a member.
  *
  * Generated from protobuf message <code>members.MemberEvent</code>
  */

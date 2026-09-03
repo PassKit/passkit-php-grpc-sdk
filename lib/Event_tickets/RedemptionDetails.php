@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Contains redemption information for a redeemed ticket. Set by the redeem endpoint only. Required fields: none.
+ *
  * Generated from protobuf message <code>event_tickets.RedemptionDetails</code>
  */
 class RedemptionDetails extends \Google\Protobuf\Internal\Message

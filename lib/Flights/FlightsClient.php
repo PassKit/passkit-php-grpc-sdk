@@ -5,10 +5,11 @@
 // *
 // Flights RPC
 //
-// The PassKit Flights API lets you manage your flights and boarding passes for Apple Wallet and Google Pay.
+// The PassKit Flights API lets you manage your flights and boarding passes for Apple Wallet and Google Wallet.
 namespace Flights;
 
 /**
+ * Manages carriers, flight designators, flights, and digital boarding passes. Carrier and flight-designator records provide data used when creating flights and boarding passes.
  */
 class FlightsClient extends \Grpc\BaseStub {
 
@@ -22,11 +23,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Create an airport record. Optional method allowing the carrier to specify how the airport name is rendered in the pass and the GPS location that will trigger a lock-screen alert.
+     * Create an airport record. Optional method allowing the carrier to specify how the airport name is rendered in the pass and the GPS location that will trigger a lock-screen alert. Required Fields: airportCode, cityName, airportName, countryCode, timezone.
      * @param \Flights\Port $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function createPort(\Flights\Port $argument,
       $metadata = [], $options = []) {
@@ -37,11 +38,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Retrieve an airport record. The AirportCode is the three character IATA code or 4 character ICAO code.
+     * Retrieve an airport record. The AirportCode is the three character IATA code or 4 character ICAO code. Required Fields: airportCode.
      * @param \Flights\AirportCode $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Flights\Port>
      */
     public function getPort(\Flights\AirportCode $argument,
       $metadata = [], $options = []) {
@@ -52,11 +53,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Update an airport record.
+     * Update an airport record. Required Fields: airportCode.
      * @param \Flights\Port $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Flights\Port>
      */
     public function updatePort(\Flights\Port $argument,
       $metadata = [], $options = []) {
@@ -67,11 +68,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Delete an airport record. Deleting a record will remove any custom data provided. A new Airport record may be automatically created for a flight departing, arriving or transiting an airport which does not have a record, using publicly available data.
+     * Delete an airport record. Deleting a record will remove any custom data provided. A new Airport record may be automatically created for a flight departing, arriving or transiting an airport which does not have a record, using publicly available data. Required Fields: airportCode.
      * @param \Flights\AirportCode $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deletePort(\Flights\AirportCode $argument,
       $metadata = [], $options = []) {
@@ -82,11 +83,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Create a carrier record. All Flight Designations and Flights must have a carrier record.
+     * Create a carrier record. All Flight Designators and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
      * @param \Flights\Carrier $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function createCarrier(\Flights\Carrier $argument,
       $metadata = [], $options = []) {
@@ -97,11 +98,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Retrieve a carrier record.
+     * Retrieve a carrier record. Required Fields: carrierCode.
      * @param \Flights\CarrierCode $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Flights\Carrier>
      */
     public function getCarrier(\Flights\CarrierCode $argument,
       $metadata = [], $options = []) {
@@ -112,11 +113,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Update a carrier record
+     * Update a carrier record. Required Fields: carrierCode.
      * @param \Flights\Carrier $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Flights\Carrier>
      */
     public function updateCarrier(\Flights\Carrier $argument,
       $metadata = [], $options = []) {
@@ -127,11 +128,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Delete a carrier record.
+     * Delete a carrier record. Required Fields: carrierCode.
      * @param \Flights\CarrierCode $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteCarrier(\Flights\CarrierCode $argument,
       $metadata = [], $options = []) {
@@ -142,11 +143,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Create a flight designator record. As much default information as possible should be provided to facilitate the automatic generation of flight records.
+     * Create a flight designator record. As much default information as possible should be provided to facilitate the automatic generation of flight records. Required Fields: carrierCode, flightNumber, revision, schedule, origin, destination.
      * @param \Flights\FlightDesignator $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function createFlightDesignator(\Flights\FlightDesignator $argument,
       $metadata = [], $options = []) {
@@ -157,11 +158,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Retrieve a flight designation record.
+     * Retrieve a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * @param \Flights\FlightDesignatorRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Flights\FlightDesignator>
      */
     public function getFlightDesignator(\Flights\FlightDesignatorRequest $argument,
       $metadata = [], $options = []) {
@@ -172,11 +173,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Update a flight designation record.
+     * Update a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * @param \Flights\FlightDesignator $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Flights\FlightDesignator>
      */
     public function updateFlightDesignator(\Flights\FlightDesignator $argument,
       $metadata = [], $options = []) {
@@ -187,11 +188,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Delete a flight designation record.
+     * Delete a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * @param \Flights\FlightDesignatorRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteFlightDesignator(\Flights\FlightDesignatorRequest $argument,
       $metadata = [], $options = []) {
@@ -202,11 +203,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records.
+     * Creates a flight record. Flight records can be generated automatically; values on this record override carrier and flight-designator data. Required fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * @param \Flights\Flight $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function createFlight(\Flights\Flight $argument,
       $metadata = [], $options = []) {
@@ -217,11 +218,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Retrieve a flight record.
+     * Retrieve a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * @param \Flights\FlightRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Flights\Flight>
      */
     public function getFlight(\Flights\FlightRequest $argument,
       $metadata = [], $options = []) {
@@ -232,11 +233,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Update a flight record.
+     * Update a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * @param \Flights\Flight $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Flights\Flight>
      */
     public function updateFlight(\Flights\Flight $argument,
       $metadata = [], $options = []) {
@@ -247,11 +248,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Delete a flight record.
+     * Delete a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * @param \Flights\FlightRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteFlight(\Flights\FlightRequest $argument,
       $metadata = [], $options = []) {
@@ -262,11 +263,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.
+     * Creates a boarding-pass record. Missing flight data is populated from the related flight, flight designator, or carrier records. Required fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * @param \Flights\BoardingPassRecord $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Flights\BoardingPassesResponse>
      */
     public function createBoardingPass(\Flights\BoardingPassRecord $argument,
       $metadata = [], $options = []) {
@@ -277,11 +278,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Retrieve a boarding pass record.
+     * Retrieve a boarding pass record. Required Fields: ticketNumber or index or passId.
      * @param \Flights\BoardingPassRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Flights\BoardingPassRecord>
      */
     public function getBoardingPassRecord(\Flights\BoardingPassRecordRequest $argument,
       $metadata = [], $options = []) {
@@ -292,11 +293,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id.
+     * Retrieves digital boarding passes in the requested format by ticket number, index, PNR, or pass ID. Required fields: ticketNumber, index, or passId.
      * @param \Flights\BoardingPassRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Flights\BoardingPassesResponse>
      */
     public function getBoardingPass(\Flights\BoardingPassRequest $argument,
       $metadata = [], $options = []) {
@@ -307,11 +308,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Update a boarding pass record.
+     * Update a boarding pass record. Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * @param \Flights\BoardingPassRecord $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Flights\BoardingPassRecord>
      */
     public function updateBoardingPass(\Flights\BoardingPassRecord $argument,
       $metadata = [], $options = []) {
@@ -322,11 +323,11 @@ class FlightsClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Delete a boarding pass record.
+     * Delete a boarding pass record. Required Fields: ticketNumber or index or passId
      * @param \Flights\BoardingPassRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteBoardingPass(\Flights\BoardingPassRecordRequest $argument,
       $metadata = [], $options = []) {

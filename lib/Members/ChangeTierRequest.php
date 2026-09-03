@@ -6,10 +6,12 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to change a member’s tier within a program.
+ *
  * Generated from protobuf message <code>members.ChangeTierRequest</code>
  */
 class ChangeTierRequest extends \Google\Protobuf\Internal\Message
@@ -39,6 +41,8 @@ class ChangeTierRequest extends \Google\Protobuf\Internal\Message
      */
     protected $tierId = '';
     /**
+     * Any relevant details for the event.
+     *
      * Generated from protobuf field <code>.members.EventDetails eventDetails = 7;</code>
      */
     protected $eventDetails = null;
@@ -58,6 +62,7 @@ class ChangeTierRequest extends \Google\Protobuf\Internal\Message
      *     @type string $tierId
      *           Indicates the ID of the tier.
      *     @type \Members\EventDetails $eventDetails
+     *           Any relevant details for the event.
      * }
      */
     public function __construct($data = NULL) {
@@ -170,6 +175,8 @@ class ChangeTierRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Any relevant details for the event.
+     *
      * Generated from protobuf field <code>.members.EventDetails eventDetails = 7;</code>
      * @return \Members\EventDetails|null
      */
@@ -189,6 +196,8 @@ class ChangeTierRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Any relevant details for the event.
+     *
      * Generated from protobuf field <code>.members.EventDetails eventDetails = 7;</code>
      * @param \Members\EventDetails $var
      * @return $this

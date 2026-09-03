@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>io.NewUserResponse</code>
@@ -43,6 +43,8 @@ class NewUserResponse extends \Google\Protobuf\Internal\Message
      */
     protected $privateKey = '';
     /**
+     * JavaPrivateKey contains a PKCS#8 encrypted private key. Use with Java 11 and below.
+     *
      * Generated from protobuf field <code>string javaPrivateKey = 8;</code>
      */
     protected $javaPrivateKey = '';
@@ -69,6 +71,7 @@ class NewUserResponse extends \Google\Protobuf\Internal\Message
      *     @type string $certificate
      *     @type string $privateKey
      *     @type string $javaPrivateKey
+     *           JavaPrivateKey contains a PKCS#8 encrypted private key. Use with Java 11 and below.
      *     @type \Google\Protobuf\Timestamp $expiresAt
      *     @type string $regionId
      * }
@@ -233,6 +236,8 @@ class NewUserResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * JavaPrivateKey contains a PKCS#8 encrypted private key. Use with Java 11 and below.
+     *
      * Generated from protobuf field <code>string javaPrivateKey = 8;</code>
      * @return string
      */
@@ -242,6 +247,8 @@ class NewUserResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * JavaPrivateKey contains a PKCS#8 encrypted private key. Use with Java 11 and below.
+     *
      * Generated from protobuf field <code>string javaPrivateKey = 8;</code>
      * @param string $var
      * @return $this

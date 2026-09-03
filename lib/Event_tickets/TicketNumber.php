@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Identifies a ticket by combining a production ID or UID with a unique ticket number. Required fields: productionId, ticketNumber.
+ *
  * Generated from protobuf message <code>event_tickets.TicketNumber</code>
  */
 class TicketNumber extends \Google\Protobuf\Internal\Message

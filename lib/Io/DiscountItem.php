@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a discount applied to a transaction item.
+ *
  * Generated from protobuf message <code>io.DiscountItem</code>
  */
 class DiscountItem extends \Google\Protobuf\Internal\Message

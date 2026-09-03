@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * A request to distribute a pass to a user by email.
+ *
  * Generated from protobuf message <code>io.EmailDistributionRequest</code>
  */
 class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
@@ -33,10 +35,14 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
      */
     protected $classId = '';
     /**
+     * The PassKit protocol used for this pass.
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 4;</code>
      */
     protected $protocol = 0;
     /**
+     * Optional override to send to a different email address.
+     *
      * Generated from protobuf field <code>string alternativeEmail = 5;</code>
      */
     protected $alternativeEmail = '';
@@ -54,7 +60,9 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
      *     @type string $classId
      *           The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
      *     @type int $protocol
+     *           The PassKit protocol used for this pass.
      *     @type string $alternativeEmail
+     *           Optional override to send to a different email address.
      * }
      */
     public function __construct($data = NULL) {
@@ -141,6 +149,8 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The PassKit protocol used for this pass.
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 4;</code>
      * @return int
      */
@@ -150,6 +160,8 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The PassKit protocol used for this pass.
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 4;</code>
      * @param int $var
      * @return $this
@@ -163,6 +175,8 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional override to send to a different email address.
+     *
      * Generated from protobuf field <code>string alternativeEmail = 5;</code>
      * @return string
      */
@@ -172,6 +186,8 @@ class EmailDistributionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional override to send to a different email address.
+     *
      * Generated from protobuf field <code>string alternativeEmail = 5;</code>
      * @param string $var
      * @return $this

@@ -6,48 +6,48 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Recurrence rule for yearly repetition.
+ *
  * Generated from protobuf message <code>io.YearlyRecursive</code>
  */
 class YearlyRecursive extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The month in which the recursive period starts.
+     * Month (1–12).
      *
      * Generated from protobuf field <code>int32 month = 1;</code>
      */
     protected $month = 0;
     /**
-     * The day on which the recursive period starts. Available values are 1-31.
-     * Selecting dayOfMonth=29 and month=2, for the last day of Feb of any year.
+     * Day of the month (1–31).
      *
      * Generated from protobuf field <code>int32 dayOfMonth = 2;</code>
      */
     protected $dayOfMonth = 0;
     /**
-     * Default hour is 0.
+     * Optional hour (0–23).
      *
      * Generated from protobuf field <code>int32 hour = 3;</code>
      */
     protected $hour = 0;
     /**
-     * Default minute is 0.
+     * Optional minute (0–59).
      *
      * Generated from protobuf field <code>int32 minute = 4;</code>
      */
     protected $minute = 0;
     /**
-     * Default second is 0.
+     * Optional second (0–59).
      *
      * Generated from protobuf field <code>int32 second = 5;</code>
      */
     protected $second = 0;
     /**
-     * State to select the year.
-     * Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+     * Determines whether the date applies to the current, previous, or next year.
      *
      * Generated from protobuf field <code>.io.TimeState state = 6;</code>
      */
@@ -60,19 +60,17 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $month
-     *           The month in which the recursive period starts.
+     *           Month (1–12).
      *     @type int $dayOfMonth
-     *           The day on which the recursive period starts. Available values are 1-31.
-     *           Selecting dayOfMonth=29 and month=2, for the last day of Feb of any year.
+     *           Day of the month (1–31).
      *     @type int $hour
-     *           Default hour is 0.
+     *           Optional hour (0–23).
      *     @type int $minute
-     *           Default minute is 0.
+     *           Optional minute (0–59).
      *     @type int $second
-     *           Default second is 0.
+     *           Optional second (0–59).
      *     @type int $state
-     *           State to select the year.
-     *           Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+     *           Determines whether the date applies to the current, previous, or next year.
      * }
      */
     public function __construct($data = NULL) {
@@ -81,7 +79,7 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The month in which the recursive period starts.
+     * Month (1–12).
      *
      * Generated from protobuf field <code>int32 month = 1;</code>
      * @return int
@@ -92,7 +90,7 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The month in which the recursive period starts.
+     * Month (1–12).
      *
      * Generated from protobuf field <code>int32 month = 1;</code>
      * @param int $var
@@ -107,8 +105,7 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The day on which the recursive period starts. Available values are 1-31.
-     * Selecting dayOfMonth=29 and month=2, for the last day of Feb of any year.
+     * Day of the month (1–31).
      *
      * Generated from protobuf field <code>int32 dayOfMonth = 2;</code>
      * @return int
@@ -119,8 +116,7 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The day on which the recursive period starts. Available values are 1-31.
-     * Selecting dayOfMonth=29 and month=2, for the last day of Feb of any year.
+     * Day of the month (1–31).
      *
      * Generated from protobuf field <code>int32 dayOfMonth = 2;</code>
      * @param int $var
@@ -135,7 +131,7 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Default hour is 0.
+     * Optional hour (0–23).
      *
      * Generated from protobuf field <code>int32 hour = 3;</code>
      * @return int
@@ -146,7 +142,7 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Default hour is 0.
+     * Optional hour (0–23).
      *
      * Generated from protobuf field <code>int32 hour = 3;</code>
      * @param int $var
@@ -161,7 +157,7 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Default minute is 0.
+     * Optional minute (0–59).
      *
      * Generated from protobuf field <code>int32 minute = 4;</code>
      * @return int
@@ -172,7 +168,7 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Default minute is 0.
+     * Optional minute (0–59).
      *
      * Generated from protobuf field <code>int32 minute = 4;</code>
      * @param int $var
@@ -187,7 +183,7 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Default second is 0.
+     * Optional second (0–59).
      *
      * Generated from protobuf field <code>int32 second = 5;</code>
      * @return int
@@ -198,7 +194,7 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Default second is 0.
+     * Optional second (0–59).
      *
      * Generated from protobuf field <code>int32 second = 5;</code>
      * @param int $var
@@ -213,8 +209,7 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * State to select the year.
-     * Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+     * Determines whether the date applies to the current, previous, or next year.
      *
      * Generated from protobuf field <code>.io.TimeState state = 6;</code>
      * @return int
@@ -225,8 +220,7 @@ class YearlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * State to select the year.
-     * Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+     * Determines whether the date applies to the current, previous, or next year.
      *
      * Generated from protobuf field <code>.io.TimeState state = 6;</code>
      * @param int $var

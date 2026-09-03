@@ -8,23 +8,33 @@ namespace Members;
 use UnexpectedValueException;
 
 /**
+ * Type of value used to represent a points balance.
+ *
  * Protobuf type <code>members.BalanceType</code>
  */
 class BalanceType
 {
     /**
+     * Points are stored as a string value (e.g., "1000").
+     *
      * Generated from protobuf enum <code>BALANCE_TYPE_STRING = 0;</code>
      */
     const BALANCE_TYPE_STRING = 0;
     /**
+     * Points are stored as an integer value (whole numbers).
+     *
      * Generated from protobuf enum <code>BALANCE_TYPE_INT = 1;</code>
      */
     const BALANCE_TYPE_INT = 1;
     /**
+     * Points are stored as a decimal value (floating-point numbers).
+     *
      * Generated from protobuf enum <code>BALANCE_TYPE_DOUBLE = 2;</code>
      */
     const BALANCE_TYPE_DOUBLE = 2;
     /**
+     * Points are stored as a monetary value using a currency format.
+     *
      * Generated from protobuf enum <code>BALANCE_TYPE_MONEY = 3;</code>
      */
     const BALANCE_TYPE_MONEY = 3;

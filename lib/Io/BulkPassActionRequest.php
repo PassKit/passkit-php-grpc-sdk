@@ -6,23 +6,31 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request for bulk actions (e.g. update, delete) on filtered pass sets.
+ *
  * Generated from protobuf message <code>io.BulkPassActionRequest</code>
  */
 class BulkPassActionRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Unique class ID for passes to apply bulk action to.
+     *
      * Generated from protobuf field <code>string classId = 1;</code>
      */
     protected $classId = '';
     /**
+     * Protocol of the pass (e.g. member, coupon, etc).
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 2;</code>
      */
     protected $protocol = 0;
     /**
+     * Grouped filter conditions for selecting target passes.
+     *
      * Generated from protobuf field <code>repeated .io.FilterGroup filterGroups = 3;</code>
      */
     private $filterGroups;
@@ -34,8 +42,11 @@ class BulkPassActionRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $classId
+     *           Unique class ID for passes to apply bulk action to.
      *     @type int $protocol
-     *     @type array<\Io\FilterGroup>|\Google\Protobuf\Internal\RepeatedField $filterGroups
+     *           Protocol of the pass (e.g. member, coupon, etc).
+     *     @type \Io\FilterGroup[] $filterGroups
+     *           Grouped filter conditions for selecting target passes.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,6 +55,8 @@ class BulkPassActionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Unique class ID for passes to apply bulk action to.
+     *
      * Generated from protobuf field <code>string classId = 1;</code>
      * @return string
      */
@@ -53,6 +66,8 @@ class BulkPassActionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Unique class ID for passes to apply bulk action to.
+     *
      * Generated from protobuf field <code>string classId = 1;</code>
      * @param string $var
      * @return $this
@@ -66,6 +81,8 @@ class BulkPassActionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Protocol of the pass (e.g. member, coupon, etc).
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 2;</code>
      * @return int
      */
@@ -75,6 +92,8 @@ class BulkPassActionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Protocol of the pass (e.g. member, coupon, etc).
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 2;</code>
      * @param int $var
      * @return $this
@@ -88,8 +107,10 @@ class BulkPassActionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Grouped filter conditions for selecting target passes.
+     *
      * Generated from protobuf field <code>repeated .io.FilterGroup filterGroups = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\FilterGroup>
      */
     public function getFilterGroups()
     {
@@ -97,8 +118,10 @@ class BulkPassActionRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Grouped filter conditions for selecting target passes.
+     *
      * Generated from protobuf field <code>repeated .io.FilterGroup filterGroups = 3;</code>
-     * @param array<\Io\FilterGroup>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\FilterGroup[] $var
      * @return $this
      */
     public function setFilterGroups($var)

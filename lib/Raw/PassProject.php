@@ -6,8 +6,8 @@
 namespace Raw;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Pass Project holds the basic business logic of the Pass Project. It holds details on pass distribution, quotas, Apple certificate, integrations & hooks to use.
@@ -83,7 +83,7 @@ class PassProject extends \Google\Protobuf\Internal\Message
      *           Name of the pass project; will be shown on the data collection page (if set) and as pass issuer name.
      *     @type \Io\LocalizedString $localizedName
      *           Localized name of the pass project
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $status
+     *     @type int[] $status
      *           The pass project status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT
      *     @type \Io\Quota $quota
      *           The pass project quota
@@ -194,7 +194,7 @@ class PassProject extends \Google\Protobuf\Internal\Message
      * The pass project status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 4;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getStatus()
     {
@@ -205,7 +205,7 @@ class PassProject extends \Google\Protobuf\Internal\Message
      * The pass project status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 4;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setStatus($var)

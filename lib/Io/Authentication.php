@@ -8,23 +8,33 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Authentication defines the method used to authenticate the request.
+ *
  * Protobuf type <code>io.Authentication</code>
  */
 class Authentication
 {
     /**
+     * No authentication provided.
+     *
      * Generated from protobuf enum <code>Unauthenticated = 0;</code>
      */
     const Unauthenticated = 0;
     /**
+     * Session or web token was used.
+     *
      * Generated from protobuf enum <code>WebToken = 1;</code>
      */
     const WebToken = 1;
     /**
+     * Bearer token authentication.
+     *
      * Generated from protobuf enum <code>BearerToken = 2;</code>
      */
     const BearerToken = 2;
     /**
+     * Certificate-based authentication.
+     *
      * Generated from protobuf enum <code>Certificate = 3;</code>
      */
     const Certificate = 3;

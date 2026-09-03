@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Defines a sink subscription which is triggered after internal PassKit processes complete.
+ *
  * Generated from protobuf message <code>io.SinkSubscription</code>
  */
 class SinkSubscription extends \Google\Protobuf\Internal\Message
@@ -39,6 +41,8 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
      */
     private $passEventId;
     /**
+     * Status of the integration.
+     *
      * Generated from protobuf field <code>.io.IntegrationStatus status = 5;</code>
      */
     protected $status = 0;
@@ -74,9 +78,10 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
      *           The uuid for the class object.
      *     @type int $protocol
      *           The protocol of class object which owns this sink subscription.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $passEventId
+     *     @type int[] $passEventId
      *           Identifies pass event type you are subscribing to.
      *     @type int $status
+     *           Status of the integration.
      *     @type int $configType
      *     @type string $configuration
      *           Configuration details for the integration.
@@ -175,7 +180,7 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
      * Identifies pass event type you are subscribing to.
      *
      * Generated from protobuf field <code>repeated .io.PassEventId passEventId = 4;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getPassEventId()
     {
@@ -186,7 +191,7 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
      * Identifies pass event type you are subscribing to.
      *
      * Generated from protobuf field <code>repeated .io.PassEventId passEventId = 4;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setPassEventId($var)
@@ -198,6 +203,8 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Status of the integration.
+     *
      * Generated from protobuf field <code>.io.IntegrationStatus status = 5;</code>
      * @return int
      */
@@ -207,6 +214,8 @@ class SinkSubscription extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Status of the integration.
+     *
      * Generated from protobuf field <code>.io.IntegrationStatus status = 5;</code>
      * @param int $var
      * @return $this

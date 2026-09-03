@@ -6,10 +6,12 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Input field configuration used in customer-initiated redemption.
+ *
  * Generated from protobuf message <code>single_use_coupons.InputField</code>
  */
 class InputField extends \Google\Protobuf\Internal\Message

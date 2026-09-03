@@ -6,31 +6,43 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Metadata about a private key stored in the system.
+ *
  * Generated from protobuf message <code>io.PrivateKeyData</code>
  */
 class PrivateKeyData extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Unique identifier for the private key.
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      */
     protected $id = '';
     /**
+     * Display name for the private key.
+     *
      * Generated from protobuf field <code>string name = 2;</code>
      */
     protected $name = '';
     /**
+     * Description for the private key.
+     *
      * Generated from protobuf field <code>string description = 3;</code>
      */
     protected $description = '';
     /**
+     * Optional expiry date for the private key.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiry = 4;</code>
      */
     protected $expiry = null;
     /**
+     * Username of the key owner.
+     *
      * Generated from protobuf field <code>string ownerUsername = 5;</code>
      */
     protected $ownerUsername = '';
@@ -42,10 +54,15 @@ class PrivateKeyData extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
+     *           Unique identifier for the private key.
      *     @type string $name
+     *           Display name for the private key.
      *     @type string $description
+     *           Description for the private key.
      *     @type \Google\Protobuf\Timestamp $expiry
+     *           Optional expiry date for the private key.
      *     @type string $ownerUsername
+     *           Username of the key owner.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,6 +71,8 @@ class PrivateKeyData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Unique identifier for the private key.
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @return string
      */
@@ -63,6 +82,8 @@ class PrivateKeyData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Unique identifier for the private key.
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @param string $var
      * @return $this
@@ -76,6 +97,8 @@ class PrivateKeyData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Display name for the private key.
+     *
      * Generated from protobuf field <code>string name = 2;</code>
      * @return string
      */
@@ -85,6 +108,8 @@ class PrivateKeyData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Display name for the private key.
+     *
      * Generated from protobuf field <code>string name = 2;</code>
      * @param string $var
      * @return $this
@@ -98,6 +123,8 @@ class PrivateKeyData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Description for the private key.
+     *
      * Generated from protobuf field <code>string description = 3;</code>
      * @return string
      */
@@ -107,6 +134,8 @@ class PrivateKeyData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Description for the private key.
+     *
      * Generated from protobuf field <code>string description = 3;</code>
      * @param string $var
      * @return $this
@@ -120,6 +149,8 @@ class PrivateKeyData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional expiry date for the private key.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiry = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -139,6 +170,8 @@ class PrivateKeyData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional expiry date for the private key.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp expiry = 4;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
@@ -152,6 +185,8 @@ class PrivateKeyData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Username of the key owner.
+     *
      * Generated from protobuf field <code>string ownerUsername = 5;</code>
      * @return string
      */
@@ -161,6 +196,8 @@ class PrivateKeyData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Username of the key owner.
+     *
      * Generated from protobuf field <code>string ownerUsername = 5;</code>
      * @param string $var
      * @return $this

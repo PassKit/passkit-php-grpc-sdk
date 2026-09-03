@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>io.PasswordResetInput</code>
@@ -19,9 +19,9 @@ class PasswordResetInput extends \Google\Protobuf\Internal\Message
      */
     protected $id = '';
     /**
-     * Generated from protobuf field <code>string registeredEmail = 2;</code>
+     * Generated from protobuf field <code>string username = 2;</code>
      */
-    protected $registeredEmail = '';
+    protected $username = '';
     /**
      * Generated from protobuf field <code>string newPassword = 3;</code>
      */
@@ -38,7 +38,7 @@ class PasswordResetInput extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
-     *     @type string $registeredEmail
+     *     @type string $username
      *     @type string $newPassword
      *     @type string $confirmNewPassword
      * }
@@ -71,23 +71,23 @@ class PasswordResetInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string registeredEmail = 2;</code>
+     * Generated from protobuf field <code>string username = 2;</code>
      * @return string
      */
-    public function getRegisteredEmail()
+    public function getUsername()
     {
-        return $this->registeredEmail;
+        return $this->username;
     }
 
     /**
-     * Generated from protobuf field <code>string registeredEmail = 2;</code>
+     * Generated from protobuf field <code>string username = 2;</code>
      * @param string $var
      * @return $this
      */
-    public function setRegisteredEmail($var)
+    public function setUsername($var)
     {
         GPBUtil::checkString($var, True);
-        $this->registeredEmail = $var;
+        $this->username = $var;
 
         return $this;
     }

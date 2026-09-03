@@ -58,6 +58,10 @@ class PermissionScope
      * Generated from protobuf enum <code>FLIGHTS_ACCESS = 512;</code>
      */
     const FLIGHTS_ACCESS = 512;
+    /**
+     * Generated from protobuf enum <code>TEAM_MEMBER_ADMIN = 1024;</code>
+     */
+    const TEAM_MEMBER_ADMIN = 1024;
 
     private static $valueToName = [
         self::PERMISSION_NONE => 'PERMISSION_NONE',
@@ -71,6 +75,7 @@ class PermissionScope
         self::COUPONS_ACCESS => 'COUPONS_ACCESS',
         self::EVENTS_ACCESS => 'EVENTS_ACCESS',
         self::FLIGHTS_ACCESS => 'FLIGHTS_ACCESS',
+        self::TEAM_MEMBER_ADMIN => 'TEAM_MEMBER_ADMIN',
     ];
 
     public static function name($value)

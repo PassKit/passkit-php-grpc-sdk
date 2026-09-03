@@ -6,11 +6,11 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * The Coupon Campaign Details.
+ * Campaign configuration for managing a coupon campaign’s rules, statuses, and options.
  *
  * Generated from protobuf message <code>single_use_coupons.CouponCampaign</code>
  */
@@ -41,7 +41,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
      */
     private $status;
     /**
-     * Leave empty for draft campaigns. Needs to be set for campaigns where status contains PROJECT_PUBLISHED.
+     * Required only when campaign status includes PROJECT_PUBLISHED.
      *
      * Generated from protobuf field <code>string passTypeIdentifier = 6;</code>
      */
@@ -77,10 +77,10 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
      *           Name of the coupon campaign; used in the portal / API. Not shown to the end-customer.
      *     @type \Io\LocalizedString $localizedName
      *           Localized name of the coupon campaign.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $status
+     *     @type int[] $status
      *           The program status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *     @type string $passTypeIdentifier
-     *           Leave empty for draft campaigns. Needs to be set for campaigns where status contains PROJECT_PUBLISHED.
+     *           Required only when campaign status includes PROJECT_PUBLISHED.
      *     @type string $ianaTimezone
      *           The campaign timezone.
      *     @type \Google\Protobuf\Timestamp $created
@@ -186,7 +186,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
      * The program status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 5;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getStatus()
     {
@@ -197,7 +197,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
      * The program status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 5;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setStatus($var)
@@ -209,7 +209,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Leave empty for draft campaigns. Needs to be set for campaigns where status contains PROJECT_PUBLISHED.
+     * Required only when campaign status includes PROJECT_PUBLISHED.
      *
      * Generated from protobuf field <code>string passTypeIdentifier = 6;</code>
      * @return string
@@ -220,7 +220,7 @@ class CouponCampaign extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Leave empty for draft campaigns. Needs to be set for campaigns where status contains PROJECT_PUBLISHED.
+     * Required only when campaign status includes PROJECT_PUBLISHED.
      *
      * Generated from protobuf field <code>string passTypeIdentifier = 6;</code>
      * @param string $var

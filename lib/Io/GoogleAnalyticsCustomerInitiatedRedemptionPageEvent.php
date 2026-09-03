@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum of events used on the customer-initiated redemption page for Google Analytics.
+ *
  * Protobuf type <code>io.GoogleAnalyticsCustomerInitiatedRedemptionPageEvent</code>
  */
 class GoogleAnalyticsCustomerInitiatedRedemptionPageEvent

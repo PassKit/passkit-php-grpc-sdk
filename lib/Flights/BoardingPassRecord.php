@@ -6,11 +6,11 @@
 namespace Flights;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * A Boarding Pass record is unique to an individual passenger journey form a boarding point to a deplaning point. A Carrier and a Flight Designation record must exist. If a Flight record does not already exist, then it will be auto-generated based on the Flight Designation record and other publicly available data.
+ * A Boarding Pass record is unique to an individual passenger journey form a boarding point to a deplaning point. A Carrier and a Flight Designator record must exist. If a Flight record does not already exist, then it will be auto-generated based on the Flight Designator record and other publicly available data.
  *
  * Generated from protobuf message <code>flights.BoardingPassRecord</code>
  */
@@ -119,19 +119,19 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      */
     protected $boardingPosition = '';
     /**
-     * 3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
+     * 3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K.
      *
      * Generated from protobuf field <code>string freeBaggageAllowance = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $freeBaggageAllowance = '';
     /**
-     * 3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
+     * 3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K.
      *
      * Generated from protobuf field <code>string carryOnAllowance = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $carryOnAllowance = '';
     /**
-     * An array of SSR codes. Codes should be 4 capitalized letters. Codes may be annotated.
+     * An array of SSR codes. Codes should be 4 capitalized letters.
      *
      * Generated from protobuf field <code>repeated string ssrCodes = 21;</code>
      */
@@ -167,13 +167,13 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      */
     protected $barcodePayload = '';
     /**
-     * Security image id for display above the barcode on a Google Pay pass.
+     * Security image ID for display above the barcode on a Google Wallet pass.
      *
      * Generated from protobuf field <code>string securityImage = 27;</code>
      */
     protected $securityImage = '';
     /**
-     * Privilege image id for display above the barcode on a Google Pay pass.
+     * Privilege image ID for display above the barcode on a Google Wallet pass.
      *
      * Generated from protobuf field <code>string privilegeImage = 28;</code>
      */
@@ -185,13 +185,13 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      */
     protected $footerImage = '';
     /**
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     private $locationMessages;
     /**
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
@@ -209,19 +209,43 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      */
     protected $barcodeAdditionalData = '';
     /**
+     * Optional key value pairs to be added in to the flight record.
+     *
+     * Generated from protobuf field <code>.io.DataItems additionalDataItems = 35;</code>
+     */
+    protected $additionalDataItems = null;
+    /**
+     * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
+     *
+     * Generated from protobuf field <code>.flights.FlightURLs urls = 37;</code>
+     */
+    protected $urls = null;
+    /**
+     * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
+     *
+     * Generated from protobuf field <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
+     */
+    private $capabilities;
+    /**
+     * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
+     *
+     * Generated from protobuf field <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
+     */
+    private $securityPrograms;
+    /**
+     * A string that indicates any priority status or privileges that a passenger may have for the flight. Examples could include "Priority Boarding", "Lounge Access", "Extra Cabin Baggage", etc.
+     *
+     * Generated from protobuf field <code>string PriorityStatus = 40;</code>
+     */
+    protected $PriorityStatus = '';
+    /**
      * If a passenger is travelling as an infant and the airline is not using conditional data with a passenger description of 6 (Adult With Infant), an id of the infant's boarding pass will be recorded here.
      *
      * Generated from protobuf field <code>string infantPassId = 34;</code>
      */
     protected $infantPassId = '';
     /**
-     * Optional key value pairs to be added in to the flight record
-     *
-     * Generated from protobuf field <code>.io.DataItems additionalDataItems = 35;</code>
-     */
-    protected $additionalDataItems = null;
-    /**
-     * Pass Metadata
+     * Pass Metadata.
      *
      * Generated from protobuf field <code>.io.Metadata metadata = 36;</code>
      */
@@ -237,7 +261,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      *           Id assigned by PassKit to represent the boarding pass record. It will be used as the serial number in Apple Wallet and as the Object identifier for Google Wallet. This field is not writable.
      *     @type string $operatingCarrierPNR
      *           PNR code of the carrier operating the flight, independent of code-share, lease or other issues.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $relatedPNRs
+     *     @type string[] $relatedPNRs
      *           Up to three related PNRs can be used to index the record and can be the marketing carrier PNR or a master PNR containing multiple bookings. If required, a related PNR can be followed by the two or three character designator of the carrier or CRS controlling the PNR, separated by an oblique.
      *     @type string $ticketNumber
      *           Ticket number can optionally be prefixed by the 3 digit airline code, followed by a 10 digit ticket number.  For ticket numbers less than 10 digits, pad with zeros.
@@ -268,11 +292,11 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      *     @type string $boardingPosition
      *           An additional field to indicate boarding priority or order.
      *     @type string $freeBaggageAllowance
-     *           3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
+     *           3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K.
      *     @type string $carryOnAllowance
-     *           3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $ssrCodes
-     *           An array of SSR codes. Codes should be 4 capitalized letters. Codes may be annotated.
+     *           3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K.
+     *     @type string[] $ssrCodes
+     *           An array of SSR codes. Codes should be 4 capitalized letters.
      *     @type string $osi
      *           Other service information that may be relevant to the booking.
      *     @type string $remarks
@@ -284,25 +308,33 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      *     @type string $barcodePayload
      *           Payload to be encoded in the pass barcode. If omitted, an IATA BCBP Standard (Resolution 792) barcode will be generated.
      *     @type string $securityImage
-     *           Security image id for display above the barcode on a Google Pay pass.
+     *           Security image ID for display above the barcode on a Google Wallet pass.
      *     @type string $privilegeImage
-     *           Privilege image id for display above the barcode on a Google Pay pass.
+     *           Privilege image ID for display above the barcode on a Google Wallet pass.
      *     @type string $footerImage
      *           Footer image id for display above the barcode on iOS devices.
-     *     @type array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $locationMessages
-     *           A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
-     *     @type array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $beaconMessages
-     *           A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
-     *     @type array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $links
+     *     @type \Io\GPSLocation[] $locationMessages
+     *           A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
+     *     @type \Io\Beacon[] $beaconMessages
+     *           A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
+     *     @type \Io\Link[] $links
      *           A list of links to be appended to the end of each boarding pass.
      *     @type string $barcodeAdditionalData
      *           If PassKit are generating barcodes, airline use data (IATA item 4) to be included in the barcode.
+     *     @type \Io\DataItems $additionalDataItems
+     *           Optional key value pairs to be added in to the flight record.
+     *     @type \Flights\FlightURLs $urls
+     *           URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
+     *     @type int[] $capabilities
+     *           Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
+     *     @type int[] $securityPrograms
+     *           Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
+     *     @type string $PriorityStatus
+     *           A string that indicates any priority status or privileges that a passenger may have for the flight. Examples could include "Priority Boarding", "Lounge Access", "Extra Cabin Baggage", etc.
      *     @type string $infantPassId
      *           If a passenger is travelling as an infant and the airline is not using conditional data with a passenger description of 6 (Adult With Infant), an id of the infant's boarding pass will be recorded here.
-     *     @type \Io\DataItems $additionalDataItems
-     *           Optional key value pairs to be added in to the flight record
      *     @type \Io\Metadata $metadata
-     *           Pass Metadata
+     *           Pass Metadata.
      * }
      */
     public function __construct($data = NULL) {
@@ -366,7 +398,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * Up to three related PNRs can be used to index the record and can be the marketing carrier PNR or a master PNR containing multiple bookings. If required, a related PNR can be followed by the two or three character designator of the carrier or CRS controlling the PNR, separated by an oblique.
      *
      * Generated from protobuf field <code>repeated string relatedPNRs = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getRelatedPNRs()
     {
@@ -377,7 +409,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * Up to three related PNRs can be used to index the record and can be the marketing carrier PNR or a master PNR containing multiple bookings. If required, a related PNR can be followed by the two or three character designator of the carrier or CRS controlling the PNR, separated by an oblique.
      *
      * Generated from protobuf field <code>repeated string relatedPNRs = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setRelatedPNRs($var)
@@ -773,7 +805,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
+     * 3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K.
      *
      * Generated from protobuf field <code>string freeBaggageAllowance = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
@@ -784,7 +816,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
+     * 3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K.
      *
      * Generated from protobuf field <code>string freeBaggageAllowance = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
@@ -799,7 +831,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
+     * 3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K.
      *
      * Generated from protobuf field <code>string carryOnAllowance = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
@@ -810,7 +842,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 3 character string comprising the quantity, followed by the unit code (PC - piece, L - lbs, K - kgs). E.g. 2PC, 20K.
+     * 3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K.
      *
      * Generated from protobuf field <code>string carryOnAllowance = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
@@ -825,10 +857,10 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * An array of SSR codes. Codes should be 4 capitalized letters. Codes may be annotated.
+     * An array of SSR codes. Codes should be 4 capitalized letters.
      *
      * Generated from protobuf field <code>repeated string ssrCodes = 21;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getSsrCodes()
     {
@@ -836,10 +868,10 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * An array of SSR codes. Codes should be 4 capitalized letters. Codes may be annotated.
+     * An array of SSR codes. Codes should be 4 capitalized letters.
      *
      * Generated from protobuf field <code>repeated string ssrCodes = 21;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setSsrCodes($var)
@@ -991,7 +1023,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Security image id for display above the barcode on a Google Pay pass.
+     * Security image ID for display above the barcode on a Google Wallet pass.
      *
      * Generated from protobuf field <code>string securityImage = 27;</code>
      * @return string
@@ -1002,7 +1034,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Security image id for display above the barcode on a Google Pay pass.
+     * Security image ID for display above the barcode on a Google Wallet pass.
      *
      * Generated from protobuf field <code>string securityImage = 27;</code>
      * @param string $var
@@ -1017,7 +1049,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Privilege image id for display above the barcode on a Google Pay pass.
+     * Privilege image ID for display above the barcode on a Google Wallet pass.
      *
      * Generated from protobuf field <code>string privilegeImage = 28;</code>
      * @return string
@@ -1028,7 +1060,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Privilege image id for display above the barcode on a Google Pay pass.
+     * Privilege image ID for display above the barcode on a Google Wallet pass.
      *
      * Generated from protobuf field <code>string privilegeImage = 28;</code>
      * @param string $var
@@ -1069,10 +1101,10 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\GPSLocation>
      */
     public function getLocationMessages()
     {
@@ -1080,10 +1112,10 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\GPSLocation[] $var
      * @return $this
      */
     public function setLocationMessages($var)
@@ -1095,10 +1127,10 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\Beacon>
      */
     public function getBeaconMessages()
     {
@@ -1106,10 +1138,10 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\Beacon[] $var
      * @return $this
      */
     public function setBeaconMessages($var)
@@ -1124,7 +1156,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * A list of links to be appended to the end of each boarding pass.
      *
      * Generated from protobuf field <code>repeated .io.Link links = 32 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\Link>
      */
     public function getLinks()
     {
@@ -1135,7 +1167,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
      * A list of links to be appended to the end of each boarding pass.
      *
      * Generated from protobuf field <code>repeated .io.Link links = 32 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\Link[] $var
      * @return $this
      */
     public function setLinks($var)
@@ -1173,6 +1205,156 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional key value pairs to be added in to the flight record.
+     *
+     * Generated from protobuf field <code>.io.DataItems additionalDataItems = 35;</code>
+     * @return \Io\DataItems|null
+     */
+    public function getAdditionalDataItems()
+    {
+        return $this->additionalDataItems;
+    }
+
+    public function hasAdditionalDataItems()
+    {
+        return isset($this->additionalDataItems);
+    }
+
+    public function clearAdditionalDataItems()
+    {
+        unset($this->additionalDataItems);
+    }
+
+    /**
+     * Optional key value pairs to be added in to the flight record.
+     *
+     * Generated from protobuf field <code>.io.DataItems additionalDataItems = 35;</code>
+     * @param \Io\DataItems $var
+     * @return $this
+     */
+    public function setAdditionalDataItems($var)
+    {
+        GPBUtil::checkMessage($var, \Io\DataItems::class);
+        $this->additionalDataItems = $var;
+
+        return $this;
+    }
+
+    /**
+     * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
+     *
+     * Generated from protobuf field <code>.flights.FlightURLs urls = 37;</code>
+     * @return \Flights\FlightURLs|null
+     */
+    public function getUrls()
+    {
+        return $this->urls;
+    }
+
+    public function hasUrls()
+    {
+        return isset($this->urls);
+    }
+
+    public function clearUrls()
+    {
+        unset($this->urls);
+    }
+
+    /**
+     * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
+     *
+     * Generated from protobuf field <code>.flights.FlightURLs urls = 37;</code>
+     * @param \Flights\FlightURLs $var
+     * @return $this
+     */
+    public function setUrls($var)
+    {
+        GPBUtil::checkMessage($var, \Flights\FlightURLs::class);
+        $this->urls = $var;
+
+        return $this;
+    }
+
+    /**
+     * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
+     *
+     * Generated from protobuf field <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
+     * @return RepeatedField<int>
+     */
+    public function getCapabilities()
+    {
+        return $this->capabilities;
+    }
+
+    /**
+     * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
+     *
+     * Generated from protobuf field <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
+     * @param int[] $var
+     * @return $this
+     */
+    public function setCapabilities($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Flights\PassengerCapabilities::class);
+        $this->capabilities = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
+     *
+     * Generated from protobuf field <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
+     * @return RepeatedField<int>
+     */
+    public function getSecurityPrograms()
+    {
+        return $this->securityPrograms;
+    }
+
+    /**
+     * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
+     *
+     * Generated from protobuf field <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
+     * @param int[] $var
+     * @return $this
+     */
+    public function setSecurityPrograms($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Flights\AirportSecurityPrograms::class);
+        $this->securityPrograms = $arr;
+
+        return $this;
+    }
+
+    /**
+     * A string that indicates any priority status or privileges that a passenger may have for the flight. Examples could include "Priority Boarding", "Lounge Access", "Extra Cabin Baggage", etc.
+     *
+     * Generated from protobuf field <code>string PriorityStatus = 40;</code>
+     * @return string
+     */
+    public function getPriorityStatus()
+    {
+        return $this->PriorityStatus;
+    }
+
+    /**
+     * A string that indicates any priority status or privileges that a passenger may have for the flight. Examples could include "Priority Boarding", "Lounge Access", "Extra Cabin Baggage", etc.
+     *
+     * Generated from protobuf field <code>string PriorityStatus = 40;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPriorityStatus($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->PriorityStatus = $var;
+
+        return $this;
+    }
+
+    /**
      * If a passenger is travelling as an infant and the airline is not using conditional data with a passenger description of 6 (Adult With Infant), an id of the infant's boarding pass will be recorded here.
      *
      * Generated from protobuf field <code>string infantPassId = 34;</code>
@@ -1199,43 +1381,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional key value pairs to be added in to the flight record
-     *
-     * Generated from protobuf field <code>.io.DataItems additionalDataItems = 35;</code>
-     * @return \Io\DataItems|null
-     */
-    public function getAdditionalDataItems()
-    {
-        return $this->additionalDataItems;
-    }
-
-    public function hasAdditionalDataItems()
-    {
-        return isset($this->additionalDataItems);
-    }
-
-    public function clearAdditionalDataItems()
-    {
-        unset($this->additionalDataItems);
-    }
-
-    /**
-     * Optional key value pairs to be added in to the flight record
-     *
-     * Generated from protobuf field <code>.io.DataItems additionalDataItems = 35;</code>
-     * @param \Io\DataItems $var
-     * @return $this
-     */
-    public function setAdditionalDataItems($var)
-    {
-        GPBUtil::checkMessage($var, \Io\DataItems::class);
-        $this->additionalDataItems = $var;
-
-        return $this;
-    }
-
-    /**
-     * Pass Metadata
+     * Pass Metadata.
      *
      * Generated from protobuf field <code>.io.Metadata metadata = 36;</code>
      * @return \Io\Metadata|null
@@ -1256,7 +1402,7 @@ class BoardingPassRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Pass Metadata
+     * Pass Metadata.
      *
      * Generated from protobuf field <code>.io.Metadata metadata = 36;</code>
      * @param \Io\Metadata $var

@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Basic filter structure used for querying data.
+ *
  * Generated from protobuf message <code>io.Filter</code>
  */
 class Filter extends \Google\Protobuf\Internal\Message
@@ -39,11 +41,11 @@ class Filter extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $filterField
+     *     @type string[] $filterField
      *           Array of column names to filter results by.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $filterValue
+     *     @type string[] $filterValue
      *           Array of values to test against the filter fields.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $filterOperator
+     *     @type string[] $filterOperator
      *           will be whitelisted operators in io core
      * }
      */
@@ -56,7 +58,7 @@ class Filter extends \Google\Protobuf\Internal\Message
      * Array of column names to filter results by.
      *
      * Generated from protobuf field <code>repeated string filterField = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getFilterField()
     {
@@ -67,7 +69,7 @@ class Filter extends \Google\Protobuf\Internal\Message
      * Array of column names to filter results by.
      *
      * Generated from protobuf field <code>repeated string filterField = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setFilterField($var)
@@ -82,7 +84,7 @@ class Filter extends \Google\Protobuf\Internal\Message
      * Array of values to test against the filter fields.
      *
      * Generated from protobuf field <code>repeated string filterValue = 2;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getFilterValue()
     {
@@ -93,7 +95,7 @@ class Filter extends \Google\Protobuf\Internal\Message
      * Array of values to test against the filter fields.
      *
      * Generated from protobuf field <code>repeated string filterValue = 2;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setFilterValue($var)
@@ -108,7 +110,7 @@ class Filter extends \Google\Protobuf\Internal\Message
      * will be whitelisted operators in io core
      *
      * Generated from protobuf field <code>repeated string filterOperator = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getFilterOperator()
     {
@@ -119,7 +121,7 @@ class Filter extends \Google\Protobuf\Internal\Message
      * will be whitelisted operators in io core
      *
      * Generated from protobuf field <code>repeated string filterOperator = 3;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setFilterOperator($var)

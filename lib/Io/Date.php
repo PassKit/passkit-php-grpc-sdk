@@ -6,30 +6,30 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * A fixed date without timezone information.
+ * A date without timezone information.
  *
  * Generated from protobuf message <code>io.Date</code>
  */
 class Date extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Year.
+     * Year component.
      *
      * Generated from protobuf field <code>int32 year = 1;</code>
      */
     protected $year = 0;
     /**
-     * Month.
+     * Month component (1–12).
      *
      * Generated from protobuf field <code>int32 month = 2;</code>
      */
     protected $month = 0;
     /**
-     * Day.
+     * Day component (1–31).
      *
      * Generated from protobuf field <code>int32 day = 3;</code>
      */
@@ -42,11 +42,11 @@ class Date extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $year
-     *           Year.
+     *           Year component.
      *     @type int $month
-     *           Month.
+     *           Month component (1–12).
      *     @type int $day
-     *           Day.
+     *           Day component (1–31).
      * }
      */
     public function __construct($data = NULL) {
@@ -55,7 +55,7 @@ class Date extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Year.
+     * Year component.
      *
      * Generated from protobuf field <code>int32 year = 1;</code>
      * @return int
@@ -66,7 +66,7 @@ class Date extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Year.
+     * Year component.
      *
      * Generated from protobuf field <code>int32 year = 1;</code>
      * @param int $var
@@ -81,7 +81,7 @@ class Date extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Month.
+     * Month component (1–12).
      *
      * Generated from protobuf field <code>int32 month = 2;</code>
      * @return int
@@ -92,7 +92,7 @@ class Date extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Month.
+     * Month component (1–12).
      *
      * Generated from protobuf field <code>int32 month = 2;</code>
      * @param int $var
@@ -107,7 +107,7 @@ class Date extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Day.
+     * Day component (1–31).
      *
      * Generated from protobuf field <code>int32 day = 3;</code>
      * @return int
@@ -118,7 +118,7 @@ class Date extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Day.
+     * Day component (1–31).
      *
      * Generated from protobuf field <code>int32 day = 3;</code>
      * @param int $var

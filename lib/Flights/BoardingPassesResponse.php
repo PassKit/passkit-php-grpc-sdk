@@ -6,8 +6,8 @@
 namespace Flights;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Contains an array of digital boarding passes.
@@ -29,7 +29,7 @@ class BoardingPassesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Io\PassBundle>|\Google\Protobuf\Internal\RepeatedField $boardingPasses
+     *     @type \Io\PassBundle[] $boardingPasses
      *           An array of boarding passes found relating to the PNR.
      * }
      */
@@ -42,7 +42,7 @@ class BoardingPassesResponse extends \Google\Protobuf\Internal\Message
      * An array of boarding passes found relating to the PNR.
      *
      * Generated from protobuf field <code>repeated .io.PassBundle boardingPasses = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\PassBundle>
      */
     public function getBoardingPasses()
     {
@@ -53,7 +53,7 @@ class BoardingPassesResponse extends \Google\Protobuf\Internal\Message
      * An array of boarding passes found relating to the PNR.
      *
      * Generated from protobuf field <code>repeated .io.PassBundle boardingPasses = 1;</code>
-     * @param array<\Io\PassBundle>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\PassBundle[] $var
      * @return $this
      */
     public function setBoardingPasses($var)

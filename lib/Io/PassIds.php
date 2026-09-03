@@ -6,15 +6,19 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Used to reference multiple pass IDs in a single operation.
+ *
  * Generated from protobuf message <code>io.PassIds</code>
  */
 class PassIds extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Repeated compressed UUID strings representing individual pass IDs.
+     *
      * Generated from protobuf field <code>repeated string ids = 1;</code>
      */
     private $ids;
@@ -25,7 +29,8 @@ class PassIds extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $ids
+     *     @type string[] $ids
+     *           Repeated compressed UUID strings representing individual pass IDs.
      * }
      */
     public function __construct($data = NULL) {
@@ -34,8 +39,10 @@ class PassIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Repeated compressed UUID strings representing individual pass IDs.
+     *
      * Generated from protobuf field <code>repeated string ids = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getIds()
     {
@@ -43,8 +50,10 @@ class PassIds extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Repeated compressed UUID strings representing individual pass IDs.
+     *
      * Generated from protobuf field <code>repeated string ids = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setIds($var)

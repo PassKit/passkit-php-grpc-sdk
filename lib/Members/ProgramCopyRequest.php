@@ -6,11 +6,11 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Contains payload for copying a program
+ * Request payload for copying an existing program into a new draft or published program.
  *
  * Generated from protobuf message <code>members.ProgramCopyRequest</code>
  */
@@ -51,7 +51,7 @@ class ProgramCopyRequest extends \Google\Protobuf\Internal\Message
      *           uuid of the program to copy.
      *     @type string $name
      *           optional name for the new program.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $status
+     *     @type int[] $status
      *           Status to set the copied program to.
      *     @type string $passTypeIdentifier
      *           Can optionally be provided if setting status to published (requires a prod cert).
@@ -118,7 +118,7 @@ class ProgramCopyRequest extends \Google\Protobuf\Internal\Message
      * Status to set the copied program to.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getStatus()
     {
@@ -129,7 +129,7 @@ class ProgramCopyRequest extends \Google\Protobuf\Internal\Message
      * Status to set the copied program to.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 3;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setStatus($var)

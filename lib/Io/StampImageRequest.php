@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Used to generate a stamp preview for a given image ID and status bitmask.
+ *
  * Generated from protobuf message <code>io.StampImageRequest</code>
  */
 class StampImageRequest extends \Google\Protobuf\Internal\Message

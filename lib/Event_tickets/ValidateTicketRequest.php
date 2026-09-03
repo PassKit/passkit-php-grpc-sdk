@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Used to validate a ticket with optional metadata and validation cap. Required fields: ticketId.
+ *
  * Generated from protobuf message <code>event_tickets.ValidateTicketRequest</code>
  */
 class ValidateTicketRequest extends \Google\Protobuf\Internal\Message

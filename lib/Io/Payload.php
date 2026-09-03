@@ -6,17 +6,19 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Payload object used for validating TOTP and encrypted barcode strings.
+ * Payload used to validate TOTP and encrypted barcode strings.
  *
  * Generated from protobuf message <code>io.Payload</code>
  */
 class Payload extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Encrypted or signed payload data.
+     *
      * Generated from protobuf field <code>string payload = 1;</code>
      */
     protected $payload = '';
@@ -28,6 +30,7 @@ class Payload extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $payload
+     *           Encrypted or signed payload data.
      * }
      */
     public function __construct($data = NULL) {
@@ -36,6 +39,8 @@ class Payload extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Encrypted or signed payload data.
+     *
      * Generated from protobuf field <code>string payload = 1;</code>
      * @return string
      */
@@ -45,6 +50,8 @@ class Payload extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Encrypted or signed payload data.
+     *
      * Generated from protobuf field <code>string payload = 1;</code>
      * @param string $var
      * @return $this

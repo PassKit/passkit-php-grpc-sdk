@@ -6,10 +6,12 @@
 namespace Raw;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to retrieve a pass record using its external ID and associated Pass Project ID.
+ *
  * Generated from protobuf message <code>raw.PassRecordByExternalIdRequest</code>
  */
 class PassRecordByExternalIdRequest extends \Google\Protobuf\Internal\Message

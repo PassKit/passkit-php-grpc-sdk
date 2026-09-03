@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Message for creating or updating a webhook subscription using a class ID and event type.
+ *
  * Generated from protobuf message <code>io.SubscriptionRequestByClassId</code>
  */
 class SubscriptionRequestByClassId extends \Google\Protobuf\Internal\Message

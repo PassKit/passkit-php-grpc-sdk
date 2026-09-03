@@ -4,6 +4,7 @@
 namespace Io;
 
 /**
+ * The PassKit Images API lets you manage your image assets for Apple Wallet, Google Wallet and the data collection pages.
  */
 class ImagesClient extends \Grpc\BaseStub {
 
@@ -17,10 +18,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Set the profile image for the logged in user. Required Fields: imageData.
      * @param \Io\ProfileImageInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function setProfileImage(\Io\ProfileImageInput $argument,
       $metadata = [], $options = []) {
@@ -31,10 +33,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Get the profile image URL for the logged in user.
      * @param \Google\Protobuf\GPBEmpty $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Url>
      */
     public function getProfileImage(\Google\Protobuf\GPBEmpty $argument,
       $metadata = [], $options = []) {
@@ -45,10 +48,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates one or more images. Image data is provided in base64. Required Fields: name, imageData.
      * @param \Io\CreateImageInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\ImageIds>
      */
     public function createImages(\Io\CreateImageInput $argument,
       $metadata = [], $options = []) {
@@ -59,10 +63,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates an image record's metadata. Required Fields: id.
      * @param \Io\UpdateImageInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\ImageRecord>
      */
     public function updateImage(\Io\UpdateImageInput $argument,
       $metadata = [], $options = []) {
@@ -73,10 +78,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves an image URL by its ID. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Url>
      */
     public function getImageURL(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -87,10 +93,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a stamp image URL with the supplied stamp status. Required Fields: id and status.
      * @param \Io\StampImageRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Url>
      */
     public function getStampImageURL(\Io\StampImageRequest $argument,
       $metadata = [], $options = []) {
@@ -101,10 +108,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves the configuration of a stamp image. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\StampImageConfig>
      */
     public function getStampImageConfig(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -115,10 +123,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates a stamp image configuration. Required Fields: id and config fields.
      * @param \Io\StampImageConfig $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function updateStampImageConfig(\Io\StampImageConfig $argument,
       $metadata = [], $options = []) {
@@ -129,10 +138,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Gets a preview image of the provided stamp image configuration. Required Fields: stampImageConfig and status.
      * @param \Io\StampImagePreviewRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\StampImagePreview>
      */
     public function getStampImagePreview(\Io\StampImagePreviewRequest $argument,
       $metadata = [], $options = []) {
@@ -143,10 +153,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a localized image URL for a specific language. Required Fields: iD and languageCode.
      * @param \Io\LocalizedImageInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Url>
      */
     public function getLocalizedImageURL(\Io\LocalizedImageInput $argument,
       $metadata = [], $options = []) {
@@ -157,10 +168,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a profile image URL by a specific ID. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Url>
      */
     public function getProfileImageById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -171,11 +183,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
-     * returns a zip bundle containing all images for that ID
+     * Retrieves an image bundle (ZIP) containing all images for the given ID. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\ImageBundle>
      */
     public function getImageBundle(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -186,10 +198,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves metadata for an image record. Required: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\ImageRecord>
      */
     public function getImageData(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -200,10 +213,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes an image record. Required: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteImage(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -214,10 +228,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a localized version of an image. Required Fields: id and language code.
      * @param \Io\LocalizedImageInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\ImageRecord>
      */
     public function deleteLocalizedImage(\Io\LocalizedImageInput $argument,
       $metadata = [], $options = []) {
@@ -228,6 +243,7 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED] Retrieves all user-owned images using pagination.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -242,6 +258,7 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves all images stored under the user account using filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -256,6 +273,7 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED] Retrieves all images available to the company.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -270,6 +288,7 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves all images stored under the company using filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -284,10 +303,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED] Returns the count of all images available to the user.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countImagesDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -298,10 +318,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Returns the count of all images available to the user using filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countImages(\Io\Filters $argument,
       $metadata = [], $options = []) {
@@ -312,10 +333,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED] Returns the count of images stored under the user's account.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countImagesForUserDeprecated(\Io\Pagination $argument,
       $metadata = [], $options = []) {
@@ -326,10 +348,11 @@ class ImagesClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Returns the count of images stored under the user's account using filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countImagesForUser(\Io\Filters $argument,
       $metadata = [], $options = []) {

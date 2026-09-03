@@ -6,38 +6,42 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * NFC configuration options for passes that support Near Field Communication.
+ *
  * Generated from protobuf message <code>io.NFC</code>
  */
 class NFC extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Enable or disable NFC for this pass.
+     *
      * Generated from protobuf field <code>bool enabled = 1;</code>
      */
     protected $enabled = false;
     /**
-     * Leave empty to use your default account keys, or provide the key ID of the public / private keypair you have provided.
+     * Optional certificate ID for custom signing keys. Leave empty to use default keys.
      *
      * Generated from protobuf field <code>string certificateId = 2;</code>
      */
     protected $certificateId = '';
     /**
-     * A maximum of 64 characters can be provided
+     * The payload to encode in the NFC message (maximum 64 characters).
      *
      * Generated from protobuf field <code>string payload = 3;</code>
      */
     protected $payload = '';
     /**
-     * iCloud binding restricts the use of the pass to a single iCloud account. Passes cannot be shared and care should be given when distributing passes to ensure that the pass goes to the correct user.  Users will need to have the iOS 17 or above, and no barcodes will be permitted on the pass.
+     * If true, the pass will be bound to a single iCloud account (iOS 17+ required). Prevents pass sharing.
      *
      * Generated from protobuf field <code>bool iCloudBound = 4;</code>
      */
     protected $iCloudBound = false;
     /**
-     * If not provided, a default learn more URL and your organization name will be used.
+     * Optional metadata for iCloud account binding display.
      *
      * Generated from protobuf field <code>.io.BindingInfo bindingInfo = 5;</code>
      */
@@ -50,14 +54,15 @@ class NFC extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type bool $enabled
+     *           Enable or disable NFC for this pass.
      *     @type string $certificateId
-     *           Leave empty to use your default account keys, or provide the key ID of the public / private keypair you have provided.
+     *           Optional certificate ID for custom signing keys. Leave empty to use default keys.
      *     @type string $payload
-     *           A maximum of 64 characters can be provided
+     *           The payload to encode in the NFC message (maximum 64 characters).
      *     @type bool $iCloudBound
-     *           iCloud binding restricts the use of the pass to a single iCloud account. Passes cannot be shared and care should be given when distributing passes to ensure that the pass goes to the correct user.  Users will need to have the iOS 17 or above, and no barcodes will be permitted on the pass.
+     *           If true, the pass will be bound to a single iCloud account (iOS 17+ required). Prevents pass sharing.
      *     @type \Io\BindingInfo $bindingInfo
-     *           If not provided, a default learn more URL and your organization name will be used.
+     *           Optional metadata for iCloud account binding display.
      * }
      */
     public function __construct($data = NULL) {
@@ -66,6 +71,8 @@ class NFC extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Enable or disable NFC for this pass.
+     *
      * Generated from protobuf field <code>bool enabled = 1;</code>
      * @return bool
      */
@@ -75,6 +82,8 @@ class NFC extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Enable or disable NFC for this pass.
+     *
      * Generated from protobuf field <code>bool enabled = 1;</code>
      * @param bool $var
      * @return $this
@@ -88,7 +97,7 @@ class NFC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Leave empty to use your default account keys, or provide the key ID of the public / private keypair you have provided.
+     * Optional certificate ID for custom signing keys. Leave empty to use default keys.
      *
      * Generated from protobuf field <code>string certificateId = 2;</code>
      * @return string
@@ -99,7 +108,7 @@ class NFC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Leave empty to use your default account keys, or provide the key ID of the public / private keypair you have provided.
+     * Optional certificate ID for custom signing keys. Leave empty to use default keys.
      *
      * Generated from protobuf field <code>string certificateId = 2;</code>
      * @param string $var
@@ -114,7 +123,7 @@ class NFC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A maximum of 64 characters can be provided
+     * The payload to encode in the NFC message (maximum 64 characters).
      *
      * Generated from protobuf field <code>string payload = 3;</code>
      * @return string
@@ -125,7 +134,7 @@ class NFC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A maximum of 64 characters can be provided
+     * The payload to encode in the NFC message (maximum 64 characters).
      *
      * Generated from protobuf field <code>string payload = 3;</code>
      * @param string $var
@@ -140,7 +149,7 @@ class NFC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * iCloud binding restricts the use of the pass to a single iCloud account. Passes cannot be shared and care should be given when distributing passes to ensure that the pass goes to the correct user.  Users will need to have the iOS 17 or above, and no barcodes will be permitted on the pass.
+     * If true, the pass will be bound to a single iCloud account (iOS 17+ required). Prevents pass sharing.
      *
      * Generated from protobuf field <code>bool iCloudBound = 4;</code>
      * @return bool
@@ -151,7 +160,7 @@ class NFC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * iCloud binding restricts the use of the pass to a single iCloud account. Passes cannot be shared and care should be given when distributing passes to ensure that the pass goes to the correct user.  Users will need to have the iOS 17 or above, and no barcodes will be permitted on the pass.
+     * If true, the pass will be bound to a single iCloud account (iOS 17+ required). Prevents pass sharing.
      *
      * Generated from protobuf field <code>bool iCloudBound = 4;</code>
      * @param bool $var
@@ -166,7 +175,7 @@ class NFC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If not provided, a default learn more URL and your organization name will be used.
+     * Optional metadata for iCloud account binding display.
      *
      * Generated from protobuf field <code>.io.BindingInfo bindingInfo = 5;</code>
      * @return \Io\BindingInfo|null
@@ -187,7 +196,7 @@ class NFC extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If not provided, a default learn more URL and your organization name will be used.
+     * Optional metadata for iCloud account binding display.
      *
      * Generated from protobuf field <code>.io.BindingInfo bindingInfo = 5;</code>
      * @param \Io\BindingInfo $var

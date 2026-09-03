@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a geographical location using latitude and longitude.
+ *
  * Generated from protobuf message <code>io.SemanticLocation</code>
  */
 class SemanticLocation extends \Google\Protobuf\Internal\Message

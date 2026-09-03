@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Status of the message lifecycle.
+ *
  * Protobuf type <code>io.MessageStatus</code>
  */
 class MessageStatus
@@ -17,28 +19,43 @@ class MessageStatus
      */
     const MESSAGE_STATUS_DO_NOT_USE = 0;
     /**
+     * Message is scheduled for future delivery.
+     *
      * Generated from protobuf enum <code>SCHEDULED = 1;</code>
      */
     const SCHEDULED = 1;
     /**
+     * Message is currently active.
+     *
      * Generated from protobuf enum <code>ACTIVE = 2;</code>
      */
     const ACTIVE = 2;
     /**
-     * Generated from protobuf enum <code>EXPIRED = 3;</code>
+     * Message is no longer visible.
+     *
+     * Generated from protobuf enum <code>COMPLETED = 3;</code>
      */
-    const EXPIRED = 3;
+    const COMPLETED = 3;
     /**
+     * Message delivery was cancelled.
+     *
      * Generated from protobuf enum <code>CANCELLED = 4;</code>
      */
     const CANCELLED = 4;
+    /**
+     * Message has been moved to the archived table.
+     *
+     * Generated from protobuf enum <code>ARCHIVED = 5;</code>
+     */
+    const ARCHIVED = 5;
 
     private static $valueToName = [
         self::MESSAGE_STATUS_DO_NOT_USE => 'MESSAGE_STATUS_DO_NOT_USE',
         self::SCHEDULED => 'SCHEDULED',
         self::ACTIVE => 'ACTIVE',
-        self::EXPIRED => 'EXPIRED',
+        self::COMPLETED => 'COMPLETED',
         self::CANCELLED => 'CANCELLED',
+        self::ARCHIVED => 'ARCHIVED',
     ];
 
     public static function name($value)

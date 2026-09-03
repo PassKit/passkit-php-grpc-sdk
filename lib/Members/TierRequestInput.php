@@ -6,11 +6,11 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Used to request member tier record by tier id.
+ * Request to fetch a tier record by program and tier ID.
  *
  * Generated from protobuf message <code>members.TierRequestInput</code>
  */

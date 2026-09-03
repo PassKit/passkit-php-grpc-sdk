@@ -6,11 +6,11 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * An Id is used to access an unique object or record. Eg. a PassKit pass id.
+ * A wrapper message for a single ID string.
  *
  * Generated from protobuf message <code>io.Id</code>
  */

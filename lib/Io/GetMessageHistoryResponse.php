@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Response containing a list of message history records.
+ *
  * Generated from protobuf message <code>io.GetMessageHistoryResponse</code>
  */
 class GetMessageHistoryResponse extends \Google\Protobuf\Internal\Message
@@ -25,7 +27,7 @@ class GetMessageHistoryResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Io\GetMessageResponse>|\Google\Protobuf\Internal\RepeatedField $messages
+     *     @type \Io\GetMessageResponse[] $messages
      * }
      */
     public function __construct($data = NULL) {
@@ -35,7 +37,7 @@ class GetMessageHistoryResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.GetMessageResponse messages = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\GetMessageResponse>
      */
     public function getMessages()
     {
@@ -44,7 +46,7 @@ class GetMessageHistoryResponse extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.GetMessageResponse messages = 1;</code>
-     * @param array<\Io\GetMessageResponse>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\GetMessageResponse[] $var
      * @return $this
      */
     public function setMessages($var)

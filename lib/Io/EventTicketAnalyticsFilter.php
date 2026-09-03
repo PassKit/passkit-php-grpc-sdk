@@ -6,31 +6,43 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Filter object for event ticket analytics.
+ *
  * Generated from protobuf message <code>io.EventTicketAnalyticsFilter</code>
  */
 class EventTicketAnalyticsFilter extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Ticket type ID.
+     *
      * Generated from protobuf field <code>string ticketTypeId = 1;</code>
      */
     protected $ticketTypeId = '';
     /**
+     * Ticket type UID.
+     *
      * Generated from protobuf field <code>string ticketTypeUid = 2;</code>
      */
     protected $ticketTypeUid = '';
     /**
+     * Venue ID.
+     *
      * Generated from protobuf field <code>string venueId = 3;</code>
      */
     protected $venueId = '';
     /**
+     * Venue UID.
+     *
      * Generated from protobuf field <code>string venueUid = 4;</code>
      */
     protected $venueUid = '';
     /**
+     * Event ID.
+     *
      * Generated from protobuf field <code>string eventId = 5;</code>
      */
     protected $eventId = '';
@@ -42,10 +54,15 @@ class EventTicketAnalyticsFilter extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $ticketTypeId
+     *           Ticket type ID.
      *     @type string $ticketTypeUid
+     *           Ticket type UID.
      *     @type string $venueId
+     *           Venue ID.
      *     @type string $venueUid
+     *           Venue UID.
      *     @type string $eventId
+     *           Event ID.
      * }
      */
     public function __construct($data = NULL) {
@@ -54,6 +71,8 @@ class EventTicketAnalyticsFilter extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Ticket type ID.
+     *
      * Generated from protobuf field <code>string ticketTypeId = 1;</code>
      * @return string
      */
@@ -63,6 +82,8 @@ class EventTicketAnalyticsFilter extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Ticket type ID.
+     *
      * Generated from protobuf field <code>string ticketTypeId = 1;</code>
      * @param string $var
      * @return $this
@@ -76,6 +97,8 @@ class EventTicketAnalyticsFilter extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Ticket type UID.
+     *
      * Generated from protobuf field <code>string ticketTypeUid = 2;</code>
      * @return string
      */
@@ -85,6 +108,8 @@ class EventTicketAnalyticsFilter extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Ticket type UID.
+     *
      * Generated from protobuf field <code>string ticketTypeUid = 2;</code>
      * @param string $var
      * @return $this
@@ -98,6 +123,8 @@ class EventTicketAnalyticsFilter extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Venue ID.
+     *
      * Generated from protobuf field <code>string venueId = 3;</code>
      * @return string
      */
@@ -107,6 +134,8 @@ class EventTicketAnalyticsFilter extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Venue ID.
+     *
      * Generated from protobuf field <code>string venueId = 3;</code>
      * @param string $var
      * @return $this
@@ -120,6 +149,8 @@ class EventTicketAnalyticsFilter extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Venue UID.
+     *
      * Generated from protobuf field <code>string venueUid = 4;</code>
      * @return string
      */
@@ -129,6 +160,8 @@ class EventTicketAnalyticsFilter extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Venue UID.
+     *
      * Generated from protobuf field <code>string venueUid = 4;</code>
      * @param string $var
      * @return $this
@@ -142,6 +175,8 @@ class EventTicketAnalyticsFilter extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Event ID.
+     *
      * Generated from protobuf field <code>string eventId = 5;</code>
      * @return string
      */
@@ -151,6 +186,8 @@ class EventTicketAnalyticsFilter extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Event ID.
+     *
      * Generated from protobuf field <code>string eventId = 5;</code>
      * @param string $var
      * @return $this

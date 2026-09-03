@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * ScannerConfiguration is the base configuration object for the scanning app.
@@ -39,10 +39,10 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $membershipPermissions
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $couponPermissions
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $defaultMembershipAction
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $defaultCouponAction
+     *     @type int[] $membershipPermissions
+     *     @type int[] $couponPermissions
+     *     @type int[] $defaultMembershipAction
+     *     @type int[] $defaultCouponAction
      * }
      */
     public function __construct($data = NULL) {
@@ -52,7 +52,7 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.ScannerMembershipPermissions membershipPermissions = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getMembershipPermissions()
     {
@@ -61,7 +61,7 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.ScannerMembershipPermissions membershipPermissions = 1;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setMembershipPermissions($var)
@@ -74,7 +74,7 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.ScannerCouponPermissions couponPermissions = 2;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getCouponPermissions()
     {
@@ -83,7 +83,7 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.ScannerCouponPermissions couponPermissions = 2;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setCouponPermissions($var)
@@ -96,7 +96,7 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.DefaultMembershipScanAction defaultMembershipAction = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getDefaultMembershipAction()
     {
@@ -105,7 +105,7 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.DefaultMembershipScanAction defaultMembershipAction = 3;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setDefaultMembershipAction($var)
@@ -118,7 +118,7 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.DefaultCouponScanAction defaultCouponAction = 4;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getDefaultCouponAction()
     {
@@ -127,7 +127,7 @@ class ScannerConfiguration extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.DefaultCouponScanAction defaultCouponAction = 4;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setDefaultCouponAction($var)

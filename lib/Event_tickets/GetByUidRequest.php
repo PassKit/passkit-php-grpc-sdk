@@ -6,10 +6,13 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to retrieve a ticket type using its productionId and user-defined uid.
+ * Required fields: productionId, uid.
+ *
  * Generated from protobuf message <code>event_tickets.GetByUidRequest</code>
  */
 class GetByUidRequest extends \Google\Protobuf\Internal\Message

@@ -6,11 +6,11 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Used to update the expiry date of a member.
+ * Expiry details for a member's pass or membership enrollment.
  *
  * Generated from protobuf message <code>members.MemberExpiry</code>
  */

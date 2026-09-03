@@ -6,43 +6,33 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * A Pass Bundle contains a landing page URL and/or a compiled pass in multiple formats
+ * A Pass Bundle contains one or more ways to access a pass (e.g. URLs or raw Apple pass file).
  *
  * Generated from protobuf message <code>io.PassBundle</code>
  */
 class PassBundle extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The PassKit Id that uniquely references the pass.
-     *
      * Generated from protobuf field <code>string id = 1;</code>
      */
     protected $id = '';
     /**
-     * The URL to the web landing page.
-     *
      * Generated from protobuf field <code>string url = 2;</code>
      */
     protected $url = '';
     /**
-     * A URL that can be used in an Android app or email. Note that this is not recommended for web use.
-     *
      * Generated from protobuf field <code>string googlePayURL = 5;</code>
      */
     protected $googlePayURL = '';
     /**
-     * The Base64 encoded bytes of the Apple Wallet pass.
-     *
      * Generated from protobuf field <code>bytes applePassBytes = 6;</code>
      */
     protected $applePassBytes = '';
     /**
-     * A URL for multiple passes, linked by a common index.
-     *
      * Generated from protobuf field <code>string multiplePassesURL = 7;</code>
      */
     protected $multiplePassesURL = '';
@@ -54,15 +44,10 @@ class PassBundle extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
-     *           The PassKit Id that uniquely references the pass.
      *     @type string $url
-     *           The URL to the web landing page.
      *     @type string $googlePayURL
-     *           A URL that can be used in an Android app or email. Note that this is not recommended for web use.
      *     @type string $applePassBytes
-     *           The Base64 encoded bytes of the Apple Wallet pass.
      *     @type string $multiplePassesURL
-     *           A URL for multiple passes, linked by a common index.
      * }
      */
     public function __construct($data = NULL) {
@@ -71,8 +56,6 @@ class PassBundle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The PassKit Id that uniquely references the pass.
-     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @return string
      */
@@ -82,8 +65,6 @@ class PassBundle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The PassKit Id that uniquely references the pass.
-     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @param string $var
      * @return $this
@@ -97,8 +78,6 @@ class PassBundle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The URL to the web landing page.
-     *
      * Generated from protobuf field <code>string url = 2;</code>
      * @return string
      */
@@ -108,8 +87,6 @@ class PassBundle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The URL to the web landing page.
-     *
      * Generated from protobuf field <code>string url = 2;</code>
      * @param string $var
      * @return $this
@@ -123,8 +100,6 @@ class PassBundle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A URL that can be used in an Android app or email. Note that this is not recommended for web use.
-     *
      * Generated from protobuf field <code>string googlePayURL = 5;</code>
      * @return string
      */
@@ -134,8 +109,6 @@ class PassBundle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A URL that can be used in an Android app or email. Note that this is not recommended for web use.
-     *
      * Generated from protobuf field <code>string googlePayURL = 5;</code>
      * @param string $var
      * @return $this
@@ -149,8 +122,6 @@ class PassBundle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The Base64 encoded bytes of the Apple Wallet pass.
-     *
      * Generated from protobuf field <code>bytes applePassBytes = 6;</code>
      * @return string
      */
@@ -160,8 +131,6 @@ class PassBundle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The Base64 encoded bytes of the Apple Wallet pass.
-     *
      * Generated from protobuf field <code>bytes applePassBytes = 6;</code>
      * @param string $var
      * @return $this
@@ -175,8 +144,6 @@ class PassBundle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A URL for multiple passes, linked by a common index.
-     *
      * Generated from protobuf field <code>string multiplePassesURL = 7;</code>
      * @return string
      */
@@ -186,8 +153,6 @@ class PassBundle extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A URL for multiple passes, linked by a common index.
-     *
      * Generated from protobuf field <code>string multiplePassesURL = 7;</code>
      * @param string $var
      * @return $this

@@ -43,6 +43,30 @@ class BarcodeType
      */
     const CODE128 = 4;
     /**
+     * European Article Number barcode with 13 digits.
+     *
+     * Generated from protobuf enum <code>EAN13 = 6;</code>
+     */
+    const EAN13 = 6;
+    /**
+     * Codabar linear barcode format.
+     *
+     * Generated from protobuf enum <code>CODABAR = 7;</code>
+     */
+    const CODABAR = 7;
+    /**
+     * Code 39 linear barcode format.
+     *
+     * Generated from protobuf enum <code>CODE39 = 8;</code>
+     */
+    const CODE39 = 8;
+    /**
+     * Interleaved 2 of 5 linear barcode format.
+     *
+     * Generated from protobuf enum <code>ITF = 9;</code>
+     */
+    const ITF = 9;
+    /**
      * This does not set a barcode. If you set barcode type as none, no barcode will be shown on the pass.
      *
      * Generated from protobuf enum <code>NONE = 5;</code>
@@ -55,6 +79,10 @@ class BarcodeType
         self::AZTEC => 'AZTEC',
         self::PDF417 => 'PDF417',
         self::CODE128 => 'CODE128',
+        self::EAN13 => 'EAN13',
+        self::CODABAR => 'CODABAR',
+        self::CODE39 => 'CODE39',
+        self::ITF => 'ITF',
         self::NONE => 'NONE',
     ];
 

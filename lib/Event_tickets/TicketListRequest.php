@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a list of filtered tickets based on production, event, and type. Required fields: productionId or productionUid.
+ *
  * Generated from protobuf message <code>event_tickets.TicketListRequest</code>
  */
 class TicketListRequest extends \Google\Protobuf\Internal\Message
@@ -20,6 +22,12 @@ class TicketListRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.io.Filters filters = 7;</code>
      */
     protected $filters = null;
+    /**
+     * If true, the list will be emailed as a CSV file instead of returned in the response.
+     *
+     * Generated from protobuf field <code>bool emailAsCsv = 8;</code>
+     */
+    protected $emailAsCsv = false;
     protected $production;
     protected $event;
     protected $ticketType;
@@ -43,6 +51,8 @@ class TicketListRequest extends \Google\Protobuf\Internal\Message
      *           User Defined Ticket Type ID.
      *     @type \Io\Filters $filters
      *           Filters: allows to filter on additional ticket data (i.e. group id, pass install status, updated etc).
+     *     @type bool $emailAsCsv
+     *           If true, the list will be emailed as a CSV file instead of returned in the response.
      * }
      */
     public function __construct($data = NULL) {
@@ -264,6 +274,32 @@ class TicketListRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Io\Filters::class);
         $this->filters = $var;
+
+        return $this;
+    }
+
+    /**
+     * If true, the list will be emailed as a CSV file instead of returned in the response.
+     *
+     * Generated from protobuf field <code>bool emailAsCsv = 8;</code>
+     * @return bool
+     */
+    public function getEmailAsCsv()
+    {
+        return $this->emailAsCsv;
+    }
+
+    /**
+     * If true, the list will be emailed as a CSV file instead of returned in the response.
+     *
+     * Generated from protobuf field <code>bool emailAsCsv = 8;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setEmailAsCsv($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->emailAsCsv = $var;
 
         return $this;
     }

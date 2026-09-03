@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Lightweight response version of an event, typically includes start and end time only.
+ *
  * Generated from protobuf message <code>event_tickets.EventLimitedFieldsResponse</code>
  */
 class EventLimitedFieldsResponse extends \Google\Protobuf\Internal\Message

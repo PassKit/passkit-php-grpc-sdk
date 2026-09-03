@@ -6,15 +6,19 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Response after sending a message.
+ *
  * Generated from protobuf message <code>io.SendMessageResponse</code>
  */
 class SendMessageResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The number of recipients the message was sent to.
+     *
      * Generated from protobuf field <code>int32 count = 1;</code>
      */
     protected $count = 0;
@@ -26,6 +30,7 @@ class SendMessageResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $count
+     *           The number of recipients the message was sent to.
      * }
      */
     public function __construct($data = NULL) {
@@ -34,6 +39,8 @@ class SendMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The number of recipients the message was sent to.
+     *
      * Generated from protobuf field <code>int32 count = 1;</code>
      * @return int
      */
@@ -43,6 +50,8 @@ class SendMessageResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The number of recipients the message was sent to.
+     *
      * Generated from protobuf field <code>int32 count = 1;</code>
      * @param int $var
      * @return $this

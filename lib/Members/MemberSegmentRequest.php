@@ -6,11 +6,11 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Member segment allows us to segment members for listing or updating
+ * Request to select or act on members based on a saved segment or filter.
  *
  * Generated from protobuf message <code>members.MemberSegmentRequest</code>
  */

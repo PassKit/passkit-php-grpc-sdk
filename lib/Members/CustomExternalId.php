@@ -6,10 +6,12 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Configuration for using a field (e.g., email or phone) as the member’s external ID automatically on enrollment.
+ *
  * Generated from protobuf message <code>members.CustomExternalId</code>
  */
 class CustomExternalId extends \Google\Protobuf\Internal\Message

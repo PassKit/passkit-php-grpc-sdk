@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Configuration for rendering a stamp card image.
+ *
  * Generated from protobuf message <code>io.StampImageConfig</code>
  */
 class StampImageConfig extends \Google\Protobuf\Internal\Message

@@ -6,10 +6,12 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Response texts shown on the hosted redemption page in various states.
+ *
  * Generated from protobuf message <code>single_use_coupons.ResponseTexts</code>
  */
 class ResponseTexts extends \Google\Protobuf\Internal\Message

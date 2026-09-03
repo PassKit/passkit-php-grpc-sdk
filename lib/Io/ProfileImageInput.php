@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Input for uploading a profile image (URL or base64-encoded).
+ *
  * Generated from protobuf message <code>io.ProfileImageInput</code>
  */
 class ProfileImageInput extends \Google\Protobuf\Internal\Message

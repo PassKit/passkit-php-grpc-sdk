@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Defines options that can modify email template behavior.
+ *
  * Protobuf type <code>io.EmailTemplateOptions</code>
  */
 class EmailTemplateOptions

@@ -8,14 +8,14 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
- * Google Pay pass types
+ * Google Wallet pass types
  *
  * Protobuf type <code>io.GooglePayPassType</code>
  */
 class GooglePayPassType
 {
     /**
-     * Use if you do not wish to support Google Pay
+     * Use if you do not wish to support Google Wallet
      *
      * Generated from protobuf enum <code>GOOGLE_PAY_NOT_SUPPORTED = 0;</code>
      */

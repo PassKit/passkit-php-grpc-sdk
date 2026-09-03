@@ -8,21 +8,27 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
- * List position is used to denote behavior for list items that may already have been populated bay a parent object.  Default is to append the item to the existing list.
+ * Specifies how to position an item in a list when a parent object already has existing values.
  *
  * Protobuf type <code>io.ListPosition</code>
  */
 class ListPosition
 {
     /**
+     * Appends the item to the list (default behavior).
+     *
      * Generated from protobuf enum <code>APPEND = 0;</code>
      */
     const APPEND = 0;
     /**
+     * Prepends the item to the list.
+     *
      * Generated from protobuf enum <code>PREPEND = 1;</code>
      */
     const PREPEND = 1;
     /**
+     * Replaces the existing list with the item.
+     *
      * Generated from protobuf enum <code>REPLACE = 2;</code>
      */
     const REPLACE = 2;

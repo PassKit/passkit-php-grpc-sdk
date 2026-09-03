@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Customise how data field is rendered on the front and back of the pass.
@@ -61,7 +61,7 @@ class AppleWalletFieldRenderOptions extends \Google\Protobuf\Internal\Message
      */
     protected $ignoreTimezone = false;
     /**
-     * Render date as a relavent date, rather than an absolute date.
+     * Render date as a relative date, rather than an absolute date.
      *
      * Generated from protobuf field <code>bool isRelativeDate = 11;</code>
      */
@@ -83,11 +83,11 @@ class AppleWalletFieldRenderOptions extends \Google\Protobuf\Internal\Message
      *     @type int $dateStyle
      *     @type int $timeStyle
      *     @type int $numberStyle
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $suppressLinkDetection
+     *     @type int[] $suppressLinkDetection
      *     @type bool $ignoreTimezone
      *           Render date and time values in the provided time, rather than switching to the local time of the user.
      *     @type bool $isRelativeDate
-     *           Render date as a relavent date, rather than an absolute date.
+     *           Render date as a relative date, rather than an absolute date.
      * }
      */
     public function __construct($data = NULL) {
@@ -283,7 +283,7 @@ class AppleWalletFieldRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.LinkDetector suppressLinkDetection = 9;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getSuppressLinkDetection()
     {
@@ -292,7 +292,7 @@ class AppleWalletFieldRenderOptions extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.LinkDetector suppressLinkDetection = 9;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setSuppressLinkDetection($var)
@@ -330,7 +330,7 @@ class AppleWalletFieldRenderOptions extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Render date as a relavent date, rather than an absolute date.
+     * Render date as a relative date, rather than an absolute date.
      *
      * Generated from protobuf field <code>bool isRelativeDate = 11;</code>
      * @return bool
@@ -341,7 +341,7 @@ class AppleWalletFieldRenderOptions extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Render date as a relavent date, rather than an absolute date.
+     * Render date as a relative date, rather than an absolute date.
      *
      * Generated from protobuf field <code>bool isRelativeDate = 11;</code>
      * @param bool $var

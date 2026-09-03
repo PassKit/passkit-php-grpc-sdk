@@ -3,10 +3,11 @@
 
 // Original file comments:
 // *
-// Single Use Coupon Protocol is suit for cases where the user requires a clean and simple single use coupon for short term coupon campaigns in Apple Wallet and Google Pay.
+// Single Use Coupon Protocol is suit for cases where the user requires a clean and simple single use coupon for short term coupon campaigns in Apple Wallet and Google Wallet.
 namespace Single_use_coupons;
 
 /**
+ * Manages coupon campaigns, offers, coupon issuance, redemption, and voiding. Create a campaign and offer before issuing coupons.
  */
 class SingleUseCouponsClient extends \Grpc\BaseStub {
 
@@ -20,10 +21,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a new single-use coupon campaign with design, rules, and configuration settings. Required fields: name and status.
      * @param \Single_use_coupons\CouponCampaign $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createCouponCampaign(\Single_use_coupons\CouponCampaign $argument,
       $metadata = [], $options = []) {
@@ -34,10 +36,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates the configuration of an existing coupon campaign. Required fields: campaignId.
      * @param \Single_use_coupons\CouponCampaign $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Single_use_coupons\CouponCampaign>
      */
     public function updateCouponCampaign(\Single_use_coupons\CouponCampaign $argument,
       $metadata = [], $options = []) {
@@ -48,10 +51,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves the details of a specific coupon campaign by id. Required fields: campaignId.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Single_use_coupons\CouponCampaign>
      */
     public function getCouponCampaign(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -62,10 +66,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a coupon campaign by id. This also deletes its associated offer and voids all related coupons. Required fields: campaignId. Use with caution, as this action is irreversible.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteCouponCampaign(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -76,6 +81,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all coupon campaigns using basic pagination. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listCouponCampaigns call instead  as OR operator is not supported.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -90,6 +96,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists coupon campaigns with support for filters, sorting, and pagination.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -104,10 +111,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Returns analytics data (e.g., redemptions, activations) for a given coupon campaign. Required fields: classId (e.g. campaignId) and protocol (query parameter).
      * @param \Io\AnalyticsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Single_use_coupons\CouponCampaignAnalyticsResponse>
      */
     public function getAnalytics(\Io\AnalyticsRequest $argument,
       $metadata = [], $options = []) {
@@ -118,10 +126,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates an offer within a coupon campaign, including its pass design and redemption rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
      * @param \Single_use_coupons\CouponOffer $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createCouponOffer(\Single_use_coupons\CouponOffer $argument,
       $metadata = [], $options = []) {
@@ -132,10 +141,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates an existing coupon offer’s settings, visuals, or redemption configuration. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
      * @param \Single_use_coupons\CouponOffer $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Single_use_coupons\CouponOffer>
      */
     public function updateCouponOffer(\Single_use_coupons\CouponOffer $argument,
       $metadata = [], $options = []) {
@@ -146,10 +156,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves the full configuration of a coupon offer by ID. Required fields: offerId.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Single_use_coupons\CouponOffer>
      */
     public function getCouponOffer(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -160,10 +171,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a coupon offer and invalidates all associated coupons. Required fields: offerId. Use with caution, as this action is irreversible.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteCouponOffer(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -174,6 +186,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all coupon offers using basic filters. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listCouponOffers call instead as OR operator is not supported.
      * @param \Single_use_coupons\CouponOffersListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -188,6 +201,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists coupon offers with support for filters, sorting, and pagination. Required fields: campaignId.
      * @param \Single_use_coupons\CouponOffersListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -202,10 +216,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Issues a unique coupon for an offer in a campaign. Required fields: campaignId, offerId, pass data.
      * @param \Single_use_coupons\Coupon $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createCoupon(\Single_use_coupons\Coupon $argument,
       $metadata = [], $options = []) {
@@ -216,10 +231,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates an existing coupon’s metadata or personalisation. Required fields: coupon id ,or externalId, offerId and campaignId.
      * @param \Single_use_coupons\Coupon $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function updateCoupon(\Single_use_coupons\Coupon $argument,
       $metadata = [], $options = []) {
@@ -230,6 +246,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Streams updates for multiple coupons for batch processing.
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\BidiStreamingCall
@@ -241,10 +258,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Marks a coupon as redeemed and applies its redemption-specific design. Required fields: coupon ID, or externalId with offerId and campaignId.
      * @param \Single_use_coupons\Coupon $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function redeemCoupon(\Single_use_coupons\Coupon $argument,
       $metadata = [], $options = []) {
@@ -255,10 +273,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates the external ID of an existing coupon. Required fields: coupon id , or externalId, newExternalId and campaignId.
      * @param \Single_use_coupons\CouponNewExternalIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function updateCouponExternalId(\Single_use_coupons\CouponNewExternalIdRequest $argument,
       $metadata = [], $options = []) {
@@ -269,6 +288,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Streams coupon redemptions for batch processing.
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\BidiStreamingCall
@@ -280,10 +300,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a coupon by its PassKit ID. Required fields: couponId.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Single_use_coupons\Coupon>
      */
     public function getCouponById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -294,10 +315,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a coupon using an external ID and campaign ID. Required fields: externalId and couponCampaignId.
      * @param \Single_use_coupons\ExternalIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Single_use_coupons\Coupon>
      */
     public function getCouponByExternalId(\Single_use_coupons\ExternalIdRequest $argument,
       $metadata = [], $options = []) {
@@ -308,10 +330,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Voids a coupon and invalidates it in the customer’s wallet. Required fields: coupon ID, or externalId with offerId and campaignId. This action is irreversible.
      * @param \Single_use_coupons\Coupon $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function voidCoupon(\Single_use_coupons\Coupon $argument,
       $metadata = [], $options = []) {
@@ -322,10 +345,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Voids multiple coupons matching the given filters. All affected passes are invalidated. Required fields: classId, protocol and filters. Use with caution, as this action is irreversible.
      * @param \Io\BulkPassActionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function bulkVoidCoupons(\Io\BulkPassActionRequest $argument,
       $metadata = [], $options = []) {
@@ -336,6 +360,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all coupons for a campaign using basic pagination. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listCouponsByCouponCampaign call instead as OR operator is not supported.
      * @param \Single_use_coupons\ListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -350,6 +375,7 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all coupons for a campaign using filters and pagination. Required fields: couponCampaignId.
      * @param \Single_use_coupons\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -364,10 +390,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Counts all coupons for a campaign. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated countCouponsByCouponCampaign call instead as OR operator is not supported.
      * @param \Single_use_coupons\ListRequestDeprecated $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countCouponsByCouponCampaignDeprecated(\Single_use_coupons\ListRequestDeprecated $argument,
       $metadata = [], $options = []) {
@@ -378,10 +405,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Counts all coupons for a campaign using advanced filters. Required fields: couponCampaignId.
      * @param \Single_use_coupons\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Count>
      */
     public function countCouponsByCouponCampaign(\Single_use_coupons\ListRequest $argument,
       $metadata = [], $options = []) {
@@ -392,10 +420,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates the personal information of the coupon holder (e.g., name, email). Required fields: couponId, or externalId + classId.
      * @param \Io\PersonRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function patchPerson(\Io\PersonRequest $argument,
       $metadata = [], $options = []) {
@@ -406,10 +435,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a copy of an existing coupon campaign. Required fields: campaignId.
      * @param \Single_use_coupons\CampaignCopyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function copyCouponCampaign(\Single_use_coupons\CampaignCopyRequest $argument,
       $metadata = [], $options = []) {
@@ -420,10 +450,11 @@ class SingleUseCouponsClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves meta keys (custom fields) for a specific campaign. Required fields: campaignId.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Strings>
      */
     public function getMetaKeysForCampaign(\Io\Id $argument,
       $metadata = [], $options = []) {

@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Used for returning multiple image records.
+ *
  * Generated from protobuf message <code>io.MultipleImages</code>
  */
 class MultipleImages extends \Google\Protobuf\Internal\Message
@@ -25,7 +27,7 @@ class MultipleImages extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Io\ImageRecord>|\Google\Protobuf\Internal\RepeatedField $images
+     *     @type \Io\ImageRecord[] $images
      * }
      */
     public function __construct($data = NULL) {
@@ -35,7 +37,7 @@ class MultipleImages extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.ImageRecord images = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\ImageRecord>
      */
     public function getImages()
     {
@@ -44,7 +46,7 @@ class MultipleImages extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.ImageRecord images = 1;</code>
-     * @param array<\Io\ImageRecord>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\ImageRecord[] $var
      * @return $this
      */
     public function setImages($var)

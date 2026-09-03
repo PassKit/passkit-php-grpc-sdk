@@ -6,21 +6,25 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * [DEPRECATED: OR operator not supported] Filter and list records.
+ * Deprecated request to list coupon offers using pagination.
  *
  * Generated from protobuf message <code>single_use_coupons.CouponOffersListRequestDeprecated</code>
  */
 class CouponOffersListRequestDeprecated extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Campaign Id.
+     *
      * Generated from protobuf field <code>string campaignId = 1;</code>
      */
     protected $campaignId = '';
     /**
+     * Pagination settings for the request.
+     *
      * Generated from protobuf field <code>.io.Pagination pagination = 2;</code>
      */
     protected $pagination = null;
@@ -32,7 +36,9 @@ class CouponOffersListRequestDeprecated extends \Google\Protobuf\Internal\Messag
      *     Optional. Data for populating the Message object.
      *
      *     @type string $campaignId
+     *           Campaign Id.
      *     @type \Io\Pagination $pagination
+     *           Pagination settings for the request.
      * }
      */
     public function __construct($data = NULL) {
@@ -41,6 +47,8 @@ class CouponOffersListRequestDeprecated extends \Google\Protobuf\Internal\Messag
     }
 
     /**
+     * Campaign Id.
+     *
      * Generated from protobuf field <code>string campaignId = 1;</code>
      * @return string
      */
@@ -50,6 +58,8 @@ class CouponOffersListRequestDeprecated extends \Google\Protobuf\Internal\Messag
     }
 
     /**
+     * Campaign Id.
+     *
      * Generated from protobuf field <code>string campaignId = 1;</code>
      * @param string $var
      * @return $this
@@ -63,6 +73,8 @@ class CouponOffersListRequestDeprecated extends \Google\Protobuf\Internal\Messag
     }
 
     /**
+     * Pagination settings for the request.
+     *
      * Generated from protobuf field <code>.io.Pagination pagination = 2;</code>
      * @return \Io\Pagination|null
      */
@@ -82,6 +94,8 @@ class CouponOffersListRequestDeprecated extends \Google\Protobuf\Internal\Messag
     }
 
     /**
+     * Pagination settings for the request.
+     *
      * Generated from protobuf field <code>.io.Pagination pagination = 2;</code>
      * @param \Io\Pagination $var
      * @return $this

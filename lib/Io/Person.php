@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A person represents a single, identifiable individual.
@@ -99,7 +99,7 @@ class Person extends \Google\Protobuf\Internal\Message
      *           Surname / Family name.
      *     @type string $forename
      *           Forename / Given name.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $otherNames
+     *     @type string[] $otherNames
      *           Other names.
      *     @type string $salutation
      *           Salutation or title.
@@ -182,7 +182,7 @@ class Person extends \Google\Protobuf\Internal\Message
      * Other names.
      *
      * Generated from protobuf field <code>repeated string otherNames = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getOtherNames()
     {
@@ -193,7 +193,7 @@ class Person extends \Google\Protobuf\Internal\Message
      * Other names.
      *
      * Generated from protobuf field <code>repeated string otherNames = 3;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setOtherNames($var)

@@ -8,23 +8,33 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Time state used to adjust the meaning of a scheduled time (e.g. previous, current, or future).
+ *
  * Protobuf type <code>io.TimeState</code>
  */
 class TimeState
 {
     /**
+     * No time state specified.
+     *
      * Generated from protobuf enum <code>TIME_STATE_NONE = 0;</code>
      */
     const TIME_STATE_NONE = 0;
     /**
+     * The current time state (e.g. this month).
+     *
      * Generated from protobuf enum <code>TIME_STATE_CURRENT = 1;</code>
      */
     const TIME_STATE_CURRENT = 1;
     /**
+     * The previous time state (e.g. last month).
+     *
      * Generated from protobuf enum <code>TIME_STATE_PREVIOUS = 2;</code>
      */
     const TIME_STATE_PREVIOUS = 2;
     /**
+     * The following time state (e.g. next month).
+     *
      * Generated from protobuf enum <code>TIME_STATE_FOLLOWING = 3;</code>
      */
     const TIME_STATE_FOLLOWING = 3;

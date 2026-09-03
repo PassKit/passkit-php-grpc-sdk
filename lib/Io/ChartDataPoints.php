@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Data points for each unit of the selected period.
+ *
  * Generated from protobuf message <code>io.ChartDataPoints</code>
  */
 class ChartDataPoints extends \Google\Protobuf\Internal\Message

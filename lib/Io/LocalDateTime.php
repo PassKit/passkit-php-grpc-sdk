@@ -6,18 +6,18 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Local Date Times are specified in ISO 8601 extended format date/time without a timezone offset. The time should be local to where the pass will be at the time of use.
+ * ISO 8601 extended format datetime without timezone offset.
  *
  * Generated from protobuf message <code>io.LocalDateTime</code>
  */
 class LocalDateTime extends \Google\Protobuf\Internal\Message
 {
     /**
-     * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
+     * ISO 8601 extended format date/time without a timezone offset E.g. 2019-08-07T18:00:00.
      *
      * Generated from protobuf field <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
@@ -30,7 +30,7 @@ class LocalDateTime extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $dateTime
-     *           ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
+     *           ISO 8601 extended format date/time without a timezone offset E.g. 2019-08-07T18:00:00.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,7 +39,7 @@ class LocalDateTime extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
+     * ISO 8601 extended format date/time without a timezone offset E.g. 2019-08-07T18:00:00.
      *
      * Generated from protobuf field <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
@@ -50,7 +50,7 @@ class LocalDateTime extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
+     * ISO 8601 extended format date/time without a timezone offset E.g. 2019-08-07T18:00:00.
      *
      * Generated from protobuf field <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var

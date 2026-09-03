@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * EventUrls provides URLs for enhanced event guidance, such as selling, transferring, or accessing services. Required fields: none.
+ *
  * Generated from protobuf message <code>event_tickets.EventUrls</code>
  */
 class EventUrls extends \Google\Protobuf\Internal\Message

@@ -6,42 +6,42 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Recurrence rule for monthly repetition.
+ *
  * Generated from protobuf message <code>io.MonthlyRecursive</code>
  */
 class MonthlyRecursive extends \Google\Protobuf\Internal\Message
 {
     /**
-     * The day which the recursive period starts. Available values are 1-31.
-     * Selecting 31 for the last day of any month.
+     * Day of the month (1–31).
      *
      * Generated from protobuf field <code>int32 dayOfMonth = 1;</code>
      */
     protected $dayOfMonth = 0;
     /**
-     * Default hour is 0.
+     * Optional hour of the day (0–23).
      *
      * Generated from protobuf field <code>int32 hour = 2;</code>
      */
     protected $hour = 0;
     /**
-     * Default minute is 0.
+     * Optional minute of the hour (0–59).
      *
      * Generated from protobuf field <code>int32 minute = 3;</code>
      */
     protected $minute = 0;
     /**
-     * Default second is 0.
+     * Optional second of the minute (0–59).
      *
      * Generated from protobuf field <code>int32 second = 4;</code>
      */
     protected $second = 0;
     /**
-     * State to select the month.
-     * Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+     * Determines which month to apply the date to.
      *
      * Generated from protobuf field <code>.io.TimeState state = 5;</code>
      */
@@ -54,17 +54,15 @@ class MonthlyRecursive extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $dayOfMonth
-     *           The day which the recursive period starts. Available values are 1-31.
-     *           Selecting 31 for the last day of any month.
+     *           Day of the month (1–31).
      *     @type int $hour
-     *           Default hour is 0.
+     *           Optional hour of the day (0–23).
      *     @type int $minute
-     *           Default minute is 0.
+     *           Optional minute of the hour (0–59).
      *     @type int $second
-     *           Default second is 0.
+     *           Optional second of the minute (0–59).
      *     @type int $state
-     *           State to select the month.
-     *           Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+     *           Determines which month to apply the date to.
      * }
      */
     public function __construct($data = NULL) {
@@ -73,8 +71,7 @@ class MonthlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The day which the recursive period starts. Available values are 1-31.
-     * Selecting 31 for the last day of any month.
+     * Day of the month (1–31).
      *
      * Generated from protobuf field <code>int32 dayOfMonth = 1;</code>
      * @return int
@@ -85,8 +82,7 @@ class MonthlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The day which the recursive period starts. Available values are 1-31.
-     * Selecting 31 for the last day of any month.
+     * Day of the month (1–31).
      *
      * Generated from protobuf field <code>int32 dayOfMonth = 1;</code>
      * @param int $var
@@ -101,7 +97,7 @@ class MonthlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Default hour is 0.
+     * Optional hour of the day (0–23).
      *
      * Generated from protobuf field <code>int32 hour = 2;</code>
      * @return int
@@ -112,7 +108,7 @@ class MonthlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Default hour is 0.
+     * Optional hour of the day (0–23).
      *
      * Generated from protobuf field <code>int32 hour = 2;</code>
      * @param int $var
@@ -127,7 +123,7 @@ class MonthlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Default minute is 0.
+     * Optional minute of the hour (0–59).
      *
      * Generated from protobuf field <code>int32 minute = 3;</code>
      * @return int
@@ -138,7 +134,7 @@ class MonthlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Default minute is 0.
+     * Optional minute of the hour (0–59).
      *
      * Generated from protobuf field <code>int32 minute = 3;</code>
      * @param int $var
@@ -153,7 +149,7 @@ class MonthlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Default second is 0.
+     * Optional second of the minute (0–59).
      *
      * Generated from protobuf field <code>int32 second = 4;</code>
      * @return int
@@ -164,7 +160,7 @@ class MonthlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Default second is 0.
+     * Optional second of the minute (0–59).
      *
      * Generated from protobuf field <code>int32 second = 4;</code>
      * @param int $var
@@ -179,8 +175,7 @@ class MonthlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * State to select the month.
-     * Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+     * Determines which month to apply the date to.
      *
      * Generated from protobuf field <code>.io.TimeState state = 5;</code>
      * @return int
@@ -191,8 +186,7 @@ class MonthlyRecursive extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * State to select the month.
-     * Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+     * Determines which month to apply the date to.
      *
      * Generated from protobuf field <code>.io.TimeState state = 5;</code>
      * @param int $var

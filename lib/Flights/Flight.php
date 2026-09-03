@@ -6,8 +6,8 @@
 namespace Flights;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Generated from protobuf message <code>flights.Flight</code>
@@ -69,37 +69,37 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     protected $arrivalGate = '';
     /**
-     * The scheduled departure time. If omitted then the departureDate must be specified.
+     * The scheduled departure time. Required. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime scheduledDepartureTime = 10;</code>
      */
     protected $scheduledDepartureTime = null;
     /**
-     * The estimated departure time.
+     * The estimated departure time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime estimatedDepartureTime = 11;</code>
      */
     protected $estimatedDepartureTime = null;
     /**
-     * The boarding time.
+     * The boarding time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime boardingTime = 12;</code>
      */
     protected $boardingTime = null;
     /**
-     * The time the gate will close.
+     * The time the gate will close. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime gateClosingTime = 13;</code>
      */
     protected $gateClosingTime = null;
     /**
-     * The scheduled arrival time.
+     * The scheduled arrival time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime scheduledArrivalTime = 14;</code>
      */
     protected $scheduledArrivalTime = null;
     /**
-     * The estimated arrival time.
+     * The estimated arrival time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime estimatedArrivalTime = 15;</code>
      */
@@ -148,7 +148,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     protected $autoInvalidateCancelledPasses = false;
     /**
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults. The first location should be the most relevant, E.g. the location of the checkin terminal.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 24 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
@@ -172,13 +172,13 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     protected $suspendAutomaticUpdates = false;
     /**
-     * Used to determine the label printed above the boarding group on the Google Pay pass.
+     * Used to determine the label printed above the boarding group on the Google Wallet pass.
      *
      * Generated from protobuf field <code>.flights.BoardingPolicy boardingPolicy = 28;</code>
      */
     protected $boardingPolicy = 0;
     /**
-     * Used to determine the label printed above the seat class on the Google Pay pass. E.g. Economy, Economy Plus.
+     * Used to determine the label printed above the seat class on the Google Wallet pass, for example Economy or Economy Plus.
      *
      * Generated from protobuf field <code>.flights.SeatClassPolicy seatingPolicy = 29;</code>
      */
@@ -202,6 +202,18 @@ class Flight extends \Google\Protobuf\Internal\Message
      */
     protected $BarcodeAdditionalData = '';
     /**
+     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+     *
+     * Generated from protobuf field <code>.io.Toggle invalidateCancelledPasses = 36 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     */
+    protected $invalidateCancelledPasses = 0;
+    /**
+     * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
+     *
+     * Generated from protobuf field <code>.flights.FlightURLs urls = 37;</code>
+     */
+    protected $urls = null;
+    /**
      * Issued, installed, uninstalled and invalidated counts. Metrics are not writable.
      *
      * Generated from protobuf field <code>.io.Metrics metrics = 33;</code>
@@ -219,12 +231,6 @@ class Flight extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string designatorId = 35;</code>
      */
     protected $designatorId = '';
-    /**
-     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
-     *
-     * Generated from protobuf field <code>.io.Toggle invalidateCancelledPasses = 36 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     */
-    protected $invalidateCancelledPasses = 0;
 
     /**
      * Constructor.
@@ -251,22 +257,22 @@ class Flight extends \Google\Protobuf\Internal\Message
      *     @type string $arrivalGate
      *           Arrival Gate.
      *     @type \Io\LocalDateTime $scheduledDepartureTime
-     *           The scheduled departure time. If omitted then the departureDate must be specified.
+     *           The scheduled departure time. Required. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *     @type \Io\LocalDateTime $estimatedDepartureTime
-     *           The estimated departure time.
+     *           The estimated departure time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *     @type \Io\LocalDateTime $boardingTime
-     *           The boarding time.
+     *           The boarding time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *     @type \Io\LocalDateTime $gateClosingTime
-     *           The time the gate will close.
+     *           The time the gate will close. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *     @type \Io\LocalDateTime $scheduledArrivalTime
-     *           The scheduled arrival time.
+     *           The scheduled arrival time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *     @type \Io\LocalDateTime $estimatedArrivalTime
-     *           The estimated arrival time.
+     *           The estimated arrival time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *     @type string $operatingCarrierCode
      *           If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
      *     @type string $operatingFlightNumber
      *           If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $codeShareFlightNumbers
+     *     @type string[] $codeShareFlightNumbers
      *           If the flight has code shares, then enter the carrier code and flight number. If there is an operating carrier, then do not include this in the list. Code share carriers will not be validated.
      *     @type string $passTemplateId
      *           The pass template id.
@@ -276,32 +282,34 @@ class Flight extends \Google\Protobuf\Internal\Message
      *           Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
      *     @type bool $autoInvalidateCancelledPasses
      *           Deprecated: Use InvalidateCancelledPasses.
-     *     @type array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $locationMessages
-     *           A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults.
-     *     @type array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $beaconMessages
+     *     @type \Io\GPSLocation[] $locationMessages
+     *           A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults. The first location should be the most relevant, E.g. the location of the checkin terminal.
+     *     @type \Io\Beacon[] $beaconMessages
      *           A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designated defaults.
-     *     @type array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $links
+     *     @type \Io\Link[] $links
      *           A list of links to be appended to the end of each boarding pass.
      *     @type bool $suspendAutomaticUpdates
      *           Suspend automatic updates to all boarding passes for this flight.
      *     @type int $boardingPolicy
-     *           Used to determine the label printed above the boarding group on the Google Pay pass.
+     *           Used to determine the label printed above the boarding group on the Google Wallet pass.
      *     @type int $seatingPolicy
-     *           Used to determine the label printed above the seat class on the Google Pay pass. E.g. Economy, Economy Plus.
+     *           Used to determine the label printed above the seat class on the Google Wallet pass, for example Economy or Economy Plus.
      *     @type int $status
      *           The status of the flight. This can be manually set, or automatically set for customers subscribing to automatic updates.
      *     @type bool $ConditionalItems
      *           If PassKit are generating barcodes, include conditional items. Default false.
      *     @type string $BarcodeAdditionalData
      *           If PassKit are generating barcodes, default airline use data (IATA item 4). This can be overwritten at the flight and boarding pass level.
+     *     @type int $invalidateCancelledPasses
+     *           Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+     *     @type \Flights\FlightURLs $urls
+     *           URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
      *     @type \Io\Metrics $metrics
      *           Issued, installed, uninstalled and invalidated counts. Metrics are not writable.
      *     @type int $createMethod
      *           How the flight was created Create mode, manually or automatically.
      *     @type string $designatorId
      *           For automatically created flights, shows the ID of the designator that bootstrapped the flight record.
-     *     @type int $invalidateCancelledPasses
-     *           Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
      * }
      */
     public function __construct($data = NULL) {
@@ -554,7 +562,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The scheduled departure time. If omitted then the departureDate must be specified.
+     * The scheduled departure time. Required. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime scheduledDepartureTime = 10;</code>
      * @return \Io\LocalDateTime|null
@@ -575,7 +583,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The scheduled departure time. If omitted then the departureDate must be specified.
+     * The scheduled departure time. Required. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime scheduledDepartureTime = 10;</code>
      * @param \Io\LocalDateTime $var
@@ -590,7 +598,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The estimated departure time.
+     * The estimated departure time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime estimatedDepartureTime = 11;</code>
      * @return \Io\LocalDateTime|null
@@ -611,7 +619,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The estimated departure time.
+     * The estimated departure time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime estimatedDepartureTime = 11;</code>
      * @param \Io\LocalDateTime $var
@@ -626,7 +634,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The boarding time.
+     * The boarding time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime boardingTime = 12;</code>
      * @return \Io\LocalDateTime|null
@@ -647,7 +655,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The boarding time.
+     * The boarding time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime boardingTime = 12;</code>
      * @param \Io\LocalDateTime $var
@@ -662,7 +670,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The time the gate will close.
+     * The time the gate will close. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime gateClosingTime = 13;</code>
      * @return \Io\LocalDateTime|null
@@ -683,7 +691,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The time the gate will close.
+     * The time the gate will close. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime gateClosingTime = 13;</code>
      * @param \Io\LocalDateTime $var
@@ -698,7 +706,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The scheduled arrival time.
+     * The scheduled arrival time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime scheduledArrivalTime = 14;</code>
      * @return \Io\LocalDateTime|null
@@ -719,7 +727,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The scheduled arrival time.
+     * The scheduled arrival time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime scheduledArrivalTime = 14;</code>
      * @param \Io\LocalDateTime $var
@@ -734,7 +742,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The estimated arrival time.
+     * The estimated arrival time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime estimatedArrivalTime = 15;</code>
      * @return \Io\LocalDateTime|null
@@ -755,7 +763,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The estimated arrival time.
+     * The estimated arrival time. Provide local time in ISO8601 format with seconds but without a timezone. E.g. 2026-12-25T12:00:00.
      *
      * Generated from protobuf field <code>.io.LocalDateTime estimatedArrivalTime = 15;</code>
      * @param \Io\LocalDateTime $var
@@ -825,7 +833,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * If the flight has code shares, then enter the carrier code and flight number. If there is an operating carrier, then do not include this in the list. Code share carriers will not be validated.
      *
      * Generated from protobuf field <code>repeated string codeShareFlightNumbers = 18;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getCodeShareFlightNumbers()
     {
@@ -836,7 +844,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * If the flight has code shares, then enter the carrier code and flight number. If there is an operating carrier, then do not include this in the list. Code share carriers will not be validated.
      *
      * Generated from protobuf field <code>repeated string codeShareFlightNumbers = 18;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setCodeShareFlightNumbers($var)
@@ -958,10 +966,10 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults. The first location should be the most relevant, E.g. the location of the checkin terminal.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 24 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\GPSLocation>
      */
     public function getLocationMessages()
     {
@@ -969,10 +977,10 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designated defaults. The first location should be the most relevant, E.g. the location of the checkin terminal.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locationMessages = 24 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\GPSLocation[] $var
      * @return $this
      */
     public function setLocationMessages($var)
@@ -987,7 +995,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designated defaults.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 25 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\Beacon>
      */
     public function getBeaconMessages()
     {
@@ -998,7 +1006,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designated defaults.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beaconMessages = 25 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\Beacon[] $var
      * @return $this
      */
     public function setBeaconMessages($var)
@@ -1013,7 +1021,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * A list of links to be appended to the end of each boarding pass.
      *
      * Generated from protobuf field <code>repeated .io.Link links = 26 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\Link>
      */
     public function getLinks()
     {
@@ -1024,7 +1032,7 @@ class Flight extends \Google\Protobuf\Internal\Message
      * A list of links to be appended to the end of each boarding pass.
      *
      * Generated from protobuf field <code>repeated .io.Link links = 26 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\Link[] $var
      * @return $this
      */
     public function setLinks($var)
@@ -1062,7 +1070,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Used to determine the label printed above the boarding group on the Google Pay pass.
+     * Used to determine the label printed above the boarding group on the Google Wallet pass.
      *
      * Generated from protobuf field <code>.flights.BoardingPolicy boardingPolicy = 28;</code>
      * @return int
@@ -1073,7 +1081,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Used to determine the label printed above the boarding group on the Google Pay pass.
+     * Used to determine the label printed above the boarding group on the Google Wallet pass.
      *
      * Generated from protobuf field <code>.flights.BoardingPolicy boardingPolicy = 28;</code>
      * @param int $var
@@ -1088,7 +1096,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Used to determine the label printed above the seat class on the Google Pay pass. E.g. Economy, Economy Plus.
+     * Used to determine the label printed above the seat class on the Google Wallet pass, for example Economy or Economy Plus.
      *
      * Generated from protobuf field <code>.flights.SeatClassPolicy seatingPolicy = 29;</code>
      * @return int
@@ -1099,7 +1107,7 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Used to determine the label printed above the seat class on the Google Pay pass. E.g. Economy, Economy Plus.
+     * Used to determine the label printed above the seat class on the Google Wallet pass, for example Economy or Economy Plus.
      *
      * Generated from protobuf field <code>.flights.SeatClassPolicy seatingPolicy = 29;</code>
      * @param int $var
@@ -1192,6 +1200,68 @@ class Flight extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+     *
+     * Generated from protobuf field <code>.io.Toggle invalidateCancelledPasses = 36 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return int
+     */
+    public function getInvalidateCancelledPasses()
+    {
+        return $this->invalidateCancelledPasses;
+    }
+
+    /**
+     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+     *
+     * Generated from protobuf field <code>.io.Toggle invalidateCancelledPasses = 36 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setInvalidateCancelledPasses($var)
+    {
+        GPBUtil::checkEnum($var, \Io\Toggle::class);
+        $this->invalidateCancelledPasses = $var;
+
+        return $this;
+    }
+
+    /**
+     * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
+     *
+     * Generated from protobuf field <code>.flights.FlightURLs urls = 37;</code>
+     * @return \Flights\FlightURLs|null
+     */
+    public function getUrls()
+    {
+        return $this->urls;
+    }
+
+    public function hasUrls()
+    {
+        return isset($this->urls);
+    }
+
+    public function clearUrls()
+    {
+        unset($this->urls);
+    }
+
+    /**
+     * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
+     *
+     * Generated from protobuf field <code>.flights.FlightURLs urls = 37;</code>
+     * @param \Flights\FlightURLs $var
+     * @return $this
+     */
+    public function setUrls($var)
+    {
+        GPBUtil::checkMessage($var, \Flights\FlightURLs::class);
+        $this->urls = $var;
+
+        return $this;
+    }
+
+    /**
      * Issued, installed, uninstalled and invalidated counts. Metrics are not writable.
      *
      * Generated from protobuf field <code>.io.Metrics metrics = 33;</code>
@@ -1275,32 +1345,6 @@ class Flight extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->designatorId = $var;
-
-        return $this;
-    }
-
-    /**
-     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
-     *
-     * Generated from protobuf field <code>.io.Toggle invalidateCancelledPasses = 36 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return int
-     */
-    public function getInvalidateCancelledPasses()
-    {
-        return $this->invalidateCancelledPasses;
-    }
-
-    /**
-     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
-     *
-     * Generated from protobuf field <code>.io.Toggle invalidateCancelledPasses = 36 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setInvalidateCancelledPasses($var)
-    {
-        GPBUtil::checkEnum($var, \Io\Toggle::class);
-        $this->invalidateCancelledPasses = $var;
 
         return $this;
     }

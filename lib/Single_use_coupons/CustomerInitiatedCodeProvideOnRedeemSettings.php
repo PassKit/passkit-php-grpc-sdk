@@ -6,10 +6,12 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Settings for customer-entered redemption codes and input validation.
+ *
  * Generated from protobuf message <code>single_use_coupons.CustomerInitiatedCodeProvideOnRedeemSettings</code>
  */
 class CustomerInitiatedCodeProvideOnRedeemSettings extends \Google\Protobuf\Internal\Message
@@ -45,7 +47,7 @@ class CustomerInitiatedCodeProvideOnRedeemSettings extends \Google\Protobuf\Inte
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $validCodes
+     *     @type string[] $validCodes
      *           Optional array of valid codes that can be input on redemption.
      *     @type \Single_use_coupons\InputField $redemptionCodeInput
      *           Input field box for entering the redemption code.
@@ -64,7 +66,7 @@ class CustomerInitiatedCodeProvideOnRedeemSettings extends \Google\Protobuf\Inte
      * Optional array of valid codes that can be input on redemption.
      *
      * Generated from protobuf field <code>repeated string validCodes = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getValidCodes()
     {
@@ -75,7 +77,7 @@ class CustomerInitiatedCodeProvideOnRedeemSettings extends \Google\Protobuf\Inte
      * Optional array of valid codes that can be input on redemption.
      *
      * Generated from protobuf field <code>repeated string validCodes = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setValidCodes($var)

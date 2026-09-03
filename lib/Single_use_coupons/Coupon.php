@@ -6,11 +6,11 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * The Coupon Details
+ * Represents a unique coupon instance (pass) with associated data and state.
  *
  * Generated from protobuf message <code>single_use_coupons.Coupon</code>
  */

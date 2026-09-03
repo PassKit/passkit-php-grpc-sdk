@@ -6,11 +6,11 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * CouponCampaignAnalyticsResponse contains redemption stats for the campaign. Other campaign analytics can be taken from the generic analytics endpoint.
+ * Response containing redemption statistics for a coupon campaign.
  *
  * Generated from protobuf message <code>single_use_coupons.CouponCampaignAnalyticsResponse</code>
  */
@@ -61,7 +61,7 @@ class CouponCampaignAnalyticsResponse extends \Google\Protobuf\Internal\Message
      *           Total number of pass redeemed for each device type.
      *     @type array|\Google\Protobuf\Internal\MapField $sources
      *           Total number of pass redeemed for each distribution source.
-     *     @type array<\Io\ChartDataPoints>|\Google\Protobuf\Internal\RepeatedField $data
+     *     @type \Io\ChartDataPoints[] $data
      *           Breakdown of data by day, month or year.
      * }
      */
@@ -188,7 +188,7 @@ class CouponCampaignAnalyticsResponse extends \Google\Protobuf\Internal\Message
      * Breakdown of data by day, month or year.
      *
      * Generated from protobuf field <code>repeated .io.ChartDataPoints data = 5;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\ChartDataPoints>
      */
     public function getData()
     {
@@ -199,7 +199,7 @@ class CouponCampaignAnalyticsResponse extends \Google\Protobuf\Internal\Message
      * Breakdown of data by day, month or year.
      *
      * Generated from protobuf field <code>repeated .io.ChartDataPoints data = 5;</code>
-     * @param array<\Io\ChartDataPoints>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\ChartDataPoints[] $var
      * @return $this
      */
     public function setData($var)

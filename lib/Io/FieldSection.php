@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Defines which field section a field should appear in on the pass.
+ *
  * Protobuf type <code>io.FieldSection</code>
  */
 class FieldSection
@@ -17,22 +19,32 @@ class FieldSection
      */
     const FIELD_SECTION_DO_NOT_USE = 0;
     /**
+     * Fields shown on the back of the pass.
+     *
      * Generated from protobuf enum <code>BACK_FIELDS = 1;</code>
      */
     const BACK_FIELDS = 1;
     /**
+     * Fields shown at the top of the pass.
+     *
      * Generated from protobuf enum <code>PRIMARY_FIELDS = 2;</code>
      */
     const PRIMARY_FIELDS = 2;
     /**
+     * Fields shown directly under the primary section.
+     *
      * Generated from protobuf enum <code>SECONDARY_FIELDS = 3;</code>
      */
     const SECONDARY_FIELDS = 3;
     /**
+     * Fields shown below secondary fields.
+     *
      * Generated from protobuf enum <code>AUXILIARY_FIELDS = 4;</code>
      */
     const AUXILIARY_FIELDS = 4;
     /**
+     * Fields shown in the header of the pass.
+     *
      * Generated from protobuf enum <code>HEADER_FIELDS = 5;</code>
      */
     const HEADER_FIELDS = 5;
@@ -42,6 +54,12 @@ class FieldSection
      * Generated from protobuf enum <code>ADDITIONAL_FIELDS = 6;</code>
      */
     const ADDITIONAL_FIELDS = 6;
+    /**
+     * Used for Apple Wallet generic footer fields, including poster generic fallback layouts.
+     *
+     * Generated from protobuf enum <code>FOOTER_FIELDS = 7;</code>
+     */
+    const FOOTER_FIELDS = 7;
 
     private static $valueToName = [
         self::FIELD_SECTION_DO_NOT_USE => 'FIELD_SECTION_DO_NOT_USE',
@@ -51,6 +69,7 @@ class FieldSection
         self::AUXILIARY_FIELDS => 'AUXILIARY_FIELDS',
         self::HEADER_FIELDS => 'HEADER_FIELDS',
         self::ADDITIONAL_FIELDS => 'ADDITIONAL_FIELDS',
+        self::FOOTER_FIELDS => 'FOOTER_FIELDS',
     ];
 
     public static function name($value)

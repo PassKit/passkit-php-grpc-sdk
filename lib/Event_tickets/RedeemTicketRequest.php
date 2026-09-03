@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Used to redeem a single ticket with optional redemption metadata. Required fields: ticketId.
+ *
  * Generated from protobuf message <code>event_tickets.RedeemTicketRequest</code>
  */
 class RedeemTicketRequest extends \Google\Protobuf\Internal\Message

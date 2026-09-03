@@ -6,11 +6,11 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Pass Template holds design and data elements for Apple Wallet and Google Pay passes.
+ * Pass Template holds design and data elements for Apple Wallet and Google Wallet passes.
  *
  * Generated from protobuf message <code>io.PassTemplate</code>
  */
@@ -93,7 +93,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      */
     protected $nfcEnabled = null;
     /**
-     * When set controls how this pass is shared. For Apple wallet this uses the built in sharing functionality. For Google Pay, a sharing link will be added to the pass.
+     * When set controls how this pass is shared. For Apple Wallet this uses the built-in sharing functionality. For Google Wallet, a sharing link is added to the pass.
      *
      * Generated from protobuf field <code>.io.Sharing sharing = 16;</code>
      */
@@ -178,14 +178,14 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      *     @type \Io\NFC $nfcEnabled
      *           NFC enabled passes will depend on client certificate capabilities. Contact support for more information.
      *     @type \Io\Sharing $sharing
-     *           When set controls how this pass is shared. For Apple wallet this uses the built in sharing functionality. For Google Pay, a sharing link will be added to the pass.
+     *           When set controls how this pass is shared. For Apple Wallet this uses the built-in sharing functionality. For Google Wallet, a sharing link is added to the pass.
      *     @type \Io\AppleWalletSettings $appleWalletSettings
      *     @type \Io\GooglePaySettings $googlePaySettings
-     *     @type array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $locations
+     *     @type \Io\GPSLocation[] $locations
      *           A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
-     *     @type array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $beacons
+     *     @type \Io\Beacon[] $beacons
      *           A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
-     *     @type array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $links
+     *     @type \Io\Link[] $links
      *           A list of links to be shown on each pass.
      *     @type string $timezone
      *           Timezone string in IANA timezone format. If not provided defaults to Etc/UTC.
@@ -656,7 +656,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * When set controls how this pass is shared. For Apple wallet this uses the built in sharing functionality. For Google Pay, a sharing link will be added to the pass.
+     * When set controls how this pass is shared. For Apple Wallet this uses the built-in sharing functionality. For Google Wallet, a sharing link is added to the pass.
      *
      * Generated from protobuf field <code>.io.Sharing sharing = 16;</code>
      * @return \Io\Sharing|null
@@ -677,7 +677,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * When set controls how this pass is shared. For Apple wallet this uses the built in sharing functionality. For Google Pay, a sharing link will be added to the pass.
+     * When set controls how this pass is shared. For Apple Wallet this uses the built-in sharing functionality. For Google Wallet, a sharing link is added to the pass.
      *
      * Generated from protobuf field <code>.io.Sharing sharing = 16;</code>
      * @param \Io\Sharing $var
@@ -759,7 +759,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\GPSLocation>
      */
     public function getLocations()
     {
@@ -770,7 +770,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\GPSLocation[] $var
      * @return $this
      */
     public function setLocations($var)
@@ -785,7 +785,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\Beacon>
      */
     public function getBeacons()
     {
@@ -796,7 +796,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\Beacon[] $var
      * @return $this
      */
     public function setBeacons($var)
@@ -811,7 +811,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * A list of links to be shown on each pass.
      *
      * Generated from protobuf field <code>repeated .io.Link links = 21;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\Link>
      */
     public function getLinks()
     {
@@ -822,7 +822,7 @@ class PassTemplate extends \Google\Protobuf\Internal\Message
      * A list of links to be shown on each pass.
      *
      * Generated from protobuf field <code>repeated .io.Link links = 21;</code>
-     * @param array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\Link[] $var
      * @return $this
      */
     public function setLinks($var)

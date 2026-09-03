@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * QuotaDetails provides information about a specific quota usage.
+ *
  * Generated from protobuf message <code>io.QuotaDetails</code>
  */
 class QuotaDetails extends \Google\Protobuf\Internal\Message

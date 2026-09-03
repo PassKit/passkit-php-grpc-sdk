@@ -6,11 +6,11 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Used to request a digital membership pass by PassKit ID.
+ * Request to retrieve a member record using an external ID.
  *
  * Generated from protobuf message <code>members.MemberRecordByExternalIdRequest</code>
  */

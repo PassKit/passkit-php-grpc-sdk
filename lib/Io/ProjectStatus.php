@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Status options for a project. These can be combined using bitmasks.
+ *
  * Protobuf type <code>io.ProjectStatus</code>
  */
 class ProjectStatus

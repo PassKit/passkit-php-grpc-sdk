@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a person's full name and related phonetic details.
+ *
  * Generated from protobuf message <code>io.SemanticPersonName</code>
  */
 class SemanticPersonName extends \Google\Protobuf\Internal\Message

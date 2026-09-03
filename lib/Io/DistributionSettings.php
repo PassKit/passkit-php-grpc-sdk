@@ -6,11 +6,11 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * DistributionSettings can be used by protocol top level elements to define the email / sms-es
+ * DistributionSettings can be used by protocol top level elements to define the email / sms-es.
  *
  * Generated from protobuf message <code>io.DistributionSettings</code>
  */
@@ -21,13 +21,19 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
      */
     private $distributionChannels;
     /**
-     * Welcome email settings
+     * deprecated: Welcome email settings.
      *
      * Generated from protobuf field <code>.io.EmailTemplate welcomeEmail = 2;</code>
      */
     protected $welcomeEmail = null;
     /**
-     * Welcome SMS settings
+     * Rich email template. Compatible with pass designer email editor.
+     *
+     * Generated from protobuf field <code>.io.RichEmailTemplate richWelcomeEmail = 4;</code>
+     */
+    protected $richWelcomeEmail = null;
+    /**
+     * Welcome SMS settings.
      *
      * Generated from protobuf field <code>.io.SmsTemplate welcomeSms = 3;</code>
      */
@@ -39,11 +45,13 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $distributionChannels
+     *     @type int[] $distributionChannels
      *     @type \Io\EmailTemplate $welcomeEmail
-     *           Welcome email settings
+     *           deprecated: Welcome email settings.
+     *     @type \Io\RichEmailTemplate $richWelcomeEmail
+     *           Rich email template. Compatible with pass designer email editor.
      *     @type \Io\SmsTemplate $welcomeSms
-     *           Welcome SMS settings
+     *           Welcome SMS settings.
      * }
      */
     public function __construct($data = NULL) {
@@ -53,7 +61,7 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.DistributionChannel distributionChannels = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getDistributionChannels()
     {
@@ -62,7 +70,7 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.DistributionChannel distributionChannels = 1;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setDistributionChannels($var)
@@ -74,7 +82,7 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Welcome email settings
+     * deprecated: Welcome email settings.
      *
      * Generated from protobuf field <code>.io.EmailTemplate welcomeEmail = 2;</code>
      * @return \Io\EmailTemplate|null
@@ -95,7 +103,7 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Welcome email settings
+     * deprecated: Welcome email settings.
      *
      * Generated from protobuf field <code>.io.EmailTemplate welcomeEmail = 2;</code>
      * @param \Io\EmailTemplate $var
@@ -110,7 +118,43 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Welcome SMS settings
+     * Rich email template. Compatible with pass designer email editor.
+     *
+     * Generated from protobuf field <code>.io.RichEmailTemplate richWelcomeEmail = 4;</code>
+     * @return \Io\RichEmailTemplate|null
+     */
+    public function getRichWelcomeEmail()
+    {
+        return $this->richWelcomeEmail;
+    }
+
+    public function hasRichWelcomeEmail()
+    {
+        return isset($this->richWelcomeEmail);
+    }
+
+    public function clearRichWelcomeEmail()
+    {
+        unset($this->richWelcomeEmail);
+    }
+
+    /**
+     * Rich email template. Compatible with pass designer email editor.
+     *
+     * Generated from protobuf field <code>.io.RichEmailTemplate richWelcomeEmail = 4;</code>
+     * @param \Io\RichEmailTemplate $var
+     * @return $this
+     */
+    public function setRichWelcomeEmail($var)
+    {
+        GPBUtil::checkMessage($var, \Io\RichEmailTemplate::class);
+        $this->richWelcomeEmail = $var;
+
+        return $this;
+    }
+
+    /**
+     * Welcome SMS settings.
      *
      * Generated from protobuf field <code>.io.SmsTemplate welcomeSms = 3;</code>
      * @return \Io\SmsTemplate|null
@@ -131,7 +175,7 @@ class DistributionSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Welcome SMS settings
+     * Welcome SMS settings.
      *
      * Generated from protobuf field <code>.io.SmsTemplate welcomeSms = 3;</code>
      * @param \Io\SmsTemplate $var

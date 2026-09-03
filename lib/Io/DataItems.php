@@ -6,18 +6,18 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * DataItems are used to supply additional metadata when creating or updating passes.
+ * Contains additional metadata to be injected into a pass as key-value pairs.
  *
  * Generated from protobuf message <code>io.DataItems</code>
  */
 class DataItems extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Key value pairs. All values must be strings, but formatting and conversion can be defined in the pass template. Keys should be alphanumeric, start with a lowercase level and use camel case.  They can be accessed in the pass template by prefixing with 'meta.'. E.g. 'meta.myCustomKey'.
+     * Key/value map for additional metadata.
      *
      * Generated from protobuf field <code>map<string, string> items = 1;</code>
      */
@@ -30,7 +30,7 @@ class DataItems extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array|\Google\Protobuf\Internal\MapField $items
-     *           Key value pairs. All values must be strings, but formatting and conversion can be defined in the pass template. Keys should be alphanumeric, start with a lowercase level and use camel case.  They can be accessed in the pass template by prefixing with 'meta.'. E.g. 'meta.myCustomKey'.
+     *           Key/value map for additional metadata.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,7 +39,7 @@ class DataItems extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Key value pairs. All values must be strings, but formatting and conversion can be defined in the pass template. Keys should be alphanumeric, start with a lowercase level and use camel case.  They can be accessed in the pass template by prefixing with 'meta.'. E.g. 'meta.myCustomKey'.
+     * Key/value map for additional metadata.
      *
      * Generated from protobuf field <code>map<string, string> items = 1;</code>
      * @return \Google\Protobuf\Internal\MapField
@@ -50,7 +50,7 @@ class DataItems extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Key value pairs. All values must be strings, but formatting and conversion can be defined in the pass template. Keys should be alphanumeric, start with a lowercase level and use camel case.  They can be accessed in the pass template by prefixing with 'meta.'. E.g. 'meta.myCustomKey'.
+     * Key/value map for additional metadata.
      *
      * Generated from protobuf field <code>map<string, string> items = 1;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var

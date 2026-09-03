@@ -6,27 +6,31 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to list coupons with optional filters and export options.
+ *
  * Generated from protobuf message <code>single_use_coupons.ListRequest</code>
  */
 class ListRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Coupon Campaign ID
+     * Coupon Campaign ID.
      *
      * Generated from protobuf field <code>string couponCampaignId = 1;</code>
      */
     protected $couponCampaignId = '';
     /**
-     * External ID
+     * Filters to apply when listing members (e.g., by tier, status).
      *
      * Generated from protobuf field <code>.io.Filters filters = 2;</code>
      */
     protected $filters = null;
     /**
+     * If true, the list will be emailed as a CSV file instead of returned in the response.
+     *
      * Generated from protobuf field <code>bool emailAsCsv = 3;</code>
      */
     protected $emailAsCsv = false;
@@ -38,10 +42,11 @@ class ListRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $couponCampaignId
-     *           Coupon Campaign ID
+     *           Coupon Campaign ID.
      *     @type \Io\Filters $filters
-     *           External ID
+     *           Filters to apply when listing members (e.g., by tier, status).
      *     @type bool $emailAsCsv
+     *           If true, the list will be emailed as a CSV file instead of returned in the response.
      * }
      */
     public function __construct($data = NULL) {
@@ -50,7 +55,7 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Coupon Campaign ID
+     * Coupon Campaign ID.
      *
      * Generated from protobuf field <code>string couponCampaignId = 1;</code>
      * @return string
@@ -61,7 +66,7 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Coupon Campaign ID
+     * Coupon Campaign ID.
      *
      * Generated from protobuf field <code>string couponCampaignId = 1;</code>
      * @param string $var
@@ -76,7 +81,7 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * External ID
+     * Filters to apply when listing members (e.g., by tier, status).
      *
      * Generated from protobuf field <code>.io.Filters filters = 2;</code>
      * @return \Io\Filters|null
@@ -97,7 +102,7 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * External ID
+     * Filters to apply when listing members (e.g., by tier, status).
      *
      * Generated from protobuf field <code>.io.Filters filters = 2;</code>
      * @param \Io\Filters $var
@@ -112,6 +117,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * If true, the list will be emailed as a CSV file instead of returned in the response.
+     *
      * Generated from protobuf field <code>bool emailAsCsv = 3;</code>
      * @return bool
      */
@@ -121,6 +128,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * If true, the list will be emailed as a CSV file instead of returned in the response.
+     *
      * Generated from protobuf field <code>bool emailAsCsv = 3;</code>
      * @param bool $var
      * @return $this

@@ -6,15 +6,19 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Used to update the ticket holder details of a ticket by ID or ticket number.Required fields: ticketId or ticketNumber, person.
+ *
  * Generated from protobuf message <code>event_tickets.EventTicketPerson</code>
  */
 class EventTicketPerson extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Personal details of the ticket holder.
+     *
      * Generated from protobuf field <code>.io.Person person = 5;</code>
      */
     protected $person = null;
@@ -27,8 +31,11 @@ class EventTicketPerson extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Io\Id $ticketId
+     *           PassKit generated ticket id (22 characters).
      *     @type \Event_tickets\TicketNumberRequest $ticketNumber
+     *           Ticket Number.
      *     @type \Io\Person $person
+     *           Personal details of the ticket holder.
      * }
      */
     public function __construct($data = NULL) {
@@ -37,6 +44,8 @@ class EventTicketPerson extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PassKit generated ticket id (22 characters).
+     *
      * Generated from protobuf field <code>.io.Id ticketId = 1;</code>
      * @return \Io\Id|null
      */
@@ -51,6 +60,8 @@ class EventTicketPerson extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PassKit generated ticket id (22 characters).
+     *
      * Generated from protobuf field <code>.io.Id ticketId = 1;</code>
      * @param \Io\Id $var
      * @return $this
@@ -64,6 +75,8 @@ class EventTicketPerson extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Ticket Number.
+     *
      * Generated from protobuf field <code>.event_tickets.TicketNumberRequest ticketNumber = 2;</code>
      * @return \Event_tickets\TicketNumberRequest|null
      */
@@ -78,6 +91,8 @@ class EventTicketPerson extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Ticket Number.
+     *
      * Generated from protobuf field <code>.event_tickets.TicketNumberRequest ticketNumber = 2;</code>
      * @param \Event_tickets\TicketNumberRequest $var
      * @return $this
@@ -91,6 +106,8 @@ class EventTicketPerson extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Personal details of the ticket holder.
+     *
      * Generated from protobuf field <code>.io.Person person = 5;</code>
      * @return \Io\Person|null
      */
@@ -110,6 +127,8 @@ class EventTicketPerson extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Personal details of the ticket holder.
+     *
      * Generated from protobuf field <code>.io.Person person = 5;</code>
      * @param \Io\Person $var
      * @return $this

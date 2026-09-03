@@ -6,43 +6,61 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Metadata associated with a TLS certificate.
+ *
  * Generated from protobuf message <code>io.TLSCertificateData</code>
  */
 class TLSCertificateData extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Unique identifier for the TLS certificate.
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      */
     protected $id = '';
     /**
+     * Common name (CN) from the certificate.
+     *
      * Generated from protobuf field <code>string commonName = 2;</code>
      */
     protected $commonName = '';
     /**
+     * Serial number of the certificate.
+     *
      * Generated from protobuf field <code>string serialNumber = 3;</code>
      */
     protected $serialNumber = '';
     /**
+     * Start date of certificate validity.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validFrom = 4;</code>
      */
     protected $validFrom = null;
     /**
+     * End date of certificate validity.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validTo = 5;</code>
      */
     protected $validTo = null;
     /**
+     * Certificate modulus.
+     *
      * Generated from protobuf field <code>string modulus = 6;</code>
      */
     protected $modulus = '';
     /**
+     * Subject Alternative Names (SANs) included in the certificate.
+     *
      * Generated from protobuf field <code>repeated string subjectAlternativeNames = 7;</code>
      */
     private $subjectAlternativeNames;
     /**
+     * Username of the certificate owner.
+     *
      * Generated from protobuf field <code>string ownerUsername = 8;</code>
      */
     protected $ownerUsername = '';
@@ -54,13 +72,21 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
+     *           Unique identifier for the TLS certificate.
      *     @type string $commonName
+     *           Common name (CN) from the certificate.
      *     @type string $serialNumber
+     *           Serial number of the certificate.
      *     @type \Google\Protobuf\Timestamp $validFrom
+     *           Start date of certificate validity.
      *     @type \Google\Protobuf\Timestamp $validTo
+     *           End date of certificate validity.
      *     @type string $modulus
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $subjectAlternativeNames
+     *           Certificate modulus.
+     *     @type string[] $subjectAlternativeNames
+     *           Subject Alternative Names (SANs) included in the certificate.
      *     @type string $ownerUsername
+     *           Username of the certificate owner.
      * }
      */
     public function __construct($data = NULL) {
@@ -69,6 +95,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Unique identifier for the TLS certificate.
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @return string
      */
@@ -78,6 +106,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Unique identifier for the TLS certificate.
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @param string $var
      * @return $this
@@ -91,6 +121,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Common name (CN) from the certificate.
+     *
      * Generated from protobuf field <code>string commonName = 2;</code>
      * @return string
      */
@@ -100,6 +132,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Common name (CN) from the certificate.
+     *
      * Generated from protobuf field <code>string commonName = 2;</code>
      * @param string $var
      * @return $this
@@ -113,6 +147,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Serial number of the certificate.
+     *
      * Generated from protobuf field <code>string serialNumber = 3;</code>
      * @return string
      */
@@ -122,6 +158,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Serial number of the certificate.
+     *
      * Generated from protobuf field <code>string serialNumber = 3;</code>
      * @param string $var
      * @return $this
@@ -135,6 +173,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Start date of certificate validity.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validFrom = 4;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -154,6 +194,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Start date of certificate validity.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validFrom = 4;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
@@ -167,6 +209,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * End date of certificate validity.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validTo = 5;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -186,6 +230,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * End date of certificate validity.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validTo = 5;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
@@ -199,6 +245,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Certificate modulus.
+     *
      * Generated from protobuf field <code>string modulus = 6;</code>
      * @return string
      */
@@ -208,6 +256,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Certificate modulus.
+     *
      * Generated from protobuf field <code>string modulus = 6;</code>
      * @param string $var
      * @return $this
@@ -221,8 +271,10 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Subject Alternative Names (SANs) included in the certificate.
+     *
      * Generated from protobuf field <code>repeated string subjectAlternativeNames = 7;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getSubjectAlternativeNames()
     {
@@ -230,8 +282,10 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Subject Alternative Names (SANs) included in the certificate.
+     *
      * Generated from protobuf field <code>repeated string subjectAlternativeNames = 7;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setSubjectAlternativeNames($var)
@@ -243,6 +297,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Username of the certificate owner.
+     *
      * Generated from protobuf field <code>string ownerUsername = 8;</code>
      * @return string
      */
@@ -252,6 +308,8 @@ class TLSCertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Username of the certificate owner.
+     *
      * Generated from protobuf field <code>string ownerUsername = 8;</code>
      * @param string $var
      * @return $this

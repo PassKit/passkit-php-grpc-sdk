@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Lightweight representation of a venue with minimal identifying fields. Required fields: none.
+ *
  * Generated from protobuf message <code>event_tickets.VenueLimitedFieldsResponse</code>
  */
 class VenueLimitedFieldsResponse extends \Google\Protobuf\Internal\Message

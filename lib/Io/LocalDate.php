@@ -6,19 +6,17 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Local Date are specified in ISO 8601 format date without a time. The date should be local to where the pass will be at the time of use.
+ * ISO 8601 date without a time (e.g. 2023-11-15).
  *
  * Generated from protobuf message <code>io.LocalDate</code>
  */
 class LocalDate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * ISO 8601 format date without a time. E.g. 2019-08-07.
-     *
      * Generated from protobuf field <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      */
     protected $dateTime = '';
@@ -30,7 +28,6 @@ class LocalDate extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $dateTime
-     *           ISO 8601 format date without a time. E.g. 2019-08-07.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,8 +36,6 @@ class LocalDate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * ISO 8601 format date without a time. E.g. 2019-08-07.
-     *
      * Generated from protobuf field <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @return string
      */
@@ -50,8 +45,6 @@ class LocalDate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * ISO 8601 format date without a time. E.g. 2019-08-07.
-     *
      * Generated from protobuf field <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
      * @param string $var
      * @return $this

@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Project metadata object used throughout the platform.
+ *
  * Generated from protobuf message <code>io.Project</code>
  */
 class Project extends \Google\Protobuf\Internal\Message

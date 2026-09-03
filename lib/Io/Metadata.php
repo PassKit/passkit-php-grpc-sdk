@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Additional data relating to the pass. Metadata can be provided with a create pass request. The only writeable field is UTM. All other fields are system generated.
@@ -145,7 +145,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      *
      *     @type int $status
      *           Current status of the pass. Not Writable.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $lifecycleEvents
+     *     @type int[] $lifecycleEvents
      *           Events that the pass has attained. Not Writable.
      *     @type \Io\UTM $utm
      *           Contains UTM data if provided in the URL parameters (utm_source, utm_medium, utm_name, utm_term, utm_content). Can also be used to track channel (web / app, etc).
@@ -163,9 +163,9 @@ class Metadata extends \Google\Protobuf\Internal\Message
      *           User agent provided by the Wallet Application. Not Writable.
      *     @type string $renderUserAgent
      *           User agent where the landing page was rendered on. Not Writable.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $installDeviceAttributes
+     *     @type int[] $installDeviceAttributes
      *           User agent provided by the Wallet Application. Not Writable.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $renderDeviceAttributes
+     *     @type int[] $renderDeviceAttributes
      *           User agent where the landing page was rendered on. Not Writable.
      *     @type \Google\Protobuf\Timestamp $issueAt
      *           Date the pass record was created. Not Writable.
@@ -220,7 +220,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Events that the pass has attained. Not Writable.
      *
      * Generated from protobuf field <code>repeated .io.LifecycleEvents lifecycleEvents = 2;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getLifecycleEvents()
     {
@@ -231,7 +231,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * Events that the pass has attained. Not Writable.
      *
      * Generated from protobuf field <code>repeated .io.LifecycleEvents lifecycleEvents = 2;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setLifecycleEvents($var)
@@ -474,7 +474,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * User agent provided by the Wallet Application. Not Writable.
      *
      * Generated from protobuf field <code>repeated .io.DeviceAttributes installDeviceAttributes = 11;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getInstallDeviceAttributes()
     {
@@ -485,7 +485,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * User agent provided by the Wallet Application. Not Writable.
      *
      * Generated from protobuf field <code>repeated .io.DeviceAttributes installDeviceAttributes = 11;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setInstallDeviceAttributes($var)
@@ -500,7 +500,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * User agent where the landing page was rendered on. Not Writable.
      *
      * Generated from protobuf field <code>repeated .io.DeviceAttributes renderDeviceAttributes = 12;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getRenderDeviceAttributes()
     {
@@ -511,7 +511,7 @@ class Metadata extends \Google\Protobuf\Internal\Message
      * User agent where the landing page was rendered on. Not Writable.
      *
      * Generated from protobuf field <code>repeated .io.DeviceAttributes renderDeviceAttributes = 12;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setRenderDeviceAttributes($var)

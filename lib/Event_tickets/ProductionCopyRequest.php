@@ -6,11 +6,11 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Contains payload for copying a Production.
+ * Contains payload for copying an existing Production to a new one, including optional fields such as a new name, UID, or status. Used to duplicate configurations efficiently. Required fields: id.
  *
  * Generated from protobuf message <code>event_tickets.ProductionCopyRequest</code>
  */
@@ -59,7 +59,7 @@ class ProductionCopyRequest extends \Google\Protobuf\Internal\Message
      *           User generated production id; unique within the account.
      *     @type string $name
      *           Optional name for the new Production.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $status
+     *     @type int[] $status
      *           Status to set the copied Production to.
      *     @type string $passTypeIdentifier
      *           Can optionally be provided if setting status to published (requires a prod cert).
@@ -152,7 +152,7 @@ class ProductionCopyRequest extends \Google\Protobuf\Internal\Message
      * Status to set the copied Production to.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 4;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getStatus()
     {
@@ -163,7 +163,7 @@ class ProductionCopyRequest extends \Google\Protobuf\Internal\Message
      * Status to set the copied Production to.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 4;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setStatus($var)

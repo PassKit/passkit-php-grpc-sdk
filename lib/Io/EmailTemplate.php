@@ -6,12 +6,11 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * EmailTemplate contains details for sending an email to a customer.
- * Uses the default PassKit email provider and sending credentials
+ * EmailTemplate contains details for sending an email to a customer. Uses the default PassKit email provider and sending credentials.
  *
  * Generated from protobuf message <code>io.EmailTemplate</code>
  */

@@ -6,10 +6,12 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Defines the format used for member points.
+ *
  * Generated from protobuf message <code>members.PointsType</code>
  */
 class PointsType extends \Google\Protobuf\Internal\Message

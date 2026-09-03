@@ -6,23 +6,31 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to list members with filters and optional CSV export.
+ *
  * Generated from protobuf message <code>members.ListRequest</code>
  */
 class ListRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Program Id
+     *
      * Generated from protobuf field <code>string programId = 1;</code>
      */
     protected $programId = '';
     /**
+     * Filters to apply when listing members (e.g., by tier, status).
+     *
      * Generated from protobuf field <code>.io.Filters filters = 2;</code>
      */
     protected $filters = null;
     /**
+     * If true, the list will be emailed as a CSV file instead of returned in the response.
+     *
      * Generated from protobuf field <code>bool emailAsCsv = 3;</code>
      */
     protected $emailAsCsv = false;
@@ -34,8 +42,11 @@ class ListRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $programId
+     *           Program Id
      *     @type \Io\Filters $filters
+     *           Filters to apply when listing members (e.g., by tier, status).
      *     @type bool $emailAsCsv
+     *           If true, the list will be emailed as a CSV file instead of returned in the response.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,6 +55,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Program Id
+     *
      * Generated from protobuf field <code>string programId = 1;</code>
      * @return string
      */
@@ -53,6 +66,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Program Id
+     *
      * Generated from protobuf field <code>string programId = 1;</code>
      * @param string $var
      * @return $this
@@ -66,6 +81,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Filters to apply when listing members (e.g., by tier, status).
+     *
      * Generated from protobuf field <code>.io.Filters filters = 2;</code>
      * @return \Io\Filters|null
      */
@@ -85,6 +102,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Filters to apply when listing members (e.g., by tier, status).
+     *
      * Generated from protobuf field <code>.io.Filters filters = 2;</code>
      * @param \Io\Filters $var
      * @return $this
@@ -98,6 +117,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * If true, the list will be emailed as a CSV file instead of returned in the response.
+     *
      * Generated from protobuf field <code>bool emailAsCsv = 3;</code>
      * @return bool
      */
@@ -107,6 +128,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * If true, the list will be emailed as a CSV file instead of returned in the response.
+     *
      * Generated from protobuf field <code>bool emailAsCsv = 3;</code>
      * @param bool $var
      * @return $this

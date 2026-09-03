@@ -8,6 +8,8 @@ namespace Members;
 use UnexpectedValueException;
 
 /**
+ * Defines the method used for automatic tier upgrades and downgrades in a program.
+ *
  * Protobuf type <code>members.ProgramAutoUpDownGradeTierType</code>
  */
 class ProgramAutoUpDownGradeTierType

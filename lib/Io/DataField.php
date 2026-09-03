@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Data Field allows you to define set of data you store against each pass holder.
@@ -145,7 +145,7 @@ class DataField extends \Google\Protobuf\Internal\Message
      *           The currency code (e.g. USD, EUR) to display with money value if data type is set as currency.
      *     @type \Io\AppleWalletFieldRenderOptions $appleWalletFieldRenderOptions
      *     @type \Io\DataCollectionFieldRenderOptions $dataCollectionFieldRenderOptions
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $usage
+     *     @type int[] $usage
      *           Usage: indicates where the field is used (apple render, google render, data collection page)
      *     @type \Io\GooglePayFieldRenderOptions $googlePayFieldRenderOptions
      *     @type string $defaultTelCountryCode
@@ -555,7 +555,7 @@ class DataField extends \Google\Protobuf\Internal\Message
      * Usage: indicates where the field is used (apple render, google render, data collection page)
      *
      * Generated from protobuf field <code>repeated .io.UsageType usage = 15;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getUsage()
     {
@@ -566,7 +566,7 @@ class DataField extends \Google\Protobuf\Internal\Message
      * Usage: indicates where the field is used (apple render, google render, data collection page)
      *
      * Generated from protobuf field <code>repeated .io.UsageType usage = 15;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setUsage($var)

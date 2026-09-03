@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Holds one or more fields to collect user input (e.g. name, email, etc.).
+ *
  * Generated from protobuf message <code>io.DataCollectionFields</code>
  */
 class DataCollectionFields extends \Google\Protobuf\Internal\Message
@@ -25,7 +27,7 @@ class DataCollectionFields extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Io\DataCollectionField>|\Google\Protobuf\Internal\RepeatedField $fields
+     *     @type \Io\DataCollectionField[] $fields
      * }
      */
     public function __construct($data = NULL) {
@@ -35,7 +37,7 @@ class DataCollectionFields extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.DataCollectionField fields = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\DataCollectionField>
      */
     public function getFields()
     {
@@ -44,7 +46,7 @@ class DataCollectionFields extends \Google\Protobuf\Internal\Message
 
     /**
      * Generated from protobuf field <code>repeated .io.DataCollectionField fields = 1;</code>
-     * @param array<\Io\DataCollectionField>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\DataCollectionField[] $var
      * @return $this
      */
     public function setFields($var)

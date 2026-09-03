@@ -6,39 +6,55 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Response message containing metadata and details about a PassTemplate.
+ *
  * Generated from protobuf message <code>io.PassTemplateResponse</code>
  */
 class PassTemplateResponse extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The full pass template object, including field configurations and settings.
+     *
      * Generated from protobuf field <code>.io.PassTemplate template = 1;</code>
      */
     protected $template = null;
     /**
+     * The name assigned to the template.
+     *
      * Generated from protobuf field <code>string Name = 2;</code>
      */
     protected $Name = '';
     /**
+     * The username of the user who created or owns the template.
+     *
      * Generated from protobuf field <code>string ownerUsername = 3;</code>
      */
     protected $ownerUsername = '';
     /**
+     * The protocol associated with this template.
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 4;</code>
      */
     protected $protocol = 0;
     /**
+     * The revision number of the template. This increases with each update.
+     *
      * Generated from protobuf field <code>uint32 revision = 5;</code>
      */
     protected $revision = 0;
     /**
+     * Timestamp indicating when the template was first created.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 6;</code>
      */
     protected $createdAt = null;
     /**
+     * Timestamp indicating when the template was last updated.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 7;</code>
      */
     protected $updatedAt = null;
@@ -50,12 +66,19 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type \Io\PassTemplate $template
+     *           The full pass template object, including field configurations and settings.
      *     @type string $Name
+     *           The name assigned to the template.
      *     @type string $ownerUsername
+     *           The username of the user who created or owns the template.
      *     @type int $protocol
+     *           The protocol associated with this template.
      *     @type int $revision
+     *           The revision number of the template. This increases with each update.
      *     @type \Google\Protobuf\Timestamp $createdAt
+     *           Timestamp indicating when the template was first created.
      *     @type \Google\Protobuf\Timestamp $updatedAt
+     *           Timestamp indicating when the template was last updated.
      * }
      */
     public function __construct($data = NULL) {
@@ -64,6 +87,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The full pass template object, including field configurations and settings.
+     *
      * Generated from protobuf field <code>.io.PassTemplate template = 1;</code>
      * @return \Io\PassTemplate|null
      */
@@ -83,6 +108,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The full pass template object, including field configurations and settings.
+     *
      * Generated from protobuf field <code>.io.PassTemplate template = 1;</code>
      * @param \Io\PassTemplate $var
      * @return $this
@@ -96,6 +123,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The name assigned to the template.
+     *
      * Generated from protobuf field <code>string Name = 2;</code>
      * @return string
      */
@@ -105,6 +134,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The name assigned to the template.
+     *
      * Generated from protobuf field <code>string Name = 2;</code>
      * @param string $var
      * @return $this
@@ -118,6 +149,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The username of the user who created or owns the template.
+     *
      * Generated from protobuf field <code>string ownerUsername = 3;</code>
      * @return string
      */
@@ -127,6 +160,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The username of the user who created or owns the template.
+     *
      * Generated from protobuf field <code>string ownerUsername = 3;</code>
      * @param string $var
      * @return $this
@@ -140,6 +175,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The protocol associated with this template.
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 4;</code>
      * @return int
      */
@@ -149,6 +186,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The protocol associated with this template.
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 4;</code>
      * @param int $var
      * @return $this
@@ -162,6 +201,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The revision number of the template. This increases with each update.
+     *
      * Generated from protobuf field <code>uint32 revision = 5;</code>
      * @return int
      */
@@ -171,6 +212,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The revision number of the template. This increases with each update.
+     *
      * Generated from protobuf field <code>uint32 revision = 5;</code>
      * @param int $var
      * @return $this
@@ -184,6 +227,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp indicating when the template was first created.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 6;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -203,6 +248,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp indicating when the template was first created.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 6;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
@@ -216,6 +263,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp indicating when the template was last updated.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 7;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -235,6 +284,8 @@ class PassTemplateResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp indicating when the template was last updated.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 7;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this

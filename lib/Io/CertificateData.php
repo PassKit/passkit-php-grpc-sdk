@@ -6,50 +6,76 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Contains data about an Apple certificate used for pass signing.
+ *
  * Generated from protobuf message <code>io.CertificateData</code>
  */
 class CertificateData extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Apple-issued pass type identifier.
+     *
      * Generated from protobuf field <code>string passTypeId = 1;</code>
      */
     protected $passTypeId = '';
     /**
+     * Apple team ID associated with the certificate.
+     *
      * Generated from protobuf field <code>string teamId = 2;</code>
      */
     protected $teamId = '';
     /**
+     * Name of the Apple team.
+     *
      * Generated from protobuf field <code>string teamName = 3;</code>
      */
     protected $teamName = '';
     /**
+     * Serial number of the certificate.
+     *
      * Generated from protobuf field <code>string serialNumber = 4;</code>
      */
     protected $serialNumber = '';
     /**
+     * Start date of certificate validity.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validFrom = 5;</code>
      */
     protected $validFrom = null;
     /**
+     * End date of certificate validity.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validTo = 6;</code>
      */
     protected $validTo = null;
     /**
+     * Certificate modulus.
+     *
      * Generated from protobuf field <code>string modulus = 7;</code>
      */
     protected $modulus = '';
     /**
+     * Indicates whether the certificate supports NFC passes.
+     *
      * Generated from protobuf field <code>bool nfcCapable = 8;</code>
      */
     protected $nfcCapable = false;
     /**
+     * Username of the certificate owner.
+     *
      * Generated from protobuf field <code>string ownerUsername = 9;</code>
      */
     protected $ownerUsername = '';
+    /**
+     * Returns true when PassKit has received the authority and App Store Connect credentials to automatically renew the certificate.
+     *
+     * Generated from protobuf field <code>bool willAutoRenew = 10;</code>
+     */
+    protected $willAutoRenew = false;
 
     /**
      * Constructor.
@@ -58,14 +84,25 @@ class CertificateData extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $passTypeId
+     *           Apple-issued pass type identifier.
      *     @type string $teamId
+     *           Apple team ID associated with the certificate.
      *     @type string $teamName
+     *           Name of the Apple team.
      *     @type string $serialNumber
+     *           Serial number of the certificate.
      *     @type \Google\Protobuf\Timestamp $validFrom
+     *           Start date of certificate validity.
      *     @type \Google\Protobuf\Timestamp $validTo
+     *           End date of certificate validity.
      *     @type string $modulus
+     *           Certificate modulus.
      *     @type bool $nfcCapable
+     *           Indicates whether the certificate supports NFC passes.
      *     @type string $ownerUsername
+     *           Username of the certificate owner.
+     *     @type bool $willAutoRenew
+     *           Returns true when PassKit has received the authority and App Store Connect credentials to automatically renew the certificate.
      * }
      */
     public function __construct($data = NULL) {
@@ -74,6 +111,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple-issued pass type identifier.
+     *
      * Generated from protobuf field <code>string passTypeId = 1;</code>
      * @return string
      */
@@ -83,6 +122,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple-issued pass type identifier.
+     *
      * Generated from protobuf field <code>string passTypeId = 1;</code>
      * @param string $var
      * @return $this
@@ -96,6 +137,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple team ID associated with the certificate.
+     *
      * Generated from protobuf field <code>string teamId = 2;</code>
      * @return string
      */
@@ -105,6 +148,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple team ID associated with the certificate.
+     *
      * Generated from protobuf field <code>string teamId = 2;</code>
      * @param string $var
      * @return $this
@@ -118,6 +163,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Name of the Apple team.
+     *
      * Generated from protobuf field <code>string teamName = 3;</code>
      * @return string
      */
@@ -127,6 +174,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Name of the Apple team.
+     *
      * Generated from protobuf field <code>string teamName = 3;</code>
      * @param string $var
      * @return $this
@@ -140,6 +189,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Serial number of the certificate.
+     *
      * Generated from protobuf field <code>string serialNumber = 4;</code>
      * @return string
      */
@@ -149,6 +200,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Serial number of the certificate.
+     *
      * Generated from protobuf field <code>string serialNumber = 4;</code>
      * @param string $var
      * @return $this
@@ -162,6 +215,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Start date of certificate validity.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validFrom = 5;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -181,6 +236,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Start date of certificate validity.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validFrom = 5;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
@@ -194,6 +251,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * End date of certificate validity.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validTo = 6;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -213,6 +272,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * End date of certificate validity.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp validTo = 6;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
@@ -226,6 +287,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Certificate modulus.
+     *
      * Generated from protobuf field <code>string modulus = 7;</code>
      * @return string
      */
@@ -235,6 +298,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Certificate modulus.
+     *
      * Generated from protobuf field <code>string modulus = 7;</code>
      * @param string $var
      * @return $this
@@ -248,6 +313,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Indicates whether the certificate supports NFC passes.
+     *
      * Generated from protobuf field <code>bool nfcCapable = 8;</code>
      * @return bool
      */
@@ -257,6 +324,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Indicates whether the certificate supports NFC passes.
+     *
      * Generated from protobuf field <code>bool nfcCapable = 8;</code>
      * @param bool $var
      * @return $this
@@ -270,6 +339,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Username of the certificate owner.
+     *
      * Generated from protobuf field <code>string ownerUsername = 9;</code>
      * @return string
      */
@@ -279,6 +350,8 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Username of the certificate owner.
+     *
      * Generated from protobuf field <code>string ownerUsername = 9;</code>
      * @param string $var
      * @return $this
@@ -287,6 +360,32 @@ class CertificateData extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->ownerUsername = $var;
+
+        return $this;
+    }
+
+    /**
+     * Returns true when PassKit has received the authority and App Store Connect credentials to automatically renew the certificate.
+     *
+     * Generated from protobuf field <code>bool willAutoRenew = 10;</code>
+     * @return bool
+     */
+    public function getWillAutoRenew()
+    {
+        return $this->willAutoRenew;
+    }
+
+    /**
+     * Returns true when PassKit has received the authority and App Store Connect credentials to automatically renew the certificate.
+     *
+     * Generated from protobuf field <code>bool willAutoRenew = 10;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setWillAutoRenew($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->willAutoRenew = $var;
 
         return $this;
     }

@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Specifies the type of update operation to perform.
+ *
  * Protobuf type <code>io.Operation</code>
  */
 class Operation

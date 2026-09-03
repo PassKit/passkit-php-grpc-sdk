@@ -6,19 +6,25 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Deprecated request to list members with basic pagination.
+ *
  * Generated from protobuf message <code>members.ListRequestDeprecated</code>
  */
 class ListRequestDeprecated extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Program Id
+     *
      * Generated from protobuf field <code>string programId = 1;</code>
      */
     protected $programId = '';
     /**
+     * Pagination settings for the request
+     *
      * Generated from protobuf field <code>.io.Pagination pagination = 2;</code>
      */
     protected $pagination = null;
@@ -30,7 +36,9 @@ class ListRequestDeprecated extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $programId
+     *           Program Id
      *     @type \Io\Pagination $pagination
+     *           Pagination settings for the request
      * }
      */
     public function __construct($data = NULL) {
@@ -39,6 +47,8 @@ class ListRequestDeprecated extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Program Id
+     *
      * Generated from protobuf field <code>string programId = 1;</code>
      * @return string
      */
@@ -48,6 +58,8 @@ class ListRequestDeprecated extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Program Id
+     *
      * Generated from protobuf field <code>string programId = 1;</code>
      * @param string $var
      * @return $this
@@ -61,6 +73,8 @@ class ListRequestDeprecated extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Pagination settings for the request
+     *
      * Generated from protobuf field <code>.io.Pagination pagination = 2;</code>
      * @return \Io\Pagination|null
      */
@@ -80,6 +94,8 @@ class ListRequestDeprecated extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Pagination settings for the request
+     *
      * Generated from protobuf field <code>.io.Pagination pagination = 2;</code>
      * @param \Io\Pagination $var
      * @return $this

@@ -6,8 +6,8 @@
 namespace Raw;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Contains payload for copying a pass project
@@ -51,7 +51,7 @@ class PassProjectCopyRequest extends \Google\Protobuf\Internal\Message
      *           uuid of the pass project to copy
      *     @type string $name
      *           optional name for the new pass project
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $status
+     *     @type int[] $status
      *           Status to set the copied project to
      *     @type string $passTypeIdentifier
      *           Can optionally be provided if setting status to published (requires a prod cert)
@@ -118,7 +118,7 @@ class PassProjectCopyRequest extends \Google\Protobuf\Internal\Message
      * Status to set the copied project to
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getStatus()
     {
@@ -129,7 +129,7 @@ class PassProjectCopyRequest extends \Google\Protobuf\Internal\Message
      * Status to set the copied project to
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 3;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setStatus($var)

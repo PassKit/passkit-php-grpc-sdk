@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a Production, which contains shared settings, branding, and distribution options for all Events under it (e.g., a theatre show, movie title, or recurring concert series).
+ *
  * Generated from protobuf message <code>event_tickets.Production</code>
  */
 class Production extends \Google\Protobuf\Internal\Message
@@ -129,7 +131,7 @@ class Production extends \Google\Protobuf\Internal\Message
      *           If set will automatically delete the ticket and invalidate the pass in our system 1 day after the event end date (if set). If event date is not set, it will expire 1 day after event start date. If not set, the tickets will expire 90 days after issue. If the ticket is not auto invalidated it can be used for further engagement.
      *     @type int $autoInvalidateTicketsUponExpiry
      *           If set will automatically delete the ticket and invalidate the pass in our system upon ticket expiry. If not set, the tickets will expire 90 days after issue. If the ticket is not auto invalidated it can be used for further engagement.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $status
+     *     @type int[] $status
      *           The events status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *     @type string $passTypeIdentifier
      *           Leave empty for draft production. Needs to be set for productions where status contains PROJECT_PUBLISHED.
@@ -406,7 +408,7 @@ class Production extends \Google\Protobuf\Internal\Message
      * The events status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 10;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getStatus()
     {
@@ -417,7 +419,7 @@ class Production extends \Google\Protobuf\Internal\Message
      * The events status (bitmask of ProjectStatus). Defaults to io.ProjectStatus.PROJECT_ACTIVE_FOR_OBJECT_CREATION + io.ProjectStatus.PROJECT_DRAFT.
      *
      * Generated from protobuf field <code>repeated .io.ProjectStatus status = 10;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setStatus($var)

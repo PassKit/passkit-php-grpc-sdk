@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Used to look up or redeem a ticket based on its associated order number. Required fields: productionId or productionUid, orderNumber.
+ *
  * Generated from protobuf message <code>event_tickets.OrderNumberRequest</code>
  */
 class OrderNumberRequest extends \Google\Protobuf\Internal\Message

@@ -6,19 +6,25 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to list all ticket types within a production, optionally using filters. Required fields: productionId.
+ *
  * Generated from protobuf message <code>event_tickets.TicketTypeListRequest</code>
  */
 class TicketTypeListRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The Production the ticket type belongs to
+     *
      * Generated from protobuf field <code>string productionId = 1;</code>
      */
     protected $productionId = '';
     /**
+     * Filters: allows to filter on additional ticket type data.
+     *
      * Generated from protobuf field <code>.io.Filters filters = 2;</code>
      */
     protected $filters = null;
@@ -30,7 +36,9 @@ class TicketTypeListRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $productionId
+     *           The Production the ticket type belongs to
      *     @type \Io\Filters $filters
+     *           Filters: allows to filter on additional ticket type data.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,6 +47,8 @@ class TicketTypeListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The Production the ticket type belongs to
+     *
      * Generated from protobuf field <code>string productionId = 1;</code>
      * @return string
      */
@@ -48,6 +58,8 @@ class TicketTypeListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The Production the ticket type belongs to
+     *
      * Generated from protobuf field <code>string productionId = 1;</code>
      * @param string $var
      * @return $this
@@ -61,6 +73,8 @@ class TicketTypeListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Filters: allows to filter on additional ticket type data.
+     *
      * Generated from protobuf field <code>.io.Filters filters = 2;</code>
      * @return \Io\Filters|null
      */
@@ -80,6 +94,8 @@ class TicketTypeListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Filters: allows to filter on additional ticket type data.
+     *
      * Generated from protobuf field <code>.io.Filters filters = 2;</code>
      * @param \Io\Filters $var
      * @return $this

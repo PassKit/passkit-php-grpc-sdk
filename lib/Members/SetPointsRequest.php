@@ -6,10 +6,12 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to set specific points balances for a member.
+ *
  * Generated from protobuf message <code>members.SetPointsRequest</code>
  */
 class SetPointsRequest extends \Google\Protobuf\Internal\Message
@@ -69,6 +71,8 @@ class SetPointsRequest extends \Google\Protobuf\Internal\Message
      */
     protected $resetTierPoints = false;
     /**
+     *Any relevant details for the event.
+     *
      * Generated from protobuf field <code>.members.EventDetails eventDetails = 10;</code>
      */
     protected $eventDetails = null;
@@ -104,6 +108,7 @@ class SetPointsRequest extends \Google\Protobuf\Internal\Message
      *     @type bool $resetTierPoints
      *           Reset the tier points. If set true, the tier point balance will be 0. The default is false.
      *     @type \Members\EventDetails $eventDetails
+     *          Any relevant details for the event.
      *     @type string $tierId
      *           Optional field to change the tierIf of the member.
      * }
@@ -348,6 +353,8 @@ class SetPointsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Any relevant details for the event.
+     *
      * Generated from protobuf field <code>.members.EventDetails eventDetails = 10;</code>
      * @return \Members\EventDetails|null
      */
@@ -367,6 +374,8 @@ class SetPointsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *Any relevant details for the event.
+     *
      * Generated from protobuf field <code>.members.EventDetails eventDetails = 10;</code>
      * @param \Members\EventDetails $var
      * @return $this

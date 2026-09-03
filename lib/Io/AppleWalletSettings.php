@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Pass settings only for Apple Wallet.
@@ -73,11 +73,35 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      */
     private $appStoreIdentifiers;
     /**
-     * Used to indicate if the poster event ticket style should be used.  Requires an NFC certificate and iCloud binding.
+     * Used to indicate if the semantic boarding pass ticket style should be used. Ignored unless ApplePassType is BOARDING_PASS.
+     *
+     * Generated from protobuf field <code>bool semanticBoardingPass = 16;</code>
+     */
+    protected $semanticBoardingPass = false;
+    /**
+     * Used to allow Apply Wallet flight service automatically overriding departure and arrival information (gate/terminal/time). Set to true to opt in to Apple live updates - conflicting airline information in the flight record will be replaced with Apple data.
+     *
+     * Generated from protobuf field <code>bool allowLiveFlightUpdates = 17;</code>
+     */
+    protected $allowLiveFlightUpdates = false;
+    /**
+     * If set to true, a boarding pass will show the gate closing time (if available) under the barcode, else it will default to show the PNR.  If no PNR is available, nothing will be displayed under the barcode.
+     *
+     * Generated from protobuf field <code>bool displayGateClosingTime = 18;</code>
+     */
+    protected $displayGateClosingTime = false;
+    /**
+     * Used to indicate if the poster event ticket style should be used. Requires an NFC certificate and iCloud binding.
      *
      * Generated from protobuf field <code>bool posterTicketStyle = 11;</code>
      */
     protected $posterTicketStyle = false;
+    /**
+     * Used to indicate if the poster generic style should be used. Ignored unless ApplePassType is GENERIC. When enabled, the generated Apple payload should also include a generic fallback for older OS versions.
+     *
+     * Generated from protobuf field <code>bool posterGenericStyle = 19;</code>
+     */
+    protected $posterGenericStyle = false;
     /**
      * Used to turn off the top gradient of event poster tickets.
      *
@@ -102,6 +126,12 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool ignoreTimeComponents = 15;</code>
      */
     protected $ignoreTimeComponents = false;
+    /**
+     * Apple Wallet featured actions displayed prominently on supported passes. Ordered by priority and limited to two actions.
+     *
+     * Generated from protobuf field <code>repeated .io.FeaturedAction featuredActions = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     */
+    private $featuredActions;
 
     /**
      * Constructor.
@@ -115,20 +145,28 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      *           Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
      *     @type string $appLaunchUrl
      *           This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $associatedStoreIdentifiers
+     *     @type int[] $associatedStoreIdentifiers
      *           Deprecated - use appStoreIdentifiers. A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *     @type int $maxDistance
      *           GPS lock screen messages will show at the lower of max distance and the pass default(unpublished) value.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $appStoreCountries
+     *     @type string[] $appStoreCountries
      *           List of country codes for the stores of the associated apps. This is required to render the pass correctly in the designer.
      *     @type int $transitType
      *     @type string $groupingIdentifier
      *     @type \Io\PersonalizationDetails $personalizationDetails
      *           Personal data requested for an Apple Wallet Pass (Requires Apple to whitelist your certificate for this service).
-     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $appStoreIdentifiers
+     *     @type int[]|string[] $appStoreIdentifiers
      *           A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *     @type bool $semanticBoardingPass
+     *           Used to indicate if the semantic boarding pass ticket style should be used. Ignored unless ApplePassType is BOARDING_PASS.
+     *     @type bool $allowLiveFlightUpdates
+     *           Used to allow Apply Wallet flight service automatically overriding departure and arrival information (gate/terminal/time). Set to true to opt in to Apple live updates - conflicting airline information in the flight record will be replaced with Apple data.
+     *     @type bool $displayGateClosingTime
+     *           If set to true, a boarding pass will show the gate closing time (if available) under the barcode, else it will default to show the PNR.  If no PNR is available, nothing will be displayed under the barcode.
      *     @type bool $posterTicketStyle
-     *           Used to indicate if the poster event ticket style should be used.  Requires an NFC certificate and iCloud binding.
+     *           Used to indicate if the poster event ticket style should be used. Requires an NFC certificate and iCloud binding.
+     *     @type bool $posterGenericStyle
+     *           Used to indicate if the poster generic style should be used. Ignored unless ApplePassType is GENERIC. When enabled, the generated Apple payload should also include a generic fallback for older OS versions.
      *     @type bool $suppressHeaderDarkening
      *           Used to turn off the top gradient of event poster tickets.
      *     @type bool $useAutomaticColors
@@ -137,6 +175,8 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      *           Text to be used in the place of, or in addition to a logo on Apple passes.
      *     @type bool $ignoreTimeComponents
      *           If set to true, time components of an Apple poster Event Ticket start/end date will not be shown on the front of the pass.
+     *     @type \Io\FeaturedAction[] $featuredActions
+     *           Apple Wallet featured actions displayed prominently on supported passes. Ordered by priority and limited to two actions.
      * }
      */
     public function __construct($data = NULL) {
@@ -226,7 +266,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      * Deprecated - use appStoreIdentifiers. A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getAssociatedStoreIdentifiers()
     {
@@ -237,7 +277,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      * Deprecated - use appStoreIdentifiers. A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setAssociatedStoreIdentifiers($var)
@@ -278,7 +318,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      * List of country codes for the stores of the associated apps. This is required to render the pass correctly in the designer.
      *
      * Generated from protobuf field <code>repeated string appStoreCountries = 6;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getAppStoreCountries()
     {
@@ -289,7 +329,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      * List of country codes for the stores of the associated apps. This is required to render the pass correctly in the designer.
      *
      * Generated from protobuf field <code>repeated string appStoreCountries = 6;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setAppStoreCountries($var)
@@ -384,7 +424,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint64 appStoreIdentifiers = 10;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>|RepeatedField<string>
      */
     public function getAppStoreIdentifiers()
     {
@@ -395,7 +435,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
      * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint64 appStoreIdentifiers = 10;</code>
-     * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[]|string[] $var
      * @return $this
      */
     public function setAppStoreIdentifiers($var)
@@ -407,7 +447,85 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Used to indicate if the poster event ticket style should be used.  Requires an NFC certificate and iCloud binding.
+     * Used to indicate if the semantic boarding pass ticket style should be used. Ignored unless ApplePassType is BOARDING_PASS.
+     *
+     * Generated from protobuf field <code>bool semanticBoardingPass = 16;</code>
+     * @return bool
+     */
+    public function getSemanticBoardingPass()
+    {
+        return $this->semanticBoardingPass;
+    }
+
+    /**
+     * Used to indicate if the semantic boarding pass ticket style should be used. Ignored unless ApplePassType is BOARDING_PASS.
+     *
+     * Generated from protobuf field <code>bool semanticBoardingPass = 16;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSemanticBoardingPass($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->semanticBoardingPass = $var;
+
+        return $this;
+    }
+
+    /**
+     * Used to allow Apply Wallet flight service automatically overriding departure and arrival information (gate/terminal/time). Set to true to opt in to Apple live updates - conflicting airline information in the flight record will be replaced with Apple data.
+     *
+     * Generated from protobuf field <code>bool allowLiveFlightUpdates = 17;</code>
+     * @return bool
+     */
+    public function getAllowLiveFlightUpdates()
+    {
+        return $this->allowLiveFlightUpdates;
+    }
+
+    /**
+     * Used to allow Apply Wallet flight service automatically overriding departure and arrival information (gate/terminal/time). Set to true to opt in to Apple live updates - conflicting airline information in the flight record will be replaced with Apple data.
+     *
+     * Generated from protobuf field <code>bool allowLiveFlightUpdates = 17;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setAllowLiveFlightUpdates($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->allowLiveFlightUpdates = $var;
+
+        return $this;
+    }
+
+    /**
+     * If set to true, a boarding pass will show the gate closing time (if available) under the barcode, else it will default to show the PNR.  If no PNR is available, nothing will be displayed under the barcode.
+     *
+     * Generated from protobuf field <code>bool displayGateClosingTime = 18;</code>
+     * @return bool
+     */
+    public function getDisplayGateClosingTime()
+    {
+        return $this->displayGateClosingTime;
+    }
+
+    /**
+     * If set to true, a boarding pass will show the gate closing time (if available) under the barcode, else it will default to show the PNR.  If no PNR is available, nothing will be displayed under the barcode.
+     *
+     * Generated from protobuf field <code>bool displayGateClosingTime = 18;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setDisplayGateClosingTime($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->displayGateClosingTime = $var;
+
+        return $this;
+    }
+
+    /**
+     * Used to indicate if the poster event ticket style should be used. Requires an NFC certificate and iCloud binding.
      *
      * Generated from protobuf field <code>bool posterTicketStyle = 11;</code>
      * @return bool
@@ -418,7 +536,7 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Used to indicate if the poster event ticket style should be used.  Requires an NFC certificate and iCloud binding.
+     * Used to indicate if the poster event ticket style should be used. Requires an NFC certificate and iCloud binding.
      *
      * Generated from protobuf field <code>bool posterTicketStyle = 11;</code>
      * @param bool $var
@@ -428,6 +546,32 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->posterTicketStyle = $var;
+
+        return $this;
+    }
+
+    /**
+     * Used to indicate if the poster generic style should be used. Ignored unless ApplePassType is GENERIC. When enabled, the generated Apple payload should also include a generic fallback for older OS versions.
+     *
+     * Generated from protobuf field <code>bool posterGenericStyle = 19;</code>
+     * @return bool
+     */
+    public function getPosterGenericStyle()
+    {
+        return $this->posterGenericStyle;
+    }
+
+    /**
+     * Used to indicate if the poster generic style should be used. Ignored unless ApplePassType is GENERIC. When enabled, the generated Apple payload should also include a generic fallback for older OS versions.
+     *
+     * Generated from protobuf field <code>bool posterGenericStyle = 19;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setPosterGenericStyle($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->posterGenericStyle = $var;
 
         return $this;
     }
@@ -532,6 +676,32 @@ class AppleWalletSettings extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->ignoreTimeComponents = $var;
+
+        return $this;
+    }
+
+    /**
+     * Apple Wallet featured actions displayed prominently on supported passes. Ordered by priority and limited to two actions.
+     *
+     * Generated from protobuf field <code>repeated .io.FeaturedAction featuredActions = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return RepeatedField<\Io\FeaturedAction>
+     */
+    public function getFeaturedActions()
+    {
+        return $this->featuredActions;
+    }
+
+    /**
+     * Apple Wallet featured actions displayed prominently on supported passes. Ordered by priority and limited to two actions.
+     *
+     * Generated from protobuf field <code>repeated .io.FeaturedAction featuredActions = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @param \Io\FeaturedAction[] $var
+     * @return $this
+     */
+    public function setFeaturedActions($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Io\FeaturedAction::class);
+        $this->featuredActions = $arr;
 
         return $this;
     }

@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a ticket's price and currency. Required fields: none.
+ *
  * Generated from protobuf message <code>event_tickets.FaceValue</code>
  */
 class FaceValue extends \Google\Protobuf\Internal\Message

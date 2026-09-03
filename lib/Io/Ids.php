@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * A list of object or record IDs.
+ *
  * Generated from protobuf message <code>io.Ids</code>
  */
 class Ids extends \Google\Protobuf\Internal\Message
@@ -27,7 +29,7 @@ class Ids extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $id
+     *     @type string[] $id
      *           An array of unique identifiers for objects or records.
      * }
      */
@@ -40,7 +42,7 @@ class Ids extends \Google\Protobuf\Internal\Message
      * An array of unique identifiers for objects or records.
      *
      * Generated from protobuf field <code>repeated string id = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getId()
     {
@@ -51,7 +53,7 @@ class Ids extends \Google\Protobuf\Internal\Message
      * An array of unique identifiers for objects or records.
      *
      * Generated from protobuf field <code>repeated string id = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setId($var)

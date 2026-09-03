@@ -4,7 +4,7 @@
 // Original file comments:
 // *
 // This protocol is suit for cases where the business logic is handled elsewhere, and the purpose is purely to issue and
-// update content for Apple Wallet and Google Pay.
+// update content for Apple Wallet and Google Wallet.
 namespace Raw;
 
 /**
@@ -21,10 +21,11 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a Pass Project. Required Fields: name, protocol, classId.
      * @param \Raw\PassProject $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createPassProject(\Raw\PassProject $argument,
       $metadata = [], $options = []) {
@@ -35,10 +36,11 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates an existing Pass Project. Required Fields: id, name, protocol, classId.
      * @param \Raw\PassProject $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Raw\PassProject>
      */
     public function updatePassProject(\Raw\PassProject $argument,
       $metadata = [], $options = []) {
@@ -49,10 +51,11 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a Pass Project by ID. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Raw\PassProject>
      */
     public function getPassProject(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -63,10 +66,11 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Copies an existing Pass Project. Required Fields: id (of the source PassProject).
      * @param \Raw\PassProjectCopyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function copyPassProject(\Raw\PassProjectCopyRequest $argument,
       $metadata = [], $options = []) {
@@ -77,10 +81,11 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a Pass Project by ID. Deleting a Pass Project results in all passes being invalidated and removed. Use with caution. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deletePassProject(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -91,10 +96,11 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a new Pass record. Required Fields: passProjectId, externalId, and fields required by protocol template.
      * @param \Raw\Pass $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createPass(\Raw\Pass $argument,
       $metadata = [], $options = []) {
@@ -105,10 +111,11 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates an existing Pass record. Required Fields: id.
      * @param \Raw\Pass $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function updatePass(\Raw\Pass $argument,
       $metadata = [], $options = []) {
@@ -119,6 +126,7 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Streams multiple Pass updates via gRPC (not available via REST). Required Fields: id for each Pass.
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\BidiStreamingCall
@@ -130,10 +138,11 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a Pass by its internal ID. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Raw\Pass>
      */
     public function getPassById(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -144,10 +153,11 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a Pass by its external ID and Pass Project ID. Required Fields: passProjectId, externalId.
      * @param \Raw\PassRecordByExternalIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Raw\Pass>
      */
     public function getPassByExternalId(\Raw\PassRecordByExternalIdRequest $argument,
       $metadata = [], $options = []) {
@@ -158,10 +168,11 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a Pass record. Required Fields: id.
      * @param \Raw\Pass $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deletePass(\Raw\Pass $argument,
       $metadata = [], $options = []) {
@@ -172,6 +183,7 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all passes for a Pass Project. Supports pagination. Required Fields: passProjectId.
      * @param \Raw\ListPassesByPassProjectRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -186,6 +198,7 @@ class RawClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all passes for a Pass Template. Supports pagination. Required Fields: passTemplateId.
      * @param \Raw\ListPassesByPassTemplateRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

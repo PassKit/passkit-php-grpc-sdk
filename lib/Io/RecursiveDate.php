@@ -6,25 +6,24 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * To be used for setting recursive datetime.
+ * Used for creating datetime values that recur on a regular schedule.
  *
  * Generated from protobuf message <code>io.RecursiveDate</code>
  */
 class RecursiveDate extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+     * Cron expression describing the recurrence interval.
      *
      * Generated from protobuf field <code>string schedule = 1;</code>
      */
     protected $schedule = '';
     /**
-     * State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
-     * Eg. Given schedule is \@monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+     * Adjusts the date forward or backward relative to the recurrence.
      *
      * Generated from protobuf field <code>.io.TimeState state = 2;</code>
      */
@@ -37,10 +36,9 @@ class RecursiveDate extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $schedule
-     *           Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+     *           Cron expression describing the recurrence interval.
      *     @type int $state
-     *           State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
-     *           Eg. Given schedule is \@monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+     *           Adjusts the date forward or backward relative to the recurrence.
      * }
      */
     public function __construct($data = NULL) {
@@ -49,7 +47,7 @@ class RecursiveDate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+     * Cron expression describing the recurrence interval.
      *
      * Generated from protobuf field <code>string schedule = 1;</code>
      * @return string
@@ -60,7 +58,7 @@ class RecursiveDate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+     * Cron expression describing the recurrence interval.
      *
      * Generated from protobuf field <code>string schedule = 1;</code>
      * @param string $var
@@ -75,8 +73,7 @@ class RecursiveDate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
-     * Eg. Given schedule is \@monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+     * Adjusts the date forward or backward relative to the recurrence.
      *
      * Generated from protobuf field <code>.io.TimeState state = 2;</code>
      * @return int
@@ -87,8 +84,7 @@ class RecursiveDate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
-     * Eg. Given schedule is \@monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+     * Adjusts the date forward or backward relative to the recurrence.
      *
      * Generated from protobuf field <code>.io.TimeState state = 2;</code>
      * @param int $var

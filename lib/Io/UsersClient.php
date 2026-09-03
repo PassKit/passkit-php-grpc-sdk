@@ -17,10 +17,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a user and issues a verification email. Required Fields: email, password, name, companyName.
      * @param \Io\NewUser $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\NewUserResponse>
      */
     public function createUser(\Io\NewUser $argument,
       $metadata = [], $options = []) {
@@ -31,10 +32,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a new user and returns a JWT token. Required Fields: email, password, name, companyName.
      * @param \Io\NewUser $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\JWT>
      */
     public function newUser(\Io\NewUser $argument,
       $metadata = [], $options = []) {
@@ -45,10 +47,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Verifies the user with the email verification code. Required Fields: code.
      * @param \Io\VerifyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Boolean>
      */
     public function verify(\Io\VerifyRequest $argument,
       $metadata = [], $options = []) {
@@ -59,10 +62,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Resends the verification email.
      * @param \Google\Protobuf\GPBEmpty $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Boolean>
      */
     public function resendVerificationEmail(\Google\Protobuf\GPBEmpty $argument,
       $metadata = [], $options = []) {
@@ -73,10 +77,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves the authenticated user's profile.
      * @param \Google\Protobuf\GPBEmpty $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\GetUserResponse>
      */
     public function getUser(\Google\Protobuf\GPBEmpty $argument,
       $metadata = [], $options = []) {
@@ -87,10 +92,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Authenticates the user and returns a JWT token. Required Fields: username, password.
      * @param \Io\Credentials $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\JWT>
      */
     public function login(\Io\Credentials $argument,
       $metadata = [], $options = []) {
@@ -101,10 +107,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Returns the barcode image URL for 2FA setup.
      * @param \Google\Protobuf\GPBEmpty $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Url>
      */
     public function get2faBarcode(\Google\Protobuf\GPBEmpty $argument,
       $metadata = [], $options = []) {
@@ -115,10 +122,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Resets the user's password if a reset code is already obtained. Required Fields: username, password, code.
      * @param \Io\Credentials $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function resetPassword(\Io\Credentials $argument,
       $metadata = [], $options = []) {
@@ -129,10 +137,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Sends a password reset link to the user's email. Required Fields: username.
      * @param \Io\Username $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function sendPasswordResetLink(\Io\Username $argument,
       $metadata = [], $options = []) {
@@ -143,10 +152,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Changes the user's password using a reset token. Required Fields: token, password.
      * @param \Io\PasswordResetInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function changePassword(\Io\PasswordResetInput $argument,
       $metadata = [], $options = []) {
@@ -157,10 +167,26 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Changes the currently authenticated user's password. Requires a valid auth token and the current password. Required Fields: currentPassword, newPassword, confirmNewPassword.
+     * @param \Io\ChangeOwnPasswordInput $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Io\JWT>
+     */
+    public function changeOwnPassword(\Io\ChangeOwnPasswordInput $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/io.Users/changeOwnPassword',
+        $argument,
+        ['\Io\JWT', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * Initiates email change. Verification email is sent to new address. Required Fields: email.
      * @param \Io\Email $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function changeEmail(\Io\Email $argument,
       $metadata = [], $options = []) {
@@ -171,10 +197,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Confirms and finalizes the email change. Required Fields: email, code.
      * @param \Io\ConfirmEmailChangeInput $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function confirmEmailChange(\Io\ConfirmEmailChangeInput $argument,
       $metadata = [], $options = []) {
@@ -185,10 +212,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates the company name associated with the account. Required Fields: name.
      * @param \Io\CompanyName $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function updateCompanyName(\Io\CompanyName $argument,
       $metadata = [], $options = []) {
@@ -199,6 +227,7 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED] Retrieves user’s projects using pagination. Required Fields: pagination.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -213,6 +242,7 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * [DEPRECATED] Retrieves all company projects using pagination. Required Fields: pagination.
      * @param \Io\Pagination $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -227,6 +257,7 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves user’s projects using filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -241,6 +272,7 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves all company projects using filters. Required Fields: filters.
      * @param \Io\Filters $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -255,10 +287,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a project by its UUID. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Project>
      */
     public function getProjectByUuid(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -269,10 +302,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a project and template using short code. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\ProjectByShortCodeResult>
      */
     public function getProjectAndTemplateByShortCode(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -283,6 +317,7 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves projects belonging to a user by status. Required Fields: status.
      * @param \Io\ProjectStatusFilter $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -297,6 +332,7 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves all company projects by status. Required Fields: status.
      * @param \Io\ProjectStatusFilter $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -311,10 +347,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves the scanner configuration for the user.
      * @param \Google\Protobuf\GPBEmpty $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\ScannerConfiguration>
      */
     public function getScannerConfig(\Google\Protobuf\GPBEmpty $argument,
       $metadata = [], $options = []) {
@@ -325,10 +362,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a new scanner configuration. Required Fields: ScannerConfiguration fields.
      * @param \Io\ScannerConfiguration $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function createScannerConfig(\Io\ScannerConfiguration $argument,
       $metadata = [], $options = []) {
@@ -339,10 +377,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates the existing scanner configuration. Required Fields: ScannerConfiguration fields.
      * @param \Io\ScannerConfiguration $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\ScannerConfiguration>
      */
     public function updateScannerConfig(\Io\ScannerConfiguration $argument,
       $metadata = [], $options = []) {
@@ -357,7 +396,7 @@ class UsersClient extends \Grpc\BaseStub {
      * @param \Io\OAuth2AuthorizationRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createAuthorizationResource(\Io\OAuth2AuthorizationRequest $argument,
       $metadata = [], $options = []) {
@@ -368,10 +407,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes an OAuth2 authorization resource. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteAuthorizationResource(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -382,10 +422,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Refreshes the API secret key for the current user.
      * @param \Google\Protobuf\GPBEmpty $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function refreshApiSecret(\Google\Protobuf\GPBEmpty $argument,
       $metadata = [], $options = []) {
@@ -396,10 +437,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Permanently deletes the user's account and all associated data. Required Fields: password.
      * @param \Io\DeleteAccountRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteAccount(\Io\DeleteAccountRequest $argument,
       $metadata = [], $options = []) {
@@ -410,10 +452,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Immediately revokes any old gRPC credentials.
      * @param \Google\Protobuf\GPBEmpty $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function revokeLegacyCredentials(\Google\Protobuf\GPBEmpty $argument,
       $metadata = [], $options = []) {
@@ -424,11 +467,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
-     * Team Members
+     * Creates a new sub-user account for the company. Required Fields: email, name, password.
      * @param \Io\NewTeamMember $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createTeamMember(\Io\NewTeamMember $argument,
       $metadata = [], $options = []) {
@@ -439,10 +482,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Assigns permissions to a new team member. Required Fields: userId, permissions.
      * @param \Io\TeamMemberPermissions $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\Id>
      */
     public function createPermissionsForTeamMember(\Io\TeamMemberPermissions $argument,
       $metadata = [], $options = []) {
@@ -453,10 +497,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates the entire permissions object for a team member. Required Fields: userId, permissions.
      * @param \Io\TeamMemberPermissions $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\TeamMemberPermissions>
      */
     public function updateTeamMemberPermissions(\Io\TeamMemberPermissions $argument,
       $metadata = [], $options = []) {
@@ -467,10 +512,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates partial permissions for a team member. Required Fields: userId, permissions.
      * @param \Io\TeamMemberPermissions $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\TeamMemberPermissions>
      */
     public function patchTeamMemberPermissions(\Io\TeamMemberPermissions $argument,
       $metadata = [], $options = []) {
@@ -481,10 +527,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a team member by ID. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Io\GetTeamMemberResponse>
      */
     public function getTeamMember(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -495,6 +542,7 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves all team members.
      * @param \Google\Protobuf\GPBEmpty $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -509,10 +557,11 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a team member. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteTeamMember(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -523,6 +572,7 @@ class UsersClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves access logs for a company or user. Required Fields: protocol, classId, userId, dateRange.
      * @param \Io\AuditLogRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

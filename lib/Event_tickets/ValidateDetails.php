@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Holds details of how a ticket was validated. Includes timestamps and optional metadata. Required fields: none.
+ *
  * Generated from protobuf message <code>event_tickets.ValidateDetails</code>
  */
 class ValidateDetails extends \Google\Protobuf\Internal\Message

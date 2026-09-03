@@ -6,15 +6,19 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request to send a message to specific passes or a whole protocol.
+ *
  * Generated from protobuf message <code>io.SendMessageRequest</code>
  */
 class SendMessageRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The ID of the message to send.
+     *
      * Generated from protobuf field <code>string messageId = 1;</code>
      */
     protected $messageId = '';
@@ -27,6 +31,7 @@ class SendMessageRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $messageId
+     *           The ID of the message to send.
      *     @type \Io\PassIds $passIds
      *     @type \Io\Protocol $protocol
      * }
@@ -37,6 +42,8 @@ class SendMessageRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The ID of the message to send.
+     *
      * Generated from protobuf field <code>string messageId = 1;</code>
      * @return string
      */
@@ -46,6 +53,8 @@ class SendMessageRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The ID of the message to send.
+     *
      * Generated from protobuf field <code>string messageId = 1;</code>
      * @param string $var
      * @return $this

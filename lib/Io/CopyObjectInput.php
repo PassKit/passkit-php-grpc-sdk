@@ -6,19 +6,25 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request message for copying an existing object (e.g., template or project).
+ *
  * Generated from protobuf message <code>io.CopyObjectInput</code>
  */
 class CopyObjectInput extends \Google\Protobuf\Internal\Message
 {
     /**
+     * The ID of the object to copy.
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      */
     protected $id = '';
     /**
+     * Optional new name to assign to the copied object.
+     *
      * Generated from protobuf field <code>string newName = 2;</code>
      */
     protected $newName = '';
@@ -30,7 +36,9 @@ class CopyObjectInput extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
+     *           The ID of the object to copy.
      *     @type string $newName
+     *           Optional new name to assign to the copied object.
      * }
      */
     public function __construct($data = NULL) {
@@ -39,6 +47,8 @@ class CopyObjectInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The ID of the object to copy.
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @return string
      */
@@ -48,6 +58,8 @@ class CopyObjectInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The ID of the object to copy.
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @param string $var
      * @return $this
@@ -61,6 +73,8 @@ class CopyObjectInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional new name to assign to the copied object.
+     *
      * Generated from protobuf field <code>string newName = 2;</code>
      * @return string
      */
@@ -70,6 +84,8 @@ class CopyObjectInput extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional new name to assign to the copied object.
+     *
      * Generated from protobuf field <code>string newName = 2;</code>
      * @param string $var
      * @return $this

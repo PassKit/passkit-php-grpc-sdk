@@ -8,7 +8,7 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
- * Used to specify the type of link for link field. Each type has different icon on Google Pay.
+ * Used to specify the type of link for link field. Each type has a different icon in Google Wallet.
  *
  * Protobuf type <code>io.LinkType</code>
  */

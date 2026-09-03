@@ -6,11 +6,11 @@
 namespace Members;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Contains an array of programs.
+ * Response containing a list of programs.
  *
  * Generated from protobuf message <code>members.ListProgramsResponse</code>
  */
@@ -29,7 +29,7 @@ class ListProgramsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Members\Program>|\Google\Protobuf\Internal\RepeatedField $programs
+     *     @type \Members\Program[] $programs
      *           An array of programs.
      * }
      */
@@ -42,7 +42,7 @@ class ListProgramsResponse extends \Google\Protobuf\Internal\Message
      * An array of programs.
      *
      * Generated from protobuf field <code>repeated .members.Program programs = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Members\Program>
      */
     public function getPrograms()
     {
@@ -53,7 +53,7 @@ class ListProgramsResponse extends \Google\Protobuf\Internal\Message
      * An array of programs.
      *
      * Generated from protobuf field <code>repeated .members.Program programs = 1;</code>
-     * @param array<\Members\Program>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Members\Program[] $var
      * @return $this
      */
     public function setPrograms($var)

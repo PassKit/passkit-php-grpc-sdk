@@ -6,16 +6,18 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a scheduled showing of a Production at a specific venue and time.
+ *
  * Generated from protobuf message <code>event_tickets.Event</code>
  */
 class Event extends \Google\Protobuf\Internal\Message
 {
     /**
-     * PassKit generated event id (22 characters). No writable.
+     * PassKit generated event id (22 characters). Not writable.
      *
      * Generated from protobuf field <code>string id = 1;</code>
      */
@@ -57,7 +59,7 @@ class Event extends \Google\Protobuf\Internal\Message
      */
     protected $endDate = null;
     /**
-     * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Pay will always notify the user 3 hours before the event start date that they have an upcoming event.
+     * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Wallet notifies the user three hours before the event start date that they have an upcoming event.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp relevantDate = 8;</code>
      */
@@ -106,7 +108,7 @@ class Event extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
-     *           PassKit generated event id (22 characters). No writable.
+     *           PassKit generated event id (22 characters). Not writable.
      *     @type \Event_tickets\Production $production
      *           The production that the event belongs to. In case of a create, only the production id needs to be provided.
      *     @type \Event_tickets\Venue $venue
@@ -120,12 +122,12 @@ class Event extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $endDate
      *           The date/time when the event ends. If the event spans multiple days, it should be the end date/time on the last day.
      *     @type \Google\Protobuf\Timestamp $relevantDate
-     *           Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Pay will always notify the user 3 hours before the event start date that they have an upcoming event.
+     *           Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Wallet notifies the user three hours before the event start date that they have an upcoming event.
      *     @type \Io\Quota $quota
      *           The quota for the event. If set to 0, then it is unlimited. If the quota is reached no new tickets can be issued.
      *     @type \Io\Metrics $metrics
      *           Performance analytics for the event. Not writable.
-     *     @type array<\Event_tickets\EventHours>|\Google\Protobuf\Internal\RepeatedField $relevantDates
+     *     @type \Event_tickets\EventHours[] $relevantDates
      *           Event hours are for multi-day events for Apple poster style tickets. Each time period can be a maximum of 24 hours.
      *     @type \Io\EventSemanticTags $semanticTags
      *           Semantic Tags are used mainly by Apple poster event tickets to create a rich event guide on the back side of the pass.
@@ -141,7 +143,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * PassKit generated event id (22 characters). No writable.
+     * PassKit generated event id (22 characters). Not writable.
      *
      * Generated from protobuf field <code>string id = 1;</code>
      * @return string
@@ -152,7 +154,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * PassKit generated event id (22 characters). No writable.
+     * PassKit generated event id (22 characters). Not writable.
      *
      * Generated from protobuf field <code>string id = 1;</code>
      * @param string $var
@@ -383,7 +385,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Pay will always notify the user 3 hours before the event start date that they have an upcoming event.
+     * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Wallet notifies the user three hours before the event start date that they have an upcoming event.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp relevantDate = 8;</code>
      * @return \Google\Protobuf\Timestamp|null
@@ -404,7 +406,7 @@ class Event extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Pay will always notify the user 3 hours before the event start date that they have an upcoming event.
+     * Optional relevant date for when the event starts. Used by Apple Wallet to trigger a lock-screen notification that there is an event coming up. Google Wallet notifies the user three hours before the event start date that they have an upcoming event.
      *
      * Generated from protobuf field <code>.google.protobuf.Timestamp relevantDate = 8;</code>
      * @param \Google\Protobuf\Timestamp $var
@@ -494,7 +496,7 @@ class Event extends \Google\Protobuf\Internal\Message
      * Event hours are for multi-day events for Apple poster style tickets. Each time period can be a maximum of 24 hours.
      *
      * Generated from protobuf field <code>repeated .event_tickets.EventHours relevantDates = 13;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Event_tickets\EventHours>
      */
     public function getRelevantDates()
     {
@@ -505,7 +507,7 @@ class Event extends \Google\Protobuf\Internal\Message
      * Event hours are for multi-day events for Apple poster style tickets. Each time period can be a maximum of 24 hours.
      *
      * Generated from protobuf field <code>repeated .event_tickets.EventHours relevantDates = 13;</code>
-     * @param array<\Event_tickets\EventHours>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Event_tickets\EventHours[] $var
      * @return $this
      */
     public function setRelevantDates($var)

@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Location metadata, typically collected when a pass is issued.
+ *
  * Generated from protobuf message <code>io.MetaLocation</code>
  */
 class MetaLocation extends \Google\Protobuf\Internal\Message

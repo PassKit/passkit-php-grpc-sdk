@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * PassOverrides contains optional pass-object level details. Overrides any template level values.
@@ -58,6 +58,12 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated uint64 appStoreIdentifiers = 8;</code>
      */
     private $appStoreIdentifiers;
+    /**
+     * Apple Wallet featured actions displayed prominently on supported passes. Ordered by priority and limited to two actions.
+     *
+     * Generated from protobuf field <code>repeated .io.FeaturedAction featuredActions = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     */
+    private $featuredActions;
 
     /**
      * Constructor.
@@ -67,18 +73,20 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      *
      *     @type \Io\ImageIds $imageIds
      *           Image ID's of images to override for this pass.
-     *     @type array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $locations
+     *     @type \Io\GPSLocation[] $locations
      *           A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
-     *     @type array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $beacons
+     *     @type \Io\Beacon[] $beacons
      *           A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
-     *     @type array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $links
+     *     @type \Io\Link[] $links
      *           A list of (personalized) links to be shown on the pass.
      *     @type \Io\Colors $colors
      *           Stores custom pass colors.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $associatedStoreIdentifiers
+     *     @type int[] $associatedStoreIdentifiers
      *           Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
-     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $appStoreIdentifiers
+     *     @type int[]|string[] $appStoreIdentifiers
      *           A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     *     @type \Io\FeaturedAction[] $featuredActions
+     *           Apple Wallet featured actions displayed prominently on supported passes. Ordered by priority and limited to two actions.
      * }
      */
     public function __construct($data = NULL) {
@@ -126,7 +134,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\GPSLocation>
      */
     public function getLocations()
     {
@@ -137,7 +145,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\GPSLocation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\GPSLocation[] $var
      * @return $this
      */
     public function setLocations($var)
@@ -152,7 +160,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\Beacon>
      */
     public function getBeacons()
     {
@@ -163,7 +171,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      *
      * Generated from protobuf field <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\Beacon>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\Beacon[] $var
      * @return $this
      */
     public function setBeacons($var)
@@ -178,7 +186,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * A list of (personalized) links to be shown on the pass.
      *
      * Generated from protobuf field <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\Link>
      */
     public function getLinks()
     {
@@ -189,7 +197,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * A list of (personalized) links to be shown on the pass.
      *
      * Generated from protobuf field <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
-     * @param array<\Io\Link>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\Link[] $var
      * @return $this
      */
     public function setLinks($var)
@@ -240,7 +248,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getAssociatedStoreIdentifiers()
     {
@@ -251,7 +259,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setAssociatedStoreIdentifiers($var)
@@ -266,7 +274,7 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint64 appStoreIdentifiers = 8;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>|RepeatedField<string>
      */
     public function getAppStoreIdentifiers()
     {
@@ -277,13 +285,39 @@ class PassOverrides extends \Google\Protobuf\Internal\Message
      * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      *
      * Generated from protobuf field <code>repeated uint64 appStoreIdentifiers = 8;</code>
-     * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[]|string[] $var
      * @return $this
      */
     public function setAppStoreIdentifiers($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::UINT64);
         $this->appStoreIdentifiers = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Apple Wallet featured actions displayed prominently on supported passes. Ordered by priority and limited to two actions.
+     *
+     * Generated from protobuf field <code>repeated .io.FeaturedAction featuredActions = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return RepeatedField<\Io\FeaturedAction>
+     */
+    public function getFeaturedActions()
+    {
+        return $this->featuredActions;
+    }
+
+    /**
+     * Apple Wallet featured actions displayed prominently on supported passes. Ordered by priority and limited to two actions.
+     *
+     * Generated from protobuf field <code>repeated .io.FeaturedAction featuredActions = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @param \Io\FeaturedAction[] $var
+     * @return $this
+     */
+    public function setFeaturedActions($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Io\FeaturedAction::class);
+        $this->featuredActions = $arr;
 
         return $this;
     }

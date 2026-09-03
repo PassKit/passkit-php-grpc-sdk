@@ -6,8 +6,8 @@
 namespace Flights;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Used to request a digital boarding pass by ticket number, index, PassKit ID or PNR.
@@ -34,7 +34,7 @@ class BoardingPassRequest extends \Google\Protobuf\Internal\Message
      *     @type \Flights\BoardingPassRecordRequestByIndex $index
      *     @type \Flights\BoardingPassesForBookingRequest $pnr
      *     @type \Io\Id $passId
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $format
+     *     @type int[] $format
      *           Optional. If omitted, return the URL to the web pass landing page. Not used when getting or deleting the underlying boarding pass record.
      * }
      */
@@ -155,7 +155,7 @@ class BoardingPassRequest extends \Google\Protobuf\Internal\Message
      * Optional. If omitted, return the URL to the web pass landing page. Not used when getting or deleting the underlying boarding pass record.
      *
      * Generated from protobuf field <code>repeated .io.PassBundleFormat format = 5;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getFormat()
     {
@@ -166,7 +166,7 @@ class BoardingPassRequest extends \Google\Protobuf\Internal\Message
      * Optional. If omitted, return the URL to the web pass landing page. Not used when getting or deleting the underlying boarding pass record.
      *
      * Generated from protobuf field <code>repeated .io.PassBundleFormat format = 5;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setFormat($var)

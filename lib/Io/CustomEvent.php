@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a custom Facebook Pixel event.
+ *
  * Generated from protobuf message <code>io.CustomEvent</code>
  */
 class CustomEvent extends \Google\Protobuf\Internal\Message

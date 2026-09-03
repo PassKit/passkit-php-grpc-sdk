@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Contains the result of a ticket validation including full ticket details. Required fields: none.
+ *
  * Generated from protobuf message <code>event_tickets.ValidateTicketResponse</code>
  */
 class ValidateTicketResponse extends \Google\Protobuf\Internal\Message

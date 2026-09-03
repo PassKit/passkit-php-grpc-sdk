@@ -6,8 +6,8 @@
 namespace Flights;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Details of infant under 2 years not occupying a seat.
@@ -47,13 +47,13 @@ class Infant extends \Google\Protobuf\Internal\Message
      */
     protected $barcodeAdditionalData = '';
     /**
-     * Security image id for display above the barcode on a Google Pay pass.
+     * Security image ID for display above the barcode on a Google Wallet pass.
      *
      * Generated from protobuf field <code>string securityImage = 6;</code>
      */
     protected $securityImage = '';
     /**
-     * Privilege image id for display above the barcode on a Google Pay pass.
+     * Privilege image ID for display above the barcode on a Google Wallet pass.
      *
      * Generated from protobuf field <code>string privilegeImage = 7;</code>
      */
@@ -64,6 +64,36 @@ class Infant extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string footerImage = 8;</code>
      */
     protected $footerImage = '';
+    /**
+     * An array of SSR codes. Codes should be 4 capitalized letters.
+     *
+     * Generated from protobuf field <code>repeated string ssrCodes = 9;</code>
+     */
+    private $ssrCodes;
+    /**
+     * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
+     *
+     * Generated from protobuf field <code>repeated .flights.PassengerCapabilities capabilities = 10;</code>
+     */
+    private $capabilities;
+    /**
+     * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
+     *
+     * Generated from protobuf field <code>repeated .flights.AirportSecurityPrograms securityPrograms = 11;</code>
+     */
+    private $securityPrograms;
+    /**
+     * 3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K. Infant baggage defaults to zero unless overwritten here.
+     *
+     * Generated from protobuf field <code>string freeBaggageAllowance = 12 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     */
+    protected $freeBaggageAllowance = '';
+    /**
+     * 3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K. Infant baggage defaults to zero unless overwritten here.
+     *
+     * Generated from protobuf field <code>string carryOnAllowance = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     */
+    protected $carryOnAllowance = '';
 
     /**
      * Constructor.
@@ -82,11 +112,21 @@ class Infant extends \Google\Protobuf\Internal\Message
      *     @type string $barcodeAdditionalData
      *           Optional additional barcode data. If PassKit are generating barcodes, airline use data (IATA item 4) to be included in the infant barcode.
      *     @type string $securityImage
-     *           Security image id for display above the barcode on a Google Pay pass.
+     *           Security image ID for display above the barcode on a Google Wallet pass.
      *     @type string $privilegeImage
-     *           Privilege image id for display above the barcode on a Google Pay pass.
+     *           Privilege image ID for display above the barcode on a Google Wallet pass.
      *     @type string $footerImage
      *           Footer image id for display above the barcode on iOS devices.
+     *     @type string[] $ssrCodes
+     *           An array of SSR codes. Codes should be 4 capitalized letters.
+     *     @type int[] $capabilities
+     *           Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
+     *     @type int[] $securityPrograms
+     *           Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
+     *     @type string $freeBaggageAllowance
+     *           3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K. Infant baggage defaults to zero unless overwritten here.
+     *     @type string $carryOnAllowance
+     *           3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K. Infant baggage defaults to zero unless overwritten here.
      * }
      */
     public function __construct($data = NULL) {
@@ -255,7 +295,7 @@ class Infant extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Security image id for display above the barcode on a Google Pay pass.
+     * Security image ID for display above the barcode on a Google Wallet pass.
      *
      * Generated from protobuf field <code>string securityImage = 6;</code>
      * @return string
@@ -266,7 +306,7 @@ class Infant extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Security image id for display above the barcode on a Google Pay pass.
+     * Security image ID for display above the barcode on a Google Wallet pass.
      *
      * Generated from protobuf field <code>string securityImage = 6;</code>
      * @param string $var
@@ -281,7 +321,7 @@ class Infant extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Privilege image id for display above the barcode on a Google Pay pass.
+     * Privilege image ID for display above the barcode on a Google Wallet pass.
      *
      * Generated from protobuf field <code>string privilegeImage = 7;</code>
      * @return string
@@ -292,7 +332,7 @@ class Infant extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Privilege image id for display above the barcode on a Google Pay pass.
+     * Privilege image ID for display above the barcode on a Google Wallet pass.
      *
      * Generated from protobuf field <code>string privilegeImage = 7;</code>
      * @param string $var
@@ -328,6 +368,136 @@ class Infant extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->footerImage = $var;
+
+        return $this;
+    }
+
+    /**
+     * An array of SSR codes. Codes should be 4 capitalized letters.
+     *
+     * Generated from protobuf field <code>repeated string ssrCodes = 9;</code>
+     * @return RepeatedField<string>
+     */
+    public function getSsrCodes()
+    {
+        return $this->ssrCodes;
+    }
+
+    /**
+     * An array of SSR codes. Codes should be 4 capitalized letters.
+     *
+     * Generated from protobuf field <code>repeated string ssrCodes = 9;</code>
+     * @param string[] $var
+     * @return $this
+     */
+    public function setSsrCodes($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->ssrCodes = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
+     *
+     * Generated from protobuf field <code>repeated .flights.PassengerCapabilities capabilities = 10;</code>
+     * @return RepeatedField<int>
+     */
+    public function getCapabilities()
+    {
+        return $this->capabilities;
+    }
+
+    /**
+     * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
+     *
+     * Generated from protobuf field <code>repeated .flights.PassengerCapabilities capabilities = 10;</code>
+     * @param int[] $var
+     * @return $this
+     */
+    public function setCapabilities($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Flights\PassengerCapabilities::class);
+        $this->capabilities = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
+     *
+     * Generated from protobuf field <code>repeated .flights.AirportSecurityPrograms securityPrograms = 11;</code>
+     * @return RepeatedField<int>
+     */
+    public function getSecurityPrograms()
+    {
+        return $this->securityPrograms;
+    }
+
+    /**
+     * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
+     *
+     * Generated from protobuf field <code>repeated .flights.AirportSecurityPrograms securityPrograms = 11;</code>
+     * @param int[] $var
+     * @return $this
+     */
+    public function setSecurityPrograms($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::ENUM, \Flights\AirportSecurityPrograms::class);
+        $this->securityPrograms = $arr;
+
+        return $this;
+    }
+
+    /**
+     * 3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K. Infant baggage defaults to zero unless overwritten here.
+     *
+     * Generated from protobuf field <code>string freeBaggageAllowance = 12 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return string
+     */
+    public function getFreeBaggageAllowance()
+    {
+        return $this->freeBaggageAllowance;
+    }
+
+    /**
+     * 3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K. Infant baggage defaults to zero unless overwritten here.
+     *
+     * Generated from protobuf field <code>string freeBaggageAllowance = 12 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setFreeBaggageAllowance($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->freeBaggageAllowance = $var;
+
+        return $this;
+    }
+
+    /**
+     * 3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K. Infant baggage defaults to zero unless overwritten here.
+     *
+     * Generated from protobuf field <code>string carryOnAllowance = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @return string
+     */
+    public function getCarryOnAllowance()
+    {
+        return $this->carryOnAllowance;
+    }
+
+    /**
+     * 3 character string comprising the quantity, followed by the unit code (PC - piece, IT - items, L - lbs, K - kgs). E.g. 2PC, 20K. Infant baggage defaults to zero unless overwritten here.
+     *
+     * Generated from protobuf field <code>string carryOnAllowance = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCarryOnAllowance($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->carryOnAllowance = $var;
 
         return $this;
     }

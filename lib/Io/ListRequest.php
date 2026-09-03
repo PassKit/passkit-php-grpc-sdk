@@ -6,23 +6,31 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Used for filtering and listing records (recommended over deprecated version).
+ *
  * Generated from protobuf message <code>io.ListRequest</code>
  */
 class ListRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Unique class ID (e.g. program or object ID).
+     *
      * Generated from protobuf field <code>string classId = 1;</code>
      */
     protected $classId = '';
     /**
+     * Optional protocol to filter by.
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 2;</code>
      */
     protected $protocol = 0;
     /**
+     * Optional filter criteria.
+     *
      * Generated from protobuf field <code>.io.Filters filters = 3;</code>
      */
     protected $filters = null;
@@ -34,8 +42,11 @@ class ListRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $classId
+     *           Unique class ID (e.g. program or object ID).
      *     @type int $protocol
+     *           Optional protocol to filter by.
      *     @type \Io\Filters $filters
+     *           Optional filter criteria.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,6 +55,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Unique class ID (e.g. program or object ID).
+     *
      * Generated from protobuf field <code>string classId = 1;</code>
      * @return string
      */
@@ -53,6 +66,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Unique class ID (e.g. program or object ID).
+     *
      * Generated from protobuf field <code>string classId = 1;</code>
      * @param string $var
      * @return $this
@@ -66,6 +81,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional protocol to filter by.
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 2;</code>
      * @return int
      */
@@ -75,6 +92,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional protocol to filter by.
+     *
      * Generated from protobuf field <code>.io.PassProtocol protocol = 2;</code>
      * @param int $var
      * @return $this
@@ -88,6 +107,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional filter criteria.
+     *
      * Generated from protobuf field <code>.io.Filters filters = 3;</code>
      * @return \Io\Filters|null
      */
@@ -107,6 +128,8 @@ class ListRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Optional filter criteria.
+     *
      * Generated from protobuf field <code>.io.Filters filters = 3;</code>
      * @param \Io\Filters $var
      * @return $this

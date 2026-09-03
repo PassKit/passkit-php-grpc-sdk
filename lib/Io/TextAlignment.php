@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum specifying text alignment options.
+ *
  * Protobuf type <code>io.TextAlignment</code>
  */
 class TextAlignment
@@ -17,19 +19,25 @@ class TextAlignment
      */
     const TEXT_ALIGNMENT_DO_NOT_USE = 0;
     /**
+     * Left-align the text.
+     *
      * Generated from protobuf enum <code>LEFT = 1;</code>
      */
     const LEFT = 1;
     /**
+     * Center-align the text.
+     *
      * Generated from protobuf enum <code>CENTER = 2;</code>
      */
     const CENTER = 2;
     /**
+     * Right-align the text.
+     *
      * Generated from protobuf enum <code>RIGHT = 3;</code>
      */
     const RIGHT = 3;
     /**
-     * Used for Apple only.
+     * Use the system's natural text alignment (used by Apple Wallet).
      *
      * Generated from protobuf enum <code>NATURAL = 4;</code>
      */

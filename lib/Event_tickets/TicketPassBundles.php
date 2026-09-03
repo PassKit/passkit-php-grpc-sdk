@@ -6,10 +6,12 @@
 namespace Event_tickets;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Contains an array of PassKit pass bundles. Required fields: none.
+ *
  * Generated from protobuf message <code>event_tickets.TicketPassBundles</code>
  */
 class TicketPassBundles extends \Google\Protobuf\Internal\Message
@@ -27,7 +29,7 @@ class TicketPassBundles extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Io\PassBundle>|\Google\Protobuf\Internal\RepeatedField $tickets
+     *     @type \Io\PassBundle[] $tickets
      *           An array of tickets.
      * }
      */
@@ -40,7 +42,7 @@ class TicketPassBundles extends \Google\Protobuf\Internal\Message
      * An array of tickets.
      *
      * Generated from protobuf field <code>repeated .io.PassBundle tickets = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\PassBundle>
      */
     public function getTickets()
     {
@@ -51,7 +53,7 @@ class TicketPassBundles extends \Google\Protobuf\Internal\Message
      * An array of tickets.
      *
      * Generated from protobuf field <code>repeated .io.PassBundle tickets = 1;</code>
-     * @param array<\Io\PassBundle>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\PassBundle[] $var
      * @return $this
      */
     public function setTickets($var)

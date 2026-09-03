@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Used to generate SmartPass links via a project distribution URL.
+ *
  * Generated from protobuf message <code>io.SmartPassLinkRequest</code>
  */
 class SmartPassLinkRequest extends \Google\Protobuf\Internal\Message

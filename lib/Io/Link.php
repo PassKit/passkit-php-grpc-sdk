@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Used to specify links put on the back of the pass.
@@ -41,7 +41,7 @@ class Link extends \Google\Protobuf\Internal\Message
      */
     protected $type = 0;
     /**
-     * This customises link text for different languages. Ignored by Google Pay passes.
+     * This customises link text for different languages. Ignored by Google Wallet passes.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedLink = 5;</code>
      */
@@ -80,10 +80,10 @@ class Link extends \Google\Protobuf\Internal\Message
      *     @type int $type
      *           Type of link data.
      *     @type \Io\LocalizedString $localizedLink
-     *           This customises link text for different languages. Ignored by Google Pay passes.
+     *           This customises link text for different languages. Ignored by Google Wallet passes.
      *     @type \Io\LocalizedString $localizedTitle
      *           This translates link title in different languages.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $usage
+     *     @type int[] $usage
      *           Indicates which wallets the link should be rendered for (this allows to hide certain link on Apple Wallet, and vise versa).
      *     @type int $position
      *           Links will be rendered in order of their position, from lowest to highest. Position can be any value, E.g. 3 links with positions 30, 10, 20 would render 10 first, 20 second and 30 third.  If no position is provided, the order of the links cannot be guaranteed.
@@ -199,7 +199,7 @@ class Link extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * This customises link text for different languages. Ignored by Google Pay passes.
+     * This customises link text for different languages. Ignored by Google Wallet passes.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedLink = 5;</code>
      * @return \Io\LocalizedString|null
@@ -220,7 +220,7 @@ class Link extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * This customises link text for different languages. Ignored by Google Pay passes.
+     * This customises link text for different languages. Ignored by Google Wallet passes.
      *
      * Generated from protobuf field <code>.io.LocalizedString localizedLink = 5;</code>
      * @param \Io\LocalizedString $var
@@ -274,7 +274,7 @@ class Link extends \Google\Protobuf\Internal\Message
      * Indicates which wallets the link should be rendered for (this allows to hide certain link on Apple Wallet, and vise versa).
      *
      * Generated from protobuf field <code>repeated .io.UsageType usage = 7;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getUsage()
     {
@@ -285,7 +285,7 @@ class Link extends \Google\Protobuf\Internal\Message
      * Indicates which wallets the link should be rendered for (this allows to hide certain link on Apple Wallet, and vise versa).
      *
      * Generated from protobuf field <code>repeated .io.UsageType usage = 7;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setUsage($var)

@@ -6,10 +6,12 @@
 namespace Single_use_coupons;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Settings for displaying a fixed redemption code to the customer.
+ *
  * Generated from protobuf message <code>single_use_coupons.CustomerInitiatedFixedCodeSettings</code>
  */
 class CustomerInitiatedFixedCodeSettings extends \Google\Protobuf\Internal\Message

@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Upload a CSV file for bulk SmartPass link generation.
+ *
  * Generated from protobuf message <code>io.SmartPassCsvUploadRequest</code>
  */
 class SmartPassCsvUploadRequest extends \Google\Protobuf\Internal\Message
@@ -21,6 +23,8 @@ class SmartPassCsvUploadRequest extends \Google\Protobuf\Internal\Message
      */
     protected $distributionUrl = '';
     /**
+     * Raw CSV data containing personalisation fields.
+     *
      * Generated from protobuf field <code>string csvContent = 2;</code>
      */
     protected $csvContent = '';
@@ -34,6 +38,7 @@ class SmartPassCsvUploadRequest extends \Google\Protobuf\Internal\Message
      *     @type string $distributionUrl
      *           Url used to prefix the smartpass link. Also includes the short code needed to lookup the parent project.
      *     @type string $csvContent
+     *           Raw CSV data containing personalisation fields.
      * }
      */
     public function __construct($data = NULL) {
@@ -68,6 +73,8 @@ class SmartPassCsvUploadRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Raw CSV data containing personalisation fields.
+     *
      * Generated from protobuf field <code>string csvContent = 2;</code>
      * @return string
      */
@@ -77,6 +84,8 @@ class SmartPassCsvUploadRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Raw CSV data containing personalisation fields.
+     *
      * Generated from protobuf field <code>string csvContent = 2;</code>
      * @param string $var
      * @return $this

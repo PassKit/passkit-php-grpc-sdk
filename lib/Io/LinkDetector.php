@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum defining what kind of links should be automatically detected.
+ *
  * Protobuf type <code>io.LinkDetector</code>
  */
 class LinkDetector
@@ -17,18 +19,26 @@ class LinkDetector
      */
     const LINK_DETECTOR_DO_NOT_USE = 0;
     /**
+     * Detect physical addresses.
+     *
      * Generated from protobuf enum <code>LINK_DETECTOR_ADDRESS = 1;</code>
      */
     const LINK_DETECTOR_ADDRESS = 1;
     /**
+     * Detect dates and times.
+     *
      * Generated from protobuf enum <code>LINK_DETECTOR_DATE = 2;</code>
      */
     const LINK_DETECTOR_DATE = 2;
     /**
+     * Detect URLs.
+     *
      * Generated from protobuf enum <code>LINK_DETECTOR_URL = 3;</code>
      */
     const LINK_DETECTOR_URL = 3;
     /**
+     * Detect phone numbers.
+     *
      * Generated from protobuf enum <code>LINK_DETECTOR_PHONE = 4;</code>
      */
     const LINK_DETECTOR_PHONE = 4;

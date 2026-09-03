@@ -6,15 +6,19 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Used to request or identify a specific Pass Type ID.
+ *
  * Generated from protobuf message <code>io.PassTypeIdentifier</code>
  */
 class PassTypeIdentifier extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Apple-issued pass type identifier.
+     *
      * Generated from protobuf field <code>string passTypeId = 1;</code>
      */
     protected $passTypeId = '';
@@ -26,6 +30,7 @@ class PassTypeIdentifier extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $passTypeId
+     *           Apple-issued pass type identifier.
      * }
      */
     public function __construct($data = NULL) {
@@ -34,6 +39,8 @@ class PassTypeIdentifier extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple-issued pass type identifier.
+     *
      * Generated from protobuf field <code>string passTypeId = 1;</code>
      * @return string
      */
@@ -43,6 +50,8 @@ class PassTypeIdentifier extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Apple-issued pass type identifier.
+     *
      * Generated from protobuf field <code>string passTypeId = 1;</code>
      * @param string $var
      * @return $this

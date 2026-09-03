@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Defines how to join grouped filter fields in a query.
+ *
  * Protobuf type <code>io.Operator</code>
  */
 class Operator

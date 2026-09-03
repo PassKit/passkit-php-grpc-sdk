@@ -9,6 +9,7 @@
 namespace Scheduler;
 
 /**
+ * The PassKit Scheduler API allows you to automate tasks within your PassKit programs. This API allows you to schedule one-time or recurring jobs that interact with other PassKit APIs.
  */
 class SchedulerClient extends \Grpc\BaseStub {
 
@@ -22,10 +23,11 @@ class SchedulerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Creates a scheduling job. Required Fields: scheduleType, protocol, classId, jobName, scheduledTime, timezone.
      * @param \Ct\SchedulingJob $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Ct\SchedulingJobResponse>
      */
     public function createSchedulingJob(\Ct\SchedulingJob $argument,
       $metadata = [], $options = []) {
@@ -36,10 +38,11 @@ class SchedulerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a scheduling job by its ID. If the job has been deleted, only history logs will be returned. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Ct\SchedulingJob>
      */
     public function getSchedulingJob(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -50,10 +53,11 @@ class SchedulerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Updates an existing scheduling job. The full SchedulingJob object must be supplied. Empty/null fields will overwrite existing data. Required Fields: id, scheduleType, protocol, classId, jobName, scheduledTime, timezone.
      * @param \Ct\SchedulingJob $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Ct\SchedulingJobResponse>
      */
     public function updateSchedulingJob(\Ct\SchedulingJob $argument,
       $metadata = [], $options = []) {
@@ -64,10 +68,11 @@ class SchedulerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Patch updates a scheduling job. Only supplied fields will be updated. Required Fields: id.
      * @param \Ct\SchedulingJob $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Ct\SchedulingJobResponse>
      */
     public function patchSchedulingJob(\Ct\SchedulingJob $argument,
       $metadata = [], $options = []) {
@@ -78,10 +83,11 @@ class SchedulerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Deletes a scheduling job by ID. History logs remain available after deletion. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function deleteSchedulingJob(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -92,10 +98,11 @@ class SchedulerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Retrieves a specific scheduling job history log by ID. Required Fields: id.
      * @param \Io\Id $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Ct\JobHistory>
      */
     public function getSchedulingJobHistory(\Io\Id $argument,
       $metadata = [], $options = []) {
@@ -106,6 +113,7 @@ class SchedulerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * Lists all history logs for a given scheduling job. Required Fields: jobId.
      * @param \Scheduler\ListRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

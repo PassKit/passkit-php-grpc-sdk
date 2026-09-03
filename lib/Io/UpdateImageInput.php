@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Input to update an existing image or its localized variants. Required fields: id.
+ *
  * Generated from protobuf message <code>io.UpdateImageInput</code>
  */
 class UpdateImageInput extends \Google\Protobuf\Internal\Message

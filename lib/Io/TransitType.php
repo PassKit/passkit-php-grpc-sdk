@@ -8,6 +8,8 @@ namespace Io;
 use UnexpectedValueException;
 
 /**
+ * Enum specifying transit types for relevant pass types.
+ *
  * Protobuf type <code>io.TransitType</code>
  */
 class TransitType
@@ -17,27 +19,37 @@ class TransitType
      */
     const TRANSIT_TYPE_DO_NOT_USE = 0;
     /**
+     * Air travel (e.g., flights).
+     *
      * Generated from protobuf enum <code>TRANSIT_TYPE_AIR = 1;</code>
      */
     const TRANSIT_TYPE_AIR = 1;
     /**
+     * Boat travel.
+     *
      * Generated from protobuf enum <code>TRANSIT_TYPE_BOAT = 2;</code>
      */
     const TRANSIT_TYPE_BOAT = 2;
     /**
+     * Bus transit.
+     *
      * Generated from protobuf enum <code>TRANSIT_TYPE_BUS = 3;</code>
      */
     const TRANSIT_TYPE_BUS = 3;
     /**
+     * Generic transit type.
+     *
      * Generated from protobuf enum <code>TRANSIT_TYPE_GENERIC = 4;</code>
      */
     const TRANSIT_TYPE_GENERIC = 4;
     /**
+     * Train travel.
+     *
      * Generated from protobuf enum <code>TRANSIT_TYPE_TRAIN = 5;</code>
      */
     const TRANSIT_TYPE_TRAIN = 5;
     /**
-     * Google Pay only.
+     * Tram travel (Google Wallet only).
      *
      * Generated from protobuf enum <code>TRANSIT_TYPE_TRAM = 6;</code>
      */

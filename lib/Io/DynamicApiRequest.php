@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Describes the payload and route parameters for making a dynamic API call.
+ *
  * Generated from protobuf message <code>io.DynamicApiRequest</code>
  */
 class DynamicApiRequest extends \Google\Protobuf\Internal\Message

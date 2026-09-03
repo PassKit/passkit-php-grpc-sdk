@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Used to display details such as teams, event timing, venue info, and artist IDs.
+ *
  * Generated from protobuf message <code>io.EventSemanticTags</code>
  */
 class EventSemanticTags extends \Google\Protobuf\Internal\Message
@@ -269,7 +271,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $artistIds
+     *     @type string[] $artistIds
      *           The Apple ID(s) for the artists featuring in an event. If the ID is not known or provided for a given artist, the ID can be found in the iTunes share URL.
      *     @type string $awayTeamAbbreviation
      *           On tickets leveraging the team sports template, the logo text is hardcoded to be HOME TEAM ABBREVIATION vs AWAY TEAM ABBREVIATION. The abbreviations are fetched from the homeTeamAbbreviation and awayTeamAbbreviation semantic tags respectively.
@@ -305,7 +307,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      *     @type string $leagueName
      *           The full league name for a sports event. Use this key only for a sports event ticket.
      *     @type \Io\LocalizedString $localizedLeagueName
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $performerNames
+     *     @type string[] $performerNames
      *           An array of the full names of the performers and opening acts at the event, in decreasing order of significance.
      *     @type bool $silenceRequested
      *           A Boolean value that determines whether the user’s device remains silent during an event or transit journey. The system may override the key and determine the length of the period of silence.
@@ -319,7 +321,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      *     @type string $venueRoom
      *           The full name of the room where the ticketed event is to take place. If a room is provided in the seat information, this value will be overwritten.
      *     @type \Io\LocalizedString $localizedVenueRoom
-     *     @type array<\Io\SemanticWifiNetwork>|\Google\Protobuf\Internal\RepeatedField $wifiAccess
+     *     @type \Io\SemanticWifiNetwork[] $wifiAccess
      *           An array of objects that represent the WiFi networks associated with the event; for example, the network name and password associated with a developer conference.
      *     @type string $venueRegionName
      *           The name of the city or hosting region of the venue.
@@ -341,9 +343,9 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      *           Time when the venue opens. Use if none of the more specific values above apply.
      *     @type \Google\Protobuf\Timestamp $venueCloseDate
      *           Time when the venue closes.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $playlistIds
+     *     @type string[] $playlistIds
      *           The Apple ID(s) for playlists applicable to the event. If the ID is not known or provided for a given playlist, the ID can be found in the iTunes share URL.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $albumIds
+     *     @type string[] $albumIds
      *           The Apple ID(s) for the albums for artists featuring in an event. If the ID is not known or provided for a given album, the ID can be found in the iTunes share URL.
      *     @type \Io\SemanticEventDateInfo $eventStartDateInfo
      *           Additional information for the start date of the event.
@@ -358,7 +360,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      * The Apple ID(s) for the artists featuring in an event. If the ID is not known or provided for a given artist, the ID can be found in the iTunes share URL.
      *
      * Generated from protobuf field <code>repeated string artistIds = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getArtistIds()
     {
@@ -369,7 +371,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      * The Apple ID(s) for the artists featuring in an event. If the ID is not known or provided for a given artist, the ID can be found in the iTunes share URL.
      *
      * Generated from protobuf field <code>repeated string artistIds = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setArtistIds($var)
@@ -1036,7 +1038,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      * An array of the full names of the performers and opening acts at the event, in decreasing order of significance.
      *
      * Generated from protobuf field <code>repeated string performerNames = 24;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getPerformerNames()
     {
@@ -1047,7 +1049,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      * An array of the full names of the performers and opening acts at the event, in decreasing order of significance.
      *
      * Generated from protobuf field <code>repeated string performerNames = 24;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setPerformerNames($var)
@@ -1266,7 +1268,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      * An array of objects that represent the WiFi networks associated with the event; for example, the network name and password associated with a developer conference.
      *
      * Generated from protobuf field <code>repeated .io.SemanticWifiNetwork wifiAccess = 32;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\SemanticWifiNetwork>
      */
     public function getWifiAccess()
     {
@@ -1277,7 +1279,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      * An array of objects that represent the WiFi networks associated with the event; for example, the network name and password associated with a developer conference.
      *
      * Generated from protobuf field <code>repeated .io.SemanticWifiNetwork wifiAccess = 32;</code>
-     * @param array<\Io\SemanticWifiNetwork>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\SemanticWifiNetwork[] $var
      * @return $this
      */
     public function setWifiAccess($var)
@@ -1650,7 +1652,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      * The Apple ID(s) for playlists applicable to the event. If the ID is not known or provided for a given playlist, the ID can be found in the iTunes share URL.
      *
      * Generated from protobuf field <code>repeated string playlistIds = 44;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getPlaylistIds()
     {
@@ -1661,7 +1663,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      * The Apple ID(s) for playlists applicable to the event. If the ID is not known or provided for a given playlist, the ID can be found in the iTunes share URL.
      *
      * Generated from protobuf field <code>repeated string playlistIds = 44;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setPlaylistIds($var)
@@ -1676,7 +1678,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      * The Apple ID(s) for the albums for artists featuring in an event. If the ID is not known or provided for a given album, the ID can be found in the iTunes share URL.
      *
      * Generated from protobuf field <code>repeated string albumIds = 45;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getAlbumIds()
     {
@@ -1687,7 +1689,7 @@ class EventSemanticTags extends \Google\Protobuf\Internal\Message
      * The Apple ID(s) for the albums for artists featuring in an event. If the ID is not known or provided for a given album, the ID can be found in the iTunes share URL.
      *
      * Generated from protobuf field <code>repeated string albumIds = 45;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setAlbumIds($var)

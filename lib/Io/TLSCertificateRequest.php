@@ -6,23 +6,31 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Request payload for uploading a TLS certificate.
+ *
  * Generated from protobuf message <code>io.TLSCertificateRequest</code>
  */
 class TLSCertificateRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * PEM-encoded TLS certificate.
+     *
      * Generated from protobuf field <code>bytes certificate = 1;</code>
      */
     protected $certificate = '';
     /**
+     * PEM-encoded certificate authority chain.
+     *
      * Generated from protobuf field <code>bytes caChain = 2;</code>
      */
     protected $caChain = '';
     /**
+     * PEM-encoded private key associated with the certificate.
+     *
      * Generated from protobuf field <code>bytes privateKey = 3;</code>
      */
     protected $privateKey = '';
@@ -34,8 +42,11 @@ class TLSCertificateRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $certificate
+     *           PEM-encoded TLS certificate.
      *     @type string $caChain
+     *           PEM-encoded certificate authority chain.
      *     @type string $privateKey
+     *           PEM-encoded private key associated with the certificate.
      * }
      */
     public function __construct($data = NULL) {
@@ -44,6 +55,8 @@ class TLSCertificateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PEM-encoded TLS certificate.
+     *
      * Generated from protobuf field <code>bytes certificate = 1;</code>
      * @return string
      */
@@ -53,6 +66,8 @@ class TLSCertificateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PEM-encoded TLS certificate.
+     *
      * Generated from protobuf field <code>bytes certificate = 1;</code>
      * @param string $var
      * @return $this
@@ -66,6 +81,8 @@ class TLSCertificateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PEM-encoded certificate authority chain.
+     *
      * Generated from protobuf field <code>bytes caChain = 2;</code>
      * @return string
      */
@@ -75,6 +92,8 @@ class TLSCertificateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PEM-encoded certificate authority chain.
+     *
      * Generated from protobuf field <code>bytes caChain = 2;</code>
      * @param string $var
      * @return $this
@@ -88,6 +107,8 @@ class TLSCertificateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PEM-encoded private key associated with the certificate.
+     *
      * Generated from protobuf field <code>bytes privateKey = 3;</code>
      * @return string
      */
@@ -97,6 +118,8 @@ class TLSCertificateRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * PEM-encoded private key associated with the certificate.
+     *
      * Generated from protobuf field <code>bytes privateKey = 3;</code>
      * @param string $var
      * @return $this

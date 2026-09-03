@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents a currency amount with a numeric value and ISO currency code.
+ *
  * Generated from protobuf message <code>io.SemanticCurrencyAmount</code>
  */
 class SemanticCurrencyAmount extends \Google\Protobuf\Internal\Message

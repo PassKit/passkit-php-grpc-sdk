@@ -6,10 +6,12 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Defines the details shown on the sign-up sheet when personalizing a pass.
+ *
  * Generated from protobuf message <code>io.PersonalizationDetails</code>
  */
 class PersonalizationDetails extends \Google\Protobuf\Internal\Message
@@ -42,7 +44,7 @@ class PersonalizationDetails extends \Google\Protobuf\Internal\Message
      *
      *     @type string $description
      *           A brief description of the program for a pass that appears on the signup sheet, under the personalization logo.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $requiredPersonalizationData
+     *     @type int[] $requiredPersonalizationData
      *           An array of the required validation items. [PERSONALIZE_NAME, PERSONALIZE_EMAIL_ADDRESS, PERSONALIZE_PHONE_NUMBER, PERSONALIZE_POSTAL_CODE]
      *     @type string $termsAndConditions
      *           A description of the program’s terms and conditions. This string can contain HTML link tags to external content.
@@ -84,7 +86,7 @@ class PersonalizationDetails extends \Google\Protobuf\Internal\Message
      * An array of the required validation items. [PERSONALIZE_NAME, PERSONALIZE_EMAIL_ADDRESS, PERSONALIZE_PHONE_NUMBER, PERSONALIZE_POSTAL_CODE]
      *
      * Generated from protobuf field <code>repeated .io.PersonalizedDataField requiredPersonalizationData = 2;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getRequiredPersonalizationData()
     {
@@ -95,7 +97,7 @@ class PersonalizationDetails extends \Google\Protobuf\Internal\Message
      * An array of the required validation items. [PERSONALIZE_NAME, PERSONALIZE_EMAIL_ADDRESS, PERSONALIZE_PHONE_NUMBER, PERSONALIZE_POSTAL_CODE]
      *
      * Generated from protobuf field <code>repeated .io.PersonalizedDataField requiredPersonalizationData = 2;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setRequiredPersonalizationData($var)

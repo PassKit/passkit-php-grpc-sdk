@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * This allows you to configure data so that you can save it against each customer record or render it on the pass.
@@ -36,7 +36,7 @@ class Data extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Io\DataField>|\Google\Protobuf\Internal\RepeatedField $dataFields
+     *     @type \Io\DataField[] $dataFields
      *           This allows you to configure individual data field that is rendered on the customer UI (data collection page and the pass).
      *           You can set data field purely for CRM analytics purpose and not show it on the customer UI.
      *     @type \Io\DataCollectionPageSettings $dataCollectionPageSettings
@@ -53,7 +53,7 @@ class Data extends \Google\Protobuf\Internal\Message
      * You can set data field purely for CRM analytics purpose and not show it on the customer UI.
      *
      * Generated from protobuf field <code>repeated .io.DataField dataFields = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Io\DataField>
      */
     public function getDataFields()
     {
@@ -65,7 +65,7 @@ class Data extends \Google\Protobuf\Internal\Message
      * You can set data field purely for CRM analytics purpose and not show it on the customer UI.
      *
      * Generated from protobuf field <code>repeated .io.DataField dataFields = 1;</code>
-     * @param array<\Io\DataField>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Io\DataField[] $var
      * @return $this
      */
     public function setDataFields($var)

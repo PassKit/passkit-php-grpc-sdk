@@ -6,8 +6,8 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Metrics list issued, installed, uninstalled and invalidated counts.
@@ -29,7 +29,7 @@ class Metrics extends \Google\Protobuf\Internal\Message
      */
     protected $appleWalletInstalls = 0;
     /**
-     * Number of passes installed in Google Pay.
+     * Number of passes installed in Google Wallet.
      *
      * Generated from protobuf field <code>uint64 googlePayInstalls = 3;</code>
      */
@@ -47,7 +47,7 @@ class Metrics extends \Google\Protobuf\Internal\Message
      */
     protected $appleWalletUninstalls = 0;
     /**
-     * Number of passes uninstalled from Google Pay.
+     * Number of passes uninstalled from Google Wallet.
      *
      * Generated from protobuf field <code>uint64 googlePayUninstalls = 12;</code>
      */
@@ -76,13 +76,13 @@ class Metrics extends \Google\Protobuf\Internal\Message
      *     @type int|string $appleWalletInstalls
      *           Number of passes installed in Apple Wallet.
      *     @type int|string $googlePayInstalls
-     *           Number of passes installed in Google Pay.
+     *           Number of passes installed in Google Wallet.
      *     @type int|string $otherAndroidInstalls
      *           Number of passes installed in Android wallet apps e.g. WalletPasses.
      *     @type int|string $appleWalletUninstalls
      *           Number of passes uninstalled from Apple Wallet.
      *     @type int|string $googlePayUninstalls
-     *           Number of passes uninstalled from Google Pay.
+     *           Number of passes uninstalled from Google Wallet.
      *     @type int|string $otherAndroidUninstalls
      *           Number of passes uninstalled from Android wallet apps e.g. WalletPasses.
      *     @type int|string $invalidations
@@ -147,7 +147,7 @@ class Metrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Number of passes installed in Google Pay.
+     * Number of passes installed in Google Wallet.
      *
      * Generated from protobuf field <code>uint64 googlePayInstalls = 3;</code>
      * @return int|string
@@ -158,7 +158,7 @@ class Metrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Number of passes installed in Google Pay.
+     * Number of passes installed in Google Wallet.
      *
      * Generated from protobuf field <code>uint64 googlePayInstalls = 3;</code>
      * @param int|string $var
@@ -225,7 +225,7 @@ class Metrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Number of passes uninstalled from Google Pay.
+     * Number of passes uninstalled from Google Wallet.
      *
      * Generated from protobuf field <code>uint64 googlePayUninstalls = 12;</code>
      * @return int|string
@@ -236,7 +236,7 @@ class Metrics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Number of passes uninstalled from Google Pay.
+     * Number of passes uninstalled from Google Wallet.
      *
      * Generated from protobuf field <code>uint64 googlePayUninstalls = 12;</code>
      * @param int|string $var

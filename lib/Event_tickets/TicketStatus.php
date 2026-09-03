@@ -8,6 +8,8 @@ namespace Event_tickets;
 use UnexpectedValueException;
 
 /**
+ * List of allowed ticket statuses.
+ *
  * Protobuf type <code>event_tickets.TicketStatus</code>
  */
 class TicketStatus

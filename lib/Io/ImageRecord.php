@@ -6,43 +6,61 @@
 namespace Io;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
+ * Represents metadata about an uploaded image.
+ *
  * Generated from protobuf message <code>io.ImageRecord</code>
  */
 class ImageRecord extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Unique image identifier.
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      */
     protected $id = '';
     /**
+     * Image name.
+     *
      * Generated from protobuf field <code>string name = 2;</code>
      */
     protected $name = '';
     /**
+     * Hosted URL for accessing the image.
+     *
      * Generated from protobuf field <code>string url = 3;</code>
      */
     protected $url = '';
     /**
+     * Enum indicating how the image is used.
+     *
      * Generated from protobuf field <code>.io.ImageUse use = 5;</code>
      */
     protected $use = 0;
     /**
+     * Languages this image supports.
+     *
      * Generated from protobuf field <code>repeated .io.LanguageCode languages = 6;</code>
      */
     private $languages;
     /**
+     * Username of the image owner.
+     *
      * Generated from protobuf field <code>string ownerUsername = 7;</code>
      */
     protected $ownerUsername = '';
     /**
+     * Timestamp of creation.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 8;</code>
      */
     protected $createdAt = null;
     /**
+     * Timestamp of last update.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 9;</code>
      */
     protected $updatedAt = null;
@@ -54,13 +72,21 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $id
+     *           Unique image identifier.
      *     @type string $name
+     *           Image name.
      *     @type string $url
+     *           Hosted URL for accessing the image.
      *     @type int $use
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $languages
+     *           Enum indicating how the image is used.
+     *     @type int[] $languages
+     *           Languages this image supports.
      *     @type string $ownerUsername
+     *           Username of the image owner.
      *     @type \Google\Protobuf\Timestamp $createdAt
+     *           Timestamp of creation.
      *     @type \Google\Protobuf\Timestamp $updatedAt
+     *           Timestamp of last update.
      * }
      */
     public function __construct($data = NULL) {
@@ -69,6 +95,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Unique image identifier.
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @return string
      */
@@ -78,6 +106,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Unique image identifier.
+     *
      * Generated from protobuf field <code>string id = 1;</code>
      * @param string $var
      * @return $this
@@ -91,6 +121,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Image name.
+     *
      * Generated from protobuf field <code>string name = 2;</code>
      * @return string
      */
@@ -100,6 +132,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Image name.
+     *
      * Generated from protobuf field <code>string name = 2;</code>
      * @param string $var
      * @return $this
@@ -113,6 +147,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Hosted URL for accessing the image.
+     *
      * Generated from protobuf field <code>string url = 3;</code>
      * @return string
      */
@@ -122,6 +158,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Hosted URL for accessing the image.
+     *
      * Generated from protobuf field <code>string url = 3;</code>
      * @param string $var
      * @return $this
@@ -135,6 +173,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Enum indicating how the image is used.
+     *
      * Generated from protobuf field <code>.io.ImageUse use = 5;</code>
      * @return int
      */
@@ -144,6 +184,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Enum indicating how the image is used.
+     *
      * Generated from protobuf field <code>.io.ImageUse use = 5;</code>
      * @param int $var
      * @return $this
@@ -157,8 +199,10 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Languages this image supports.
+     *
      * Generated from protobuf field <code>repeated .io.LanguageCode languages = 6;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getLanguages()
     {
@@ -166,8 +210,10 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Languages this image supports.
+     *
      * Generated from protobuf field <code>repeated .io.LanguageCode languages = 6;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setLanguages($var)
@@ -179,6 +225,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Username of the image owner.
+     *
      * Generated from protobuf field <code>string ownerUsername = 7;</code>
      * @return string
      */
@@ -188,6 +236,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Username of the image owner.
+     *
      * Generated from protobuf field <code>string ownerUsername = 7;</code>
      * @param string $var
      * @return $this
@@ -201,6 +251,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp of creation.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 8;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -220,6 +272,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp of creation.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp createdAt = 8;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
@@ -233,6 +287,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp of last update.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 9;</code>
      * @return \Google\Protobuf\Timestamp|null
      */
@@ -252,6 +308,8 @@ class ImageRecord extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Timestamp of last update.
+     *
      * Generated from protobuf field <code>.google.protobuf.Timestamp updatedAt = 9;</code>
      * @param \Google\Protobuf\Timestamp $var
      * @return $this
